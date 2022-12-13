@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Xml;
+using System.IO;
+using System.Threading;
 
 namespace MyOfficeTable
 {
@@ -243,7 +245,6 @@ namespace MyOfficeTable
         {
             CheckСorrectness();
             ChangeVisibilityButtons();
-            timer.Stop();
             GetXml();
         }
 

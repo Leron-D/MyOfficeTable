@@ -98,7 +98,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(285, 9);
+            this.headerLabel.Location = new System.Drawing.Point(308, 9);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(258, 41);
             this.headerLabel.TabIndex = 17;
@@ -165,7 +165,7 @@
             this.firstAnswerCheckBox.AutoSize = true;
             this.firstAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.firstAnswerCheckBox.Location = new System.Drawing.Point(259, 234);
+            this.firstAnswerCheckBox.Location = new System.Drawing.Point(258, 240);
             this.firstAnswerCheckBox.Name = "firstAnswerCheckBox";
             this.firstAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.firstAnswerCheckBox.TabIndex = 22;
@@ -177,7 +177,7 @@
             this.secondAnswerCheckBox.AutoSize = true;
             this.secondAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondAnswerCheckBox.Location = new System.Drawing.Point(383, 234);
+            this.secondAnswerCheckBox.Location = new System.Drawing.Point(382, 240);
             this.secondAnswerCheckBox.Name = "secondAnswerCheckBox";
             this.secondAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.secondAnswerCheckBox.TabIndex = 23;
@@ -189,7 +189,7 @@
             this.thirdAnswerCheckBox.AutoSize = true;
             this.thirdAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thirdAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(507, 234);
+            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(506, 240);
             this.thirdAnswerCheckBox.Name = "thirdAnswerCheckBox";
             this.thirdAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.thirdAnswerCheckBox.TabIndex = 24;
@@ -199,7 +199,7 @@
             // answerTextBox
             // 
             this.answerTextBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox.Location = new System.Drawing.Point(259, 192);
+            this.answerTextBox.Location = new System.Drawing.Point(258, 198);
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(352, 36);
             this.answerTextBox.TabIndex = 25;
@@ -212,9 +212,9 @@
             this.startTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startTestButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startTestButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.startTestButton.Location = new System.Drawing.Point(228, 142);
+            this.startTestButton.Location = new System.Drawing.Point(283, 145);
             this.startTestButton.Name = "startTestButton";
-            this.startTestButton.Size = new System.Drawing.Size(383, 41);
+            this.startTestButton.Size = new System.Drawing.Size(297, 41);
             this.startTestButton.TabIndex = 26;
             this.startTestButton.Text = "Начать тестирование";
             this.startTestButton.UseVisualStyleBackColor = false;
