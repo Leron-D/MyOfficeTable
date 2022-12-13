@@ -128,7 +128,7 @@
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goBackButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goBackButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goBackButton.Location = new System.Drawing.Point(12, 667);
+            this.goBackButton.Location = new System.Drawing.Point(0, 671);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(148, 36);
             this.goBackButton.TabIndex = 11;
