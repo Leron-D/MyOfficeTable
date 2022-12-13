@@ -46,6 +46,7 @@
             this.questionLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -98,7 +99,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(308, 9);
+            this.headerLabel.Location = new System.Drawing.Point(5, 2);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(258, 41);
             this.headerLabel.TabIndex = 17;
@@ -224,10 +225,10 @@
             // 
             this.questionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.questionLabel.Location = new System.Drawing.Point(12, 61);
-            this.questionLabel.MaximumSize = new System.Drawing.Size(946, 90);
+            this.questionLabel.Location = new System.Drawing.Point(12, 71);
+            this.questionLabel.MaximumSize = new System.Drawing.Size(850, 90);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(850, 68);
+            this.questionLabel.Size = new System.Drawing.Size(850, 58);
             this.questionLabel.TabIndex = 27;
             this.questionLabel.Text = "Вопрос";
             // 
@@ -247,12 +248,21 @@
             this.timerLabel.TabIndex = 28;
             this.timerLabel.Text = "Таймер";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Location = new System.Drawing.Point(-1, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(874, 10);
+            this.panel1.TabIndex = 29;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(874, 309);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.startTestButton);
@@ -301,5 +311,6 @@
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timerLabel;
+        private System.Windows.Forms.Panel panel1;
     }
 }

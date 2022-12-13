@@ -36,6 +36,7 @@
             this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.referenceButton = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(329, 26);
+            this.headerLabel.Location = new System.Drawing.Point(5, 1);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(455, 41);
             this.headerLabel.TabIndex = 7;
@@ -135,12 +136,21 @@
             this.goBackButton.UseVisualStyleBackColor = false;
             this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Location = new System.Drawing.Point(0, 45);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1139, 10);
+            this.panel1.TabIndex = 30;
+            // 
             // TheoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(1139, 707);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.collapseButton);
@@ -170,5 +180,6 @@
         private System.Windows.Forms.Button referenceButton;
         private System.Windows.Forms.WebBrowser webBrowser;
         private System.Windows.Forms.Button goBackButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }
