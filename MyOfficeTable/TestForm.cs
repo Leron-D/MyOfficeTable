@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Xml;
-using static System.Collections.Specialized.BitVector32;
 
 namespace MyOfficeTable
 {
@@ -18,7 +17,7 @@ namespace MyOfficeTable
     {
         double mark = 0;
         int[] questionsArray = new int[15] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
-        int countAnswers = 0;
+        int numQuestion = 0;
         int seconds = 0;
         private Point mouseOffset;
         private Point currentOffset;
@@ -34,22 +33,29 @@ namespace MyOfficeTable
 
         private void LoadForm(string fileName)
         {
-            firstAnswerCheckBox.Location = answerTextBox.Location = new Point(12, 144);
-            secondAnswerCheckBox.Location = new Point(12, 181);
-            thirdAnswerCheckBox.Location = new Point(12, 218);
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(collapseButton, "Свернуть");
-            toolTip.SetToolTip(cancelButton, "Закрыть");
-            testName = fileName;
-            Random rnd = new Random();
-            for (int i = questionsArray.Length - 1; i >= 1; i--)
+            try
             {
-                int j = rnd.Next(i + 1);
-                var temp = questionsArray[j];
-                questionsArray[j] = questionsArray[i];
-                questionsArray[i] = temp;
+                firstAnswerCheckBox.Location = answerTextBox.Location = new Point(12, 144);
+                secondAnswerCheckBox.Location = new Point(12, 181);
+                thirdAnswerCheckBox.Location = new Point(12, 218);
+                ToolTip toolTip = new ToolTip();
+                toolTip.SetToolTip(collapseButton, "Свернуть");
+                toolTip.SetToolTip(cancelButton, "Закрыть");
+                testName = fileName;
+                Random rnd = new Random();
+                for (int i = questionsArray.Length - 1; i >= 1; i--)
+                {
+                    int j = rnd.Next(i + 1);
+                    var temp = questionsArray[j];
+                    questionsArray[j] = questionsArray[i];
+                    questionsArray[i] = temp;
+                }
+                ChangeVisibilityButtons();
             }
-            ChangeVisibilityButtons();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CollapseButton_Click(object sender, EventArgs e)
@@ -107,91 +113,98 @@ namespace MyOfficeTable
             if (xRoot != null)
             {
                 XmlNodeList a = xDoc.GetElementsByTagName("Question");
-                XmlNode question = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("Text");
-                questionLabel.Text = question.Value;
-                if (a.Item(questionsArray[countAnswers]).Attributes["Type"].Value == "Single")
+                XmlNode question = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Text");
+                questionLabel.Text = $"Вопрос {numQuestion + 1}. {question.Value}";
+                if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Single")
                 {
                     seconds = 30;
                     timer.Start();
                     firstAnswerRadioButton.Visible = true;
                     secondAnswerRadioButton.Visible = true;
                     thirdAnswerRadioButton.Visible = true;
-                    successfulAnswer = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("True");
-                    XmlNode answer1 = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("Answer1");
-                    XmlNode answer2 = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("Answer2");
-                    XmlNode answer3 = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("Answer3");
+                    successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
+                    XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
+                    XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
+                    XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
                     firstAnswerRadioButton.Text = answer1.Value;
                     secondAnswerRadioButton.Text = answer2.Value;
                     thirdAnswerRadioButton.Text = answer3.Value;
                 }
-                else if (a.Item(questionsArray[countAnswers]).Attributes["Type"].Value == "Multiple")
+                else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Multiple")
                 {
                     seconds = 60;
                     timer.Start();
                     firstAnswerCheckBox.Visible = true;
                     secondAnswerCheckBox.Visible = true;
                     thirdAnswerCheckBox.Visible = true;
-                    successfulAnswer = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("True");
-                    XmlNode answer1 = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("Answer1");
-                    XmlNode answer2 = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("Answer2");
-                    XmlNode answer3 = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("Answer3");
+                    successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
+                    XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
+                    XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
+                    XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
                     firstAnswerCheckBox.Text = answer1.Value;
                     secondAnswerCheckBox.Text = answer2.Value;
                     thirdAnswerCheckBox.Text = answer3.Value;
                 }
-                else if (a.Item(questionsArray[countAnswers]).Attributes["Type"].Value == "String")
+                else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "String")
                 {
                     seconds = 90;
                     timer.Start();
                     answerTextBox.Visible = true;
-                    successfulAnswer = a.Item(questionsArray[countAnswers]).Attributes.GetNamedItem("True");
+                    successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                 }
             }
         }
         public void CheckСorrectness()
         {
-            if (firstAnswerRadioButton.Checked)
+            try
             {
-                if (firstAnswerRadioButton.Text.ToLower() == successfulAnswer.Value.ToLower())
+                if (firstAnswerRadioButton.Checked)
+                {
+                    if (firstAnswerRadioButton.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
+                else if (secondAnswerRadioButton.Checked)
+                {
+                    if (secondAnswerRadioButton.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
+                else if (thirdAnswerRadioButton.Checked)
+                {
+                    if (thirdAnswerRadioButton.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
+                if (firstAnswerCheckBox.Visible)
+                {
+                    string answerString = "";
+                    if (firstAnswerCheckBox.Checked)
+                        answerString += firstAnswerCheckBox.Text;
+                    if (secondAnswerCheckBox.Checked)
+                        answerString += secondAnswerCheckBox.Text;
+                    if (thirdAnswerCheckBox.Checked)
+                        answerString += thirdAnswerCheckBox.Text;
+                    if (answerString == successfulAnswer.Value)
+                        mark++;
+                }
+                if (answerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower())
                     mark++;
+                numQuestion++;
+                if (numQuestion > 9)
+                {
+                    timer.Stop();
+                    if (mark > 8.5)
+                        MessageBox.Show("Отлично! Вы прошли тест на " + mark + "/10 " + "Оценка 5");
+                    else if (mark > 7.5)
+                        MessageBox.Show("Хорошо! Вы прошли тест на " + mark + "/10 " + "Оценка 4");
+                    else if (mark >= 6)
+                        MessageBox.Show("Не плохо! Вы прошли тест на " + mark + "/10 " + "Оценка 3");
+                    else
+                        MessageBox.Show("Вы прошли тест на " + mark + "/10 " + "Оценка 2");
+                    Close();
+                }
             }
-            else if (secondAnswerRadioButton.Checked)
+            catch (Exception ex)
             {
-                if (secondAnswerRadioButton.Text.ToLower() == successfulAnswer.Value.ToLower())
-                    mark++;
-            }
-            else if (thirdAnswerRadioButton.Checked)
-            {
-                if (thirdAnswerRadioButton.Text.ToLower() == successfulAnswer.Value.ToLower())
-                    mark++;
-            }
-            if (firstAnswerCheckBox.Visible)
-            {
-                var answerString = "";
-                if (firstAnswerCheckBox.Checked) 
-                    answerString += firstAnswerCheckBox.Text;
-                if (secondAnswerCheckBox.Checked) 
-                    answerString += secondAnswerCheckBox.Text;
-                if (thirdAnswerCheckBox.Checked) 
-                    answerString += thirdAnswerCheckBox.Text;
-                if (answerString == successfulAnswer.Value) 
-                    mark++;
-            }
-            if (answerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower()) 
-                mark++;
-            countAnswers++;
-            if (countAnswers > 9)
-            {
-                timer.Stop();
-                if(mark > 8.5) 
-                    MessageBox.Show("Отлично! Вы прошли тест на " + mark + "/10 " + "Оценка 5");
-                else if (mark > 7.5)
-                    MessageBox.Show("Хорошо! Вы прошли тест на " + mark + "/10 " + "Оценка 4");
-                else if (mark >= 6)
-                    MessageBox.Show("Не плохо! Вы прошли тест на " + mark + "/10 " + "Оценка 3");
-                else
-                    MessageBox.Show("Попробуйте пройти тест еще раз! " + "Оценка 2");
-                Close();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -199,6 +212,31 @@ namespace MyOfficeTable
         {
             seconds--;
             timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
+            if (firstAnswerRadioButton.Visible == true)
+            {
+                if (seconds == 0)
+                {
+                    seconds = 30;
+                    GoNextQuestionButton_Click(this, EventArgs.Empty);
+                }
+            }
+
+            else if (firstAnswerCheckBox.Visible == true)
+            {
+                if (seconds == 0)
+                {
+                    seconds = 60;
+                    GoNextQuestionButton_Click(this, EventArgs.Empty);
+                }
+            }           
+            else if (answerTextBox.Visible == true)
+            {
+                if (seconds == 0)
+                {
+                    seconds = 90;
+                    GoNextQuestionButton_Click(this, EventArgs.Empty);
+                }
+            }
         }
 
         private void GoNextQuestionButton_Click(object sender, EventArgs e)

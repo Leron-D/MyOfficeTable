@@ -98,7 +98,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(307, 9);
+            this.headerLabel.Location = new System.Drawing.Point(285, 9);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(258, 41);
             this.headerLabel.TabIndex = 17;
@@ -126,7 +126,7 @@
             this.firstAnswerRadioButton.AutoSize = true;
             this.firstAnswerRadioButton.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.firstAnswerRadioButton.Location = new System.Drawing.Point(12, 155);
+            this.firstAnswerRadioButton.Location = new System.Drawing.Point(12, 145);
             this.firstAnswerRadioButton.Name = "firstAnswerRadioButton";
             this.firstAnswerRadioButton.Size = new System.Drawing.Size(117, 31);
             this.firstAnswerRadioButton.TabIndex = 19;
@@ -139,7 +139,7 @@
             this.secondAnswerRadioButton.AutoSize = true;
             this.secondAnswerRadioButton.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondAnswerRadioButton.Location = new System.Drawing.Point(12, 192);
+            this.secondAnswerRadioButton.Location = new System.Drawing.Point(12, 182);
             this.secondAnswerRadioButton.Name = "secondAnswerRadioButton";
             this.secondAnswerRadioButton.Size = new System.Drawing.Size(117, 31);
             this.secondAnswerRadioButton.TabIndex = 20;
@@ -152,7 +152,7 @@
             this.thirdAnswerRadioButton.AutoSize = true;
             this.thirdAnswerRadioButton.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thirdAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.thirdAnswerRadioButton.Location = new System.Drawing.Point(12, 229);
+            this.thirdAnswerRadioButton.Location = new System.Drawing.Point(12, 219);
             this.thirdAnswerRadioButton.Name = "thirdAnswerRadioButton";
             this.thirdAnswerRadioButton.Size = new System.Drawing.Size(117, 31);
             this.thirdAnswerRadioButton.TabIndex = 21;
@@ -165,7 +165,7 @@
             this.firstAnswerCheckBox.AutoSize = true;
             this.firstAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.firstAnswerCheckBox.Location = new System.Drawing.Point(135, 155);
+            this.firstAnswerCheckBox.Location = new System.Drawing.Point(259, 234);
             this.firstAnswerCheckBox.Name = "firstAnswerCheckBox";
             this.firstAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.firstAnswerCheckBox.TabIndex = 22;
@@ -177,7 +177,7 @@
             this.secondAnswerCheckBox.AutoSize = true;
             this.secondAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondAnswerCheckBox.Location = new System.Drawing.Point(135, 192);
+            this.secondAnswerCheckBox.Location = new System.Drawing.Point(383, 234);
             this.secondAnswerCheckBox.Name = "secondAnswerCheckBox";
             this.secondAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.secondAnswerCheckBox.TabIndex = 23;
@@ -189,7 +189,7 @@
             this.thirdAnswerCheckBox.AutoSize = true;
             this.thirdAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thirdAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(135, 229);
+            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(507, 234);
             this.thirdAnswerCheckBox.Name = "thirdAnswerCheckBox";
             this.thirdAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.thirdAnswerCheckBox.TabIndex = 24;
@@ -212,7 +212,7 @@
             this.startTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startTestButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startTestButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.startTestButton.Location = new System.Drawing.Point(259, 145);
+            this.startTestButton.Location = new System.Drawing.Point(228, 142);
             this.startTestButton.Name = "startTestButton";
             this.startTestButton.Size = new System.Drawing.Size(383, 41);
             this.startTestButton.TabIndex = 26;
@@ -222,12 +222,12 @@
             // 
             // questionLabel
             // 
-            this.questionLabel.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.questionLabel.Location = new System.Drawing.Point(6, 61);
+            this.questionLabel.Location = new System.Drawing.Point(12, 61);
             this.questionLabel.MaximumSize = new System.Drawing.Size(946, 90);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(873, 81);
+            this.questionLabel.Size = new System.Drawing.Size(850, 68);
             this.questionLabel.TabIndex = 27;
             this.questionLabel.Text = "Вопрос";
             // 
