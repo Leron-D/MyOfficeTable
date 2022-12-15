@@ -244,9 +244,8 @@
             this.timerLabel.ForeColor = System.Drawing.Color.DarkCyan;
             this.timerLabel.Location = new System.Drawing.Point(801, 71);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(94, 27);
+            this.timerLabel.Size = new System.Drawing.Size(0, 27);
             this.timerLabel.TabIndex = 28;
-            this.timerLabel.Text = "Таймер";
             // 
             // panel1
             // 
