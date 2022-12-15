@@ -17,6 +17,7 @@ namespace MyOfficeTable
             InitializeComponent();
             rightNumLabel.Text = rightNum.ToString();
             markLabel.Text = mark.ToString();
+            headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
         }
 
         private void CollapseButton_Click(object sender, EventArgs e)
@@ -26,14 +27,6 @@ namespace MyOfficeTable
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Close();
-        }
-
-        private void TestResultForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Hide();
-            MainForm form = new MainForm();
-            form.ShowDialog();
             Close();
         }
     }

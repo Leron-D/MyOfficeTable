@@ -47,7 +47,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(200, 36);
+            this.headerLabel.Location = new System.Drawing.Point(209, 24);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(194, 41);
             this.headerLabel.TabIndex = 18;
@@ -99,7 +99,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(357, 117);
+            this.label3.Location = new System.Drawing.Point(366, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 27);
             this.label3.TabIndex = 35;
@@ -113,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label4.Location = new System.Drawing.Point(400, 117);
+            this.label4.Location = new System.Drawing.Point(409, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 27);
             this.label4.TabIndex = 36;
@@ -194,7 +194,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TestResultForm";
             this.Text = "TestResultForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestResultForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
