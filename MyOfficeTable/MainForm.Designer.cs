@@ -36,6 +36,7 @@
             this.collapseButton = new System.Windows.Forms.Button();
             this.referenceButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.goToTestingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goToTestingButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goToTestingButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goToTestingButton.Location = new System.Drawing.Point(145, 207);
+            this.goToTestingButton.Location = new System.Drawing.Point(158, 237);
             this.goToTestingButton.Name = "goToTestingButton";
             this.goToTestingButton.Size = new System.Drawing.Size(279, 52);
             this.goToTestingButton.TabIndex = 8;
@@ -61,7 +62,7 @@
             this.goToTheoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goToTheoryButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goToTheoryButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goToTheoryButton.Location = new System.Drawing.Point(145, 130);
+            this.goToTheoryButton.Location = new System.Drawing.Point(158, 160);
             this.goToTheoryButton.Name = "goToTheoryButton";
             this.goToTheoryButton.Size = new System.Drawing.Size(279, 52);
             this.goToTheoryButton.TabIndex = 7;
@@ -76,7 +77,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(126, 38);
+            this.headerLabel.Location = new System.Drawing.Point(141, 42);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(345, 41);
             this.headerLabel.TabIndex = 6;
@@ -89,7 +90,7 @@
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(527, 2);
+            this.cancelButton.Location = new System.Drawing.Point(556, 2);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 11;
@@ -103,7 +104,7 @@
             this.collapseButton.FlatAppearance.BorderSize = 0;
             this.collapseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.collapseButton.Image = global::MyOfficeTable.Properties.Resources.collapse;
-            this.collapseButton.Location = new System.Drawing.Point(486, 2);
+            this.collapseButton.Location = new System.Drawing.Point(515, 2);
             this.collapseButton.Name = "collapseButton";
             this.collapseButton.Size = new System.Drawing.Size(35, 32);
             this.collapseButton.TabIndex = 10;
@@ -114,12 +115,12 @@
             // referenceButton
             // 
             this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
             this.referenceButton.FlatAppearance.BorderSize = 0;
             this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
             this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.referenceButton.Location = new System.Drawing.Point(536, 264);
+            this.referenceButton.Location = new System.Drawing.Point(565, 302);
             this.referenceButton.Name = "referenceButton";
             this.referenceButton.Size = new System.Drawing.Size(22, 29);
             this.referenceButton.TabIndex = 9;
@@ -136,12 +137,21 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Location = new System.Drawing.Point(-1, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(597, 19);
+            this.panel1.TabIndex = 31;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(561, 294);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(590, 332);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.collapseButton);
             this.Controls.Add(this.referenceButton);
@@ -173,5 +183,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button collapseButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }

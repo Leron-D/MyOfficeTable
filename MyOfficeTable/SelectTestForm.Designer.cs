@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.referenceButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +76,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(148, 33);
+            this.headerLabel.Location = new System.Drawing.Point(148, 41);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(242, 41);
             this.headerLabel.TabIndex = 14;
@@ -84,12 +85,12 @@
             // 
             // selectThemeComboBox
             // 
-            this.selectThemeComboBox.BackColor = System.Drawing.Color.White;
+            this.selectThemeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.selectThemeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.selectThemeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectThemeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selectThemeComboBox.FormattingEnabled = true;
-            this.selectThemeComboBox.Location = new System.Drawing.Point(38, 113);
+            this.selectThemeComboBox.Location = new System.Drawing.Point(38, 142);
             this.selectThemeComboBox.Name = "selectThemeComboBox";
             this.selectThemeComboBox.Size = new System.Drawing.Size(481, 33);
             this.selectThemeComboBox.TabIndex = 15;
@@ -103,7 +104,7 @@
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goBackButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goBackButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goBackButton.Location = new System.Drawing.Point(12, 250);
+            this.goBackButton.Location = new System.Drawing.Point(0, 280);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(129, 36);
             this.goBackButton.TabIndex = 16;
@@ -120,7 +121,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button1.Location = new System.Drawing.Point(155, 170);
+            this.button1.Location = new System.Drawing.Point(155, 198);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(226, 54);
             this.button1.TabIndex = 17;
@@ -141,12 +142,12 @@
             // referenceButton
             // 
             this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
             this.referenceButton.FlatAppearance.BorderSize = 0;
             this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
             this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.referenceButton.Location = new System.Drawing.Point(534, 267);
+            this.referenceButton.Location = new System.Drawing.Point(534, 287);
             this.referenceButton.Name = "referenceButton";
             this.referenceButton.Size = new System.Drawing.Size(22, 29);
             this.referenceButton.TabIndex = 19;
@@ -154,12 +155,21 @@
             this.referenceButton.UseVisualStyleBackColor = false;
             this.referenceButton.Click += new System.EventHandler(this.ReferenceButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Location = new System.Drawing.Point(0, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(597, 19);
+            this.panel1.TabIndex = 32;
+            // 
             // SelectTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(557, 298);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(557, 317);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.referenceButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -193,5 +203,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button referenceButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }

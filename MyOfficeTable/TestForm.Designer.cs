@@ -55,7 +55,7 @@
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(842, 1);
+            this.cancelButton.Location = new System.Drawing.Point(1095, 1);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 15;
@@ -69,7 +69,7 @@
             this.collapseButton.FlatAppearance.BorderSize = 0;
             this.collapseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.collapseButton.Image = global::MyOfficeTable.Properties.Resources.collapse;
-            this.collapseButton.Location = new System.Drawing.Point(801, 1);
+            this.collapseButton.Location = new System.Drawing.Point(1054, 1);
             this.collapseButton.Name = "collapseButton";
             this.collapseButton.Size = new System.Drawing.Size(35, 32);
             this.collapseButton.TabIndex = 14;
@@ -85,7 +85,7 @@
             this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
             this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.referenceButton.Location = new System.Drawing.Point(773, -234);
+            this.referenceButton.Location = new System.Drawing.Point(1026, -200);
             this.referenceButton.Name = "referenceButton";
             this.referenceButton.Size = new System.Drawing.Size(22, 29);
             this.referenceButton.TabIndex = 16;
@@ -114,7 +114,7 @@
             this.goNextQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goNextQuestionButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goNextQuestionButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goNextQuestionButton.Location = new System.Drawing.Point(600, 271);
+            this.goNextQuestionButton.Location = new System.Drawing.Point(853, 305);
             this.goNextQuestionButton.Name = "goNextQuestionButton";
             this.goNextQuestionButton.Size = new System.Drawing.Size(273, 36);
             this.goNextQuestionButton.TabIndex = 18;
@@ -166,7 +166,7 @@
             this.firstAnswerCheckBox.AutoSize = true;
             this.firstAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.firstAnswerCheckBox.Location = new System.Drawing.Point(258, 240);
+            this.firstAnswerCheckBox.Location = new System.Drawing.Point(12, 308);
             this.firstAnswerCheckBox.Name = "firstAnswerCheckBox";
             this.firstAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.firstAnswerCheckBox.TabIndex = 22;
@@ -178,7 +178,7 @@
             this.secondAnswerCheckBox.AutoSize = true;
             this.secondAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondAnswerCheckBox.Location = new System.Drawing.Point(382, 240);
+            this.secondAnswerCheckBox.Location = new System.Drawing.Point(136, 308);
             this.secondAnswerCheckBox.Name = "secondAnswerCheckBox";
             this.secondAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.secondAnswerCheckBox.TabIndex = 23;
@@ -190,7 +190,7 @@
             this.thirdAnswerCheckBox.AutoSize = true;
             this.thirdAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thirdAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(506, 240);
+            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(260, 308);
             this.thirdAnswerCheckBox.Name = "thirdAnswerCheckBox";
             this.thirdAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.thirdAnswerCheckBox.TabIndex = 24;
@@ -200,7 +200,7 @@
             // answerTextBox
             // 
             this.answerTextBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox.Location = new System.Drawing.Point(258, 198);
+            this.answerTextBox.Location = new System.Drawing.Point(12, 266);
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(352, 36);
             this.answerTextBox.TabIndex = 25;
@@ -213,7 +213,7 @@
             this.startTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startTestButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startTestButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.startTestButton.Location = new System.Drawing.Point(283, 145);
+            this.startTestButton.Location = new System.Drawing.Point(413, 194);
             this.startTestButton.Name = "startTestButton";
             this.startTestButton.Size = new System.Drawing.Size(297, 41);
             this.startTestButton.TabIndex = 26;
@@ -228,7 +228,7 @@
             this.questionLabel.Location = new System.Drawing.Point(12, 71);
             this.questionLabel.MaximumSize = new System.Drawing.Size(850, 90);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(850, 58);
+            this.questionLabel.Size = new System.Drawing.Size(774, 58);
             this.questionLabel.TabIndex = 27;
             this.questionLabel.Text = "Вопрос";
             // 
@@ -242,7 +242,7 @@
             this.timerLabel.AutoSize = true;
             this.timerLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.timerLabel.Location = new System.Drawing.Point(12, 271);
+            this.timerLabel.Location = new System.Drawing.Point(801, 71);
             this.timerLabel.Name = "timerLabel";
             this.timerLabel.Size = new System.Drawing.Size(94, 27);
             this.timerLabel.TabIndex = 28;
@@ -253,15 +253,15 @@
             this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Location = new System.Drawing.Point(-1, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 10);
+            this.panel1.Size = new System.Drawing.Size(1127, 22);
             this.panel1.TabIndex = 29;
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(874, 309);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1127, 343);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.timerLabel);

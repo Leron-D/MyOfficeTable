@@ -141,14 +141,14 @@
             this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1139, 10);
+            this.panel1.Size = new System.Drawing.Size(1137, 19);
             this.panel1.TabIndex = 30;
             // 
             // TheoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleGreen;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 707);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelButton);
