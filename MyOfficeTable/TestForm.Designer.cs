@@ -205,6 +205,7 @@
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(352, 36);
             this.answerTextBox.TabIndex = 25;
+            this.answerTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnswerTextBox_KeyDown);
             // 
             // startTestButton
             // 

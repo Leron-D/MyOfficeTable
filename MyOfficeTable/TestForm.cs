@@ -267,5 +267,17 @@ namespace MyOfficeTable
             MainForm form = new MainForm();
             form.ShowDialog();
         }
+
+        private void AnswerTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                var question = MessageBox.Show("Вы уверены, что хотите продолжить?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(question == DialogResult.Yes)
+                {
+                    GoNextQuestionButton_Click(sender, e);
+                }
+            }
+        }
     }
 }
