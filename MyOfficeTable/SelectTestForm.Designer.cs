@@ -76,7 +76,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(148, 41);
+            this.headerLabel.Location = new System.Drawing.Point(99, 54);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(242, 41);
             this.headerLabel.TabIndex = 14;
@@ -132,9 +132,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 71);
+            this.pictureBox1.Size = new System.Drawing.Size(93, 102);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;

@@ -39,7 +39,7 @@ namespace MyOfficeTable
             {
                 startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
                 startTestButton.Top = (ClientSize.Height - startTestButton.Height) / 2;
-                headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
+                progressBar.Left = (ClientSize.Width - progressBar.Width) / 2;
                 firstAnswerCheckBox.Location = answerTextBox.Location = new Point(12, 144);
                 secondAnswerCheckBox.Location = new Point(12, 181);
                 thirdAnswerCheckBox.Location = new Point(12, 218);
@@ -97,6 +97,7 @@ namespace MyOfficeTable
         private void StartTestButton_Click(object sender, EventArgs e)
         {
             startTestButton.Visible = false;
+            progressBar.Visible = true;
             GetXml();
         }
 
@@ -253,6 +254,8 @@ namespace MyOfficeTable
 
         private void GoNextQuestionButton_Click(object sender, EventArgs e)
         {
+            if (numQuestion <= 9)
+                progressBar.Value += 30;
             CheckСorrectness();
             ChangeVisibilityButtons();
             GetXml();

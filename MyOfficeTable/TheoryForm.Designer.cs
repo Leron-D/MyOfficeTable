@@ -107,7 +107,7 @@
             // referenceButton
             // 
             this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
             this.referenceButton.FlatAppearance.BorderSize = 0;
             this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.referenceButton.ForeColor = System.Drawing.Color.Transparent;

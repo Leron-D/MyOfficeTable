@@ -47,6 +47,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -255,12 +256,24 @@
             this.panel1.Size = new System.Drawing.Size(1127, 22);
             this.panel1.TabIndex = 29;
             // 
+            // progressBar
+            // 
+            this.progressBar.ForeColor = System.Drawing.Color.Teal;
+            this.progressBar.Location = new System.Drawing.Point(413, 316);
+            this.progressBar.Maximum = 330;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(300, 23);
+            this.progressBar.TabIndex = 30;
+            this.progressBar.Value = 30;
+            this.progressBar.Visible = false;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1127, 343);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.timerLabel);
@@ -311,5 +324,6 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }

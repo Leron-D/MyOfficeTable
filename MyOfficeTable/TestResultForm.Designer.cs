@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestResultForm));
             this.headerLabel = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(209, 24);
+            this.headerLabel.Location = new System.Drawing.Point(209, 19);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(194, 41);
             this.headerLabel.TabIndex = 18;
@@ -59,7 +60,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.Teal;
-            this.panel.Location = new System.Drawing.Point(0, 80);
+            this.panel.Location = new System.Drawing.Point(0, 63);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(637, 19);
             this.panel.TabIndex = 32;
@@ -71,7 +72,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(12, 117);
+            this.label1.Location = new System.Drawing.Point(9, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(307, 27);
             this.label1.TabIndex = 33;
@@ -85,7 +86,7 @@
             this.rightNumLabel.AutoSize = true;
             this.rightNumLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rightNumLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.rightNumLabel.Location = new System.Drawing.Point(325, 117);
+            this.rightNumLabel.Location = new System.Drawing.Point(322, 103);
             this.rightNumLabel.Name = "rightNumLabel";
             this.rightNumLabel.Size = new System.Drawing.Size(27, 27);
             this.rightNumLabel.TabIndex = 34;
@@ -99,7 +100,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(366, 117);
+            this.label3.Location = new System.Drawing.Point(363, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 27);
             this.label3.TabIndex = 35;
@@ -113,7 +114,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label4.Location = new System.Drawing.Point(409, 117);
+            this.label4.Location = new System.Drawing.Point(406, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 27);
             this.label4.TabIndex = 36;
@@ -127,7 +128,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(12, 166);
+            this.label2.Location = new System.Drawing.Point(9, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 27);
             this.label2.TabIndex = 37;
@@ -141,7 +142,7 @@
             this.markLabel.AutoSize = true;
             this.markLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.markLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.markLabel.Location = new System.Drawing.Point(180, 166);
+            this.markLabel.Location = new System.Drawing.Point(177, 152);
             this.markLabel.Name = "markLabel";
             this.markLabel.Size = new System.Drawing.Size(27, 27);
             this.markLabel.TabIndex = 38;
@@ -180,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 245);
+            this.ClientSize = new System.Drawing.Size(635, 205);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.collapseButton);
             this.Controls.Add(this.markLabel);
@@ -192,8 +193,13 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.headerLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestResultForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestResultForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
