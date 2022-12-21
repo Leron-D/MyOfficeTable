@@ -45,10 +45,12 @@
             this.questionLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.fourthAnswerCheckBox = new System.Windows.Forms.CheckBox();
             this.headerLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.numOfQuestionLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -159,7 +161,7 @@
             this.firstAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.firstAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.firstAnswerCheckBox.Location = new System.Drawing.Point(12, 308);
+            this.firstAnswerCheckBox.Location = new System.Drawing.Point(135, 145);
             this.firstAnswerCheckBox.Name = "firstAnswerCheckBox";
             this.firstAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.firstAnswerCheckBox.TabIndex = 22;
@@ -172,7 +174,7 @@
             this.secondAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.secondAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondAnswerCheckBox.Location = new System.Drawing.Point(136, 308);
+            this.secondAnswerCheckBox.Location = new System.Drawing.Point(135, 183);
             this.secondAnswerCheckBox.Name = "secondAnswerCheckBox";
             this.secondAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.secondAnswerCheckBox.TabIndex = 23;
@@ -185,7 +187,7 @@
             this.thirdAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.thirdAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thirdAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(260, 308);
+            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(135, 220);
             this.thirdAnswerCheckBox.Name = "thirdAnswerCheckBox";
             this.thirdAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.thirdAnswerCheckBox.TabIndex = 24;
@@ -245,24 +247,13 @@
             this.timerLabel.Size = new System.Drawing.Size(0, 27);
             this.timerLabel.TabIndex = 28;
             // 
-            // progressBar
-            // 
-            this.progressBar.ForeColor = System.Drawing.Color.Teal;
-            this.progressBar.Location = new System.Drawing.Point(413, 316);
-            this.progressBar.Maximum = 330;
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(300, 23);
-            this.progressBar.TabIndex = 30;
-            this.progressBar.Value = 30;
-            this.progressBar.Visible = false;
-            // 
             // fourthAnswerCheckBox
             // 
             this.fourthAnswerCheckBox.AutoSize = true;
             this.fourthAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.fourthAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fourthAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.fourthAnswerCheckBox.Location = new System.Drawing.Point(370, 268);
+            this.fourthAnswerCheckBox.Location = new System.Drawing.Point(259, 145);
             this.fourthAnswerCheckBox.Name = "fourthAnswerCheckBox";
             this.fourthAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.fourthAnswerCheckBox.TabIndex = 31;
@@ -289,8 +280,47 @@
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Location = new System.Drawing.Point(-1, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1127, 22);
+            this.panel1.Size = new System.Drawing.Size(1141, 22);
             this.panel1.TabIndex = 29;
+            // 
+            // numOfQuestionLabel
+            // 
+            this.numOfQuestionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.numOfQuestionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOfQuestionLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.numOfQuestionLabel.Location = new System.Drawing.Point(490, 309);
+            this.numOfQuestionLabel.MaximumSize = new System.Drawing.Size(850, 90);
+            this.numOfQuestionLabel.Name = "numOfQuestionLabel";
+            this.numOfQuestionLabel.Size = new System.Drawing.Size(45, 32);
+            this.numOfQuestionLabel.TabIndex = 32;
+            this.numOfQuestionLabel.Text = "#";
+            this.numOfQuestionLabel.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.Location = new System.Drawing.Point(541, 309);
+            this.label2.MaximumSize = new System.Drawing.Size(850, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 32);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "из";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label3.Location = new System.Drawing.Point(592, 309);
+            this.label3.MaximumSize = new System.Drawing.Size(850, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 32);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "10";
+            this.label3.Visible = false;
             // 
             // TestForm
             // 
@@ -299,8 +329,10 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1127, 343);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.numOfQuestionLabel);
             this.Controls.Add(this.fourthAnswerCheckBox);
-            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.timerLabel);
@@ -349,9 +381,11 @@
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timerLabel;
-        private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.CheckBox fourthAnswerCheckBox;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label numOfQuestionLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

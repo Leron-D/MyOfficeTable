@@ -18,6 +18,7 @@ namespace MyOfficeTable
     public partial class TestForm : Form
     {
         int mark = 0;
+        int numOfQuestion = 1;
         int[] questionsArray = new int[15] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
         int numQuestion = 0;
         int seconds = 0;
@@ -39,7 +40,6 @@ namespace MyOfficeTable
             {
                 startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
                 startTestButton.Top = (ClientSize.Height - startTestButton.Height) / 2;
-                progressBar.Left = (ClientSize.Width - progressBar.Width) / 2;
                 firstAnswerCheckBox.Location = answerTextBox.Location = new Point(12, 144);
                 secondAnswerCheckBox.Location = new Point(12, 181);
                 thirdAnswerCheckBox.Location = new Point(12, 218);
@@ -71,7 +71,14 @@ namespace MyOfficeTable
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Close();
+            if (numOfQuestionLabel.Text != "#")
+            {
+                var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (message == DialogResult.Yes)
+                    Close();
+            }
+            else
+                Close();
         }
 
         private void TestForm_MouseDown(object sender, MouseEventArgs e)
@@ -98,7 +105,8 @@ namespace MyOfficeTable
         private void StartTestButton_Click(object sender, EventArgs e)
         {
             startTestButton.Visible = false;
-            progressBar.Visible = true;
+            numOfQuestionLabel.Visible = label2.Visible = label3.Visible = true;
+            numOfQuestionLabel.Text = $"{numOfQuestion}";
             GetXml();
         }
 
@@ -261,8 +269,8 @@ namespace MyOfficeTable
 
         private void GoNextQuestionButton_Click(object sender, EventArgs e)
         {
-            if (numQuestion <= 9)
-                progressBar.Value += 30;
+            numOfQuestion++;
+            numOfQuestionLabel.Text = $"{numOfQuestion}";
             CheckСorrectness();
             ChangeVisibilityButtons();
             GetXml();

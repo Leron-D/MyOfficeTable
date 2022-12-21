@@ -10,18 +10,14 @@ using System.Windows.Forms;
 
 namespace MyOfficeTable
 {
-    public partial class MainForm : Form
+    public partial class SelectActionForm : Form
     {
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        public MainForm()
+        public SelectActionForm()
         {
             InitializeComponent();
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(referenceButton, "Справка о программе");
-            toolTip.SetToolTip(collapseButton, "Свернуть");
-            toolTip.SetToolTip(cancelButton, "Закрыть");
         }
 
         private void CollapseButton_Click(object sender, EventArgs e)
@@ -31,32 +27,28 @@ namespace MyOfficeTable
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Close();
-        }
-
-        private void GoToTheoryButton_Click(object sender, EventArgs e)
-        {
             Hide();
-            TheoryForm form = new TheoryForm();
+            MainForm form = new MainForm();
             form.ShowDialog();
             Close();
         }
 
-        private void GoToTestingButton_Click(object sender, EventArgs e)
+        private void GoBackButton_Click(object sender, EventArgs e)
         {
             Hide();
-            SelectActionForm form = new SelectActionForm();
+            MainForm form = new MainForm();
             form.ShowDialog();
             Close();
         }
-        private void MainForm_MouseDown(object sender, MouseEventArgs e)
+
+        private void SelectActionForm_MouseDown(object sender, MouseEventArgs e)
         {
             isMouseDown = true;
             mouseOffset = Cursor.Position;
             currentOffset = this.Location;
         }
 
-        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        private void SelectActionForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (isMouseDown)
             {
@@ -65,9 +57,17 @@ namespace MyOfficeTable
             }
         }
 
-        private void MainForm_MouseUp(object sender, MouseEventArgs e)
+        private void SelectActionForm_MouseUp(object sender, MouseEventArgs e)
         {
             isMouseDown = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SelectTestForm form = new SelectTestForm();
+            form.ShowDialog();
+            Close();
         }
     }
 }

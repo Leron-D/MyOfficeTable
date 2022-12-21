@@ -78,9 +78,9 @@
             this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
             this.headerLabel.Location = new System.Drawing.Point(148, 30);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(242, 41);
+            this.headerLabel.Size = new System.Drawing.Size(230, 41);
             this.headerLabel.TabIndex = 14;
-            this.headerLabel.Text = "Выбор главы";
+            this.headerLabel.Text = "Выбор темы";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // selectThemeComboBox

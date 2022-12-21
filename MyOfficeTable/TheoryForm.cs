@@ -23,6 +23,9 @@ namespace MyOfficeTable
             toolTip.SetToolTip(referenceButton, "Справка о программе");
             toolTip.SetToolTip(collapseButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
+            firstChapterButton.Text = "I глава\nРабота в приложении\nв «МойОфис Таблица»";
+            secondChapterButton.Text = "II глава\nРабота с файлами\nв «МойОфис Таблица»";
+            thirdChapterButton.Text = "III глава\nВставка элементов\nв таблицу";
             webBrowser.Navigate(Directory.GetCurrentDirectory() + @"\Lections\Lection.html");
         }
 
@@ -63,6 +66,33 @@ namespace MyOfficeTable
         private void TheoryForm_MouseUp(object sender, MouseEventArgs e)
         {
             isMouseDown = false;
+        }
+
+        private void firstChapterButton_Click(object sender, EventArgs e)
+        {
+            HtmlElement sectionAnchor = webBrowser.Document.GetElementById("firstChapter");
+            if (sectionAnchor != null)
+            {
+                sectionAnchor.ScrollIntoView(true);
+            }
+        }
+
+        private void secondChapterButton_Click(object sender, EventArgs e)
+        {
+            HtmlElement sectionAnchor = webBrowser.Document.GetElementById("secondChapter");
+            if (sectionAnchor != null)
+            {
+                sectionAnchor.ScrollIntoView(true);
+            }
+        }
+
+        private void thirdChapterButton_Click(object sender, EventArgs e)
+        {
+            HtmlElement sectionAnchor = webBrowser.Document.GetElementById("thirdChapter");
+            if (sectionAnchor != null)
+            {
+                sectionAnchor.ScrollIntoView(true);
+            }
         }
     }
 }
