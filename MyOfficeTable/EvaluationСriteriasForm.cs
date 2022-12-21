@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +11,15 @@ using System.Windows.Forms;
 
 namespace MyOfficeTable
 {
-    public partial class SelectActionForm : Form
+    public partial class EvaluationСriteriasForm : Form
     {
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        public SelectActionForm()
+        public EvaluationСriteriasForm()
         {
             InitializeComponent();
+            webBrowser.Navigate(Directory.GetCurrentDirectory() + @"\Lections\EvaulationCriterias.html");
         }
 
         private void CollapseButton_Click(object sender, EventArgs e)
@@ -27,6 +29,9 @@ namespace MyOfficeTable
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            Hide();
+            MainForm form = new MainForm();
+            form.ShowDialog();
             Close();
         }
 
@@ -59,18 +64,10 @@ namespace MyOfficeTable
             isMouseDown = false;
         }
 
-        private void GoToSelectTestButton_Click(object sender, EventArgs e)
+        private void GoBackButton_Click_1(object sender, EventArgs e)
         {
             Hide();
-            SelectTestForm form = new SelectTestForm();
-            form.ShowDialog();
-            Close();
-        }
-
-        private void GoToEvaulationCriterias_Click(object sender, EventArgs e)
-        {
-            Hide();
-            EvaluationСriteriasForm form = new EvaluationСriteriasForm();
+            SelectActionForm form = new SelectActionForm();
             form.ShowDialog();
             Close();
         }

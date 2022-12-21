@@ -30,12 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.referenceButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.goToEvaulationCriterias = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
             this.headerLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
             this.collapseButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.goToSelectTestButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,21 +61,22 @@
             this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.referenceButton.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // goToEvaulationCriterias
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.goToEvaulationCriterias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Turquoise;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button1.Location = new System.Drawing.Point(128, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(323, 48);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Критерии оценивания";
-            this.button1.UseVisualStyleBackColor = false;
+            this.goToEvaulationCriterias.BackColor = System.Drawing.Color.Turquoise;
+            this.goToEvaulationCriterias.FlatAppearance.BorderSize = 0;
+            this.goToEvaulationCriterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goToEvaulationCriterias.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goToEvaulationCriterias.ForeColor = System.Drawing.Color.DarkCyan;
+            this.goToEvaulationCriterias.Location = new System.Drawing.Point(132, 129);
+            this.goToEvaulationCriterias.Name = "goToEvaulationCriterias";
+            this.goToEvaulationCriterias.Size = new System.Drawing.Size(310, 48);
+            this.goToEvaulationCriterias.TabIndex = 38;
+            this.goToEvaulationCriterias.Text = "Критерии оценивания";
+            this.goToEvaulationCriterias.UseVisualStyleBackColor = false;
+            this.goToEvaulationCriterias.Click += new System.EventHandler(this.GoToEvaulationCriterias_Click);
             // 
             // goBackButton
             // 
@@ -86,9 +87,9 @@
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goBackButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goBackButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goBackButton.Location = new System.Drawing.Point(2, 289);
+            this.goBackButton.Location = new System.Drawing.Point(-3, 293);
             this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(121, 36);
+            this.goBackButton.Size = new System.Drawing.Size(130, 36);
             this.goBackButton.TabIndex = 37;
             this.goBackButton.Text = "Назад";
             this.goBackButton.UseVisualStyleBackColor = false;
@@ -138,22 +139,22 @@
             this.collapseButton.UseVisualStyleBackColor = false;
             this.collapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
             // 
-            // button2
+            // goToSelectTestButton
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.goToSelectTestButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Turquoise;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button2.Location = new System.Drawing.Point(128, 196);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(323, 48);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Выбор темы";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.goToSelectTestButton.BackColor = System.Drawing.Color.Turquoise;
+            this.goToSelectTestButton.FlatAppearance.BorderSize = 0;
+            this.goToSelectTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goToSelectTestButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goToSelectTestButton.ForeColor = System.Drawing.Color.DarkCyan;
+            this.goToSelectTestButton.Location = new System.Drawing.Point(132, 196);
+            this.goToSelectTestButton.Name = "goToSelectTestButton";
+            this.goToSelectTestButton.Size = new System.Drawing.Size(310, 48);
+            this.goToSelectTestButton.TabIndex = 41;
+            this.goToSelectTestButton.Text = "Перейти к тестированию";
+            this.goToSelectTestButton.UseVisualStyleBackColor = false;
+            this.goToSelectTestButton.Click += new System.EventHandler(this.GoToSelectTestButton_Click);
             // 
             // SelectActionForm
             // 
@@ -161,16 +162,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(580, 328);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.goToSelectTestButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.referenceButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.goToEvaulationCriterias);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.collapseButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SelectActionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectActionForm";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectActionForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SelectActionForm_MouseMove);
@@ -184,11 +186,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button referenceButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button goToEvaulationCriterias;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button collapseButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button goToSelectTestButton;
     }
 }

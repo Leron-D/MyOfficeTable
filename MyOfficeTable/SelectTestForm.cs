@@ -38,7 +38,7 @@ namespace MyOfficeTable
         private void GoBackButton_Click(object sender, EventArgs e)
         {
             Hide();
-            MainForm form = new MainForm();
+            SelectActionForm form = new SelectActionForm();
             form.ShowDialog();
             Close();
         }
