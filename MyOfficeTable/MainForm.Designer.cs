@@ -87,6 +87,7 @@
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.BackColor = System.Drawing.Color.Transparent;
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
@@ -95,12 +96,13 @@
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 11;
             this.cancelButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // collapseButton
             // 
             this.collapseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.collapseButton.BackColor = System.Drawing.Color.Transparent;
             this.collapseButton.FlatAppearance.BorderSize = 0;
             this.collapseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.collapseButton.Image = global::MyOfficeTable.Properties.Resources.collapse;
@@ -109,7 +111,7 @@
             this.collapseButton.Size = new System.Drawing.Size(35, 32);
             this.collapseButton.TabIndex = 10;
             this.collapseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.collapseButton.UseVisualStyleBackColor = true;
+            this.collapseButton.UseVisualStyleBackColor = false;
             this.collapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
             // 
             // referenceButton
@@ -119,7 +121,6 @@
             this.referenceButton.FlatAppearance.BorderSize = 0;
             this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
             this.referenceButton.Location = new System.Drawing.Point(565, 302);
             this.referenceButton.Name = "referenceButton";
             this.referenceButton.Size = new System.Drawing.Size(22, 29);
@@ -129,7 +130,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(99, 100);
@@ -149,7 +150,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(590, 332);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelButton);
@@ -159,6 +161,7 @@
             this.Controls.Add(this.goToTheoryButton);
             this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

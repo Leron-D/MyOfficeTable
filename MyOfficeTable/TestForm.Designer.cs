@@ -33,7 +33,6 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.collapseButton = new System.Windows.Forms.Button();
             this.referenceButton = new System.Windows.Forms.Button();
-            this.headerLabel = new System.Windows.Forms.Label();
             this.goNextQuestionButton = new System.Windows.Forms.Button();
             this.firstAnswerRadioButton = new System.Windows.Forms.RadioButton();
             this.secondAnswerRadioButton = new System.Windows.Forms.RadioButton();
@@ -46,13 +45,16 @@
             this.questionLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.fourthAnswerCheckBox = new System.Windows.Forms.CheckBox();
+            this.headerLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.BackColor = System.Drawing.Color.Transparent;
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
@@ -61,12 +63,13 @@
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 15;
             this.cancelButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // collapseButton
             // 
             this.collapseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.collapseButton.BackColor = System.Drawing.Color.Transparent;
             this.collapseButton.FlatAppearance.BorderSize = 0;
             this.collapseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.collapseButton.Image = global::MyOfficeTable.Properties.Resources.collapse;
@@ -75,7 +78,7 @@
             this.collapseButton.Size = new System.Drawing.Size(35, 32);
             this.collapseButton.TabIndex = 14;
             this.collapseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.collapseButton.UseVisualStyleBackColor = true;
+            this.collapseButton.UseVisualStyleBackColor = false;
             this.collapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
             // 
             // referenceButton
@@ -85,27 +88,12 @@
             this.referenceButton.FlatAppearance.BorderSize = 0;
             this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
             this.referenceButton.Location = new System.Drawing.Point(1026, -200);
             this.referenceButton.Name = "referenceButton";
             this.referenceButton.Size = new System.Drawing.Size(22, 29);
             this.referenceButton.TabIndex = 16;
             this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.referenceButton.UseVisualStyleBackColor = false;
-            // 
-            // headerLabel
-            // 
-            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(5, 2);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(258, 41);
-            this.headerLabel.TabIndex = 17;
-            this.headerLabel.Text = "Тестирование";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // goNextQuestionButton
             // 
@@ -126,6 +114,7 @@
             // firstAnswerRadioButton
             // 
             this.firstAnswerRadioButton.AutoSize = true;
+            this.firstAnswerRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.firstAnswerRadioButton.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
             this.firstAnswerRadioButton.Location = new System.Drawing.Point(12, 145);
@@ -134,11 +123,12 @@
             this.firstAnswerRadioButton.TabIndex = 19;
             this.firstAnswerRadioButton.TabStop = true;
             this.firstAnswerRadioButton.Text = "Ответ 1";
-            this.firstAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.firstAnswerRadioButton.UseVisualStyleBackColor = false;
             // 
             // secondAnswerRadioButton
             // 
             this.secondAnswerRadioButton.AutoSize = true;
+            this.secondAnswerRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.secondAnswerRadioButton.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
             this.secondAnswerRadioButton.Location = new System.Drawing.Point(12, 182);
@@ -147,11 +137,12 @@
             this.secondAnswerRadioButton.TabIndex = 20;
             this.secondAnswerRadioButton.TabStop = true;
             this.secondAnswerRadioButton.Text = "Ответ 2";
-            this.secondAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.secondAnswerRadioButton.UseVisualStyleBackColor = false;
             // 
             // thirdAnswerRadioButton
             // 
             this.thirdAnswerRadioButton.AutoSize = true;
+            this.thirdAnswerRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.thirdAnswerRadioButton.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thirdAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
             this.thirdAnswerRadioButton.Location = new System.Drawing.Point(12, 219);
@@ -160,11 +151,12 @@
             this.thirdAnswerRadioButton.TabIndex = 21;
             this.thirdAnswerRadioButton.TabStop = true;
             this.thirdAnswerRadioButton.Text = "Ответ 3";
-            this.thirdAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.thirdAnswerRadioButton.UseVisualStyleBackColor = false;
             // 
             // firstAnswerCheckBox
             // 
             this.firstAnswerCheckBox.AutoSize = true;
+            this.firstAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.firstAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
             this.firstAnswerCheckBox.Location = new System.Drawing.Point(12, 308);
@@ -172,11 +164,12 @@
             this.firstAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.firstAnswerCheckBox.TabIndex = 22;
             this.firstAnswerCheckBox.Text = "Ответ 1";
-            this.firstAnswerCheckBox.UseVisualStyleBackColor = true;
+            this.firstAnswerCheckBox.UseVisualStyleBackColor = false;
             // 
             // secondAnswerCheckBox
             // 
             this.secondAnswerCheckBox.AutoSize = true;
+            this.secondAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.secondAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
             this.secondAnswerCheckBox.Location = new System.Drawing.Point(136, 308);
@@ -184,11 +177,12 @@
             this.secondAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.secondAnswerCheckBox.TabIndex = 23;
             this.secondAnswerCheckBox.Text = "Ответ 2";
-            this.secondAnswerCheckBox.UseVisualStyleBackColor = true;
+            this.secondAnswerCheckBox.UseVisualStyleBackColor = false;
             // 
             // thirdAnswerCheckBox
             // 
             this.thirdAnswerCheckBox.AutoSize = true;
+            this.thirdAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.thirdAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thirdAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
             this.thirdAnswerCheckBox.Location = new System.Drawing.Point(260, 308);
@@ -196,7 +190,7 @@
             this.thirdAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.thirdAnswerCheckBox.TabIndex = 24;
             this.thirdAnswerCheckBox.Text = "Ответ 3";
-            this.thirdAnswerCheckBox.UseVisualStyleBackColor = true;
+            this.thirdAnswerCheckBox.UseVisualStyleBackColor = false;
             // 
             // answerTextBox
             // 
@@ -215,7 +209,7 @@
             this.startTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startTestButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startTestButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.startTestButton.Location = new System.Drawing.Point(413, 194);
+            this.startTestButton.Location = new System.Drawing.Point(413, 162);
             this.startTestButton.Name = "startTestButton";
             this.startTestButton.Size = new System.Drawing.Size(297, 41);
             this.startTestButton.TabIndex = 26;
@@ -225,12 +219,13 @@
             // 
             // questionLabel
             // 
+            this.questionLabel.BackColor = System.Drawing.Color.Transparent;
             this.questionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.DarkCyan;
             this.questionLabel.Location = new System.Drawing.Point(12, 71);
             this.questionLabel.MaximumSize = new System.Drawing.Size(850, 90);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(774, 58);
+            this.questionLabel.Size = new System.Drawing.Size(801, 58);
             this.questionLabel.TabIndex = 27;
             this.questionLabel.Text = "Вопрос";
             // 
@@ -242,20 +237,13 @@
             // timerLabel
             // 
             this.timerLabel.AutoSize = true;
+            this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.timerLabel.Location = new System.Drawing.Point(801, 71);
+            this.timerLabel.Location = new System.Drawing.Point(839, 71);
             this.timerLabel.Name = "timerLabel";
             this.timerLabel.Size = new System.Drawing.Size(0, 27);
             this.timerLabel.TabIndex = 28;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Location = new System.Drawing.Point(-1, 46);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1127, 22);
-            this.panel1.TabIndex = 29;
             // 
             // progressBar
             // 
@@ -268,12 +256,50 @@
             this.progressBar.Value = 30;
             this.progressBar.Visible = false;
             // 
+            // fourthAnswerCheckBox
+            // 
+            this.fourthAnswerCheckBox.AutoSize = true;
+            this.fourthAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.fourthAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fourthAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
+            this.fourthAnswerCheckBox.Location = new System.Drawing.Point(370, 268);
+            this.fourthAnswerCheckBox.Name = "fourthAnswerCheckBox";
+            this.fourthAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
+            this.fourthAnswerCheckBox.TabIndex = 31;
+            this.fourthAnswerCheckBox.Text = "Ответ 4";
+            this.fourthAnswerCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.headerLabel.Location = new System.Drawing.Point(5, 2);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(258, 41);
+            this.headerLabel.TabIndex = 17;
+            this.headerLabel.Text = "Тестирование";
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.Location = new System.Drawing.Point(-1, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1127, 22);
+            this.panel1.TabIndex = 29;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1127, 343);
+            this.Controls.Add(this.fourthAnswerCheckBox);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.questionLabel);
@@ -311,7 +337,6 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button collapseButton;
         private System.Windows.Forms.Button referenceButton;
-        private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Button goNextQuestionButton;
         private System.Windows.Forms.RadioButton firstAnswerRadioButton;
         private System.Windows.Forms.RadioButton secondAnswerRadioButton;
@@ -324,7 +349,9 @@
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timerLabel;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.CheckBox fourthAnswerCheckBox;
+        private System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Panel panel1;
     }
 }

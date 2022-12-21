@@ -118,35 +118,56 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="picture3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="collapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\collapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lection" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\lection.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="MyOfficeTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\myofficetable.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="picture15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MyOfficeTable1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\myofficetable.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="picture20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MyOfficeTable2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lections\myofficetable.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Работа_в_приложении_МойОфис_Таблица" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\tests\работа в приложении мойофис таблица.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Lection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\lection.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="picture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lections\picture1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="picture16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="picture10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lections\picture10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="picture13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lections\picture13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,47 +175,8 @@
   <data name="picture14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lections\picture14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="picture15" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture17" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture18" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture19" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="picture2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lections\picture2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\lections\picture9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +184,28 @@
   <data name="savePict" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lections\savepict.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Работа_в_приложении_МойОфис_Таблица" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\tests\работа в приложении мойофис таблица.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="collapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\collapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MyOfficeTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\myofficetable.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picture9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lections\picture9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="фон_S97zP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\фон.s97zp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

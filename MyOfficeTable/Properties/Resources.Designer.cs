@@ -383,5 +383,15 @@ namespace MyOfficeTable.Properties {
                 return ResourceManager.GetString("Работа_в_приложении_МойОфис_Таблица", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap фон_S97zP {
+            get {
+                object obj = ResourceManager.GetObject("фон_S97zP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

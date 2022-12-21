@@ -43,6 +43,7 @@ namespace MyOfficeTable
                 firstAnswerCheckBox.Location = answerTextBox.Location = new Point(12, 144);
                 secondAnswerCheckBox.Location = new Point(12, 181);
                 thirdAnswerCheckBox.Location = new Point(12, 218);
+                fourthAnswerCheckBox.Location = new Point(12, 255);
                 ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(collapseButton, "Свернуть");
                 toolTip.SetToolTip(cancelButton, "Закрыть");
@@ -104,7 +105,7 @@ namespace MyOfficeTable
         void ChangeVisibilityButtons()
         {
             firstAnswerRadioButton.Visible = secondAnswerRadioButton.Visible = thirdAnswerRadioButton.Visible = firstAnswerCheckBox.Visible = timerLabel.Visible = goNextQuestionButton.Visible =
-                secondAnswerCheckBox.Visible = thirdAnswerCheckBox.Visible = answerTextBox.Visible = firstAnswerRadioButton.Checked = secondAnswerRadioButton.Checked = 
+                secondAnswerCheckBox.Visible = thirdAnswerCheckBox.Visible = fourthAnswerCheckBox.Visible = answerTextBox.Visible = firstAnswerRadioButton.Checked = secondAnswerRadioButton.Checked = 
                 thirdAnswerRadioButton.Checked = firstAnswerCheckBox.Checked = secondAnswerCheckBox.Checked = thirdAnswerCheckBox.Checked = questionLabel.Visible = false;
             answerTextBox.Text = "";
         }
@@ -147,9 +148,15 @@ namespace MyOfficeTable
                     XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
                     XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
                     XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
+                    XmlNode answer4 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer4");
                     firstAnswerCheckBox.Text = answer1.Value;
                     secondAnswerCheckBox.Text = answer2.Value;
-                    thirdAnswerCheckBox.Text = answer3.Value;
+                    thirdAnswerCheckBox.Text = answer3.Value;                    
+                    if(answer4 != null)
+                    {
+                        fourthAnswerCheckBox.Visible = true;                        
+                        fourthAnswerCheckBox.Text = answer4.Value;
+                    }
                 }
                 else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "String")
                 {

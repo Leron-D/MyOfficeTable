@@ -42,6 +42,7 @@
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.BackColor = System.Drawing.Color.Transparent;
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
@@ -50,12 +51,13 @@
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 13;
             this.cancelButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // collapseButton
             // 
             this.collapseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.collapseButton.BackColor = System.Drawing.Color.Transparent;
             this.collapseButton.FlatAppearance.BorderSize = 0;
             this.collapseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.collapseButton.Image = global::MyOfficeTable.Properties.Resources.collapse;
@@ -64,7 +66,7 @@
             this.collapseButton.Size = new System.Drawing.Size(35, 32);
             this.collapseButton.TabIndex = 12;
             this.collapseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.collapseButton.UseVisualStyleBackColor = true;
+            this.collapseButton.UseVisualStyleBackColor = false;
             this.collapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
             // 
             // headerLabel
@@ -83,14 +85,15 @@
             // 
             // selectThemeComboBox
             // 
-            this.selectThemeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.selectThemeComboBox.BackColor = System.Drawing.Color.LightGray;
             this.selectThemeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.selectThemeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selectThemeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectThemeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectThemeComboBox.ForeColor = System.Drawing.Color.DarkCyan;
             this.selectThemeComboBox.FormattingEnabled = true;
-            this.selectThemeComboBox.Location = new System.Drawing.Point(38, 128);
+            this.selectThemeComboBox.Location = new System.Drawing.Point(25, 127);
             this.selectThemeComboBox.Name = "selectThemeComboBox";
-            this.selectThemeComboBox.Size = new System.Drawing.Size(481, 33);
+            this.selectThemeComboBox.Size = new System.Drawing.Size(508, 33);
             this.selectThemeComboBox.TabIndex = 15;
             // 
             // goBackButton
@@ -119,7 +122,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button1.Location = new System.Drawing.Point(155, 184);
+            this.button1.Location = new System.Drawing.Point(155, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(226, 54);
             this.button1.TabIndex = 17;
@@ -155,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(557, 292);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.referenceButton);
