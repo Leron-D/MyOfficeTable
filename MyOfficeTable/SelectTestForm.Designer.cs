@@ -144,7 +144,6 @@
             this.referenceButton.TabIndex = 19;
             this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.referenceButton.UseVisualStyleBackColor = false;
-            this.referenceButton.Click += new System.EventHandler(this.ReferenceButton_Click);
             // 
             // panel1
             // 

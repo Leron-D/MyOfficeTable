@@ -52,11 +52,6 @@ namespace MyOfficeTable
             Close();
         }
 
-        private void ReferenceButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void GoToTestButton_Click(object sender, EventArgs e)
         {
             try
