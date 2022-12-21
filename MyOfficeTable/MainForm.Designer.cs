@@ -34,10 +34,9 @@
             this.headerLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
             this.collapseButton = new System.Windows.Forms.Button();
-            this.referenceButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.referenceButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,20 +114,6 @@
             this.collapseButton.UseVisualStyleBackColor = false;
             this.collapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
             // 
-            // referenceButton
-            // 
-            this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
-            this.referenceButton.FlatAppearance.BorderSize = 0;
-            this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Location = new System.Drawing.Point(565, 302);
-            this.referenceButton.Name = "referenceButton";
-            this.referenceButton.Size = new System.Drawing.Size(22, 29);
-            this.referenceButton.TabIndex = 9;
-            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.referenceButton.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -147,20 +132,21 @@
             this.panel1.Size = new System.Drawing.Size(597, 19);
             this.panel1.TabIndex = 31;
             // 
-            // button1
+            // referenceButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.button1.Location = new System.Drawing.Point(565, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 29);
-            this.button1.TabIndex = 40;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
+            this.referenceButton.FlatAppearance.BorderSize = 0;
+            this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
+            this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
+            this.referenceButton.Location = new System.Drawing.Point(565, 301);
+            this.referenceButton.Name = "referenceButton";
+            this.referenceButton.Size = new System.Drawing.Size(22, 29);
+            this.referenceButton.TabIndex = 40;
+            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.referenceButton.UseVisualStyleBackColor = false;
+            this.referenceButton.Click += new System.EventHandler(this.ReferenceButton_Click);
             // 
             // MainForm
             // 
@@ -169,11 +155,10 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(590, 332);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.referenceButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.collapseButton);
-            this.Controls.Add(this.referenceButton);
             this.Controls.Add(this.goToTestingButton);
             this.Controls.Add(this.goToTheoryButton);
             this.Controls.Add(this.headerLabel);
@@ -195,8 +180,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button referenceButton;
         private System.Windows.Forms.Button goToTestingButton;
         private System.Windows.Forms.Button goToTheoryButton;
         private System.Windows.Forms.Label headerLabel;
@@ -204,6 +187,6 @@
         private System.Windows.Forms.Button collapseButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button referenceButton;
     }
 }

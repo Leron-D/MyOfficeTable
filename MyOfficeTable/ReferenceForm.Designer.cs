@@ -72,7 +72,11 @@
             this.Controls.Add(this.collapseButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReferenceForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReferenceForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseUp);
             this.ResumeLayout(false);
 
         }

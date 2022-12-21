@@ -69,5 +69,11 @@ namespace MyOfficeTable
         {
             isMouseDown = false;
         }
+
+        private void ReferenceButton_Click(object sender, EventArgs e)
+        {
+            ReferenceForm form = new ReferenceForm();
+            form.ShowDialog();
+        }
     }
 }
