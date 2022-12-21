@@ -35,7 +35,6 @@
             this.selectThemeComboBox = new System.Windows.Forms.ComboBox();
             this.goBackButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.referenceButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -130,21 +129,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.GoToTestButton_Click);
             // 
-            // referenceButton
-            // 
-            this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
-            this.referenceButton.FlatAppearance.BorderSize = 0;
-            this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.referenceButton.Location = new System.Drawing.Point(534, 262);
-            this.referenceButton.Name = "referenceButton";
-            this.referenceButton.Size = new System.Drawing.Size(22, 29);
-            this.referenceButton.TabIndex = 19;
-            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.referenceButton.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
@@ -160,7 +144,6 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(557, 292);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.referenceButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.selectThemeComboBox);
@@ -189,7 +172,6 @@
         private System.Windows.Forms.ComboBox selectThemeComboBox;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button referenceButton;
         private System.Windows.Forms.Panel panel1;
     }
 }
