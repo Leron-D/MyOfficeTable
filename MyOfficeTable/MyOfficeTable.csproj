@@ -137,6 +137,7 @@
   <ItemGroup>
     <Content Include="Resources\cancel.png" />
     <Content Include="Resources\collapse.png" />
+    <Content Include="Resources\EvaulationCriterias.html" />
     <Content Include="Resources\Lections\Lection.html" />
     <Content Include="Resources\Lections\MyOfficeTable.jpg" />
     <Content Include="Resources\Lections\picture1.jpg" />
