@@ -1,0 +1,17 @@
+<Array>
+	<Question Type="String" Text="В каком формате могут быть использованы файлы в качестве шаблона?" True="xots"></Question>
+	<Question Type="String" Text="Какую команду необходимо выбрать в меню Файл, чтобы создать новый документ на основе шаблона?" True="создать по шаблону"></Question>
+	<Question Type="String" Text="Какая команда в меню Файл позволяет открыть файл?" True="открыть"></Question>
+	<Question Type="String" Text="Какая команда в меню Файл позволяет открыть недавно открывавшуюся таблицу?" True="недавние документы"></Question>
+	<Question Type="String" Text="Какой параметр очищает недавно открывавшиеся документы?" True="очистить"></Question>
+	<Question Type="Single" Text="Новый пустой документ создаётся автоматически ..." Answer1="При закрытии приложения" Answer2="При запуске приложения" Answer3="При сворачивании окна" True="При запуске приложения"></Question>
+	<Question Type="Single" Text="Какая команда позволяет сделать шаблон из таблицы?" Answer1="Файл - Создать по шаблону" Answer2="Файл - Сохранить как" Answer3="Файл - Сохранить шаблон" True="Файл - Сохранить шаблон"></Question>
+	<Question Type="Single" Text="Сколько имён последних открывавшихся файлов запоминает «МойОфис Таблица»?" Answer1="Десять" Answer2="Пять" Answer3="Восемнадцать" True="Десять"></Question>
+	<Question Type="Single" Text="«МойОфис Таблица» позволяет сохранять файлы в форматах ..." Answer1="xlsx, docx, doc" Answer2="xlsx, csv, xods" Answer3="xlsx, ods, xods" True="xlsx, ods, xods"></Question>
+	<Question Type="Single" Text="Какую кнопку необходимо нажать при закрытии несохранённого документа в окне запроса для того, чтобы продолжить работу без изменений?" Answer1="Сохранить" Answer2="Не сохранять" Answer3="Отмена" True="Отмена"></Question>
+	<Question Type="Multiple" Text="Как можно создать пустой документ в процессе работы" Answer1="Файл - создать" Answer2="Ctrl+L" Answer3="Ctrl+N" True="Файл - создатьCtrl+N"></Question>
+	<Question Type="Multiple" Text="Какие из перечисленных форматов файлов позволяют открывать и редактировать «МойОфис Таблица»?" Answer1="csv" Answer2="docx" Answer3="xls" True="csvxls"></Question>
+	<Question Type="Multiple" Text="Какие команды в меню Файл позволяют сохранить таблицу?" Answer1="Экспорт" Answer2="Сохранить" Answer3="Сохранить как" True="СохранитьСохранить как"></Question>
+	<Question Type="Multiple" Text="Как можно экспортировать файл в «МойОфис Таблица»?" Answer1="Файл - Экспорт" Answer2="Печать - Экспорт в pdf" Answer3="Файл - Сохранить как" True="Файл - ЭкспортПечать - Экспорт в pdf"></Question>
+	<Question Type="Multiple" Text="Как можно закрыть файл в «МойОфис Таблица»?" Answer1="Сохранить файл" Answer2="Нажать на кнопку Закрыть" Answer3="Файл - Закрыть" True="Нажать на кнопку ЗакрытьФайл - Закрыть"></Question>
+</Array>
