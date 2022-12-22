@@ -174,7 +174,9 @@
     <Content Include="Resources\MyOfficeTable.ico" />
     <Content Include="Resources\MyOfficeTable.jpg" />
     <Content Include="Resources\question.png" />
+    <Content Include="Resources\Tests\Вставка элементов в таблицу.xml" />
     <Content Include="Resources\Tests\Работа в приложении МойОфис Таблица.xml" />
+    <Content Include="Resources\Tests\Работа с файлами в «МойОфис Таблица».xml" />
     <Content Include="Resources\фон.S97zP.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
