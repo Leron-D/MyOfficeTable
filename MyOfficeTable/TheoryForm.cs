@@ -20,7 +20,6 @@ namespace MyOfficeTable
         {
             InitializeComponent();
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(referenceButton, "Справка о программе");
             toolTip.SetToolTip(collapseButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
             firstChapterButton.Text = "I глава\nРабота в приложении\nв «МойОфис Таблица»";

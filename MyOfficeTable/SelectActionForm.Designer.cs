@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.referenceButton = new System.Windows.Forms.Button();
             this.goToEvaulationCriterias = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
             this.headerLabel = new System.Windows.Forms.Label();
@@ -45,21 +44,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(596, 19);
             this.panel1.TabIndex = 40;
-            // 
-            // referenceButton
-            // 
-            this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
-            this.referenceButton.FlatAppearance.BorderSize = 0;
-            this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.referenceButton.Location = new System.Drawing.Point(555, 296);
-            this.referenceButton.Name = "referenceButton";
-            this.referenceButton.Size = new System.Drawing.Size(22, 29);
-            this.referenceButton.TabIndex = 39;
-            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.referenceButton.UseVisualStyleBackColor = false;
             // 
             // goToEvaulationCriterias
             // 
@@ -164,7 +148,6 @@
             this.ClientSize = new System.Drawing.Size(580, 328);
             this.Controls.Add(this.goToSelectTestButton);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.referenceButton);
             this.Controls.Add(this.goToEvaulationCriterias);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.headerLabel);
@@ -185,7 +168,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button referenceButton;
         private System.Windows.Forms.Button goToEvaulationCriterias;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Label headerLabel;

@@ -123,59 +123,62 @@ namespace MyOfficeTable
 
         void GetXml()
         {
-            questionLabel.Visible = timerLabel.Visible = goNextQuestionButton.Visible = true;
-
-            XmlDocument xDoc = new XmlDocument();
-            xDoc.Load(testName);
-            XmlElement xRoot = xDoc.DocumentElement;
-            if (xRoot != null)
+            try
             {
-                XmlNodeList a = xDoc.GetElementsByTagName("Question");
-                XmlNode question = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Text");
-                questionLabel.Text = $"Вопрос {numQuestion + 1}. {question.Value}";
-                if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Single")
+                questionLabel.Visible = timerLabel.Visible = goNextQuestionButton.Visible = true;
+
+                XmlDocument xDoc = new XmlDocument();
+                xDoc.Load(testName);
+                XmlElement xRoot = xDoc.DocumentElement;
+                if (xRoot != null)
                 {
-                    seconds = 30;
-                    timer.Start();
-                    firstAnswerRadioButton.Visible = true;
-                    secondAnswerRadioButton.Visible = true;
-                    thirdAnswerRadioButton.Visible = true;
-                    successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
-                    XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
-                    XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
-                    XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
-                    firstAnswerRadioButton.Text = answer1.Value;
-                    secondAnswerRadioButton.Text = answer2.Value;
-                    thirdAnswerRadioButton.Text = answer3.Value;
-                }
-                else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Multiple")
-                {
-                    seconds = 60;
-                    timer.Start();
-                    firstAnswerCheckBox.Visible = true;
-                    secondAnswerCheckBox.Visible = true;
-                    thirdAnswerCheckBox.Visible = true;
-                    successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
-                    XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
-                    XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
-                    XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
-                    XmlNode answer4 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer4");
-                    firstAnswerCheckBox.Text = answer1.Value;
-                    secondAnswerCheckBox.Text = answer2.Value;
-                    thirdAnswerCheckBox.Text = answer3.Value;                    
-                    if(answer4 != null)
+                    XmlNodeList a = xDoc.GetElementsByTagName("Question");
+                    XmlNode question = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Text");
+                    questionLabel.Text = $"Вопрос {numQuestion + 1}. {question.Value}";
+                    if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Single")
                     {
-                        fourthAnswerCheckBox.Visible = true;                        
-                        fourthAnswerCheckBox.Text = answer4.Value;
+                        seconds = 30;
+                        timer.Start();
+                        firstAnswerRadioButton.Visible = secondAnswerRadioButton.Visible = thirdAnswerRadioButton.Visible = true;
+                        successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
+                        XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
+                        XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
+                        XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
+                        firstAnswerRadioButton.Text = answer1.Value;
+                        secondAnswerRadioButton.Text = answer2.Value;
+                        thirdAnswerRadioButton.Text = answer3.Value;
+                    }
+                    else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Multiple")
+                    {
+                        seconds = 60;
+                        timer.Start();
+                        firstAnswerCheckBox.Visible = secondAnswerCheckBox.Visible = thirdAnswerCheckBox.Visible = true;
+                        successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
+                        XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
+                        XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
+                        XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
+                        XmlNode answer4 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer4");
+                        firstAnswerCheckBox.Text = answer1.Value;
+                        secondAnswerCheckBox.Text = answer2.Value;
+                        thirdAnswerCheckBox.Text = answer3.Value;
+                        if (answer4 != null)
+                        {
+                            fourthAnswerCheckBox.Visible = true;
+                            fourthAnswerCheckBox.Text = answer4.Value;
+                        }
+                    }
+                    else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "String")
+                    {
+                        seconds = 90;
+                        timer.Start();
+                        answerTextBox.Visible = true;
+                        successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                     }
                 }
-                else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "String")
-                {
-                    seconds = 90;
-                    timer.Start();
-                    answerTextBox.Visible = true;
-                    successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void CheckСorrectness()
@@ -206,6 +209,8 @@ namespace MyOfficeTable
                         answerString += secondAnswerCheckBox.Text;
                     if (thirdAnswerCheckBox.Checked)
                         answerString += thirdAnswerCheckBox.Text;
+                    if(fourthAnswerCheckBox.Checked)
+                        answerString += fourthAnswerCheckBox.Text;
                     if (answerString == successfulAnswer.Value)
                         mark++;
                 }
@@ -215,9 +220,9 @@ namespace MyOfficeTable
                 if (numQuestion > 9)
                 {
                     timer.Stop();
-                    if (mark > 8.5)
+                    if (mark > 8)
                         OpenResultForm(mark, 5);
-                    else if (mark > 7.5)
+                    else if (mark > 7)
                         OpenResultForm(mark, 4);
                     else if (mark >= 6)
                         OpenResultForm(mark, 3);

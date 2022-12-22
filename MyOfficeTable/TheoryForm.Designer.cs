@@ -34,13 +34,12 @@
             this.headerLabel = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.webBrowser = new System.Windows.Forms.WebBrowser();
-            this.referenceButton = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.firstChapterButton = new System.Windows.Forms.Button();
-            this.secondChapterButton = new System.Windows.Forms.Button();
             this.thirdChapterButton = new System.Windows.Forms.Button();
+            this.secondChapterButton = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -107,21 +106,6 @@
             this.webBrowser.Size = new System.Drawing.Size(1110, 591);
             this.webBrowser.TabIndex = 0;
             // 
-            // referenceButton
-            // 
-            this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
-            this.referenceButton.FlatAppearance.BorderSize = 0;
-            this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.referenceButton.Location = new System.Drawing.Point(1312, 674);
-            this.referenceButton.Name = "referenceButton";
-            this.referenceButton.Size = new System.Drawing.Size(22, 29);
-            this.referenceButton.TabIndex = 10;
-            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.referenceButton.UseVisualStyleBackColor = false;
-            // 
             // goBackButton
             // 
             this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -131,7 +115,7 @@
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goBackButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goBackButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goBackButton.Location = new System.Drawing.Point(0, 671);
+            this.goBackButton.Location = new System.Drawing.Point(12, 667);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(148, 36);
             this.goBackButton.TabIndex = 11;
@@ -174,24 +158,6 @@
             this.firstChapterButton.UseVisualStyleBackColor = false;
             this.firstChapterButton.Click += new System.EventHandler(this.firstChapterButton_Click);
             // 
-            // secondChapterButton
-            // 
-            this.secondChapterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.secondChapterButton.AutoSize = true;
-            this.secondChapterButton.BackColor = System.Drawing.Color.Turquoise;
-            this.secondChapterButton.FlatAppearance.BorderSize = 0;
-            this.secondChapterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.secondChapterButton.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondChapterButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondChapterButton.Location = new System.Drawing.Point(0, 91);
-            this.secondChapterButton.Name = "secondChapterButton";
-            this.secondChapterButton.Size = new System.Drawing.Size(203, 70);
-            this.secondChapterButton.TabIndex = 32;
-            this.secondChapterButton.Text = "II глава";
-            this.secondChapterButton.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.secondChapterButton.UseVisualStyleBackColor = false;
-            this.secondChapterButton.Click += new System.EventHandler(this.secondChapterButton_Click);
-            // 
             // thirdChapterButton
             // 
             this.thirdChapterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -210,6 +176,24 @@
             this.thirdChapterButton.UseVisualStyleBackColor = false;
             this.thirdChapterButton.Click += new System.EventHandler(this.thirdChapterButton_Click);
             // 
+            // secondChapterButton
+            // 
+            this.secondChapterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.secondChapterButton.AutoSize = true;
+            this.secondChapterButton.BackColor = System.Drawing.Color.Turquoise;
+            this.secondChapterButton.FlatAppearance.BorderSize = 0;
+            this.secondChapterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.secondChapterButton.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondChapterButton.ForeColor = System.Drawing.Color.DarkCyan;
+            this.secondChapterButton.Location = new System.Drawing.Point(0, 91);
+            this.secondChapterButton.Name = "secondChapterButton";
+            this.secondChapterButton.Size = new System.Drawing.Size(203, 70);
+            this.secondChapterButton.TabIndex = 32;
+            this.secondChapterButton.Text = "II глава";
+            this.secondChapterButton.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.secondChapterButton.UseVisualStyleBackColor = false;
+            this.secondChapterButton.Click += new System.EventHandler(this.secondChapterButton_Click);
+            // 
             // TheoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,7 +207,6 @@
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.collapseButton);
             this.Controls.Add(this.headerLabel);
-            this.Controls.Add(this.referenceButton);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -247,7 +230,6 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button collapseButton;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Button referenceButton;
         private System.Windows.Forms.WebBrowser webBrowser;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Panel panel1;

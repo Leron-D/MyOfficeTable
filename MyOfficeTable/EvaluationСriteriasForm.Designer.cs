@@ -115,7 +115,7 @@
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goBackButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goBackButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goBackButton.Location = new System.Drawing.Point(-1, 341);
+            this.goBackButton.Location = new System.Drawing.Point(9, 340);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(166, 36);
             this.goBackButton.TabIndex = 53;
@@ -128,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(910, 374);
+            this.ClientSize = new System.Drawing.Size(910, 382);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelButton);
