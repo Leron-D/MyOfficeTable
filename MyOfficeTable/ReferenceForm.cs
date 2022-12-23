@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,11 @@ namespace MyOfficeTable
         public ReferenceForm()
         {
             InitializeComponent();
+            headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
+            titleLabel.Text = "Название: Основы работы в «МойОфис Таблица»";
+            versionLabel.Text = $"Версия программы: {Assembly.GetExecutingAssembly().GetName().Version}";
+            descriptionLabel.Text = "Описание: программа предназначена для самостоятельного изучения материала и самопроверки знаний по теме «Основы работы в «МойОфис Таблица»";
+            creatorLabel.Text = "Создатель: Студент группы ПКС-91 Шаньгин Максим";
         }
 
         private void CollapseButton_Click(object sender, EventArgs e)
