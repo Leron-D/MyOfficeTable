@@ -122,7 +122,7 @@
             this.goBackButton.TabIndex = 53;
             this.goBackButton.Text = "Назад";
             this.goBackButton.UseVisualStyleBackColor = false;
-            this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click_1);
+            this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
             // EvaluationСriteriasForm
             // 
@@ -141,6 +141,9 @@
             this.Name = "EvaluationСriteriasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Критерии оценивания";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseUp);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

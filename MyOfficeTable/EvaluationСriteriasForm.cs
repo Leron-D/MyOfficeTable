@@ -38,19 +38,19 @@ namespace MyOfficeTable
         private void GoBackButton_Click(object sender, EventArgs e)
         {
             Hide();
-            MainForm form = new MainForm();
+            SelectActionForm form = new SelectActionForm();
             form.ShowDialog();
             Close();
         }
 
-        private void SelectActionForm_MouseDown(object sender, MouseEventArgs e)
+        private void EvaluationCriteriasForm_MouseDown(object sender, MouseEventArgs e)
         {
             isMouseDown = true;
             mouseOffset = Cursor.Position;
             currentOffset = this.Location;
         }
 
-        private void SelectActionForm_MouseMove(object sender, MouseEventArgs e)
+        private void EvaluationCriteriasForm_MouseMove(object sender, MouseEventArgs e)
         {
             if (isMouseDown)
             {
@@ -59,17 +59,9 @@ namespace MyOfficeTable
             }
         }
 
-        private void SelectActionForm_MouseUp(object sender, MouseEventArgs e)
+        private void EvaluationCriteriasForm_MouseUp(object sender, MouseEventArgs e)
         {
             isMouseDown = false;
-        }
-
-        private void GoBackButton_Click_1(object sender, EventArgs e)
-        {
-            Hide();
-            SelectActionForm form = new SelectActionForm();
-            form.ShowDialog();
-            Close();
         }
     }
 }
