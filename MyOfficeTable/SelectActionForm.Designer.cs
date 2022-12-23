@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectActionForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.goToEvaulationCriterias = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
@@ -154,6 +155,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.collapseButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectActionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выбор действия";
