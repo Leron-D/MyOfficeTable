@@ -354,7 +354,7 @@
             this.MaximizeBox = false;
             this.Name = "TestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TestForm";
+            this.Text = "Тестирование";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestForm_FormClosed);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseMove);

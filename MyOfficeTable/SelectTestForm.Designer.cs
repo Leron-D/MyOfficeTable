@@ -155,7 +155,7 @@
             this.MaximizeBox = false;
             this.Name = "SelectTestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SelectTestForm";
+            this.Text = "Выбор темы";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseUp);

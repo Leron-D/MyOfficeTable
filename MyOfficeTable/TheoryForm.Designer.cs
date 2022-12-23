@@ -213,7 +213,7 @@
             this.MaximizeBox = false;
             this.Name = "TheoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TheoryForm";
+            this.Text = "Теоретический материал";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TheoryForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TheoryForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TheoryForm_MouseUp);

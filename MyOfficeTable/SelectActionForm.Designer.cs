@@ -156,7 +156,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SelectActionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SelectActionForm";
+            this.Text = "Выбор действия";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectActionForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SelectActionForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SelectActionForm_MouseUp);

@@ -153,7 +153,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReferenceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReferenceForm";
+            this.Text = "О программе";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseUp);

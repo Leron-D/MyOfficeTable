@@ -197,7 +197,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestResultForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TestResultForm";
+            this.Text = "Результаты тестирования";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseUp);
