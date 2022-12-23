@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReferenceForm));
             this.cancelButton = new System.Windows.Forms.Button();
             this.collapseButton = new System.Windows.Forms.Button();
             this.headerLabel = new System.Windows.Forms.Label();
@@ -149,6 +150,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.collapseButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReferenceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReferenceForm";
