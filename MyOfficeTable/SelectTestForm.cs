@@ -86,5 +86,13 @@ namespace MyOfficeTable
         {
             isMouseDown = false;
         }
+
+        private void GoToEvaulationCriterias_Click(object sender, EventArgs e)
+        {
+            Hide();
+            EvaluationСriteriasForm form = new EvaluationСriteriasForm();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

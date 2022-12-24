@@ -153,6 +153,7 @@
             this.goToEvaulationCriterias.TabIndex = 39;
             this.goToEvaulationCriterias.Text = "Посмотреть критерии оценивания";
             this.goToEvaulationCriterias.UseVisualStyleBackColor = false;
+            this.goToEvaulationCriterias.Click += new System.EventHandler(this.GoToEvaulationCriterias_Click);
             // 
             // SelectTestForm
             // 
