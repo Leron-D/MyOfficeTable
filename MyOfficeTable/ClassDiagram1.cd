@@ -6,7 +6,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAAAAQAACQAAABEgACAgAAiAAQAEEABAAAAAQQIAAA=</HashCode>
+      <HashCode>ABAAAAQAACQAAABEgACAgABCAAABEAABAAAAAQQAAAg=</HashCode>
       <FileName>EvaluationСriteriasForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -21,7 +21,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.Program">
-    <Position X="2.25" Y="3.5" Width="1.5" />
+    <Position X="5.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -33,27 +33,17 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABCAAAQAACQAAAAAgACAgAUCAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <HashCode>ABCAAAQAECQAAAAAgACAgAUCAACAAAABAAIAAAQAAAA=</HashCode>
       <FileName>ReferenceForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MyOfficeTable.SelectActionForm">
-    <Position X="0.5" Y="4" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AhAAAAQAACQAAABUgACAgAAiAAAAEEABAAAAAQQIAIA=</HashCode>
-      <FileName>SelectActionForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="MyOfficeTable.SelectTestForm">
-    <Position X="5.75" Y="4" Width="1.5" />
+    <Position X="2.25" Y="3.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAAAAQAACQAAABAgECAgAACAAEIEgAJAAAAAQUCAAA=</HashCode>
+      <HashCode>ABAAAAQAACQAAABQgECAgAACAAEIEgAJAAAAAQUCAIA=</HashCode>
       <FileName>SelectTestForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -68,7 +58,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.TestResultForm">
-    <Position X="2.25" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="3.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -83,7 +73,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AhBAAAQAACQAAEBFgACAsAADAAACUAABAAAAAQQAAAA=</HashCode>
+      <HashCode>ABBAAAQAACQAAEBFgACAsAADAAACUAABAAAAAQQAAAA=</HashCode>
       <FileName>TheoryForm.cs</FileName>
     </TypeIdentifier>
   </Class>
