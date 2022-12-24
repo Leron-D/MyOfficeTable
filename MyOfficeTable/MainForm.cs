@@ -45,7 +45,7 @@ namespace MyOfficeTable
         private void GoToTestingButton_Click(object sender, EventArgs e)
         {
             Hide();
-            SelectActionForm form = new SelectActionForm();
+            SelectTestForm form = new SelectTestForm();
             form.ShowDialog();
             Close();
         }
