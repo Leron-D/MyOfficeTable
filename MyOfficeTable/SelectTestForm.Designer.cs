@@ -36,6 +36,7 @@
             this.goBackButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.goToEvaulationCriterias = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -104,7 +105,7 @@
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goBackButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goBackButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goBackButton.Location = new System.Drawing.Point(0, 256);
+            this.goBackButton.Location = new System.Drawing.Point(0, 318);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(129, 36);
             this.goBackButton.TabIndex = 16;
@@ -121,9 +122,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button1.Location = new System.Drawing.Point(155, 166);
+            this.button1.Location = new System.Drawing.Point(67, 182);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 54);
+            this.button1.Size = new System.Drawing.Size(414, 44);
             this.button1.TabIndex = 17;
             this.button1.Text = "Перейти к тесту";
             this.button1.UseVisualStyleBackColor = false;
@@ -137,12 +138,29 @@
             this.panel1.Size = new System.Drawing.Size(566, 19);
             this.panel1.TabIndex = 32;
             // 
+            // goToEvaulationCriterias
+            // 
+            this.goToEvaulationCriterias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.goToEvaulationCriterias.BackColor = System.Drawing.Color.Turquoise;
+            this.goToEvaulationCriterias.FlatAppearance.BorderSize = 0;
+            this.goToEvaulationCriterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goToEvaulationCriterias.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goToEvaulationCriterias.ForeColor = System.Drawing.Color.DarkCyan;
+            this.goToEvaulationCriterias.Location = new System.Drawing.Point(67, 246);
+            this.goToEvaulationCriterias.Name = "goToEvaulationCriterias";
+            this.goToEvaulationCriterias.Size = new System.Drawing.Size(414, 48);
+            this.goToEvaulationCriterias.TabIndex = 39;
+            this.goToEvaulationCriterias.Text = "Посмотреть критерии оценивания";
+            this.goToEvaulationCriterias.UseVisualStyleBackColor = false;
+            // 
             // SelectTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(557, 292);
+            this.ClientSize = new System.Drawing.Size(557, 354);
+            this.Controls.Add(this.goToEvaulationCriterias);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.goBackButton);
@@ -173,5 +191,6 @@
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button goToEvaulationCriterias;
     }
 }
