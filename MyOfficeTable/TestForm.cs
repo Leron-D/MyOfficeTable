@@ -111,6 +111,7 @@ namespace MyOfficeTable
             numOfQuestionLabel.Visible = label2.Visible = label3.Visible = true;
             numOfQuestionLabel.Text = $"{numOfQuestion}";
             GetXml();
+            timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
         }
 
         void ChangeVisibilityButtons()
@@ -277,11 +278,15 @@ namespace MyOfficeTable
 
         private void GoNextQuestionButton_Click(object sender, EventArgs e)
         {
+            timer.Stop();
             numOfQuestion++;
             numOfQuestionLabel.Text = $"{numOfQuestion}";
             CheckСorrectness();
             ChangeVisibilityButtons();
             GetXml();
+            timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
+            timer.Start();
+
         }
 
         private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
