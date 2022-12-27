@@ -51,6 +51,7 @@
             this.numOfQuestionLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.fourthAnswerRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -60,7 +61,7 @@
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(1095, 1);
+            this.cancelButton.Location = new System.Drawing.Point(1254, 1);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 15;
@@ -75,7 +76,7 @@
             this.collapseButton.FlatAppearance.BorderSize = 0;
             this.collapseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.collapseButton.Image = global::MyOfficeTable.Properties.Resources.collapse;
-            this.collapseButton.Location = new System.Drawing.Point(1054, 1);
+            this.collapseButton.Location = new System.Drawing.Point(1213, 1);
             this.collapseButton.Name = "collapseButton";
             this.collapseButton.Size = new System.Drawing.Size(35, 32);
             this.collapseButton.TabIndex = 14;
@@ -90,7 +91,7 @@
             this.referenceButton.FlatAppearance.BorderSize = 0;
             this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Location = new System.Drawing.Point(1026, -200);
+            this.referenceButton.Location = new System.Drawing.Point(1185, -200);
             this.referenceButton.Name = "referenceButton";
             this.referenceButton.Size = new System.Drawing.Size(22, 29);
             this.referenceButton.TabIndex = 16;
@@ -105,7 +106,7 @@
             this.goNextQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goNextQuestionButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goNextQuestionButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.goNextQuestionButton.Location = new System.Drawing.Point(853, 305);
+            this.goNextQuestionButton.Location = new System.Drawing.Point(1012, 305);
             this.goNextQuestionButton.Name = "goNextQuestionButton";
             this.goNextQuestionButton.Size = new System.Drawing.Size(273, 36);
             this.goNextQuestionButton.TabIndex = 18;
@@ -197,7 +198,7 @@
             // answerTextBox
             // 
             this.answerTextBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox.Location = new System.Drawing.Point(12, 266);
+            this.answerTextBox.Location = new System.Drawing.Point(12, 295);
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(352, 36);
             this.answerTextBox.TabIndex = 25;
@@ -211,7 +212,7 @@
             this.startTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startTestButton.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startTestButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.startTestButton.Location = new System.Drawing.Point(413, 162);
+            this.startTestButton.Location = new System.Drawing.Point(486, 162);
             this.startTestButton.Name = "startTestButton";
             this.startTestButton.Size = new System.Drawing.Size(297, 41);
             this.startTestButton.TabIndex = 26;
@@ -225,9 +226,9 @@
             this.questionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.ForeColor = System.Drawing.Color.DarkCyan;
             this.questionLabel.Location = new System.Drawing.Point(12, 71);
-            this.questionLabel.MaximumSize = new System.Drawing.Size(850, 90);
+            this.questionLabel.MaximumSize = new System.Drawing.Size(900, 90);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(801, 58);
+            this.questionLabel.Size = new System.Drawing.Size(900, 58);
             this.questionLabel.TabIndex = 27;
             this.questionLabel.Text = "Вопрос";
             // 
@@ -242,7 +243,7 @@
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.timerLabel.Location = new System.Drawing.Point(839, 71);
+            this.timerLabel.Location = new System.Drawing.Point(1007, 71);
             this.timerLabel.Name = "timerLabel";
             this.timerLabel.Size = new System.Drawing.Size(0, 27);
             this.timerLabel.TabIndex = 28;
@@ -253,7 +254,7 @@
             this.fourthAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.fourthAnswerCheckBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fourthAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.fourthAnswerCheckBox.Location = new System.Drawing.Point(259, 145);
+            this.fourthAnswerCheckBox.Location = new System.Drawing.Point(135, 256);
             this.fourthAnswerCheckBox.Name = "fourthAnswerCheckBox";
             this.fourthAnswerCheckBox.Size = new System.Drawing.Size(118, 31);
             this.fourthAnswerCheckBox.TabIndex = 31;
@@ -280,7 +281,7 @@
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Location = new System.Drawing.Point(-1, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1141, 22);
+            this.panel1.Size = new System.Drawing.Size(1292, 22);
             this.panel1.TabIndex = 29;
             // 
             // numOfQuestionLabel
@@ -322,13 +323,28 @@
             this.label3.Text = "10";
             this.label3.Visible = false;
             // 
+            // fourthAnswerRadioButton
+            // 
+            this.fourthAnswerRadioButton.AutoSize = true;
+            this.fourthAnswerRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.fourthAnswerRadioButton.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fourthAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
+            this.fourthAnswerRadioButton.Location = new System.Drawing.Point(12, 256);
+            this.fourthAnswerRadioButton.Name = "fourthAnswerRadioButton";
+            this.fourthAnswerRadioButton.Size = new System.Drawing.Size(117, 31);
+            this.fourthAnswerRadioButton.TabIndex = 35;
+            this.fourthAnswerRadioButton.TabStop = true;
+            this.fourthAnswerRadioButton.Text = "Ответ 4";
+            this.fourthAnswerRadioButton.UseVisualStyleBackColor = false;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1127, 343);
+            this.ClientSize = new System.Drawing.Size(1286, 343);
+            this.Controls.Add(this.fourthAnswerRadioButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numOfQuestionLabel);
@@ -387,5 +403,6 @@
         private System.Windows.Forms.Label numOfQuestionLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton fourthAnswerRadioButton;
     }
 }

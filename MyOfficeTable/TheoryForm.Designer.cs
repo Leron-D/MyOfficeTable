@@ -92,9 +92,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.Controls.Add(this.webBrowser);
-            this.panel.Location = new System.Drawing.Point(224, 70);
+            this.panel.Location = new System.Drawing.Point(303, 70);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1110, 591);
+            this.panel.Size = new System.Drawing.Size(1031, 591);
             this.panel.TabIndex = 1;
             // 
             // webBrowser
@@ -103,7 +103,7 @@
             this.webBrowser.Location = new System.Drawing.Point(0, 0);
             this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(1110, 591);
+            this.webBrowser.Size = new System.Drawing.Size(1031, 591);
             this.webBrowser.TabIndex = 0;
             // 
             // goBackButton
@@ -138,7 +138,7 @@
             this.panel2.Controls.Add(this.secondChapterButton);
             this.panel2.Location = new System.Drawing.Point(12, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 591);
+            this.panel2.Size = new System.Drawing.Size(285, 591);
             this.panel2.TabIndex = 31;
             // 
             // firstChapterButton
@@ -147,11 +147,11 @@
             this.firstChapterButton.BackColor = System.Drawing.Color.Turquoise;
             this.firstChapterButton.FlatAppearance.BorderSize = 0;
             this.firstChapterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.firstChapterButton.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstChapterButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstChapterButton.ForeColor = System.Drawing.Color.DarkCyan;
             this.firstChapterButton.Location = new System.Drawing.Point(0, 3);
             this.firstChapterButton.Name = "firstChapterButton";
-            this.firstChapterButton.Size = new System.Drawing.Size(203, 70);
+            this.firstChapterButton.Size = new System.Drawing.Size(282, 89);
             this.firstChapterButton.TabIndex = 31;
             this.firstChapterButton.Text = "I глава";
             this.firstChapterButton.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -165,11 +165,11 @@
             this.thirdChapterButton.BackColor = System.Drawing.Color.Turquoise;
             this.thirdChapterButton.FlatAppearance.BorderSize = 0;
             this.thirdChapterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.thirdChapterButton.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thirdChapterButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thirdChapterButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.thirdChapterButton.Location = new System.Drawing.Point(0, 178);
+            this.thirdChapterButton.Location = new System.Drawing.Point(0, 231);
             this.thirdChapterButton.Name = "thirdChapterButton";
-            this.thirdChapterButton.Size = new System.Drawing.Size(203, 70);
+            this.thirdChapterButton.Size = new System.Drawing.Size(282, 89);
             this.thirdChapterButton.TabIndex = 33;
             this.thirdChapterButton.Text = "III глава";
             this.thirdChapterButton.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -183,11 +183,11 @@
             this.secondChapterButton.BackColor = System.Drawing.Color.Turquoise;
             this.secondChapterButton.FlatAppearance.BorderSize = 0;
             this.secondChapterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.secondChapterButton.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secondChapterButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondChapterButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondChapterButton.Location = new System.Drawing.Point(0, 91);
+            this.secondChapterButton.Location = new System.Drawing.Point(0, 117);
             this.secondChapterButton.Name = "secondChapterButton";
-            this.secondChapterButton.Size = new System.Drawing.Size(203, 70);
+            this.secondChapterButton.Size = new System.Drawing.Size(282, 89);
             this.secondChapterButton.TabIndex = 32;
             this.secondChapterButton.Text = "II глава";
             this.secondChapterButton.TextAlign = System.Drawing.ContentAlignment.TopLeft;

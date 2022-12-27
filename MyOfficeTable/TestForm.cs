@@ -117,8 +117,8 @@ namespace MyOfficeTable
         void ChangeVisibilityButtons()
         {
             firstAnswerRadioButton.Visible = secondAnswerRadioButton.Visible = thirdAnswerRadioButton.Visible = firstAnswerCheckBox.Visible = timerLabel.Visible = goNextQuestionButton.Visible =
-                secondAnswerCheckBox.Visible = thirdAnswerCheckBox.Visible = fourthAnswerCheckBox.Visible = answerTextBox.Visible = firstAnswerRadioButton.Checked = secondAnswerRadioButton.Checked = 
-                thirdAnswerRadioButton.Checked = firstAnswerCheckBox.Checked = secondAnswerCheckBox.Checked = thirdAnswerCheckBox.Checked = questionLabel.Visible = false;
+            secondAnswerCheckBox.Visible = thirdAnswerCheckBox.Visible = fourthAnswerCheckBox.Visible = fourthAnswerCheckBox.Checked = fourthAnswerRadioButton.Visible = fourthAnswerRadioButton.Checked = answerTextBox.Visible = firstAnswerRadioButton.Checked = 
+            secondAnswerRadioButton.Checked = thirdAnswerRadioButton.Checked = firstAnswerCheckBox.Checked = secondAnswerCheckBox.Checked = thirdAnswerCheckBox.Checked = questionLabel.Visible = false;
             answerTextBox.Text = "";
         }
 
@@ -127,7 +127,6 @@ namespace MyOfficeTable
             try
             {
                 questionLabel.Visible = timerLabel.Visible = goNextQuestionButton.Visible = true;
-
                 XmlDocument xDoc = new XmlDocument();
                 xDoc.Load(testName);
                 XmlElement xRoot = xDoc.DocumentElement;
@@ -145,9 +144,15 @@ namespace MyOfficeTable
                         XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
                         XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
                         XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
+                        XmlNode answer4 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer4");
                         firstAnswerRadioButton.Text = answer1.Value;
                         secondAnswerRadioButton.Text = answer2.Value;
                         thirdAnswerRadioButton.Text = answer3.Value;
+                        if (answer4 != null)
+                        {
+                            fourthAnswerRadioButton.Visible = true;
+                            fourthAnswerRadioButton.Text = answer4.Value;
+                        }
                     }
                     else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Multiple")
                     {
@@ -199,6 +204,11 @@ namespace MyOfficeTable
                 else if (thirdAnswerRadioButton.Checked)
                 {
                     if (thirdAnswerRadioButton.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
+                else if (fourthAnswerRadioButton.Checked)
+                {
+                    if (fourthAnswerRadioButton.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
                 if (firstAnswerCheckBox.Visible)
@@ -281,7 +291,7 @@ namespace MyOfficeTable
             timer.Stop();
             numOfQuestion++;
             numOfQuestionLabel.Text = $"{numOfQuestion}";
-            CheckСorrectness();
+            CheckСorrectness();            
             ChangeVisibilityButtons();
             GetXml();
             timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
