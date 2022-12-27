@@ -19,6 +19,9 @@ namespace MyOfficeTable
         public EvaluationСriteriasForm()
         {
             InitializeComponent();
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(collapseButton, "Свернуть");
+            toolTip.SetToolTip(cancelButton, "Закрыть");
             webBrowser.Navigate(Directory.GetCurrentDirectory() + @"\Lections\EvaulationCriterias.html");
         }
 

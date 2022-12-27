@@ -18,6 +18,9 @@ namespace MyOfficeTable
         public TestResultForm(int rightNum, int mark)
         {
             InitializeComponent();
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(collapseButton, "Свернуть");
+            toolTip.SetToolTip(cancelButton, "Закрыть");
             rightNumLabel.Text = rightNum.ToString();
             markLabel.Text = mark.ToString();
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;

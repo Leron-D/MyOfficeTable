@@ -19,6 +19,9 @@ namespace MyOfficeTable
         public ReferenceForm()
         {
             InitializeComponent();
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(collapseButton, "Свернуть");
+            toolTip.SetToolTip(cancelButton, "Закрыть");
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
             titleLabel.Text = "Название: Основы работы в «МойОфис Таблица»";
             versionLabel.Text = $"Версия программы: {Assembly.GetExecutingAssembly().GetName().Version}";
