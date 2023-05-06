@@ -19,14 +19,14 @@ namespace MyOfficeTable
         {
             InitializeComponent();
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(collapseButton, "Свернуть");
+            toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
             rightNumLabel.Text = rightNum.ToString();
             markLabel.Text = mark.ToString();
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
         }
 
-        private void CollapseButton_Click(object sender, EventArgs e)
+        private void MinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }

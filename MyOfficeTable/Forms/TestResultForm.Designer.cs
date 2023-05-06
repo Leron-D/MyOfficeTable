@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestResultForm));
             this.headerLabel = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rightNumLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.markLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.collapseButton = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
+            this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -46,11 +49,11 @@
             this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(209, 19);
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.ForeColor = System.Drawing.Color.White;
+            this.headerLabel.Location = new System.Drawing.Point(253, 52);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(194, 41);
+            this.headerLabel.Size = new System.Drawing.Size(193, 39);
             this.headerLabel.TabIndex = 18;
             this.headerLabel.Text = "Результат";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -59,11 +62,23 @@
             // 
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.Teal;
-            this.panel.Location = new System.Drawing.Point(0, 63);
+            this.panel.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel.Controls.Add(this.pictureBox1);
+            this.panel.Controls.Add(this.headerLabel);
+            this.panel.Location = new System.Drawing.Point(0, 49);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(637, 19);
+            this.panel.Size = new System.Drawing.Size(637, 135);
             this.panel.TabIndex = 32;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -71,8 +86,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(9, 103);
+            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.Location = new System.Drawing.Point(13, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(307, 27);
             this.label1.TabIndex = 33;
@@ -85,8 +100,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rightNumLabel.AutoSize = true;
             this.rightNumLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightNumLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.rightNumLabel.Location = new System.Drawing.Point(322, 103);
+            this.rightNumLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.rightNumLabel.Location = new System.Drawing.Point(326, 215);
             this.rightNumLabel.Name = "rightNumLabel";
             this.rightNumLabel.Size = new System.Drawing.Size(27, 27);
             this.rightNumLabel.TabIndex = 34;
@@ -99,8 +114,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(363, 103);
+            this.label3.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label3.Location = new System.Drawing.Point(367, 215);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 27);
             this.label3.TabIndex = 35;
@@ -113,8 +128,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label4.Location = new System.Drawing.Point(406, 103);
+            this.label4.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label4.Location = new System.Drawing.Point(410, 215);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 27);
             this.label4.TabIndex = 36;
@@ -127,8 +142,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(9, 152);
+            this.label2.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label2.Location = new System.Drawing.Point(13, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 27);
             this.label2.TabIndex = 37;
@@ -141,8 +156,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.markLabel.AutoSize = true;
             this.markLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.markLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.markLabel.Location = new System.Drawing.Point(177, 152);
+            this.markLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.markLabel.Location = new System.Drawing.Point(181, 264);
             this.markLabel.Name = "markLabel";
             this.markLabel.Size = new System.Drawing.Size(27, 27);
             this.markLabel.TabIndex = 38;
@@ -163,28 +178,28 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // collapseButton
+            // minimizeButton
             // 
-            this.collapseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.collapseButton.FlatAppearance.BorderSize = 0;
-            this.collapseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.collapseButton.Image = global::MyOfficeTable.Properties.Resources.collapse;
-            this.collapseButton.Location = new System.Drawing.Point(565, 0);
-            this.collapseButton.Name = "collapseButton";
-            this.collapseButton.Size = new System.Drawing.Size(35, 32);
-            this.collapseButton.TabIndex = 39;
-            this.collapseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.collapseButton.UseVisualStyleBackColor = true;
-            this.collapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
+            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
+            this.minimizeButton.Location = new System.Drawing.Point(565, 0);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(35, 32);
+            this.minimizeButton.TabIndex = 39;
+            this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
             // TestResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(635, 205);
+            this.ClientSize = new System.Drawing.Size(635, 316);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.collapseButton);
+            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.markLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -192,7 +207,6 @@
             this.Controls.Add(this.rightNumLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel);
-            this.Controls.Add(this.headerLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestResultForm";
@@ -201,6 +215,9 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseUp);
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +234,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label markLabel;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button collapseButton;
+        private System.Windows.Forms.Button minimizeButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyOfficeTable.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,16 +16,24 @@ namespace MyOfficeTable
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
+        
         public MainForm()
         {
             InitializeComponent();
+            if(Properties.Settings.Default.IsFirstLoad)
+            {
+                Animator.Start();
+                Properties.Settings.Default.IsFirstLoad = false;
+                Properties.Settings.Default.Save();
+            }
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(referenceButton, "Справка о программе");
-            toolTip.SetToolTip(collapseButton, "Свернуть");
+            toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
+            headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
         }
 
-        private void CollapseButton_Click(object sender, EventArgs e)
+        private void MinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
@@ -34,21 +43,6 @@ namespace MyOfficeTable
             Close();
         }
 
-        private void GoToTheoryButton_Click(object sender, EventArgs e)
-        {
-            Hide();
-            TheoryForm form = new TheoryForm();
-            form.ShowDialog();
-            Close();
-        }
-
-        private void GoToTestingButton_Click(object sender, EventArgs e)
-        {
-            Hide();
-            SelectTestForm form = new SelectTestForm();
-            form.ShowDialog();
-            Close();
-        }
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
             isMouseDown = true;
@@ -74,6 +68,33 @@ namespace MyOfficeTable
         {
             ReferenceForm form = new ReferenceForm();
             form.ShowDialog();
+        }
+
+        private void TheoryButton_Click(object sender, EventArgs e)
+        {
+            GoToSelectTheme(false);
+        }
+
+        private void TestingButton_Click(object sender, EventArgs e)
+        {
+            GoToSelectTheme(true);
+        }
+
+        private void GoToSelectTheme(bool mode)
+        {
+            GoToForm(new SelectThemeForm(mode));
+        }
+
+        private void InteractiveTasksButton_Click(object sender, EventArgs e)
+        {
+            GoToForm(new InstructionForm());
+        }
+
+        void GoToForm(Form form)
+        {
+            Hide();
+            form.ShowDialog();
+            Close();
         }
     }
 }

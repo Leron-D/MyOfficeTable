@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyOfficeTable.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,34 +17,38 @@ namespace MyOfficeTable
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        public EvaluationСriteriasForm()
+        string file = "";
+
+        public EvaluationСriteriasForm(string fileName = "")
         {
             InitializeComponent();
+
+            file = fileName;
+
+            if (Properties.Settings.Default.goFromTheory)
+                goToTestButton.Visible = true;
+            else
+                goToTestButton.Visible = false;
+
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(collapseButton, "Свернуть");
+            toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
-            webBrowser.Navigate(Directory.GetCurrentDirectory() + @"\Lections\EvaulationCriterias.html");
+            webBrowser.Navigate(Directory.GetCurrentDirectory() + @"\Tests\EvaulationCriterias.html");
         }
 
-        private void CollapseButton_Click(object sender, EventArgs e)
+        private void MinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            MainForm form = new MainForm();
-            form.ShowDialog();
-            Close();
+            GoToForm(new MainForm());
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            SelectTestForm form = new SelectTestForm();
-            form.ShowDialog();
-            Close();
+            GoToForm(new SelectThemeForm(true));
         }
 
         private void EvaluationCriteriasForm_MouseDown(object sender, MouseEventArgs e)
@@ -65,6 +70,19 @@ namespace MyOfficeTable
         private void EvaluationCriteriasForm_MouseUp(object sender, MouseEventArgs e)
         {
             isMouseDown = false;
+        }
+
+        private void GoToTestButton_Click(object sender, EventArgs e)
+        {
+            if (file != "")
+                GoToForm(new TestForm(file));
+        }
+
+        void GoToForm(Form form)
+        {
+            Hide();
+            form.ShowDialog();
+            Close();
         }
     }
 }

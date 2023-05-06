@@ -30,12 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReferenceForm));
             this.cancelButton = new System.Windows.Forms.Button();
-            this.collapseButton = new System.Windows.Forms.Button();
-            this.headerLabel = new System.Windows.Forms.Label();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.creatorLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.headerLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -45,7 +49,7 @@
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(592, 2);
+            this.cancelButton.Location = new System.Drawing.Point(786, 2);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 15;
@@ -53,34 +57,20 @@
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // collapseButton
+            // minimizeButton
             // 
-            this.collapseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.collapseButton.BackColor = System.Drawing.Color.Transparent;
-            this.collapseButton.FlatAppearance.BorderSize = 0;
-            this.collapseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.collapseButton.Image = global::MyOfficeTable.Properties.Resources.collapse;
-            this.collapseButton.Location = new System.Drawing.Point(551, 2);
-            this.collapseButton.Name = "collapseButton";
-            this.collapseButton.Size = new System.Drawing.Size(35, 32);
-            this.collapseButton.TabIndex = 14;
-            this.collapseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.collapseButton.UseVisualStyleBackColor = false;
-            this.collapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
-            // 
-            // headerLabel
-            // 
-            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.headerLabel.Location = new System.Drawing.Point(185, 9);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(244, 41);
-            this.headerLabel.TabIndex = 16;
-            this.headerLabel.Text = "О программе";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
+            this.minimizeButton.Location = new System.Drawing.Point(745, 2);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(35, 32);
+            this.minimizeButton.TabIndex = 14;
+            this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
             // creatorLabel
             // 
@@ -89,7 +79,7 @@
             this.creatorLabel.AutoSize = true;
             this.creatorLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creatorLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.creatorLabel.Location = new System.Drawing.Point(12, 352);
+            this.creatorLabel.Location = new System.Drawing.Point(8, 498);
             this.creatorLabel.Name = "creatorLabel";
             this.creatorLabel.Size = new System.Drawing.Size(142, 27);
             this.creatorLabel.TabIndex = 17;
@@ -103,7 +93,7 @@
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.titleLabel.Location = new System.Drawing.Point(12, 92);
+            this.titleLabel.Location = new System.Drawing.Point(8, 238);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(131, 27);
             this.titleLabel.TabIndex = 18;
@@ -117,7 +107,7 @@
             this.versionLabel.AutoSize = true;
             this.versionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.versionLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.versionLabel.Location = new System.Drawing.Point(12, 154);
+            this.versionLabel.Location = new System.Drawing.Point(8, 300);
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(234, 27);
             this.versionLabel.TabIndex = 19;
@@ -130,25 +120,59 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.descriptionLabel.Location = new System.Drawing.Point(12, 221);
+            this.descriptionLabel.Location = new System.Drawing.Point(8, 367);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(574, 117);
+            this.descriptionLabel.Size = new System.Drawing.Size(768, 117);
             this.descriptionLabel.TabIndex = 20;
             this.descriptionLabel.Text = "Описание: ";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.headerLabel);
+            this.panel1.Location = new System.Drawing.Point(-5, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(834, 134);
+            this.panel1.TabIndex = 33;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.ForeColor = System.Drawing.Color.White;
+            this.headerLabel.Location = new System.Drawing.Point(308, 51);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(242, 39);
+            this.headerLabel.TabIndex = 14;
+            this.headerLabel.Text = "О программе";
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ReferenceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(626, 401);
+            this.ClientSize = new System.Drawing.Size(820, 595);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.creatorLabel);
-            this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.collapseButton);
+            this.Controls.Add(this.minimizeButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReferenceForm";
@@ -157,6 +181,9 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ReferenceForm_MouseUp);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,11 +192,13 @@
         #endregion
 
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button collapseButton;
-        private System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Label creatorLabel;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label headerLabel;
     }
 }

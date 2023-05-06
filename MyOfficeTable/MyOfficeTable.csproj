@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +35,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.10.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.10\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="jose-jwt, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jose-jwt.2.4.0\lib\net461\jose-jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1722.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1722.45\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1722.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1722.45\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1722.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1722.45\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly, Version=7.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.7.1.0\lib\netstandard2.0\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.15.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.15.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,19 +76,54 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UriTemplate.Core, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UriTemplate.Core.1.0.2\lib\net461\UriTemplate.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EvaluationСriteriasForm.cs">
+    <Compile Include="Animation\Animation.cs" />
+    <Compile Include="Animation\Animator.cs" />
+    <Compile Include="Controls\ButtonCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MyComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MyRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\EvaluationСriteriasForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EvaluationСriteriasForm.Designer.cs">
+    <Compile Include="Forms\EvaluationСriteriasForm.Designer.cs">
       <DependentUpon>EvaluationСriteriasForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\InstructionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\InstructionForm.Designer.cs">
+      <DependentUpon>InstructionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InteractiveTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InteractiveTaskForm.Designer.cs">
+      <DependentUpon>InteractiveTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResultInteractiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResultInteractiveForm.Designer.cs">
+      <DependentUpon>ResultInteractiveForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,63 +132,73 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ReferenceForm.cs">
+    <Compile Include="Forms\ReferenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReferenceForm.Designer.cs">
+    <Compile Include="Forms\ReferenceForm.Designer.cs">
       <DependentUpon>ReferenceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectTestForm.cs">
+    <Compile Include="Forms\SelectThemeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectTestForm.Designer.cs">
-      <DependentUpon>SelectTestForm.cs</DependentUpon>
+    <Compile Include="Forms\SelectThemeForm.Designer.cs">
+      <DependentUpon>SelectThemeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestForm.cs">
+    <Compile Include="Forms\TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestForm.Designer.cs">
+    <Compile Include="Forms\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestResultForm.cs">
+    <Compile Include="Forms\TestResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestResultForm.Designer.cs">
+    <Compile Include="Forms\TestResultForm.Designer.cs">
       <DependentUpon>TestResultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TheoryForm.cs">
+    <Compile Include="Forms\TheoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TheoryForm.Designer.cs">
+    <Compile Include="Forms\TheoryForm.Designer.cs">
       <DependentUpon>TheoryForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EvaluationСriteriasForm.resx">
+    <EmbeddedResource Include="Forms\EvaluationСriteriasForm.resx">
       <DependentUpon>EvaluationСriteriasForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\InstructionForm.resx">
+      <DependentUpon>InstructionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InteractiveTaskForm.resx">
+      <DependentUpon>InteractiveTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResultInteractiveForm.resx">
+      <DependentUpon>ResultInteractiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReferenceForm.resx">
+    <EmbeddedResource Include="Forms\ReferenceForm.resx">
       <DependentUpon>ReferenceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectTestForm.resx">
-      <DependentUpon>SelectTestForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SelectThemeForm.resx">
+      <DependentUpon>SelectThemeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestForm.resx">
+    <EmbeddedResource Include="Forms\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestResultForm.resx">
+    <EmbeddedResource Include="Forms\TestResultForm.resx">
       <DependentUpon>TestResultForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TheoryForm.resx">
+    <EmbeddedResource Include="Forms\TheoryForm.resx">
       <DependentUpon>TheoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -137,7 +214,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\cancel.png" />
-    <Content Include="Resources\collapse.png" />
+    <None Include="Resources\Cut.jpg" />
+    <None Include="Resources\checked.png" />
     <Content Include="Resources\EvaulationCriterias.html" />
     <Content Include="Resources\Lections\Lection.html" />
     <Content Include="Resources\Lections\MyOfficeTable.jpg" />
@@ -162,13 +240,34 @@
     <Content Include="Resources\Lections\picture8.jpg" />
     <Content Include="Resources\Lections\picture9.jpg" />
     <Content Include="Resources\Lections\savePict.jpg" />
+    <None Include="Resources\minimize.png" />
     <Content Include="Resources\MyOfficeTable.ico" />
     <Content Include="Resources\MyOfficeTable.jpg" />
     <Content Include="Resources\question.png" />
     <Content Include="Resources\Tests\Вставка элементов в таблицу.xml" />
     <Content Include="Resources\Tests\Работа в приложении МойОфис Таблица.xml" />
     <Content Include="Resources\Tests\Работа с файлами в «МойОфис Таблица».xml" />
+    <None Include="Resources\Цвет текста.png" />
+    <None Include="Resources\Цвет заливки.png" />
+    <None Include="Resources\Вставить.png" />
+    <None Include="Resources\Копировать.png" />
+    <None Include="Resources\Копировать_формат.jpg" />
+    <None Include="Resources\Курсив.png" />
+    <None Include="Resources\Печать.png" />
+    <None Include="Resources\Подчёркнутый.png" />
+    <None Include="Resources\Полужирное начертание.jpg" />
+    <None Include="Resources\Сохранить.png" />
+    <None Include="Resources\Все буквы прописные.jpg" />
+    <None Include="Resources\unchecked.png" />
     <Content Include="Resources\фон.S97zP.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1722.45\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1722.45\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.1722.45\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.1722.45\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
 </Project>
