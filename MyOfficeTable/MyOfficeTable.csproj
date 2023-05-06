@@ -127,11 +127,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ReferenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +198,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -217,36 +217,10 @@
     <None Include="Resources\Cut.jpg" />
     <None Include="Resources\checked.png" />
     <Content Include="Resources\EvaulationCriterias.html" />
-    <Content Include="Resources\Lections\Lection.html" />
-    <Content Include="Resources\Lections\MyOfficeTable.jpg" />
-    <Content Include="Resources\Lections\picture1.jpg" />
-    <Content Include="Resources\Lections\picture10.jpg" />
-    <Content Include="Resources\Lections\picture11.jpg" />
-    <Content Include="Resources\Lections\picture12.jpg" />
-    <Content Include="Resources\Lections\picture13.jpg" />
-    <Content Include="Resources\Lections\picture14.jpg" />
-    <Content Include="Resources\Lections\picture15.jpg" />
-    <Content Include="Resources\Lections\picture16.jpg" />
-    <Content Include="Resources\Lections\picture17.jpg" />
-    <Content Include="Resources\Lections\picture18.jpg" />
-    <Content Include="Resources\Lections\picture19.jpg" />
-    <Content Include="Resources\Lections\picture2.jpg" />
-    <Content Include="Resources\Lections\picture20.jpg" />
-    <Content Include="Resources\Lections\picture3.jpg" />
-    <Content Include="Resources\Lections\picture4.jpg" />
-    <Content Include="Resources\Lections\picture5.jpg" />
-    <Content Include="Resources\Lections\picture6.jpg" />
-    <Content Include="Resources\Lections\picture7.jpg" />
-    <Content Include="Resources\Lections\picture8.jpg" />
-    <Content Include="Resources\Lections\picture9.jpg" />
-    <Content Include="Resources\Lections\savePict.jpg" />
     <None Include="Resources\minimize.png" />
     <Content Include="Resources\MyOfficeTable.ico" />
     <Content Include="Resources\MyOfficeTable.jpg" />
     <Content Include="Resources\question.png" />
-    <Content Include="Resources\Tests\Вставка элементов в таблицу.xml" />
-    <Content Include="Resources\Tests\Работа в приложении МойОфис Таблица.xml" />
-    <Content Include="Resources\Tests\Работа с файлами в «МойОфис Таблица».xml" />
     <None Include="Resources\Цвет текста.png" />
     <None Include="Resources\Цвет заливки.png" />
     <None Include="Resources\Вставить.png" />

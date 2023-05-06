@@ -1,0 +1,855 @@
+<html>
+<head>
+<style>
+	body
+	{
+		background-color: lightCyan;
+		color: teal;
+		font-size: 16pt;
+	}
+	.header
+	{
+		font-size: 20pt;
+		font-weight: bold;
+	}
+</style>
+</head>
+<body>
+<p align="center" class="header">
+    Практическая работа №2
+</p>
+<p align="center" class="header">
+    Использование формул, математических и статистических функций в табличном процессоре
+</p>
+<p align="center">
+    <strong></strong>
+</p>
+<p>
+    <strong>1 </strong>
+    <strong>Цель работы:</strong>
+</p>
+<p>
+    1.1 Приобрести умение создавать формулы электронной таблицы с
+    использованием абсолютных и относительных ссылок;
+</p>
+<p>
+    1.2 Приобрести умение выполнять расчеты с применением математических и
+    статистических функций электронной таблицы.
+</p>
+<p>
+    <strong>2 </strong>
+    <strong>Основное оборудование:</strong>
+</p>
+<p>
+    2.1 ПК.
+</p>
+<p>
+    <strong>3 </strong>
+    <strong>Подготовка к работе:</strong>
+</p>
+<p>
+    3.1 Изучить теоретический материал п.8;
+</p>
+<p>
+    3.2 Подготовить бланк отчета.
+</p>
+<p>
+    <strong>4 </strong>
+    <strong>Задание:</strong>
+</p>
+<p>
+    4.1 Решить задачу с помощью табличного процессора.<strong></strong>
+</p>
+<p>
+    Сопоставить доходность акций по уровню дивидендов за год по отдельным
+    эмитентам. Данные представлены в таблице 1.
+</p>
+<p>
+    Таблица 1 – Доходность акций
+</p>
+<div align="center">
+    <table border="1" cellspacing="0" cellpadding="0" width="633">
+        <tbody>
+            <tr>
+                <td width="151" rowspan="2">
+                    <p align="center">
+                        Эмитент
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        Номинал акции, руб.
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        Цена продажи, руб.
+                    </p>
+                </td>
+                <td width="170" colspan="2">
+                    <p align="center">
+                        Дивиденды, объявленные в расчете на год
+                    </p>
+                </td>
+                <td width="142" colspan="2">
+                    <p align="center">
+                        Доходность по дивидендам
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="85">
+                    <p align="center">
+                        NA
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        CP
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        Div, %
+                    </p>
+                </td>
+                <td width="66">
+                    <p align="center">
+                        DivR, руб.
+                    </p>
+                </td>
+                <td width="66">
+                    <p align="center">
+                        К номиналу DN
+                    </p>
+                </td>
+                <td width="76">
+                    <p align="center">
+                        Фактическая DF
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="151">
+                    <p align="center">
+                        Сибирьгазбанк
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        10000
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        17780
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        400%
+                    </p>
+                </td>
+                <td width="66">
+                </td>
+                <td width="66">
+                </td>
+                <td width="76">
+                </td>
+            </tr>
+            <tr>
+                <td width="151">
+                    <p align="center">
+                        Инкомбанк
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        10000
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        22900
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        400%
+                    </p>
+                </td>
+                <td width="66">
+                </td>
+                <td width="66">
+                </td>
+                <td width="76">
+                </td>
+            </tr>
+            <tr>
+                <td width="151">
+                    <p align="center">
+                        Сургутнефтегазбанк
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        5000
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        5600
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        320%
+                    </p>
+                </td>
+                <td width="66">
+                </td>
+                <td width="66">
+                </td>
+                <td width="76">
+                </td>
+            </tr>
+            <tr>
+                <td width="151">
+                    <p align="center">
+                        Нефтехимбанк
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        1000
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        2015
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        653%
+                    </p>
+                </td>
+                <td width="66">
+                </td>
+                <td width="66">
+                </td>
+                <td width="76">
+                </td>
+            </tr>
+            <tr>
+                <td width="151">
+                    <p align="center">
+                        Сбербанк
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        1000
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        2482
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        736%
+                    </p>
+                </td>
+                <td width="66">
+                </td>
+                <td width="66">
+                </td>
+                <td width="76">
+                </td>
+            </tr>
+            <tr>
+                <td width="151">
+                    <p align="center">
+                        КБ Аккобанк
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        1000
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        1000
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        325%
+                    </p>
+                </td>
+                <td width="66">
+                </td>
+                <td width="66">
+                </td>
+                <td width="76">
+                </td>
+            </tr>
+            <tr>
+                <td width="151">
+                    <p align="center">
+                        СКБ банк
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        50000
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        27050
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        360%
+                    </p>
+                </td>
+                <td width="66">
+                </td>
+                <td width="66">
+                </td>
+                <td width="76">
+                </td>
+            </tr>
+            <tr>
+                <td width="151">
+                    <p align="center">
+                        Промстройбанк
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        1000
+                    </p>
+                </td>
+                <td width="85">
+                    <p align="center">
+                        1200
+                    </p>
+                </td>
+                <td width="104">
+                    <p align="center">
+                        153%
+                    </p>
+                </td>
+                <td width="66">
+                </td>
+                <td width="66">
+                </td>
+                <td width="76">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    Для расчетов используйте формулы DivR=NA*Div, DN=Div, DF=DivR/CP. Оформите
+    таблицу 2 статистических показателей.
+</p>
+<p>
+    Таблица 2 – Статистические показатели
+</p>
+<div align="center">
+    <table border="1" cellspacing="0" cellpadding="0" width="358">
+        <tbody>
+            <tr>
+                <td width="285" valign="top">
+                    <p align="center">
+                        Расчетная величина
+                    </p>
+                </td>
+                <td width="74" valign="top">
+                    <p align="center">
+                        Значение
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="285" valign="top">
+                    <p>
+                        Средняя цена продажи акций
+                    </p>
+                </td>
+                <td width="74" valign="top">
+                </td>
+            </tr>
+            <tr>
+                <td width="285" valign="top">
+                    <p>
+                        Максимальная цена продажи акций
+                    </p>
+                </td>
+                <td width="74" valign="top">
+                </td>
+            </tr>
+            <tr>
+                <td width="285" valign="top">
+                    <p>
+                        Минимальная цена продажи акций
+                    </p>
+                </td>
+                <td width="74" valign="top">
+                </td>
+            </tr>
+            <tr>
+                <td width="285" valign="top">
+                    <p>
+                        Максимальная фактическая доходность акций
+                    </p>
+                </td>
+                <td width="74" valign="top">
+                </td>
+            </tr>
+            <tr>
+                <td width="285" valign="top">
+                    <p>
+                        Минимальная фактическая доходность акций
+                    </p>
+                </td>
+                <td width="74" valign="top">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    4.2 Решить задачу с помощью табличного процессора.
+</p>
+<p>
+    Сформировать основную и вспомогательную таблицы 3 и 4. Вычислить значения
+    столбцов «Стоимость одного заказа» и «Сумма» таблицы 3. Использовать для
+    вычислений данные вспомогательной таблицы 4.
+</p>
+<p>
+    Таблица 3 - Заказы
+</p>
+<div align="center">
+    <table border="1" cellspacing="0" cellpadding="0" width="653">
+        <tbody>
+            <tr>
+                <td width="26">
+                    <p align="center">
+                        <strong>№</strong>
+                    </p>
+                </td>
+                <td width="105">
+                    <p align="center">
+                        <strong>Заказчик</strong>
+                    </p>
+                </td>
+                <td width="92">
+                    <p align="center">
+                        <strong>Дата заказа</strong>
+                    </p>
+                </td>
+                <td width="103">
+                    <p align="center">
+                        <strong>Тип рекламы</strong>
+                    </p>
+                </td>
+                <td width="135">
+                    <p align="center">
+                        <strong>Количество</strong>
+                    </p>
+                    <p align="center">
+                        <strong>заказов</strong>
+                    </p>
+                </td>
+                <td width="132">
+                    <p align="center">
+                        <strong>Стоимость одного</strong>
+                    </p>
+                    <p align="center">
+                        <strong>заказа</strong>
+                    </p>
+                </td>
+                <td width="60">
+                    <p align="center">
+                        <strong>Сумма</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="26">
+                    <p>
+                        1.
+                    </p>
+                </td>
+                <td width="105">
+                    <p>
+                        КА «Квадрат»
+                    </p>
+                </td>
+                <td width="92">
+                    <p align="center">
+                        15 дек.
+                    </p>
+                </td>
+                <td width="103">
+                    <p align="center">
+                        Буклет
+                    </p>
+                </td>
+                <td width="135">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="132" valign="top">
+                </td>
+                <td width="60" valign="top">
+                </td>
+            </tr>
+            <tr>
+                <td width="26">
+                    <p>
+                        2.
+                    </p>
+                </td>
+                <td width="105">
+                    <p>
+                        ИП «Альтаир»
+                    </p>
+                </td>
+                <td width="92">
+                    <p align="center">
+                        10 сент.
+                    </p>
+                </td>
+                <td width="103">
+                    <p align="center">
+                        Листовка
+                    </p>
+                </td>
+                <td width="135">
+                    <p align="center">
+                        3
+                    </p>
+                </td>
+                <td width="132" valign="top">
+                </td>
+                <td width="60" valign="top">
+                </td>
+            </tr>
+            <tr>
+                <td width="26">
+                    <p>
+                        3.
+                    </p>
+                </td>
+                <td width="105">
+                    <p>
+                        ИП «Пионер»
+                    </p>
+                </td>
+                <td width="92">
+                    <p align="center">
+                        12 авг.
+                    </p>
+                </td>
+                <td width="103">
+                    <p align="center">
+                        Буклет
+                    </p>
+                </td>
+                <td width="135">
+                    <p align="center">
+                        150
+                    </p>
+                </td>
+                <td width="132" valign="top">
+                </td>
+                <td width="60" valign="top">
+                </td>
+            </tr>
+            <tr>
+                <td width="26">
+                    <p>
+                        4. 4
+                    </p>
+                </td>
+                <td width="105">
+                    <p>
+                        Интерсити
+                    </p>
+                </td>
+                <td width="92">
+                    <p align="center">
+                        05 мая
+                    </p>
+                </td>
+                <td width="103">
+                    <p align="center">
+                        Буклет
+                    </p>
+                </td>
+                <td width="135">
+                    <p align="center">
+                        78
+                    </p>
+                </td>
+                <td width="132" valign="top">
+                </td>
+                <td width="60" valign="top">
+                </td>
+            </tr>
+            <tr>
+                <td width="26">
+                    <p>
+                        5.
+                    </p>
+                </td>
+                <td width="105">
+                    <p>
+                        СП «Кедр»
+                    </p>
+                </td>
+                <td width="92">
+                    <p align="center">
+                        07 дек.
+                    </p>
+                </td>
+                <td width="103">
+                    <p align="center">
+                        Плакат
+                    </p>
+                </td>
+                <td width="135">
+                    <p align="center">
+                        29
+                    </p>
+                </td>
+                <td width="132" valign="top">
+                </td>
+                <td width="60" valign="top">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    Таблица 4 – Стоимость одного заказа
+</p>
+<div align="center">
+    <table border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="123">
+                    <p align="center">
+                        <strong>Тип рекламы</strong>
+                    </p>
+                </td>
+                <td width="151">
+                    <p align="center">
+                        <strong>Стоимость заказа</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="123">
+                    <p align="center">
+                        Буклет
+                    </p>
+                </td>
+                <td width="151">
+                    <p align="center">
+                        75
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="123">
+                    <p align="center">
+                        Листовка
+                    </p>
+                </td>
+                <td width="151">
+                    <p align="center">
+                        25
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="123">
+                    <p align="center">
+                        Плакат
+                    </p>
+                </td>
+                <td width="151">
+                    <p align="center">
+                        45
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    4.3 Решить задачу с помощью табличного процессора. Результат выполнения
+    задания проверьте в программе MathCAD.
+</p>
+<p>
+Решить систему линейных уравнений <em>A<sup>2</sup></em><em>X=</em>    <em>B</em>, если
+</p>
+<p align="center">
+    <img
+        width="200"
+        height="100"
+        src="2.jpg"
+    />
+    <img
+        width="100"
+        height="100"
+        src="3.jpg"
+    />
+    .
+</p>
+<p>
+    <strong>5 </strong>
+    <strong>Порядок выполнения работы</strong>
+    <strong>:</strong>
+</p>
+<p>
+    5.1 Выполнить задания 4.1-4.3 в любом порядке.
+</p>
+<p>
+    <strong>6 </strong>
+    <strong>Содержание отчета</strong>
+    <strong>:</strong>
+</p>
+<p>
+    6.1 Титульный лист;
+</p>
+<p>
+    6.2 Цель работы;
+</p>
+<p>
+    6.3 Ответы на контрольные вопросы.
+</p>
+<p>
+    <strong>7 </strong>
+    <strong>Контрольные вопросы</strong>
+    <strong>:</strong>
+</p>
+<p>
+    7.1 Что называется адресом ячейки электронной таблицы?
+</p>
+<p>
+    7.2 Какие виды адресации ячеек существуют в электронных таблицах? Каковы их
+    особенности?
+</p>
+<p>
+    7.3 Как табличный процессор распознает, что ячейка электронной таблицы
+    содержит формулу?
+</p>
+<p>
+    7.4 Что может содержать формула в ячейке электронной таблицы?
+</p>
+<p>
+    7.5 Какие функции использованы при выполнении заданий? Каково их
+    назначение?
+</p>
+<p>
+    <strong>8 </strong>
+    <strong>Приложение:</strong>
+</p>
+<p>
+    8.1 Матричные уравнения
+</p>
+<p>
+    Матричные уравнения простейшего вида с неизвестной матрицей X
+    записываются следующим образом
+</p>
+<p>
+    <img
+        width="120"
+        height="60"
+        src="4.jpg"
+    />
+</p>
+<p>
+    <img
+        width="120"
+        height="60"
+        src="5.jpg"
+    />
+</p>
+<p>
+    где <i>А, В</i> – матрицы.
+</p>
+<p>
+    Если матрица A невырожденная, то их решение записываются в виде
+</p>
+<p>
+    <img
+        width="130"
+        height="40"
+        src="6.jpg"
+    />
+</p>
+<p>
+    <img
+        width="130"
+        height="40"
+        src="7.jpg"
+    />
+    ,
+</p>
+<p>
+    где A<sup>-1</sup> – матрица обратная к матрице <em>А.</em>
+</p>
+<p>
+    8.2 Функции для работы с матрицами в МойОфис Таблица:
+</p>
+<p>
+    МУМНОЖ(массив1; массив2) – возвращает матричное произведение двух массивов.
+</p>
+<p>
+    Пример: Вычисление произведения матриц <em>А</em> и <em>В</em>.
+</p>
+<p align="center">
+    <img
+        width="718"
+        height="153"
+        src="8.jpg"
+    />
+</p>
+<p>
+    Формулу в этом примере необходимо ввести как формулу массива. Для этого
+    нужно выделить диапазон Н3:J4, начиная с ячейки, содержащей формулу. Нажать
+    клавишу F2, а затем — клавиши CTRL+SHIFT+ВВОД. Если формула не будет
+    введена как формула массива, единственное значение будет равно 8.
+</p>
+<p>
+    МОБР(массив) – возвращает обратную матрицу для матрицы, хранящейся в
+    массиве.
+</p>
+<p>
+    Пример: Вычисление обратной матрицы к матрице <em>А</em>.
+</p>
+<p align="center">
+    <img
+        width="452"
+        height="157"
+        src="9.jpg"
+    />
+</p>
+<p>
+    Формулу в этом примере необходимо ввести как формулу массива.
+</p>
+</body>
+</html>

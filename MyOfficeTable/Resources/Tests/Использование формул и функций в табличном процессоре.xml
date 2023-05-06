@@ -1,0 +1,17 @@
+<Array>
+	<Question Type="String" Text="С какого символа начинается ввод формул в ячейку? (существительное)? " True="равно"></Question>
+	<Question Type="String" Text="Какую операцию выполняет знак ^ (циркумфлекс)?" True="возведение в степень"></Question>
+	<Question Type="String" Text="Какая функция позволяет подсчитать количество ячеек в выбранном диапазоне, соответствующих заданному критерию?" True="счетесли"></Question>
+	<Question Type="String" Text="Какая функция позволяет выполнить сложение чисел в выбранном диапазоне?" True="сумм"></Question>
+	<Question Type="String" Text="Как называется панель, на которой отображаются все функции, доступные в МойОфис Таблица?" True="панель функций"></Question>
+	<Question Type="Single" Text="Какая из перечисленных функций относится к логическим?" Answer1="СУММ" Answer2="ПОИСК" Answer3="ПОДСТАВИТЬ" Answer4="ЕСЛИ" True="ЕСЛИ"></Question>
+	<Question Type="Single" Text="Какая из перечисленных функций относится к математическим?" Answer1="ПОИСК" Answer2="СУММ" Answer3="ЕСЛИ" Answer4="ПРОСМОТР" True="СУММ"></Question>
+	<Question Type="Single" Text="Какая из перечисленных функций осуществляет поиск ключа в одной строке или колонке и возвращает значение ячейки, находящейся в соответствующей позиции другой строки или колонки?" Answer1="ПРОСМОТР" Answer2="ПОИСК" Answer3="ЕСЛИ" Asnwer4="ТЕКСТ" True="ПРОСМОТР"></Question>
+	<Question Type="Single" Text="В какой части окна находится кнопка для открытия панели функций?" Answer1="Верхней" Answer2="Ctrl + L" Answer3="Правой" Answer4="Левой" Answer5="Нижней" True="Правой"></Question>
+	<Question Type="Single" Text="Какой знак выполняет операцию умножения?" Answer1="+ (плюс)" Answer2="^ (циркумфлекс)" Answer3="- (минус)" Answer4="x (икс)" Answer5="* (звёздочка)" True="* (звёздочка)"></Question>
+	<Question Type="Multiple" Text="Из чего строится выражение?" Answer1="Констант" Answer2="Изображений" Answer3="Графиков" Answer4="Формул" Answer5="Ссылок"  True="КонстантФормулСсылок"></Question>
+	<Question Type="Multiple" Text="Для ввода функции в ячейку можно использовать инструменты…" Answer1="Панели формул" Answer2="Панели инструментов" Answer3="Данной ячейки" Answer4="Строки формул" Answer5="Меню Файл" True="Панели формулДанной ячейкиСтроки формул"></Question>
+	<Question Type="Multiple" Text="Какие из перечисленных функций относятся к математическим (тригонометрическим)?" Answer1="ИСТИНА" Answer2="EXP" Answer3="CSC" Answer4="МИН" Answer5="МАКС" Answer6="ОКРУГЛ" True="EXPCSC"></Question>
+	<Question Type="Multiple" Text="Какие из перечисленных функций относятся к логическим?" Answer1="И" Answer2="КОРЕНЬ" Answer3="ЕНЕЧЁТ" Answer4="ЕСЛИ" Answer5="ЕОШИБКА" True="ИЕСЛИ"></Question>
+	<Question Type="Multiple" Text="Как можно вставить формулу в ячейку?" Answer1="С помощью кнопки fx" Answer2="С помощью комбинации клавиш Ctrl+F" Answer3="С помощью меню Вставка - Функция" Answer4="Написать формулу после знака -" Answer5="Написать формулу после знака =" True="С помощью кнопки fxС помощью меню Вставка - Функция"></Question>
+</Array>
