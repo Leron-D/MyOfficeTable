@@ -100,7 +100,7 @@
             // 
             // headerPictureBox
             // 
-            this.headerPictureBox.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable2;
+            this.headerPictureBox.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
             this.headerPictureBox.Location = new System.Drawing.Point(0, 0);
             this.headerPictureBox.Name = "headerPictureBox";
             this.headerPictureBox.Size = new System.Drawing.Size(132, 133);

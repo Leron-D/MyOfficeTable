@@ -384,7 +384,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable2;
+            this.pictureBox7.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
             this.pictureBox7.Location = new System.Drawing.Point(0, 0);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(132, 133);
@@ -572,7 +572,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable2;
+            this.pictureBox8.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
             this.pictureBox8.Location = new System.Drawing.Point(0, 0);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(132, 133);
@@ -813,7 +813,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable2;
+            this.pictureBox5.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(132, 133);
