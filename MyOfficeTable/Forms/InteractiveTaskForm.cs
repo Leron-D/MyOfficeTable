@@ -29,9 +29,9 @@ namespace MyOfficeTable.Forms
             tabControl.ItemSize = new System.Drawing.Size(0, 1);
             tabControl.SizeMode = TabSizeMode.Fixed;
             tabControl.TabStop = false;
-            firstDestinationPictureBox.AllowDrop = secondDestinationPictureBox.AllowDrop = thirdDestinationPictureBox.AllowDrop = fourthDestinationPictureBox.AllowDrop =
-            fifthDestinationPictureBox.AllowDrop = sixthDestinationPictureBox.AllowDrop = seventhDestinationPictureBox.AllowDrop = eighthDestinationPictureBox.AllowDrop =
-            ninthDestinationPictureBox.AllowDrop = tenthDestinationPictureBox.AllowDrop = eleventhDestinationPictureBox.AllowDrop = twelfthDestinationPictureBox.AllowDrop = true;
+            DestinationPictureBox1.AllowDrop = DestinationPictureBox2.AllowDrop = DestinationPictureBox3.AllowDrop = DestinationPictureBox4.AllowDrop =
+            DestinationPictureBox5.AllowDrop = DestinationPictureBox6.AllowDrop = DestinationPictureBox7.AllowDrop = DestinationPictureBox8.AllowDrop =
+            DestinationPictureBox9.AllowDrop = DestinationPictureBox10.AllowDrop = DestinationPictureBox11.AllowDrop = DestinationPictureBox12.AllowDrop = true;
             srcPictureBox = null;
         }
 
@@ -124,51 +124,51 @@ namespace MyOfficeTable.Forms
             {
                 if (destinationPictureBox.Tag == "cut")
                 {
-                    ReturnPicture(firstSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox1, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "copyFormat")
                 {
-                    ReturnPicture(secondSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox2, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "allLettersUppercase")
                 {
-                    ReturnPicture(thirdSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox3, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "bold")
                 {
-                    ReturnPicture(fourthSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox4, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "print")
                 {
-                    ReturnPicture(fifthSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox5, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "save")
                 {
-                    ReturnPicture(sixthSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox6, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "enter")
                 {
-                    ReturnPicture(seventhSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox7, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "copy")
                 {
-                    ReturnPicture(eighthSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox8, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "italic")
                 {
-                    ReturnPicture(ninthSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox9, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "colorOfText")
                 {
-                    ReturnPicture(tenthSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox10, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "underlined")
                 {
-                    ReturnPicture(eleventhSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox11, destinationPictureBox);
                 }
                 else if (destinationPictureBox.Tag == "colorOfFill")
                 {
-                    ReturnPicture(twelfthSourcePictureBox, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox12, destinationPictureBox);
                 }
             }
         }
@@ -220,7 +220,7 @@ namespace MyOfficeTable.Forms
 
         void CheckCorrectness()
         {
-            if (firstDestinationPictureBox.Tag == "cut" && secondDestinationPictureBox.Tag == "copyFormat" && thirdDestinationPictureBox.Tag == "bold" && fourthDestinationPictureBox.Tag == "allLettersUppercase")
+            if (DestinationPictureBox1.Tag == "cut" && DestinationPictureBox2.Tag == "copyFormat" && DestinationPictureBox3.Tag == "bold" && DestinationPictureBox4.Tag == "allLettersUppercase")
             {
                 Properties.Settings.Default.correctTask1 = true;
                 Properties.Settings.Default.Save();
@@ -231,7 +231,7 @@ namespace MyOfficeTable.Forms
                 Properties.Settings.Default.Save();
             }
 
-            if (fifthDestinationPictureBox.Tag == "save" && sixthDestinationPictureBox.Tag == "print" && seventhDestinationPictureBox.Tag == "copy" && eighthDestinationPictureBox.Tag == "enter")
+            if (DestinationPictureBox5.Tag == "save" && DestinationPictureBox6.Tag == "print" && DestinationPictureBox7.Tag == "copy" && DestinationPictureBox8.Tag == "enter")
             {
                 Properties.Settings.Default.correctTask2 = true;
                 Properties.Settings.Default.Save();
@@ -242,7 +242,7 @@ namespace MyOfficeTable.Forms
                 Properties.Settings.Default.Save();
             }
 
-            if (ninthDestinationPictureBox.Tag == "underlined" && tenthDestinationPictureBox.Tag == "colorOfFill" && eleventhDestinationPictureBox.Tag == "italic" && twelfthDestinationPictureBox.Tag == "colorOfText")
+            if (DestinationPictureBox9.Tag == "underlined" && DestinationPictureBox10.Tag == "colorOfFill" && DestinationPictureBox11.Tag == "italic" && DestinationPictureBox12.Tag == "colorOfText")
             {
                 Properties.Settings.Default.correctTask3 = true;
                 Properties.Settings.Default.Save();

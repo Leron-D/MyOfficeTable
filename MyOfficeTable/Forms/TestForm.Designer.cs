@@ -33,34 +33,34 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.referenceButton = new System.Windows.Forms.Button();
-            this.firstAnswerCheckBox = new System.Windows.Forms.CheckBox();
-            this.secondAnswerCheckBox = new System.Windows.Forms.CheckBox();
-            this.thirdAnswerCheckBox = new System.Windows.Forms.CheckBox();
+            this.AnswerCheckBox1 = new System.Windows.Forms.CheckBox();
+            this.AnswerCheckBox2 = new System.Windows.Forms.CheckBox();
+            this.AnswerCheckBox3 = new System.Windows.Forms.CheckBox();
             this.answerTextBox = new System.Windows.Forms.TextBox();
             this.questionLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
-            this.fourthAnswerCheckBox = new System.Windows.Forms.CheckBox();
+            this.AnswerCheckBox4 = new System.Windows.Forms.CheckBox();
             this.headerLabel = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numOfQuestionLabel = new System.Windows.Forms.Label();
             this.offLabel = new System.Windows.Forms.Label();
             this.allNumQuestionLabel = new System.Windows.Forms.Label();
-            this.eighthAnswerCheckBox = new System.Windows.Forms.CheckBox();
-            this.seventhAnswerCheckBox = new System.Windows.Forms.CheckBox();
-            this.sixthAnswerCheckBox = new System.Windows.Forms.CheckBox();
-            this.fifthAnswerCheckBox = new System.Windows.Forms.CheckBox();
-            this.sixthAnswerRadioButton = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerCheckBox8 = new System.Windows.Forms.CheckBox();
+            this.AnswerCheckBox7 = new System.Windows.Forms.CheckBox();
+            this.AnswerCheckBox6 = new System.Windows.Forms.CheckBox();
+            this.AnswerCheckBox5 = new System.Windows.Forms.CheckBox();
+            this.AnswerRadioButton6 = new WindowsFormsApp1.MyRadioButton();
             this.goNextQuestionButton = new WindowsFormsApp1.MyButton();
-            this.eighthAnswerRadioButton = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerRadioButton8 = new WindowsFormsApp1.MyRadioButton();
             this.startTestButton = new WindowsFormsApp1.MyButton();
-            this.seventhAnswerRadioButton = new WindowsFormsApp1.MyRadioButton();
-            this.fifthAnswerRadioButton = new WindowsFormsApp1.MyRadioButton();
-            this.firstAnswerRadioButton = new WindowsFormsApp1.MyRadioButton();
-            this.thirdAnswerRadioButton = new WindowsFormsApp1.MyRadioButton();
-            this.fourthAnswerRadioButton = new WindowsFormsApp1.MyRadioButton();
-            this.secondAnswerRadioButton = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerRadioButton7 = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerRadioButton5 = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerRadioButton1 = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerRadioButton3 = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerRadioButton4 = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerRadioButton2 = new WindowsFormsApp1.MyRadioButton();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -110,72 +110,72 @@
             this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.referenceButton.UseVisualStyleBackColor = false;
             // 
-            // firstAnswerCheckBox
+            // AnswerCheckBox1
             // 
-            this.firstAnswerCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.firstAnswerCheckBox.AutoSize = true;
-            this.firstAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.firstAnswerCheckBox.FlatAppearance.BorderSize = 0;
-            this.firstAnswerCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.firstAnswerCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.firstAnswerCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.firstAnswerCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.firstAnswerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.firstAnswerCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("firstAnswerCheckBox.Image")));
-            this.firstAnswerCheckBox.Location = new System.Drawing.Point(160, 260);
-            this.firstAnswerCheckBox.Name = "firstAnswerCheckBox";
-            this.firstAnswerCheckBox.Size = new System.Drawing.Size(159, 46);
-            this.firstAnswerCheckBox.TabIndex = 22;
-            this.firstAnswerCheckBox.Text = "Ответ 1";
-            this.firstAnswerCheckBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.firstAnswerCheckBox.UseVisualStyleBackColor = false;
-            this.firstAnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
-            this.firstAnswerCheckBox.LocationChanged += new System.EventHandler(this.FirstAnswerCheckBox_LocationChanged);
+            this.AnswerCheckBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AnswerCheckBox1.AutoSize = true;
+            this.AnswerCheckBox1.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox1.FlatAppearance.BorderSize = 0;
+            this.AnswerCheckBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnswerCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerCheckBox1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("AnswerCheckBox1.Image")));
+            this.AnswerCheckBox1.Location = new System.Drawing.Point(160, 260);
+            this.AnswerCheckBox1.Name = "AnswerCheckBox1";
+            this.AnswerCheckBox1.Size = new System.Drawing.Size(159, 46);
+            this.AnswerCheckBox1.TabIndex = 22;
+            this.AnswerCheckBox1.Text = "Ответ 1";
+            this.AnswerCheckBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AnswerCheckBox1.UseVisualStyleBackColor = false;
+            this.AnswerCheckBox1.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            this.AnswerCheckBox1.LocationChanged += new System.EventHandler(this.FirstAnswerCheckBox_LocationChanged);
             // 
-            // secondAnswerCheckBox
+            // AnswerCheckBox2
             // 
-            this.secondAnswerCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.secondAnswerCheckBox.AutoSize = true;
-            this.secondAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.secondAnswerCheckBox.FlatAppearance.BorderSize = 0;
-            this.secondAnswerCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.secondAnswerCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.secondAnswerCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.secondAnswerCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.secondAnswerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondAnswerCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("secondAnswerCheckBox.Image")));
-            this.secondAnswerCheckBox.Location = new System.Drawing.Point(160, 297);
-            this.secondAnswerCheckBox.Name = "secondAnswerCheckBox";
-            this.secondAnswerCheckBox.Size = new System.Drawing.Size(159, 46);
-            this.secondAnswerCheckBox.TabIndex = 23;
-            this.secondAnswerCheckBox.Text = "Ответ 2";
-            this.secondAnswerCheckBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.secondAnswerCheckBox.UseVisualStyleBackColor = false;
-            this.secondAnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            this.AnswerCheckBox2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AnswerCheckBox2.AutoSize = true;
+            this.AnswerCheckBox2.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox2.FlatAppearance.BorderSize = 0;
+            this.AnswerCheckBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnswerCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerCheckBox2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerCheckBox2.Image = ((System.Drawing.Image)(resources.GetObject("AnswerCheckBox2.Image")));
+            this.AnswerCheckBox2.Location = new System.Drawing.Point(160, 297);
+            this.AnswerCheckBox2.Name = "AnswerCheckBox2";
+            this.AnswerCheckBox2.Size = new System.Drawing.Size(159, 46);
+            this.AnswerCheckBox2.TabIndex = 23;
+            this.AnswerCheckBox2.Text = "Ответ 2";
+            this.AnswerCheckBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AnswerCheckBox2.UseVisualStyleBackColor = false;
+            this.AnswerCheckBox2.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // thirdAnswerCheckBox
+            // AnswerCheckBox3
             // 
-            this.thirdAnswerCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.thirdAnswerCheckBox.AutoSize = true;
-            this.thirdAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.thirdAnswerCheckBox.FlatAppearance.BorderSize = 0;
-            this.thirdAnswerCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.thirdAnswerCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.thirdAnswerCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.thirdAnswerCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.thirdAnswerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thirdAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.thirdAnswerCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("thirdAnswerCheckBox.Image")));
-            this.thirdAnswerCheckBox.Location = new System.Drawing.Point(160, 334);
-            this.thirdAnswerCheckBox.Name = "thirdAnswerCheckBox";
-            this.thirdAnswerCheckBox.Size = new System.Drawing.Size(159, 46);
-            this.thirdAnswerCheckBox.TabIndex = 24;
-            this.thirdAnswerCheckBox.Text = "Ответ 3";
-            this.thirdAnswerCheckBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.thirdAnswerCheckBox.UseVisualStyleBackColor = false;
-            this.thirdAnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            this.AnswerCheckBox3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AnswerCheckBox3.AutoSize = true;
+            this.AnswerCheckBox3.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox3.FlatAppearance.BorderSize = 0;
+            this.AnswerCheckBox3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnswerCheckBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerCheckBox3.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerCheckBox3.Image = ((System.Drawing.Image)(resources.GetObject("AnswerCheckBox3.Image")));
+            this.AnswerCheckBox3.Location = new System.Drawing.Point(160, 334);
+            this.AnswerCheckBox3.Name = "AnswerCheckBox3";
+            this.AnswerCheckBox3.Size = new System.Drawing.Size(159, 46);
+            this.AnswerCheckBox3.TabIndex = 24;
+            this.AnswerCheckBox3.Text = "Ответ 3";
+            this.AnswerCheckBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AnswerCheckBox3.UseVisualStyleBackColor = false;
+            this.AnswerCheckBox3.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
             // answerTextBox
             // 
@@ -216,27 +216,27 @@
             this.timerLabel.Size = new System.Drawing.Size(0, 27);
             this.timerLabel.TabIndex = 28;
             // 
-            // fourthAnswerCheckBox
+            // AnswerCheckBox4
             // 
-            this.fourthAnswerCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.fourthAnswerCheckBox.AutoSize = true;
-            this.fourthAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.fourthAnswerCheckBox.FlatAppearance.BorderSize = 0;
-            this.fourthAnswerCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.fourthAnswerCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.fourthAnswerCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.fourthAnswerCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fourthAnswerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fourthAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.fourthAnswerCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("fourthAnswerCheckBox.Image")));
-            this.fourthAnswerCheckBox.Location = new System.Drawing.Point(160, 372);
-            this.fourthAnswerCheckBox.Name = "fourthAnswerCheckBox";
-            this.fourthAnswerCheckBox.Size = new System.Drawing.Size(159, 46);
-            this.fourthAnswerCheckBox.TabIndex = 31;
-            this.fourthAnswerCheckBox.Text = "Ответ 4";
-            this.fourthAnswerCheckBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.fourthAnswerCheckBox.UseVisualStyleBackColor = false;
-            this.fourthAnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            this.AnswerCheckBox4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AnswerCheckBox4.AutoSize = true;
+            this.AnswerCheckBox4.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox4.FlatAppearance.BorderSize = 0;
+            this.AnswerCheckBox4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnswerCheckBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerCheckBox4.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerCheckBox4.Image = ((System.Drawing.Image)(resources.GetObject("AnswerCheckBox4.Image")));
+            this.AnswerCheckBox4.Location = new System.Drawing.Point(160, 372);
+            this.AnswerCheckBox4.Name = "AnswerCheckBox4";
+            this.AnswerCheckBox4.Size = new System.Drawing.Size(159, 46);
+            this.AnswerCheckBox4.TabIndex = 31;
+            this.AnswerCheckBox4.Text = "Ответ 4";
+            this.AnswerCheckBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AnswerCheckBox4.UseVisualStyleBackColor = false;
+            this.AnswerCheckBox4.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
             // headerLabel
             // 
@@ -315,109 +315,109 @@
             this.allNumQuestionLabel.Text = "10";
             this.allNumQuestionLabel.Visible = false;
             // 
-            // eighthAnswerCheckBox
+            // AnswerCheckBox8
             // 
-            this.eighthAnswerCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.eighthAnswerCheckBox.AutoSize = true;
-            this.eighthAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.eighthAnswerCheckBox.FlatAppearance.BorderSize = 0;
-            this.eighthAnswerCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.eighthAnswerCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.eighthAnswerCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.eighthAnswerCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eighthAnswerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eighthAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.eighthAnswerCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("eighthAnswerCheckBox.Image")));
-            this.eighthAnswerCheckBox.Location = new System.Drawing.Point(1098, 378);
-            this.eighthAnswerCheckBox.Name = "eighthAnswerCheckBox";
-            this.eighthAnswerCheckBox.Size = new System.Drawing.Size(159, 46);
-            this.eighthAnswerCheckBox.TabIndex = 56;
-            this.eighthAnswerCheckBox.Text = "Ответ 8";
-            this.eighthAnswerCheckBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.eighthAnswerCheckBox.UseVisualStyleBackColor = false;
-            this.eighthAnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            this.AnswerCheckBox8.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AnswerCheckBox8.AutoSize = true;
+            this.AnswerCheckBox8.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox8.FlatAppearance.BorderSize = 0;
+            this.AnswerCheckBox8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnswerCheckBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerCheckBox8.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerCheckBox8.Image = ((System.Drawing.Image)(resources.GetObject("AnswerCheckBox8.Image")));
+            this.AnswerCheckBox8.Location = new System.Drawing.Point(1098, 378);
+            this.AnswerCheckBox8.Name = "AnswerCheckBox8";
+            this.AnswerCheckBox8.Size = new System.Drawing.Size(159, 46);
+            this.AnswerCheckBox8.TabIndex = 56;
+            this.AnswerCheckBox8.Text = "Ответ 8";
+            this.AnswerCheckBox8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AnswerCheckBox8.UseVisualStyleBackColor = false;
+            this.AnswerCheckBox8.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // seventhAnswerCheckBox
+            // AnswerCheckBox7
             // 
-            this.seventhAnswerCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.seventhAnswerCheckBox.AutoSize = true;
-            this.seventhAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.seventhAnswerCheckBox.FlatAppearance.BorderSize = 0;
-            this.seventhAnswerCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.seventhAnswerCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.seventhAnswerCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.seventhAnswerCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.seventhAnswerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seventhAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.seventhAnswerCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("seventhAnswerCheckBox.Image")));
-            this.seventhAnswerCheckBox.Location = new System.Drawing.Point(1098, 336);
-            this.seventhAnswerCheckBox.Name = "seventhAnswerCheckBox";
-            this.seventhAnswerCheckBox.Size = new System.Drawing.Size(159, 46);
-            this.seventhAnswerCheckBox.TabIndex = 55;
-            this.seventhAnswerCheckBox.Text = "Ответ 7";
-            this.seventhAnswerCheckBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.seventhAnswerCheckBox.UseVisualStyleBackColor = false;
-            this.seventhAnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            this.AnswerCheckBox7.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AnswerCheckBox7.AutoSize = true;
+            this.AnswerCheckBox7.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox7.FlatAppearance.BorderSize = 0;
+            this.AnswerCheckBox7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnswerCheckBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerCheckBox7.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerCheckBox7.Image = ((System.Drawing.Image)(resources.GetObject("AnswerCheckBox7.Image")));
+            this.AnswerCheckBox7.Location = new System.Drawing.Point(1098, 336);
+            this.AnswerCheckBox7.Name = "AnswerCheckBox7";
+            this.AnswerCheckBox7.Size = new System.Drawing.Size(159, 46);
+            this.AnswerCheckBox7.TabIndex = 55;
+            this.AnswerCheckBox7.Text = "Ответ 7";
+            this.AnswerCheckBox7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AnswerCheckBox7.UseVisualStyleBackColor = false;
+            this.AnswerCheckBox7.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // sixthAnswerCheckBox
+            // AnswerCheckBox6
             // 
-            this.sixthAnswerCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.sixthAnswerCheckBox.AutoSize = true;
-            this.sixthAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.sixthAnswerCheckBox.FlatAppearance.BorderSize = 0;
-            this.sixthAnswerCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.sixthAnswerCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.sixthAnswerCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.sixthAnswerCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sixthAnswerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sixthAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.sixthAnswerCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("sixthAnswerCheckBox.Image")));
-            this.sixthAnswerCheckBox.Location = new System.Drawing.Point(1098, 296);
-            this.sixthAnswerCheckBox.Name = "sixthAnswerCheckBox";
-            this.sixthAnswerCheckBox.Size = new System.Drawing.Size(159, 46);
-            this.sixthAnswerCheckBox.TabIndex = 54;
-            this.sixthAnswerCheckBox.Text = "Ответ 6";
-            this.sixthAnswerCheckBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sixthAnswerCheckBox.UseVisualStyleBackColor = false;
-            this.sixthAnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            this.AnswerCheckBox6.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AnswerCheckBox6.AutoSize = true;
+            this.AnswerCheckBox6.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox6.FlatAppearance.BorderSize = 0;
+            this.AnswerCheckBox6.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnswerCheckBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerCheckBox6.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerCheckBox6.Image = ((System.Drawing.Image)(resources.GetObject("AnswerCheckBox6.Image")));
+            this.AnswerCheckBox6.Location = new System.Drawing.Point(1098, 296);
+            this.AnswerCheckBox6.Name = "AnswerCheckBox6";
+            this.AnswerCheckBox6.Size = new System.Drawing.Size(159, 46);
+            this.AnswerCheckBox6.TabIndex = 54;
+            this.AnswerCheckBox6.Text = "Ответ 6";
+            this.AnswerCheckBox6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AnswerCheckBox6.UseVisualStyleBackColor = false;
+            this.AnswerCheckBox6.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // fifthAnswerCheckBox
+            // AnswerCheckBox5
             // 
-            this.fifthAnswerCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.fifthAnswerCheckBox.AutoSize = true;
-            this.fifthAnswerCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.fifthAnswerCheckBox.FlatAppearance.BorderSize = 0;
-            this.fifthAnswerCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.fifthAnswerCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.fifthAnswerCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.fifthAnswerCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fifthAnswerCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fifthAnswerCheckBox.ForeColor = System.Drawing.Color.DarkCyan;
-            this.fifthAnswerCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("fifthAnswerCheckBox.Image")));
-            this.fifthAnswerCheckBox.Location = new System.Drawing.Point(1098, 258);
-            this.fifthAnswerCheckBox.Name = "fifthAnswerCheckBox";
-            this.fifthAnswerCheckBox.Size = new System.Drawing.Size(159, 46);
-            this.fifthAnswerCheckBox.TabIndex = 53;
-            this.fifthAnswerCheckBox.Text = "Ответ 5";
-            this.fifthAnswerCheckBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.fifthAnswerCheckBox.UseVisualStyleBackColor = false;
-            this.fifthAnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            this.AnswerCheckBox5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.AnswerCheckBox5.AutoSize = true;
+            this.AnswerCheckBox5.BackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox5.FlatAppearance.BorderSize = 0;
+            this.AnswerCheckBox5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AnswerCheckBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnswerCheckBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerCheckBox5.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerCheckBox5.Image = ((System.Drawing.Image)(resources.GetObject("AnswerCheckBox5.Image")));
+            this.AnswerCheckBox5.Location = new System.Drawing.Point(1098, 258);
+            this.AnswerCheckBox5.Name = "AnswerCheckBox5";
+            this.AnswerCheckBox5.Size = new System.Drawing.Size(159, 46);
+            this.AnswerCheckBox5.TabIndex = 53;
+            this.AnswerCheckBox5.Text = "Ответ 5";
+            this.AnswerCheckBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AnswerCheckBox5.UseVisualStyleBackColor = false;
+            this.AnswerCheckBox5.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // sixthAnswerRadioButton
+            // AnswerRadioButton6
             // 
-            this.sixthAnswerRadioButton.AutoSize = true;
-            this.sixthAnswerRadioButton.CheckedColor = System.Drawing.Color.ForestGreen;
-            this.sixthAnswerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sixthAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.sixthAnswerRadioButton.Location = new System.Drawing.Point(953, 305);
-            this.sixthAnswerRadioButton.MinimumSize = new System.Drawing.Size(0, 21);
-            this.sixthAnswerRadioButton.Name = "sixthAnswerRadioButton";
-            this.sixthAnswerRadioButton.Size = new System.Drawing.Size(139, 33);
-            this.sixthAnswerRadioButton.TabIndex = 60;
-            this.sixthAnswerRadioButton.TabStop = true;
-            this.sixthAnswerRadioButton.Text = "Ответ 6";
-            this.sixthAnswerRadioButton.UnCheckedColor = System.Drawing.Color.Gray;
-            this.sixthAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.AnswerRadioButton6.AutoSize = true;
+            this.AnswerRadioButton6.CheckedColor = System.Drawing.Color.ForestGreen;
+            this.AnswerRadioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRadioButton6.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerRadioButton6.Location = new System.Drawing.Point(953, 305);
+            this.AnswerRadioButton6.MinimumSize = new System.Drawing.Size(0, 21);
+            this.AnswerRadioButton6.Name = "AnswerRadioButton6";
+            this.AnswerRadioButton6.Size = new System.Drawing.Size(139, 33);
+            this.AnswerRadioButton6.TabIndex = 60;
+            this.AnswerRadioButton6.TabStop = true;
+            this.AnswerRadioButton6.Text = "Ответ 6";
+            this.AnswerRadioButton6.UnCheckedColor = System.Drawing.Color.Gray;
+            this.AnswerRadioButton6.UseVisualStyleBackColor = true;
             // 
             // goNextQuestionButton
             // 
@@ -441,21 +441,21 @@
             this.goNextQuestionButton.UseVisualStyleBackColor = false;
             this.goNextQuestionButton.Click += new System.EventHandler(this.GoNextQuestionButton_Click);
             // 
-            // eighthAnswerRadioButton
+            // AnswerRadioButton8
             // 
-            this.eighthAnswerRadioButton.AutoSize = true;
-            this.eighthAnswerRadioButton.CheckedColor = System.Drawing.Color.CadetBlue;
-            this.eighthAnswerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eighthAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.eighthAnswerRadioButton.Location = new System.Drawing.Point(953, 381);
-            this.eighthAnswerRadioButton.MinimumSize = new System.Drawing.Size(0, 21);
-            this.eighthAnswerRadioButton.Name = "eighthAnswerRadioButton";
-            this.eighthAnswerRadioButton.Size = new System.Drawing.Size(139, 33);
-            this.eighthAnswerRadioButton.TabIndex = 59;
-            this.eighthAnswerRadioButton.TabStop = true;
-            this.eighthAnswerRadioButton.Text = "Ответ 8";
-            this.eighthAnswerRadioButton.UnCheckedColor = System.Drawing.Color.Gray;
-            this.eighthAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.AnswerRadioButton8.AutoSize = true;
+            this.AnswerRadioButton8.CheckedColor = System.Drawing.Color.CadetBlue;
+            this.AnswerRadioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRadioButton8.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerRadioButton8.Location = new System.Drawing.Point(953, 381);
+            this.AnswerRadioButton8.MinimumSize = new System.Drawing.Size(0, 21);
+            this.AnswerRadioButton8.Name = "AnswerRadioButton8";
+            this.AnswerRadioButton8.Size = new System.Drawing.Size(139, 33);
+            this.AnswerRadioButton8.TabIndex = 59;
+            this.AnswerRadioButton8.TabStop = true;
+            this.AnswerRadioButton8.Text = "Ответ 8";
+            this.AnswerRadioButton8.UnCheckedColor = System.Drawing.Color.Gray;
+            this.AnswerRadioButton8.UseVisualStyleBackColor = true;
             // 
             // startTestButton
             // 
@@ -478,102 +478,102 @@
             this.startTestButton.UseVisualStyleBackColor = false;
             this.startTestButton.Click += new System.EventHandler(this.StartTestButton_Click);
             // 
-            // seventhAnswerRadioButton
+            // AnswerRadioButton7
             // 
-            this.seventhAnswerRadioButton.AutoSize = true;
-            this.seventhAnswerRadioButton.CheckedColor = System.Drawing.Color.Teal;
-            this.seventhAnswerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seventhAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.seventhAnswerRadioButton.Location = new System.Drawing.Point(953, 343);
-            this.seventhAnswerRadioButton.MinimumSize = new System.Drawing.Size(0, 21);
-            this.seventhAnswerRadioButton.Name = "seventhAnswerRadioButton";
-            this.seventhAnswerRadioButton.Size = new System.Drawing.Size(139, 33);
-            this.seventhAnswerRadioButton.TabIndex = 58;
-            this.seventhAnswerRadioButton.TabStop = true;
-            this.seventhAnswerRadioButton.Text = "Ответ 7";
-            this.seventhAnswerRadioButton.UnCheckedColor = System.Drawing.Color.Gray;
-            this.seventhAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.AnswerRadioButton7.AutoSize = true;
+            this.AnswerRadioButton7.CheckedColor = System.Drawing.Color.Teal;
+            this.AnswerRadioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRadioButton7.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerRadioButton7.Location = new System.Drawing.Point(953, 343);
+            this.AnswerRadioButton7.MinimumSize = new System.Drawing.Size(0, 21);
+            this.AnswerRadioButton7.Name = "AnswerRadioButton7";
+            this.AnswerRadioButton7.Size = new System.Drawing.Size(139, 33);
+            this.AnswerRadioButton7.TabIndex = 58;
+            this.AnswerRadioButton7.TabStop = true;
+            this.AnswerRadioButton7.Text = "Ответ 7";
+            this.AnswerRadioButton7.UnCheckedColor = System.Drawing.Color.Gray;
+            this.AnswerRadioButton7.UseVisualStyleBackColor = true;
             // 
-            // fifthAnswerRadioButton
+            // AnswerRadioButton5
             // 
-            this.fifthAnswerRadioButton.AutoSize = true;
-            this.fifthAnswerRadioButton.CheckedColor = System.Drawing.Color.ForestGreen;
-            this.fifthAnswerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fifthAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.fifthAnswerRadioButton.Location = new System.Drawing.Point(953, 267);
-            this.fifthAnswerRadioButton.MinimumSize = new System.Drawing.Size(0, 21);
-            this.fifthAnswerRadioButton.Name = "fifthAnswerRadioButton";
-            this.fifthAnswerRadioButton.Size = new System.Drawing.Size(139, 33);
-            this.fifthAnswerRadioButton.TabIndex = 57;
-            this.fifthAnswerRadioButton.TabStop = true;
-            this.fifthAnswerRadioButton.Text = "Ответ 5";
-            this.fifthAnswerRadioButton.UnCheckedColor = System.Drawing.Color.Gray;
-            this.fifthAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.AnswerRadioButton5.AutoSize = true;
+            this.AnswerRadioButton5.CheckedColor = System.Drawing.Color.ForestGreen;
+            this.AnswerRadioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRadioButton5.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerRadioButton5.Location = new System.Drawing.Point(953, 267);
+            this.AnswerRadioButton5.MinimumSize = new System.Drawing.Size(0, 21);
+            this.AnswerRadioButton5.Name = "AnswerRadioButton5";
+            this.AnswerRadioButton5.Size = new System.Drawing.Size(139, 33);
+            this.AnswerRadioButton5.TabIndex = 57;
+            this.AnswerRadioButton5.TabStop = true;
+            this.AnswerRadioButton5.Text = "Ответ 5";
+            this.AnswerRadioButton5.UnCheckedColor = System.Drawing.Color.Gray;
+            this.AnswerRadioButton5.UseVisualStyleBackColor = true;
             // 
-            // firstAnswerRadioButton
+            // AnswerRadioButton1
             // 
-            this.firstAnswerRadioButton.AutoSize = true;
-            this.firstAnswerRadioButton.CheckedColor = System.Drawing.Color.ForestGreen;
-            this.firstAnswerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.firstAnswerRadioButton.Location = new System.Drawing.Point(17, 267);
-            this.firstAnswerRadioButton.MinimumSize = new System.Drawing.Size(0, 21);
-            this.firstAnswerRadioButton.Name = "firstAnswerRadioButton";
-            this.firstAnswerRadioButton.Size = new System.Drawing.Size(139, 33);
-            this.firstAnswerRadioButton.TabIndex = 47;
-            this.firstAnswerRadioButton.TabStop = true;
-            this.firstAnswerRadioButton.Text = "Ответ 1";
-            this.firstAnswerRadioButton.UnCheckedColor = System.Drawing.Color.Gray;
-            this.firstAnswerRadioButton.UseVisualStyleBackColor = true;
-            this.firstAnswerRadioButton.LocationChanged += new System.EventHandler(this.FirstAnswerRadioButton_LocationChanged);
+            this.AnswerRadioButton1.AutoSize = true;
+            this.AnswerRadioButton1.CheckedColor = System.Drawing.Color.ForestGreen;
+            this.AnswerRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRadioButton1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerRadioButton1.Location = new System.Drawing.Point(17, 267);
+            this.AnswerRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
+            this.AnswerRadioButton1.Name = "AnswerRadioButton1";
+            this.AnswerRadioButton1.Size = new System.Drawing.Size(139, 33);
+            this.AnswerRadioButton1.TabIndex = 47;
+            this.AnswerRadioButton1.TabStop = true;
+            this.AnswerRadioButton1.Text = "Ответ 1";
+            this.AnswerRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
+            this.AnswerRadioButton1.UseVisualStyleBackColor = true;
+            this.AnswerRadioButton1.LocationChanged += new System.EventHandler(this.FirstAnswerRadioButton_LocationChanged);
             // 
-            // thirdAnswerRadioButton
+            // AnswerRadioButton3
             // 
-            this.thirdAnswerRadioButton.AutoSize = true;
-            this.thirdAnswerRadioButton.CheckedColor = System.Drawing.Color.Teal;
-            this.thirdAnswerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thirdAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.thirdAnswerRadioButton.Location = new System.Drawing.Point(17, 343);
-            this.thirdAnswerRadioButton.MinimumSize = new System.Drawing.Size(0, 21);
-            this.thirdAnswerRadioButton.Name = "thirdAnswerRadioButton";
-            this.thirdAnswerRadioButton.Size = new System.Drawing.Size(139, 33);
-            this.thirdAnswerRadioButton.TabIndex = 49;
-            this.thirdAnswerRadioButton.TabStop = true;
-            this.thirdAnswerRadioButton.Text = "Ответ 3";
-            this.thirdAnswerRadioButton.UnCheckedColor = System.Drawing.Color.Gray;
-            this.thirdAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.AnswerRadioButton3.AutoSize = true;
+            this.AnswerRadioButton3.CheckedColor = System.Drawing.Color.Teal;
+            this.AnswerRadioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRadioButton3.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerRadioButton3.Location = new System.Drawing.Point(17, 343);
+            this.AnswerRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
+            this.AnswerRadioButton3.Name = "AnswerRadioButton3";
+            this.AnswerRadioButton3.Size = new System.Drawing.Size(139, 33);
+            this.AnswerRadioButton3.TabIndex = 49;
+            this.AnswerRadioButton3.TabStop = true;
+            this.AnswerRadioButton3.Text = "Ответ 3";
+            this.AnswerRadioButton3.UnCheckedColor = System.Drawing.Color.Gray;
+            this.AnswerRadioButton3.UseVisualStyleBackColor = true;
             // 
-            // fourthAnswerRadioButton
+            // AnswerRadioButton4
             // 
-            this.fourthAnswerRadioButton.AutoSize = true;
-            this.fourthAnswerRadioButton.CheckedColor = System.Drawing.Color.CadetBlue;
-            this.fourthAnswerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fourthAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.fourthAnswerRadioButton.Location = new System.Drawing.Point(17, 381);
-            this.fourthAnswerRadioButton.MinimumSize = new System.Drawing.Size(0, 21);
-            this.fourthAnswerRadioButton.Name = "fourthAnswerRadioButton";
-            this.fourthAnswerRadioButton.Size = new System.Drawing.Size(139, 33);
-            this.fourthAnswerRadioButton.TabIndex = 50;
-            this.fourthAnswerRadioButton.TabStop = true;
-            this.fourthAnswerRadioButton.Text = "Ответ 4";
-            this.fourthAnswerRadioButton.UnCheckedColor = System.Drawing.Color.Gray;
-            this.fourthAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.AnswerRadioButton4.AutoSize = true;
+            this.AnswerRadioButton4.CheckedColor = System.Drawing.Color.CadetBlue;
+            this.AnswerRadioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRadioButton4.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerRadioButton4.Location = new System.Drawing.Point(17, 381);
+            this.AnswerRadioButton4.MinimumSize = new System.Drawing.Size(0, 21);
+            this.AnswerRadioButton4.Name = "AnswerRadioButton4";
+            this.AnswerRadioButton4.Size = new System.Drawing.Size(139, 33);
+            this.AnswerRadioButton4.TabIndex = 50;
+            this.AnswerRadioButton4.TabStop = true;
+            this.AnswerRadioButton4.Text = "Ответ 4";
+            this.AnswerRadioButton4.UnCheckedColor = System.Drawing.Color.Gray;
+            this.AnswerRadioButton4.UseVisualStyleBackColor = true;
             // 
-            // secondAnswerRadioButton
+            // AnswerRadioButton2
             // 
-            this.secondAnswerRadioButton.AutoSize = true;
-            this.secondAnswerRadioButton.CheckedColor = System.Drawing.Color.ForestGreen;
-            this.secondAnswerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondAnswerRadioButton.ForeColor = System.Drawing.Color.DarkCyan;
-            this.secondAnswerRadioButton.Location = new System.Drawing.Point(17, 305);
-            this.secondAnswerRadioButton.MinimumSize = new System.Drawing.Size(0, 21);
-            this.secondAnswerRadioButton.Name = "secondAnswerRadioButton";
-            this.secondAnswerRadioButton.Size = new System.Drawing.Size(139, 33);
-            this.secondAnswerRadioButton.TabIndex = 52;
-            this.secondAnswerRadioButton.TabStop = true;
-            this.secondAnswerRadioButton.Text = "Ответ 2";
-            this.secondAnswerRadioButton.UnCheckedColor = System.Drawing.Color.Gray;
-            this.secondAnswerRadioButton.UseVisualStyleBackColor = true;
+            this.AnswerRadioButton2.AutoSize = true;
+            this.AnswerRadioButton2.CheckedColor = System.Drawing.Color.ForestGreen;
+            this.AnswerRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRadioButton2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AnswerRadioButton2.Location = new System.Drawing.Point(17, 305);
+            this.AnswerRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
+            this.AnswerRadioButton2.Name = "AnswerRadioButton2";
+            this.AnswerRadioButton2.Size = new System.Drawing.Size(139, 33);
+            this.AnswerRadioButton2.TabIndex = 52;
+            this.AnswerRadioButton2.TabStop = true;
+            this.AnswerRadioButton2.Text = "Ответ 2";
+            this.AnswerRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
+            this.AnswerRadioButton2.UseVisualStyleBackColor = true;
             // 
             // TestForm
             // 
@@ -582,34 +582,34 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1286, 594);
-            this.Controls.Add(this.secondAnswerCheckBox);
-            this.Controls.Add(this.sixthAnswerRadioButton);
+            this.Controls.Add(this.AnswerCheckBox2);
+            this.Controls.Add(this.AnswerRadioButton6);
             this.Controls.Add(this.referenceButton);
-            this.Controls.Add(this.firstAnswerCheckBox);
+            this.Controls.Add(this.AnswerCheckBox1);
             this.Controls.Add(this.goNextQuestionButton);
-            this.Controls.Add(this.eighthAnswerRadioButton);
+            this.Controls.Add(this.AnswerRadioButton8);
             this.Controls.Add(this.startTestButton);
-            this.Controls.Add(this.thirdAnswerCheckBox);
+            this.Controls.Add(this.AnswerCheckBox3);
             this.Controls.Add(this.allNumQuestionLabel);
-            this.Controls.Add(this.seventhAnswerRadioButton);
+            this.Controls.Add(this.AnswerRadioButton7);
             this.Controls.Add(this.offLabel);
-            this.Controls.Add(this.fourthAnswerCheckBox);
+            this.Controls.Add(this.AnswerCheckBox4);
             this.Controls.Add(this.numOfQuestionLabel);
-            this.Controls.Add(this.fifthAnswerRadioButton);
+            this.Controls.Add(this.AnswerRadioButton5);
             this.Controls.Add(this.headerPanel);
-            this.Controls.Add(this.firstAnswerRadioButton);
+            this.Controls.Add(this.AnswerRadioButton1);
             this.Controls.Add(this.questionLabel);
-            this.Controls.Add(this.eighthAnswerCheckBox);
+            this.Controls.Add(this.AnswerCheckBox8);
             this.Controls.Add(this.timerLabel);
-            this.Controls.Add(this.thirdAnswerRadioButton);
+            this.Controls.Add(this.AnswerRadioButton3);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.seventhAnswerCheckBox);
-            this.Controls.Add(this.fourthAnswerRadioButton);
+            this.Controls.Add(this.AnswerCheckBox7);
+            this.Controls.Add(this.AnswerRadioButton4);
             this.Controls.Add(this.minimizeButton);
-            this.Controls.Add(this.sixthAnswerCheckBox);
+            this.Controls.Add(this.AnswerCheckBox6);
             this.Controls.Add(this.answerTextBox);
-            this.Controls.Add(this.fifthAnswerCheckBox);
-            this.Controls.Add(this.secondAnswerRadioButton);
+            this.Controls.Add(this.AnswerCheckBox5);
+            this.Controls.Add(this.AnswerRadioButton2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -634,14 +634,14 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Button referenceButton;
-        private System.Windows.Forms.CheckBox firstAnswerCheckBox;
-        private System.Windows.Forms.CheckBox secondAnswerCheckBox;
-        private System.Windows.Forms.CheckBox thirdAnswerCheckBox;
+        private System.Windows.Forms.CheckBox AnswerCheckBox1;
+        private System.Windows.Forms.CheckBox AnswerCheckBox2;
+        private System.Windows.Forms.CheckBox AnswerCheckBox3;
         private System.Windows.Forms.TextBox answerTextBox;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timerLabel;
-        private System.Windows.Forms.CheckBox fourthAnswerCheckBox;
+        private System.Windows.Forms.CheckBox AnswerCheckBox4;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label numOfQuestionLabel;
@@ -650,17 +650,17 @@
         private WindowsFormsApp1.MyButton startTestButton;
         private WindowsFormsApp1.MyButton goNextQuestionButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private WindowsFormsApp1.MyRadioButton firstAnswerRadioButton;
-        private WindowsFormsApp1.MyRadioButton thirdAnswerRadioButton;
-        private WindowsFormsApp1.MyRadioButton fourthAnswerRadioButton;
-        private WindowsFormsApp1.MyRadioButton secondAnswerRadioButton;
-        private WindowsFormsApp1.MyRadioButton sixthAnswerRadioButton;
-        private WindowsFormsApp1.MyRadioButton eighthAnswerRadioButton;
-        private WindowsFormsApp1.MyRadioButton seventhAnswerRadioButton;
-        private WindowsFormsApp1.MyRadioButton fifthAnswerRadioButton;
-        private System.Windows.Forms.CheckBox eighthAnswerCheckBox;
-        private System.Windows.Forms.CheckBox seventhAnswerCheckBox;
-        private System.Windows.Forms.CheckBox sixthAnswerCheckBox;
-        private System.Windows.Forms.CheckBox fifthAnswerCheckBox;
+        private WindowsFormsApp1.MyRadioButton AnswerRadioButton1;
+        private WindowsFormsApp1.MyRadioButton AnswerRadioButton3;
+        private WindowsFormsApp1.MyRadioButton AnswerRadioButton4;
+        private WindowsFormsApp1.MyRadioButton AnswerRadioButton2;
+        private WindowsFormsApp1.MyRadioButton AnswerRadioButton6;
+        private WindowsFormsApp1.MyRadioButton AnswerRadioButton8;
+        private WindowsFormsApp1.MyRadioButton AnswerRadioButton7;
+        private WindowsFormsApp1.MyRadioButton AnswerRadioButton5;
+        private System.Windows.Forms.CheckBox AnswerCheckBox8;
+        private System.Windows.Forms.CheckBox AnswerCheckBox7;
+        private System.Windows.Forms.CheckBox AnswerCheckBox6;
+        private System.Windows.Forms.CheckBox AnswerCheckBox5;
     }
 }
