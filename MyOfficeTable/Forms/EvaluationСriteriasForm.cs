@@ -84,5 +84,11 @@ namespace MyOfficeTable
             form.ShowDialog();
             Close();
         }
+
+        private void EvaluationСriteriasForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.goFromTheory = false;
+            Properties.Settings.Default.Save();
+        }
     }
 }

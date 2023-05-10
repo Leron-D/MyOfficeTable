@@ -16,7 +16,8 @@ namespace MyOfficeTable
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Properties.Settings.Default.IsFirstLoad = Properties.Settings.Default.goFromTheory = Properties.Settings.Default.firstLoadInstruction = true;
+            Properties.Settings.Default.IsFirstLoad = Properties.Settings.Default.firstLoadInstruction = true;
+            Properties.Settings.Default.goFromTheory = false;
             Properties.Settings.Default.Save();
             Application.Run(new MainForm());
         }

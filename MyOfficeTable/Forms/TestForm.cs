@@ -48,10 +48,10 @@ namespace MyOfficeTable
                 offLabel.Left = (ClientSize.Width - offLabel.Width) / 2;
                 numOfQuestionLabel.Left = offLabel.Left - 51;
                 allNumQuestionLabel.Left = offLabel.Left + 51;
-                firstAnswerCheckBox.Location = answerTextBox.Location = firstAnswerRadioButton.Location;
-                secondAnswerCheckBox.Location = new Point(12, firstAnswerCheckBox.Location.Y + 42);
-                thirdAnswerCheckBox.Location = new Point(12, secondAnswerCheckBox.Location.Y + 42);
-                fourthAnswerCheckBox.Location = new Point(12, thirdAnswerCheckBox.Location.Y + 42);
+                //firstAnswerCheckBox.Location = answerTextBox.Location = firstAnswerRadioButton.Location;
+                //secondAnswerCheckBox.Location = new Point(1, firstAnswerCheckBox.Location.Y + 42);
+                //thirdAnswerCheckBox.Location = new Point(1, secondAnswerCheckBox.Location.Y + 42);
+                //fourthAnswerCheckBox.Location = new Point(1, thirdAnswerCheckBox.Location.Y + 42);
                 ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(minimizeButton, "Свернуть");
                 toolTip.SetToolTip(cancelButton, "Закрыть");
@@ -169,7 +169,7 @@ namespace MyOfficeTable
                         if (answer5 != null)
                         {
                             Height += 42;
-                            fifthAnswerRadioButton.Location = new Point(12, fourthAnswerRadioButton.Location.Y + 42);
+                            fifthAnswerRadioButton.Location = new Point(17, fourthAnswerRadioButton.Location.Y + 42);
                             fifthAnswerRadioButton.Visible = true;
                             fifthAnswerRadioButton.Text = answer5.Value;
                         }
@@ -181,7 +181,7 @@ namespace MyOfficeTable
                         if (answer6 != null)
                         {
                             Height += 42;
-                            sixthAnswerRadioButton.Location = new Point(12, fifthAnswerRadioButton.Location.Y + 42);
+                            sixthAnswerRadioButton.Location = new Point(17, fifthAnswerRadioButton.Location.Y + 42);
                             sixthAnswerRadioButton.Visible = true;
                             sixthAnswerRadioButton.Text = answer6.Value;
                         }
@@ -193,7 +193,7 @@ namespace MyOfficeTable
                         if (answer7 != null)
                         {
                             Height += 42;
-                            seventhAnswerRadioButton.Location = new Point(12, sixthAnswerRadioButton.Location.Y + 42);
+                            seventhAnswerRadioButton.Location = new Point(17, sixthAnswerRadioButton.Location.Y + 42);
                             seventhAnswerRadioButton.Visible = true;
                             seventhAnswerRadioButton.Text = answer7.Value;
                         }
@@ -205,7 +205,7 @@ namespace MyOfficeTable
                         if (answer8 != null)
                         {
                             Height += 42;
-                            eighthAnswerRadioButton.Location = new Point(12, seventhAnswerRadioButton.Location.Y + 42);
+                            eighthAnswerRadioButton.Location = new Point(17, seventhAnswerRadioButton.Location.Y + 42);
                             eighthAnswerRadioButton.Visible = true;
                             eighthAnswerRadioButton.Text = answer8.Value;
                         }
@@ -237,7 +237,7 @@ namespace MyOfficeTable
                         if (answer5 != null)
                         {
                             Height += 42;
-                            fifthAnswerCheckBox.Location = new Point(12, fourthAnswerCheckBox.Location.Y + 42);
+                            fifthAnswerCheckBox.Location = new Point(1, fourthAnswerCheckBox.Location.Y + 42);
                             fifthAnswerCheckBox.Visible = true;
                             fifthAnswerCheckBox.Text = answer5.Value;
                         }
@@ -249,7 +249,7 @@ namespace MyOfficeTable
                         if (answer6 != null)
                         {
                             Height += 42;
-                            sixthAnswerCheckBox.Location = new Point(12, fifthAnswerCheckBox.Location.Y + 42);
+                            sixthAnswerCheckBox.Location = new Point(1, fifthAnswerCheckBox.Location.Y + 42);
                             sixthAnswerCheckBox.Visible = true;
                             sixthAnswerCheckBox.Text = answer6.Value;
                         }
@@ -261,7 +261,7 @@ namespace MyOfficeTable
                         if (answer7 != null)
                         {
                             Height += 42;
-                            seventhAnswerCheckBox.Location = new Point(12, sixthAnswerCheckBox.Location.Y + 42);
+                            seventhAnswerCheckBox.Location = new Point(1, sixthAnswerCheckBox.Location.Y + 42);
                             seventhAnswerCheckBox.Visible = true;
                             seventhAnswerCheckBox.Text = answer7.Value;
                         }
@@ -273,7 +273,7 @@ namespace MyOfficeTable
                         if (answer8 != null)
                         {
                             Height += 42;
-                            eighthAnswerCheckBox.Location = new Point(12, seventhAnswerCheckBox.Location.Y + 42);
+                            eighthAnswerCheckBox.Location = new Point(1, seventhAnswerCheckBox.Location.Y + 42);
                             eighthAnswerCheckBox.Visible = true;
                             eighthAnswerCheckBox.Text = answer8.Value;
                         }
@@ -440,22 +440,31 @@ namespace MyOfficeTable
 
         private void FirstAnswerRadioButton_LocationChanged(object sender, EventArgs e)
         {
-            secondAnswerRadioButton.Location = secondAnswerCheckBox.Location = new Point(12, firstAnswerRadioButton.Location.Y + 42);
-            thirdAnswerRadioButton.Location = thirdAnswerCheckBox.Location = new Point(12, secondAnswerRadioButton.Location.Y + 42);
-            fourthAnswerRadioButton.Location = fourthAnswerCheckBox.Location = new Point(12, thirdAnswerRadioButton.Location.Y + 42);
+            secondAnswerRadioButton.Location = new Point(17, firstAnswerRadioButton.Location.Y + 42);
+            thirdAnswerRadioButton.Location = new Point(17, secondAnswerRadioButton.Location.Y + 42);
+            fourthAnswerRadioButton.Location = new Point(17, thirdAnswerRadioButton.Location.Y + 42);
         }
 
         private void QuestionLabel_Resize(object sender, EventArgs e)
         {
             int height = questionLabel.Size.Height + questionLabel.Location.Y;
-            if (height > 290)
+            if (height > 275)
             {
-                firstAnswerRadioButton.Location = firstAnswerCheckBox.Location = new Point(12, height + 15);
+                firstAnswerRadioButton.Location = answerTextBox.Location = new Point(17, height + 16);
+                firstAnswerCheckBox.Location = new Point(1, height + 16);
             }
             else
             {
-                firstAnswerRadioButton.Location = firstAnswerCheckBox.Location = new Point(12, 305);
+                firstAnswerRadioButton.Location = answerTextBox.Location = new Point(17, 267);
+                firstAnswerCheckBox.Location = new Point(1, 260);
             }
+        }
+
+        private void FirstAnswerCheckBox_LocationChanged(object sender, EventArgs e)
+        {
+            secondAnswerCheckBox.Location = new Point(1, firstAnswerCheckBox.Location.Y + 42);
+            thirdAnswerCheckBox.Location = new Point(1, secondAnswerCheckBox.Location.Y + 42);
+            fourthAnswerCheckBox.Location = new Point(1, thirdAnswerCheckBox.Location.Y + 42);
         }
     }
 }

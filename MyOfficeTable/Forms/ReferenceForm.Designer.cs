@@ -49,7 +49,7 @@
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(786, 2);
+            this.cancelButton.Location = new System.Drawing.Point(818, 2);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 15;
@@ -64,7 +64,7 @@
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(745, 2);
+            this.minimizeButton.Location = new System.Drawing.Point(777, 2);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
             this.minimizeButton.TabIndex = 14;
@@ -122,18 +122,20 @@
             this.descriptionLabel.ForeColor = System.Drawing.Color.DarkCyan;
             this.descriptionLabel.Location = new System.Drawing.Point(8, 367);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(768, 117);
+            this.descriptionLabel.Size = new System.Drawing.Size(800, 117);
             this.descriptionLabel.TabIndex = 20;
             this.descriptionLabel.Text = "Описание: ";
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Location = new System.Drawing.Point(-5, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 134);
+            this.panel1.Size = new System.Drawing.Size(864, 134);
             this.panel1.TabIndex = 33;
             // 
             // pictureBox1
@@ -165,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(820, 595);
+            this.ClientSize = new System.Drawing.Size(852, 595);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.versionLabel);

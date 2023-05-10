@@ -184,6 +184,7 @@
             this.Name = "EvaluationСriteriasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Критерии оценивания";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EvaluationСriteriasForm_FormClosed);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseUp);

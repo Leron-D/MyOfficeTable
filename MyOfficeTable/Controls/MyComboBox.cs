@@ -89,7 +89,6 @@ namespace MyOfficeTable
 
         private void Icon_Click(object sender, EventArgs e)
         {
-
             comboBoxList.Select();
             comboBoxList.DroppedDown = true;
         }
@@ -324,7 +323,7 @@ namespace MyOfficeTable
             comboBoxList.Width = labelText.Width;
             comboBoxList.Location = new Point()
             {
-                X = this.Width - this.Padding.Right - comboBoxList.Width,
+                X = this.Width - comboBoxList.Width,
                 Y = labelText.Bottom - comboBoxList.Height
             };
         }
