@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyOfficeTable.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,8 +21,8 @@ namespace MyOfficeTable.Forms
         public InteractiveTaskForm()
         {
             InitializeComponent();
-            Properties.Settings.Default.firstLoadInstruction = false;
-            Properties.Settings.Default.Save();
+            Settings.Default.firstLoadInstruction = false;
+            Settings.Default.Save();
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(helpButton, "Помощь");
             tabControl.Multiline = true;
@@ -45,8 +46,8 @@ namespace MyOfficeTable.Forms
             var message = MessageBox.Show("Вы точно хотите выйти?", "Выход из задания", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (message == DialogResult.Yes)
             {
-                Properties.Settings.Default.firstLoadInstruction = true;
-                Properties.Settings.Default.Save();
+                Settings.Default.firstLoadInstruction = true;
+                Settings.Default.Save();
                 MainForm form = new MainForm();
                 Hide();
                 form.ShowDialog();
@@ -73,11 +74,6 @@ namespace MyOfficeTable.Forms
         private void InteractiveTaskForm_MouseUp(object sender, MouseEventArgs e)
         {
             isMouseDown = false;
-        }
-
-        private void SourcePictureBox_DragDrop(object sender, DragEventArgs e)
-        {
-
         }
 
         private void SourcePictureBox_DragEnter(object sender, DragEventArgs e)
@@ -109,7 +105,8 @@ namespace MyOfficeTable.Forms
             {
                 destinationPictureBox.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
                 destinationPictureBox.Tag = srcPictureBox.Tag;
-                srcPictureBox.Image = null;
+                srcPictureBox.Image = null;            
+                CheckCorrectness();
             }
         }
 
@@ -124,78 +121,85 @@ namespace MyOfficeTable.Forms
             {
                 if (destinationPictureBox.Tag == "cut")
                 {
-                    ReturnPicture(SourcePictureBox1, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox1, destinationPictureBox, resultLabel1);
                 }
                 else if (destinationPictureBox.Tag == "copyFormat")
                 {
-                    ReturnPicture(SourcePictureBox2, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox2, destinationPictureBox, resultLabel2);
                 }
                 else if (destinationPictureBox.Tag == "allLettersUppercase")
                 {
-                    ReturnPicture(SourcePictureBox3, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox3, destinationPictureBox, resultLabel3);
                 }
                 else if (destinationPictureBox.Tag == "bold")
                 {
-                    ReturnPicture(SourcePictureBox4, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox4, destinationPictureBox, resultLabel4);
                 }
                 else if (destinationPictureBox.Tag == "print")
                 {
-                    ReturnPicture(SourcePictureBox5, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox5, destinationPictureBox, resultLabel5);
                 }
                 else if (destinationPictureBox.Tag == "save")
                 {
-                    ReturnPicture(SourcePictureBox6, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox6, destinationPictureBox, resultLabel6);
                 }
                 else if (destinationPictureBox.Tag == "enter")
                 {
-                    ReturnPicture(SourcePictureBox7, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox7, destinationPictureBox, resultLabel7);
                 }
                 else if (destinationPictureBox.Tag == "copy")
                 {
-                    ReturnPicture(SourcePictureBox8, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox8, destinationPictureBox, resultLabel8);
                 }
                 else if (destinationPictureBox.Tag == "italic")
                 {
-                    ReturnPicture(SourcePictureBox9, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox9, destinationPictureBox, resultLabel9);
                 }
                 else if (destinationPictureBox.Tag == "colorOfText")
                 {
-                    ReturnPicture(SourcePictureBox10, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox10, destinationPictureBox, resultLabel10);
                 }
                 else if (destinationPictureBox.Tag == "underlined")
                 {
-                    ReturnPicture(SourcePictureBox11, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox11, destinationPictureBox, resultLabel11);
                 }
                 else if (destinationPictureBox.Tag == "colorOfFill")
                 {
-                    ReturnPicture(SourcePictureBox12, destinationPictureBox);
+                    ReturnPicture(SourcePictureBox12, destinationPictureBox, resultLabel12);
                 }
             }
         }
 
-        private void ReturnPicture(PictureBox pictureBox1, PictureBox pictureBox2)
+        private void ReturnPicture(PictureBox pictureBox1, PictureBox pictureBox2, Label resultLabel)
         {
             pictureBox1.Image = pictureBox2.Image;
             pictureBox2.Image = null;
             pictureBox2.Tag = null;
+            resultLabel.Tag = null;
+            CheckCorrectness();
         }
 
         private void GoToNextTask()
         {
-            if (tabControl.SelectedTab == tabControl.TabPages[0])
+            if (tabControl.SelectedTab == tabControl.TabPages[0] && resultLabel1.Tag == "Correct" && resultLabel2.Tag == "Correct" && resultLabel3.Tag == "Correct" && resultLabel4.Tag == "Correct")
             {
                 tabControl.SelectedTab = tabControl.TabPages[1];
                 goNextButton.Text = "Продолжить";
                 goBackButton.Enabled = true;
             }
-            else if (tabControl.SelectedTab == tabControl.TabPages[1])
+            else if (tabControl.SelectedTab == tabControl.TabPages[1] && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
             {
                 tabControl.SelectedTab = tabControl.TabPages[2];
                 goNextButton.Text = "Завершить";
             }
+            else if (tabControl.SelectedTab == tabControl.TabPages[2] && resultLabel9.Tag == "Correct" && resultLabel10.Tag == "Correct" && resultLabel11.Tag == "Correct" && resultLabel12.Tag == "Correct")
+            {
+                ShowForm(new ResultInteractiveForm());
+            }
             else
             {
                 CheckCorrectness();
+                MessageBox.Show("Задание решено неверно, попробуйте снова", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -220,42 +224,44 @@ namespace MyOfficeTable.Forms
 
         void CheckCorrectness()
         {
-            if (DestinationPictureBox1.Tag == "cut" && DestinationPictureBox2.Tag == "copyFormat" && DestinationPictureBox3.Tag == "bold" && DestinationPictureBox4.Tag == "allLettersUppercase")
+            if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
-                Properties.Settings.Default.correctTask1 = true;
-                Properties.Settings.Default.Save();
+                ChangeImageOfLabel(DestinationPictureBox1, "cut", resultLabel1);
+                ChangeImageOfLabel(DestinationPictureBox2, "copyFormat", resultLabel2);
+                ChangeImageOfLabel(DestinationPictureBox3, "bold", resultLabel3);
+                ChangeImageOfLabel(DestinationPictureBox4, "allLettersUppercase", resultLabel4);
+            }
+            else if (tabControl.SelectedTab == tabControl.TabPages[1])
+            {
+                ChangeImageOfLabel(DestinationPictureBox5, "save", resultLabel5);
+                ChangeImageOfLabel(DestinationPictureBox6, "print", resultLabel6);
+                ChangeImageOfLabel(DestinationPictureBox7, "copy", resultLabel7);
+                ChangeImageOfLabel(DestinationPictureBox8, "enter", resultLabel8);
             }
             else
             {
-                Properties.Settings.Default.correctTask1 = false;
-                Properties.Settings.Default.Save();
+                ChangeImageOfLabel(DestinationPictureBox9, "underlined", resultLabel9);
+                ChangeImageOfLabel(DestinationPictureBox10, "colorOfFill", resultLabel10);
+                ChangeImageOfLabel(DestinationPictureBox11, "italic", resultLabel11);
+                ChangeImageOfLabel(DestinationPictureBox12, "colorOfText", resultLabel12);
             }
+        }
 
-            if (DestinationPictureBox5.Tag == "save" && DestinationPictureBox6.Tag == "print" && DestinationPictureBox7.Tag == "copy" && DestinationPictureBox8.Tag == "enter")
+        private void ChangeImageOfLabel(PictureBox destination, string tag, Label resultLabel)
+        {
+            resultLabel.Visible = true;
+            if (destination.Tag != tag)
             {
-                Properties.Settings.Default.correctTask2 = true;
-                Properties.Settings.Default.Save();
+                resultLabel.Text = "";
+                resultLabel.Image = Resources.Incorrect;
+                resultLabel.Tag = "Incorrect";
             }
             else
             {
-                Properties.Settings.Default.correctTask2 = false;
-                Properties.Settings.Default.Save();
+                resultLabel.Text = "";
+                resultLabel.Image = Resources.Correct;
+                resultLabel.Tag = "Correct";
             }
-
-            if (DestinationPictureBox9.Tag == "underlined" && DestinationPictureBox10.Tag == "colorOfFill" && DestinationPictureBox11.Tag == "italic" && DestinationPictureBox12.Tag == "colorOfText")
-            {
-                Properties.Settings.Default.correctTask3 = true;
-                Properties.Settings.Default.Save();
-            }
-            else
-            {
-                Properties.Settings.Default.correctTask3 = false;
-                Properties.Settings.Default.Save();
-            }
-            ResultInteractiveForm form = new ResultInteractiveForm();
-            Hide();
-            form.ShowDialog();
-            Close();
         }
 
         private void HelpButton_Click(object sender, EventArgs e)
@@ -269,6 +275,13 @@ namespace MyOfficeTable.Forms
         private void InstructionForm_Closed(object sender, FormClosedEventArgs e)
         {
             helpButton.Enabled = true;
+        }
+
+        void ShowForm(Form form)
+        {
+            Hide();
+            form.ShowDialog();
+            Close();
         }
     }
 }

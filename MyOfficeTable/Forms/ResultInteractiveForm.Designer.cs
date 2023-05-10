@@ -28,95 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.takeTestAgainButton = new WindowsFormsApp1.MyButton();
-            this.resultLabel3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.resultLabel2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultInteractiveForm));
+            this.goTestAgainButton = new WindowsFormsApp1.MyButton();
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
-            this.resultLabel1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // takeTestAgainButton
+            // goTestAgainButton
             // 
-            this.takeTestAgainButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.takeTestAgainButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.takeTestAgainButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            this.takeTestAgainButton.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.takeTestAgainButton.BorderRadius = 20;
-            this.takeTestAgainButton.BorderSize = 0;
-            this.takeTestAgainButton.FlatAppearance.BorderSize = 0;
-            this.takeTestAgainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.takeTestAgainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.takeTestAgainButton.ForeColor = System.Drawing.Color.White;
-            this.takeTestAgainButton.Location = new System.Drawing.Point(241, 432);
-            this.takeTestAgainButton.MinimumSize = new System.Drawing.Size(150, 40);
-            this.takeTestAgainButton.Name = "takeTestAgainButton";
-            this.takeTestAgainButton.Size = new System.Drawing.Size(239, 40);
-            this.takeTestAgainButton.TabIndex = 64;
-            this.takeTestAgainButton.Text = "Пройти тест заново";
-            this.takeTestAgainButton.TextColor = System.Drawing.Color.White;
-            this.takeTestAgainButton.UseVisualStyleBackColor = false;
-            this.takeTestAgainButton.Click += new System.EventHandler(this.TakeTestAgainButton_Click);
-            // 
-            // resultLabel3
-            // 
-            this.resultLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.resultLabel3.AutoSize = true;
-            this.resultLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel3.Location = new System.Drawing.Point(430, 358);
-            this.resultLabel3.Name = "resultLabel3";
-            this.resultLabel3.Size = new System.Drawing.Size(37, 37);
-            this.resultLabel3.TabIndex = 63;
-            this.resultLabel3.Text = "#";
-            this.resultLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label5.Location = new System.Drawing.Point(142, 358);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(265, 37);
-            this.label5.TabIndex = 62;
-            this.label5.Text = "Третье задание:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // resultLabel2
-            // 
-            this.resultLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.resultLabel2.AutoSize = true;
-            this.resultLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel2.Location = new System.Drawing.Point(430, 290);
-            this.resultLabel2.Name = "resultLabel2";
-            this.resultLabel2.Size = new System.Drawing.Size(37, 37);
-            this.resultLabel2.TabIndex = 61;
-            this.resultLabel2.Text = "#";
-            this.resultLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label3.Location = new System.Drawing.Point(142, 290);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(270, 37);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Второе задание:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.goTestAgainButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.goTestAgainButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.goTestAgainButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.goTestAgainButton.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.goTestAgainButton.BorderRadius = 20;
+            this.goTestAgainButton.BorderSize = 0;
+            this.goTestAgainButton.FlatAppearance.BorderSize = 0;
+            this.goTestAgainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goTestAgainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goTestAgainButton.ForeColor = System.Drawing.Color.White;
+            this.goTestAgainButton.Location = new System.Drawing.Point(252, 427);
+            this.goTestAgainButton.MinimumSize = new System.Drawing.Size(150, 40);
+            this.goTestAgainButton.Name = "goTestAgainButton";
+            this.goTestAgainButton.Size = new System.Drawing.Size(239, 40);
+            this.goTestAgainButton.TabIndex = 64;
+            this.goTestAgainButton.Text = "Пройти тест заново";
+            this.goTestAgainButton.TextColor = System.Drawing.Color.White;
+            this.goTestAgainButton.UseVisualStyleBackColor = false;
+            this.goTestAgainButton.Click += new System.EventHandler(this.TakeTestAgainButton_Click);
             // 
             // cancelButton
             // 
@@ -145,32 +89,6 @@
             this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.minimizeButton.UseVisualStyleBackColor = true;
             this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
-            // 
-            // resultLabel1
-            // 
-            this.resultLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.resultLabel1.AutoSize = true;
-            this.resultLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel1.Location = new System.Drawing.Point(430, 227);
-            this.resultLabel1.Name = "resultLabel1";
-            this.resultLabel1.Size = new System.Drawing.Size(37, 37);
-            this.resultLabel1.TabIndex = 57;
-            this.resultLabel1.Text = "#";
-            this.resultLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(142, 227);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 37);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Первое задание:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel
             // 
@@ -206,26 +124,39 @@
             this.headerLabel.Text = "Результат";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.Location = new System.Drawing.Point(25, 248);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(712, 111);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Все задания были решены верно.\r\nВы можете попробовать пройти другие тесты,\r\nлибо " +
+    "пройти тест заново";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // ResultInteractiveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(758, 479);
-            this.Controls.Add(this.takeTestAgainButton);
-            this.Controls.Add(this.resultLabel3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.resultLabel2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.goTestAgainButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.minimizeButton);
-            this.Controls.Add(this.resultLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResultInteractiveForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResultInteractiveForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ResultInteractiveForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ResultInteractiveForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ResultInteractiveForm_MouseUp);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -236,17 +167,12 @@
 
         #endregion
 
-        private WindowsFormsApp1.MyButton takeTestAgainButton;
-        private System.Windows.Forms.Label resultLabel3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label resultLabel2;
-        private System.Windows.Forms.Label label3;
+        private WindowsFormsApp1.MyButton goTestAgainButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button minimizeButton;
-        private System.Windows.Forms.Label resultLabel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

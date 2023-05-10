@@ -50,42 +50,6 @@ namespace MyOfficeTable.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool correctTask1 {
-            get {
-                return ((bool)(this["correctTask1"]));
-            }
-            set {
-                this["correctTask1"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool correctTask2 {
-            get {
-                return ((bool)(this["correctTask2"]));
-            }
-            set {
-                this["correctTask2"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool correctTask3 {
-            get {
-                return ((bool)(this["correctTask3"]));
-            }
-            set {
-                this["correctTask3"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool goFromTheory {
             get {
                 return ((bool)(this["goFromTheory"]));

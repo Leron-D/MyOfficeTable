@@ -23,24 +23,7 @@ namespace MyOfficeTable.Forms
 
         private void LoadForm()
         {
-            takeTestAgainButton.Left = (ClientSize.Width - takeTestAgainButton.Width) / 2;
-            CheckResult(resultLabel1);
-            CheckResult(resultLabel2);
-            CheckResult(resultLabel3);
-        }
-
-        private void CheckResult(Label resultLabel)
-        {
-            if (Properties.Settings.Default.correctTask1)
-            {
-                resultLabel.Text = "Верно";
-                resultLabel.ForeColor = Color.Green;
-            }
-            else
-            {
-                resultLabel.Text = "Неверно";
-                resultLabel.ForeColor = Color.Red;
-            }
+            goTestAgainButton.Left = (ClientSize.Width - goTestAgainButton.Width) / 2;
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)

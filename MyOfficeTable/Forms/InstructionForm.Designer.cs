@@ -177,6 +177,7 @@
             this.Controls.Add(this.goNextButton);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "InstructionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

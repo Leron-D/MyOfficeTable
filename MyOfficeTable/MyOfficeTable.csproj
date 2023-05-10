@@ -220,8 +220,10 @@
     <Content Include="Resources\cancel.png" />
     <None Include="Resources\Cut.jpg" />
     <None Include="Resources\checked.png" />
+    <None Include="Resources\Correct.png" />
     <Content Include="Resources\EvaulationCriterias.html" />
     <None Include="Resources\minimize.png" />
+    <None Include="Resources\Incorrect.png" />
     <Content Include="Resources\MyOfficeTable.ico" />
     <Content Include="Resources\MyOfficeTable.jpg" />
     <Content Include="Resources\question.png" />
