@@ -225,7 +225,7 @@
     <None Include="Resources\minimize.png" />
     <None Include="Resources\Incorrect.png" />
     <Content Include="Resources\MyOfficeTable.ico" />
-    <Content Include="Resources\MyOfficeTable.jpg" />
+    <None Include="Resources\MyOfficeTable.jpg" />
     <Content Include="Resources\question.png" />
     <None Include="Resources\Цвет текста.png" />
     <None Include="Resources\Цвет заливки.png" />

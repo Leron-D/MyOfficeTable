@@ -124,9 +124,6 @@
   <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MyOfficeTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\myofficetable.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="фон_S97zP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\фон.s97zp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -183,5 +180,8 @@
   </data>
   <data name="Incorrect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Incorrect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MyOfficeTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyOfficeTable.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
