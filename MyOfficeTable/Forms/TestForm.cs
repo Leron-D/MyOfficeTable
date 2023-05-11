@@ -36,13 +36,14 @@ namespace MyOfficeTable
         {
             InitializeComponent();
             LoadForm(fileName);
-            headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
         }
 
         private void LoadForm(string fileName)
         {
             try
-            {
+            {                
+                testName = fileName;                
+                headerLabel.Text = Path.GetFileNameWithoutExtension(testName);
                 startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
                 startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
                 offLabel.Left = (ClientSize.Width - offLabel.Width) / 2;
@@ -55,7 +56,6 @@ namespace MyOfficeTable
                 ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(minimizeButton, "Свернуть");
                 toolTip.SetToolTip(cancelButton, "Закрыть");
-                testName = fileName;
                 Random rnd = new Random();
                 for (int i = questionsArray.Length - 1; i >= 1; i--)
                 {

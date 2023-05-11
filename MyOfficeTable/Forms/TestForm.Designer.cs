@@ -41,9 +41,8 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
             this.AnswerCheckBox4 = new System.Windows.Forms.CheckBox();
-            this.headerLabel = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.headerPictureBox = new System.Windows.Forms.PictureBox();
             this.numOfQuestionLabel = new System.Windows.Forms.Label();
             this.offLabel = new System.Windows.Forms.Label();
             this.allNumQuestionLabel = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.AnswerCheckBox7 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox6 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox5 = new System.Windows.Forms.CheckBox();
+            this.headerLabel = new System.Windows.Forms.Label();
             this.AnswerRadioButton6 = new WindowsFormsApp1.MyRadioButton();
             this.goNextQuestionButton = new WindowsFormsApp1.MyButton();
             this.AnswerRadioButton8 = new WindowsFormsApp1.MyRadioButton();
@@ -62,7 +62,7 @@
             this.AnswerRadioButton4 = new WindowsFormsApp1.MyRadioButton();
             this.AnswerRadioButton2 = new WindowsFormsApp1.MyRadioButton();
             this.headerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -238,40 +238,25 @@
             this.AnswerCheckBox4.UseVisualStyleBackColor = false;
             this.AnswerCheckBox4.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // headerLabel
-            // 
-            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(508, 53);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(257, 39);
-            this.headerLabel.TabIndex = 17;
-            this.headerLabel.Text = "Тестирование";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.headerPanel.Controls.Add(this.pictureBox1);
+            this.headerPanel.Controls.Add(this.headerPictureBox);
             this.headerPanel.Controls.Add(this.headerLabel);
             this.headerPanel.Location = new System.Drawing.Point(-1, 46);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(1292, 134);
             this.headerPanel.TabIndex = 29;
             // 
-            // pictureBox1
+            // headerPictureBox
             // 
-            this.pictureBox1.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
+            this.headerPictureBox.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
+            this.headerPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.headerPictureBox.Name = "headerPictureBox";
+            this.headerPictureBox.Size = new System.Drawing.Size(132, 133);
+            this.headerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.headerPictureBox.TabIndex = 47;
+            this.headerPictureBox.TabStop = false;
             // 
             // numOfQuestionLabel
             // 
@@ -402,6 +387,20 @@
             this.AnswerCheckBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox5.UseVisualStyleBackColor = false;
             this.AnswerCheckBox5.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.headerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.ForeColor = System.Drawing.Color.White;
+            this.headerLabel.Location = new System.Drawing.Point(138, 9);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(1137, 113);
+            this.headerLabel.TabIndex = 17;
+            this.headerLabel.Text = "Тестирование";
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AnswerRadioButton6
             // 
@@ -622,8 +621,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseUp);
             this.headerPanel.ResumeLayout(false);
-            this.headerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,14 +640,13 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.CheckBox AnswerCheckBox4;
-        private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label numOfQuestionLabel;
         private System.Windows.Forms.Label offLabel;
         private System.Windows.Forms.Label allNumQuestionLabel;
         private WindowsFormsApp1.MyButton startTestButton;
         private WindowsFormsApp1.MyButton goNextQuestionButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox headerPictureBox;
         private WindowsFormsApp1.MyRadioButton AnswerRadioButton1;
         private WindowsFormsApp1.MyRadioButton AnswerRadioButton3;
         private WindowsFormsApp1.MyRadioButton AnswerRadioButton4;
@@ -662,5 +659,6 @@
         private System.Windows.Forms.CheckBox AnswerCheckBox7;
         private System.Windows.Forms.CheckBox AnswerCheckBox6;
         private System.Windows.Forms.CheckBox AnswerCheckBox5;
+        private System.Windows.Forms.Label headerLabel;
     }
 }
