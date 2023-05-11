@@ -23,7 +23,7 @@ namespace MyOfficeTable
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
-            titleLabel.Text = "Название: Электронное пособиеОсновы работы в «МойОфис Таблица»";
+            titleLabel.Text = "Название: Электронное пособие «Основы работы в «МойОфис Таблица»";
             versionLabel.Text = $"Версия программы: {Assembly.GetExecutingAssembly().GetName().Version}";
             descriptionLabel.Text = "Описание: программа предназначена для самостоятельного изучения материала и самопроверки знаний по теме «Основы работы в «МойОфис Таблица»";
             creatorLabel.Text = "Создатель: Студент группы ПКС-91 Шаньгин Максим";

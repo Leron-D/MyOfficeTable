@@ -44,7 +44,8 @@ namespace MyOfficeTable
             comboBoxList.ForeColor = listTextColor;
             comboBoxList.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged);//Default event
             comboBoxList.TextChanged += new EventHandler(ComboBox_TextChanged);
-            
+            comboBoxList.Click += new EventHandler(ComboBoxList_Click);
+
             buttonIcon.Dock = DockStyle.Right;
             buttonIcon.FlatStyle = FlatStyle.Flat;
             buttonIcon.FlatAppearance.BorderSize = 0;
@@ -79,6 +80,14 @@ namespace MyOfficeTable
             AdjustComboBoxDimensions();
         }
 
+        private void ComboBoxList_Click(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+            comboBoxList.Select();
+            if (comboBoxList.DropDownStyle == ComboBoxStyle.DropDownList)
+                comboBoxList.DroppedDown = true;
+        }
+
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (OnSelectedIndexChanged != null)
@@ -92,6 +101,7 @@ namespace MyOfficeTable
             comboBoxList.Select();
             comboBoxList.DroppedDown = true;
         }
+
         private void Surface_Click(object sender, EventArgs e)
         {
             this.OnClick(e);

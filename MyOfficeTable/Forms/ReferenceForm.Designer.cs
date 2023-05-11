@@ -76,43 +76,37 @@
             // 
             this.creatorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.creatorLabel.AutoSize = true;
             this.creatorLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creatorLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.creatorLabel.Location = new System.Drawing.Point(8, 498);
+            this.creatorLabel.Location = new System.Drawing.Point(8, 521);
             this.creatorLabel.Name = "creatorLabel";
-            this.creatorLabel.Size = new System.Drawing.Size(142, 27);
+            this.creatorLabel.Size = new System.Drawing.Size(804, 27);
             this.creatorLabel.TabIndex = 17;
             this.creatorLabel.Text = "Создатель: ";
-            this.creatorLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // titleLabel
             // 
             this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.titleLabel.Location = new System.Drawing.Point(8, 238);
+            this.titleLabel.Location = new System.Drawing.Point(8, 229);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(131, 27);
+            this.titleLabel.Size = new System.Drawing.Size(800, 85);
             this.titleLabel.TabIndex = 18;
             this.titleLabel.Text = "Название: ";
-            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // versionLabel
             // 
             this.versionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.versionLabel.AutoSize = true;
             this.versionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.versionLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.versionLabel.Location = new System.Drawing.Point(8, 300);
+            this.versionLabel.Location = new System.Drawing.Point(8, 330);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(234, 27);
+            this.versionLabel.Size = new System.Drawing.Size(800, 27);
             this.versionLabel.TabIndex = 19;
             this.versionLabel.Text = "Версия программы: ";
-            this.versionLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // descriptionLabel
             // 
@@ -120,7 +114,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.descriptionLabel.Location = new System.Drawing.Point(8, 367);
+            this.descriptionLabel.Location = new System.Drawing.Point(8, 404);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(800, 117);
             this.descriptionLabel.TabIndex = 20;
@@ -187,7 +181,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

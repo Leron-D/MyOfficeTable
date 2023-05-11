@@ -117,65 +117,70 @@ namespace MyOfficeTable.Forms
 
         private void DoOnDoubleClick(PictureBox destinationPictureBox)
         {
+            ReturnPicture(destinationPictureBox);
+        }
+
+        private void ReturnPicture(PictureBox destinationPictureBox)
+        {
             if (destinationPictureBox.Tag != null)
             {
                 if (destinationPictureBox.Tag == "cut")
                 {
-                    ReturnPicture(SourcePictureBox1, destinationPictureBox, resultLabel1);
+                    ChangePicturePosition(SourcePictureBox1, destinationPictureBox, resultLabel1);
                 }
                 else if (destinationPictureBox.Tag == "copyFormat")
                 {
-                    ReturnPicture(SourcePictureBox2, destinationPictureBox, resultLabel2);
+                    ChangePicturePosition(SourcePictureBox2, destinationPictureBox, resultLabel2);
                 }
                 else if (destinationPictureBox.Tag == "allLettersUppercase")
                 {
-                    ReturnPicture(SourcePictureBox3, destinationPictureBox, resultLabel3);
+                    ChangePicturePosition(SourcePictureBox3, destinationPictureBox, resultLabel3);
                 }
                 else if (destinationPictureBox.Tag == "bold")
                 {
-                    ReturnPicture(SourcePictureBox4, destinationPictureBox, resultLabel4);
+                    ChangePicturePosition(SourcePictureBox4, destinationPictureBox, resultLabel4);
                 }
                 else if (destinationPictureBox.Tag == "print")
                 {
-                    ReturnPicture(SourcePictureBox5, destinationPictureBox, resultLabel5);
+                    ChangePicturePosition(SourcePictureBox5, destinationPictureBox, resultLabel5);
                 }
                 else if (destinationPictureBox.Tag == "save")
                 {
-                    ReturnPicture(SourcePictureBox6, destinationPictureBox, resultLabel6);
+                    ChangePicturePosition(SourcePictureBox6, destinationPictureBox, resultLabel6);
                 }
                 else if (destinationPictureBox.Tag == "enter")
                 {
-                    ReturnPicture(SourcePictureBox7, destinationPictureBox, resultLabel7);
+                    ChangePicturePosition(SourcePictureBox7, destinationPictureBox, resultLabel7);
                 }
                 else if (destinationPictureBox.Tag == "copy")
                 {
-                    ReturnPicture(SourcePictureBox8, destinationPictureBox, resultLabel8);
+                    ChangePicturePosition(SourcePictureBox8, destinationPictureBox, resultLabel8);
                 }
                 else if (destinationPictureBox.Tag == "italic")
                 {
-                    ReturnPicture(SourcePictureBox9, destinationPictureBox, resultLabel9);
+                    ChangePicturePosition(SourcePictureBox9, destinationPictureBox, resultLabel9);
                 }
                 else if (destinationPictureBox.Tag == "colorOfText")
                 {
-                    ReturnPicture(SourcePictureBox10, destinationPictureBox, resultLabel10);
+                    ChangePicturePosition(SourcePictureBox10, destinationPictureBox, resultLabel10);
                 }
                 else if (destinationPictureBox.Tag == "underlined")
                 {
-                    ReturnPicture(SourcePictureBox11, destinationPictureBox, resultLabel11);
+                    ChangePicturePosition(SourcePictureBox11, destinationPictureBox, resultLabel11);
                 }
                 else if (destinationPictureBox.Tag == "colorOfFill")
                 {
-                    ReturnPicture(SourcePictureBox12, destinationPictureBox, resultLabel12);
+                    ChangePicturePosition(SourcePictureBox12, destinationPictureBox, resultLabel12);
                 }
             }
         }
 
-        private void ReturnPicture(PictureBox pictureBox1, PictureBox pictureBox2, Label resultLabel)
+        private void ChangePicturePosition(PictureBox destinationPictureBox, PictureBox sourcePictureBox, Label resultLabel, string tag = null)
         {
-            pictureBox1.Image = pictureBox2.Image;
-            pictureBox2.Image = null;
-            pictureBox2.Tag = null;
-            resultLabel.Tag = null;
+            destinationPictureBox.Image = sourcePictureBox.Image;
+            sourcePictureBox.Image = null;
+            sourcePictureBox.Tag = null;
+            resultLabel.Tag = tag;
             CheckCorrectness();
         }
 
@@ -282,6 +287,14 @@ namespace MyOfficeTable.Forms
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void DestinationPictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            srcPictureBox = sender as PictureBox;
+            PictureBox pictureBox = sender as PictureBox;
+            if (e.Button == MouseButtons.Left && pictureBox.Image != null)
+                pictureBox.DoDragDrop(pictureBox.Image, DragDropEffects.Move);
         }
     }
 }

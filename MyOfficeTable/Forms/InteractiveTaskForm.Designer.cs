@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InteractiveTaskForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.task1TabPage = new System.Windows.Forms.TabPage();
             this.resultLabel4 = new System.Windows.Forms.Label();
@@ -346,6 +347,7 @@
             this.DestinationPictureBox4.DragDrop += new System.Windows.Forms.DragEventHandler(this.DestinationPictureBox_DragDrop);
             this.DestinationPictureBox4.DragEnter += new System.Windows.Forms.DragEventHandler(this.DestinationPictureBox_DragEnter);
             this.DestinationPictureBox4.DoubleClick += new System.EventHandler(this.DestinationPictureBox_DoubleClick);
+            this.DestinationPictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DestinationPictureBox_MouseDown);
             // 
             // DestinationPictureBox2
             // 
@@ -360,6 +362,7 @@
             this.DestinationPictureBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.DestinationPictureBox_DragDrop);
             this.DestinationPictureBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.DestinationPictureBox_DragEnter);
             this.DestinationPictureBox2.DoubleClick += new System.EventHandler(this.DestinationPictureBox_DoubleClick);
+            this.DestinationPictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DestinationPictureBox_MouseDown);
             // 
             // label3
             // 
@@ -397,6 +400,7 @@
             this.DestinationPictureBox3.DragDrop += new System.Windows.Forms.DragEventHandler(this.DestinationPictureBox_DragDrop);
             this.DestinationPictureBox3.DragEnter += new System.Windows.Forms.DragEventHandler(this.DestinationPictureBox_DragEnter);
             this.DestinationPictureBox3.DoubleClick += new System.EventHandler(this.DestinationPictureBox_DoubleClick);
+            this.DestinationPictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DestinationPictureBox_MouseDown);
             // 
             // DestinationPictureBox1
             // 
@@ -411,6 +415,7 @@
             this.DestinationPictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.DestinationPictureBox_DragDrop);
             this.DestinationPictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.DestinationPictureBox_DragEnter);
             this.DestinationPictureBox1.DoubleClick += new System.EventHandler(this.DestinationPictureBox_DoubleClick);
+            this.DestinationPictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DestinationPictureBox_MouseDown);
             // 
             // panel2
             // 
@@ -1139,6 +1144,7 @@
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.goBackButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InteractiveTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InteractiveTaskForm";
