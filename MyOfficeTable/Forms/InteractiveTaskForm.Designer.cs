@@ -709,6 +709,7 @@
             this.DestinationPictureBox8.TabStop = false;
             this.DestinationPictureBox8.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.DestinationPictureBox8.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.DestinationPictureBox8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // DestinationPictureBox6
             // 
@@ -722,6 +723,7 @@
             this.DestinationPictureBox6.TabStop = false;
             this.DestinationPictureBox6.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.DestinationPictureBox6.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.DestinationPictureBox6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // DestinationPictureBox7
             // 
@@ -734,6 +736,7 @@
             this.DestinationPictureBox7.TabStop = false;
             this.DestinationPictureBox7.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.DestinationPictureBox7.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.DestinationPictureBox7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // DestinationPictureBox5
             // 
@@ -747,6 +750,7 @@
             this.DestinationPictureBox5.TabStop = false;
             this.DestinationPictureBox5.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.DestinationPictureBox5.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.DestinationPictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // task3TabPage
             // 
@@ -1002,6 +1006,7 @@
             this.DestinationPictureBox12.TabStop = false;
             this.DestinationPictureBox12.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.DestinationPictureBox12.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.DestinationPictureBox12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // DestinationPictureBox11
             // 
@@ -1015,6 +1020,7 @@
             this.DestinationPictureBox11.TabStop = false;
             this.DestinationPictureBox11.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.DestinationPictureBox11.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.DestinationPictureBox11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // DestinationPictureBox10
             // 
@@ -1027,6 +1033,7 @@
             this.DestinationPictureBox10.TabStop = false;
             this.DestinationPictureBox10.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.DestinationPictureBox10.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.DestinationPictureBox10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // DestinationPictureBox9
             // 
@@ -1040,6 +1047,7 @@
             this.DestinationPictureBox9.TabStop = false;
             this.DestinationPictureBox9.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.DestinationPictureBox9.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.DestinationPictureBox9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // helpButton
             // 

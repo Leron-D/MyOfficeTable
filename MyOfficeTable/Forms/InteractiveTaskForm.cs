@@ -21,6 +21,11 @@ namespace MyOfficeTable.Forms
         public InteractiveTaskForm()
         {
             InitializeComponent();
+            LoadForm();
+        }
+
+        private void LoadForm()
+        {
             Settings.Default.firstLoadInstruction = false;
             Settings.Default.Save();
             ToolTip toolTip = new ToolTip();
