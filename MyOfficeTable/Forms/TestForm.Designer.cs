@@ -207,13 +207,12 @@
             // 
             // timerLabel
             // 
-            this.timerLabel.AutoSize = true;
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.timerLabel.Location = new System.Drawing.Point(994, 223);
+            this.timerLabel.Location = new System.Drawing.Point(984, 223);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(0, 27);
+            this.timerLabel.Size = new System.Drawing.Size(290, 27);
             this.timerLabel.TabIndex = 28;
             // 
             // AnswerCheckBox4
