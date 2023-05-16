@@ -75,7 +75,7 @@
             this.cancelButton.Location = new System.Drawing.Point(1254, 1);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
-            this.cancelButton.TabIndex = 15;
+            this.cancelButton.TabIndex = 2;
             this.cancelButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -90,7 +90,7 @@
             this.minimizeButton.Location = new System.Drawing.Point(1213, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
-            this.minimizeButton.TabIndex = 14;
+            this.minimizeButton.TabIndex = 1;
             this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.minimizeButton.UseVisualStyleBackColor = false;
             this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
@@ -106,7 +106,7 @@
             this.referenceButton.Location = new System.Drawing.Point(1172, 4);
             this.referenceButton.Name = "referenceButton";
             this.referenceButton.Size = new System.Drawing.Size(22, 29);
-            this.referenceButton.TabIndex = 16;
+            this.referenceButton.TabIndex = 0;
             this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.referenceButton.UseVisualStyleBackColor = false;
             // 
@@ -126,7 +126,7 @@
             this.AnswerCheckBox1.Location = new System.Drawing.Point(160, 260);
             this.AnswerCheckBox1.Name = "AnswerCheckBox1";
             this.AnswerCheckBox1.Size = new System.Drawing.Size(159, 46);
-            this.AnswerCheckBox1.TabIndex = 22;
+            this.AnswerCheckBox1.TabIndex = 13;
             this.AnswerCheckBox1.Text = "Ответ 1";
             this.AnswerCheckBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox1.UseVisualStyleBackColor = false;
@@ -149,7 +149,7 @@
             this.AnswerCheckBox2.Location = new System.Drawing.Point(160, 297);
             this.AnswerCheckBox2.Name = "AnswerCheckBox2";
             this.AnswerCheckBox2.Size = new System.Drawing.Size(159, 46);
-            this.AnswerCheckBox2.TabIndex = 23;
+            this.AnswerCheckBox2.TabIndex = 14;
             this.AnswerCheckBox2.Text = "Ответ 2";
             this.AnswerCheckBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox2.UseVisualStyleBackColor = false;
@@ -171,7 +171,7 @@
             this.AnswerCheckBox3.Location = new System.Drawing.Point(160, 334);
             this.AnswerCheckBox3.Name = "AnswerCheckBox3";
             this.AnswerCheckBox3.Size = new System.Drawing.Size(159, 46);
-            this.AnswerCheckBox3.TabIndex = 24;
+            this.AnswerCheckBox3.TabIndex = 15;
             this.AnswerCheckBox3.Text = "Ответ 3";
             this.AnswerCheckBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox3.UseVisualStyleBackColor = false;
@@ -183,7 +183,7 @@
             this.answerTextBox.Location = new System.Drawing.Point(17, 424);
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(352, 36);
-            this.answerTextBox.TabIndex = 25;
+            this.answerTextBox.TabIndex = 12;
             this.answerTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnswerTextBox_KeyDown);
             // 
             // questionLabel
@@ -232,7 +232,7 @@
             this.AnswerCheckBox4.Location = new System.Drawing.Point(160, 372);
             this.AnswerCheckBox4.Name = "AnswerCheckBox4";
             this.AnswerCheckBox4.Size = new System.Drawing.Size(159, 46);
-            this.AnswerCheckBox4.TabIndex = 31;
+            this.AnswerCheckBox4.TabIndex = 16;
             this.AnswerCheckBox4.Text = "Ответ 4";
             this.AnswerCheckBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox4.UseVisualStyleBackColor = false;
@@ -330,7 +330,7 @@
             this.AnswerCheckBox8.Location = new System.Drawing.Point(1098, 378);
             this.AnswerCheckBox8.Name = "AnswerCheckBox8";
             this.AnswerCheckBox8.Size = new System.Drawing.Size(159, 46);
-            this.AnswerCheckBox8.TabIndex = 56;
+            this.AnswerCheckBox8.TabIndex = 20;
             this.AnswerCheckBox8.Text = "Ответ 8";
             this.AnswerCheckBox8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox8.UseVisualStyleBackColor = false;
@@ -352,7 +352,7 @@
             this.AnswerCheckBox7.Location = new System.Drawing.Point(1098, 336);
             this.AnswerCheckBox7.Name = "AnswerCheckBox7";
             this.AnswerCheckBox7.Size = new System.Drawing.Size(159, 46);
-            this.AnswerCheckBox7.TabIndex = 55;
+            this.AnswerCheckBox7.TabIndex = 19;
             this.AnswerCheckBox7.Text = "Ответ 7";
             this.AnswerCheckBox7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox7.UseVisualStyleBackColor = false;
@@ -374,7 +374,7 @@
             this.AnswerCheckBox6.Location = new System.Drawing.Point(1098, 296);
             this.AnswerCheckBox6.Name = "AnswerCheckBox6";
             this.AnswerCheckBox6.Size = new System.Drawing.Size(159, 46);
-            this.AnswerCheckBox6.TabIndex = 54;
+            this.AnswerCheckBox6.TabIndex = 18;
             this.AnswerCheckBox6.Text = "Ответ 6";
             this.AnswerCheckBox6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox6.UseVisualStyleBackColor = false;
@@ -396,7 +396,7 @@
             this.AnswerCheckBox5.Location = new System.Drawing.Point(1098, 258);
             this.AnswerCheckBox5.Name = "AnswerCheckBox5";
             this.AnswerCheckBox5.Size = new System.Drawing.Size(159, 46);
-            this.AnswerCheckBox5.TabIndex = 53;
+            this.AnswerCheckBox5.TabIndex = 17;
             this.AnswerCheckBox5.Text = "Ответ 5";
             this.AnswerCheckBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AnswerCheckBox5.UseVisualStyleBackColor = false;
@@ -412,7 +412,7 @@
             this.AnswerRadioButton6.MinimumSize = new System.Drawing.Size(0, 21);
             this.AnswerRadioButton6.Name = "AnswerRadioButton6";
             this.AnswerRadioButton6.Size = new System.Drawing.Size(139, 33);
-            this.AnswerRadioButton6.TabIndex = 60;
+            this.AnswerRadioButton6.TabIndex = 9;
             this.AnswerRadioButton6.TabStop = true;
             this.AnswerRadioButton6.Text = "Ответ 6";
             this.AnswerRadioButton6.UnCheckedColor = System.Drawing.Color.Gray;
@@ -434,7 +434,7 @@
             this.goNextQuestionButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goNextQuestionButton.Name = "goNextQuestionButton";
             this.goNextQuestionButton.Size = new System.Drawing.Size(273, 40);
-            this.goNextQuestionButton.TabIndex = 46;
+            this.goNextQuestionButton.TabIndex = 21;
             this.goNextQuestionButton.Text = "Следующий вопрос";
             this.goNextQuestionButton.TextColor = System.Drawing.Color.White;
             this.goNextQuestionButton.UseVisualStyleBackColor = false;
@@ -450,7 +450,7 @@
             this.AnswerRadioButton8.MinimumSize = new System.Drawing.Size(0, 21);
             this.AnswerRadioButton8.Name = "AnswerRadioButton8";
             this.AnswerRadioButton8.Size = new System.Drawing.Size(139, 33);
-            this.AnswerRadioButton8.TabIndex = 59;
+            this.AnswerRadioButton8.TabIndex = 11;
             this.AnswerRadioButton8.TabStop = true;
             this.AnswerRadioButton8.Text = "Ответ 8";
             this.AnswerRadioButton8.UnCheckedColor = System.Drawing.Color.Gray;
@@ -471,7 +471,7 @@
             this.startTestButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.startTestButton.Name = "startTestButton";
             this.startTestButton.Size = new System.Drawing.Size(297, 40);
-            this.startTestButton.TabIndex = 45;
+            this.startTestButton.TabIndex = 3;
             this.startTestButton.Text = "Начать тестирование";
             this.startTestButton.TextColor = System.Drawing.Color.White;
             this.startTestButton.UseVisualStyleBackColor = false;
@@ -487,7 +487,7 @@
             this.AnswerRadioButton7.MinimumSize = new System.Drawing.Size(0, 21);
             this.AnswerRadioButton7.Name = "AnswerRadioButton7";
             this.AnswerRadioButton7.Size = new System.Drawing.Size(139, 33);
-            this.AnswerRadioButton7.TabIndex = 58;
+            this.AnswerRadioButton7.TabIndex = 10;
             this.AnswerRadioButton7.TabStop = true;
             this.AnswerRadioButton7.Text = "Ответ 7";
             this.AnswerRadioButton7.UnCheckedColor = System.Drawing.Color.Gray;
@@ -503,7 +503,7 @@
             this.AnswerRadioButton5.MinimumSize = new System.Drawing.Size(0, 21);
             this.AnswerRadioButton5.Name = "AnswerRadioButton5";
             this.AnswerRadioButton5.Size = new System.Drawing.Size(139, 33);
-            this.AnswerRadioButton5.TabIndex = 57;
+            this.AnswerRadioButton5.TabIndex = 8;
             this.AnswerRadioButton5.TabStop = true;
             this.AnswerRadioButton5.Text = "Ответ 5";
             this.AnswerRadioButton5.UnCheckedColor = System.Drawing.Color.Gray;
@@ -519,7 +519,7 @@
             this.AnswerRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
             this.AnswerRadioButton1.Name = "AnswerRadioButton1";
             this.AnswerRadioButton1.Size = new System.Drawing.Size(139, 33);
-            this.AnswerRadioButton1.TabIndex = 47;
+            this.AnswerRadioButton1.TabIndex = 4;
             this.AnswerRadioButton1.TabStop = true;
             this.AnswerRadioButton1.Text = "Ответ 1";
             this.AnswerRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
@@ -536,7 +536,7 @@
             this.AnswerRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
             this.AnswerRadioButton3.Name = "AnswerRadioButton3";
             this.AnswerRadioButton3.Size = new System.Drawing.Size(139, 33);
-            this.AnswerRadioButton3.TabIndex = 49;
+            this.AnswerRadioButton3.TabIndex = 6;
             this.AnswerRadioButton3.TabStop = true;
             this.AnswerRadioButton3.Text = "Ответ 3";
             this.AnswerRadioButton3.UnCheckedColor = System.Drawing.Color.Gray;
@@ -552,7 +552,7 @@
             this.AnswerRadioButton4.MinimumSize = new System.Drawing.Size(0, 21);
             this.AnswerRadioButton4.Name = "AnswerRadioButton4";
             this.AnswerRadioButton4.Size = new System.Drawing.Size(139, 33);
-            this.AnswerRadioButton4.TabIndex = 50;
+            this.AnswerRadioButton4.TabIndex = 7;
             this.AnswerRadioButton4.TabStop = true;
             this.AnswerRadioButton4.Text = "Ответ 4";
             this.AnswerRadioButton4.UnCheckedColor = System.Drawing.Color.Gray;
@@ -568,7 +568,7 @@
             this.AnswerRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
             this.AnswerRadioButton2.Name = "AnswerRadioButton2";
             this.AnswerRadioButton2.Size = new System.Drawing.Size(139, 33);
-            this.AnswerRadioButton2.TabIndex = 52;
+            this.AnswerRadioButton2.TabIndex = 5;
             this.AnswerRadioButton2.TabStop = true;
             this.AnswerRadioButton2.Text = "Ответ 2";
             this.AnswerRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
