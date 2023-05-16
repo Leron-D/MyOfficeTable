@@ -21,6 +21,7 @@ namespace MyOfficeTable
 {
     public partial class TestForm : Form
     {
+        private List<MyRadioButton> radioButtons;
         int mark = 0;
         int numOfQuestion = 1;
         int[] questionsArray = new int[15] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
@@ -121,6 +122,7 @@ namespace MyOfficeTable
 
         void ChangeVisibilityButtons()
         {
+            
             AnswerRadioButton1.Visible = AnswerRadioButton2.Visible = AnswerRadioButton3.Visible = AnswerCheckBox1.Visible = timerLabel.Visible = goNextQuestionButton.Visible =
             AnswerCheckBox2.Visible = AnswerCheckBox3.Visible = AnswerCheckBox4.Visible = AnswerCheckBox4.Checked = AnswerRadioButton4.Visible = AnswerRadioButton4.Checked = answerTextBox.Visible = AnswerRadioButton1.Checked = 
             AnswerRadioButton2.Checked = AnswerRadioButton3.Checked = AnswerCheckBox1.Checked = AnswerCheckBox2.Checked = AnswerCheckBox3.Checked = questionLabel.Visible = 

@@ -32,7 +32,10 @@ namespace MyOfficeTable.Forms
             tabControl.TabStop = false;
             DestinationPictureBox1.AllowDrop = DestinationPictureBox2.AllowDrop = DestinationPictureBox3.AllowDrop = DestinationPictureBox4.AllowDrop =
             DestinationPictureBox5.AllowDrop = DestinationPictureBox6.AllowDrop = DestinationPictureBox7.AllowDrop = DestinationPictureBox8.AllowDrop =
-            DestinationPictureBox9.AllowDrop = DestinationPictureBox10.AllowDrop = DestinationPictureBox11.AllowDrop = DestinationPictureBox12.AllowDrop = true;
+            DestinationPictureBox9.AllowDrop = DestinationPictureBox10.AllowDrop = DestinationPictureBox11.AllowDrop = DestinationPictureBox12.AllowDrop =
+            SourcePictureBox1.AllowDrop = SourcePictureBox2.AllowDrop = SourcePictureBox3.AllowDrop = SourcePictureBox4.AllowDrop = SourcePictureBox4.AllowDrop =
+            SourcePictureBox5.AllowDrop = SourcePictureBox6.AllowDrop = SourcePictureBox7.AllowDrop = SourcePictureBox8.AllowDrop = SourcePictureBox9.AllowDrop =
+            SourcePictureBox10.AllowDrop = SourcePictureBox11.AllowDrop = SourcePictureBox12.AllowDrop = true;
             srcPictureBox = null;
         }
 
@@ -81,7 +84,7 @@ namespace MyOfficeTable.Forms
             e.Effect = DragDropEffects.Move;
         }
 
-        private void SourcePictureBox_MouseDown(object sender, MouseEventArgs e)
+        private void PictureBox_MouseDown(object sender, MouseEventArgs e)
         {
             srcPictureBox = sender as PictureBox;
             PictureBox pictureBox = sender as PictureBox;
@@ -89,7 +92,7 @@ namespace MyOfficeTable.Forms
                 pictureBox.DoDragDrop(pictureBox.Image, DragDropEffects.Move);
         }
 
-        private void DestinationPictureBox_DragEnter(object sender, DragEventArgs e)
+        private void PictureBox_DragEnter(object sender, DragEventArgs e)
         {
             PictureBox pictureBox = sender as PictureBox;
             if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect & DragDropEffects.Move) != 0)
@@ -98,81 +101,20 @@ namespace MyOfficeTable.Forms
                 e.Effect = DragDropEffects.None;
         }
 
-        private void DestinationPictureBox_DragDrop(object sender, DragEventArgs e)
+        private void PictureBox_DragDrop(object sender, DragEventArgs e)
         {
             PictureBox destinationPictureBox = sender as PictureBox;
-            if (destinationPictureBox.Image == null)
-            {
-                destinationPictureBox.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
-                destinationPictureBox.Tag = srcPictureBox.Tag;
-                srcPictureBox.Image = null;            
-                CheckCorrectness();
-            }
-        }
-
-        private void DestinationPictureBox_DoubleClick(object sender, EventArgs e)
-        {
-            DoOnDoubleClick(sender as PictureBox);
-        }
-
-        private void DoOnDoubleClick(PictureBox destinationPictureBox)
-        {
-            ReturnPicture(destinationPictureBox);
-        }
-
-        private void ReturnPicture(PictureBox destinationPictureBox)
-        {
-            if (destinationPictureBox.Tag != null)
-            {
-                if (destinationPictureBox.Tag == "cut")
-                {
-                    ChangePicturePosition(SourcePictureBox1, destinationPictureBox, resultLabel1);
-                }
-                else if (destinationPictureBox.Tag == "copyFormat")
-                {
-                    ChangePicturePosition(SourcePictureBox2, destinationPictureBox, resultLabel2);
-                }
-                else if (destinationPictureBox.Tag == "allLettersUppercase")
-                {
-                    ChangePicturePosition(SourcePictureBox3, destinationPictureBox, resultLabel3);
-                }
-                else if (destinationPictureBox.Tag == "bold")
-                {
-                    ChangePicturePosition(SourcePictureBox4, destinationPictureBox, resultLabel4);
-                }
-                else if (destinationPictureBox.Tag == "print")
-                {
-                    ChangePicturePosition(SourcePictureBox5, destinationPictureBox, resultLabel5);
-                }
-                else if (destinationPictureBox.Tag == "save")
-                {
-                    ChangePicturePosition(SourcePictureBox6, destinationPictureBox, resultLabel6);
-                }
-                else if (destinationPictureBox.Tag == "enter")
-                {
-                    ChangePicturePosition(SourcePictureBox7, destinationPictureBox, resultLabel7);
-                }
-                else if (destinationPictureBox.Tag == "copy")
-                {
-                    ChangePicturePosition(SourcePictureBox8, destinationPictureBox, resultLabel8);
-                }
-                else if (destinationPictureBox.Tag == "italic")
-                {
-                    ChangePicturePosition(SourcePictureBox9, destinationPictureBox, resultLabel9);
-                }
-                else if (destinationPictureBox.Tag == "colorOfText")
-                {
-                    ChangePicturePosition(SourcePictureBox10, destinationPictureBox, resultLabel10);
-                }
-                else if (destinationPictureBox.Tag == "underlined")
-                {
-                    ChangePicturePosition(SourcePictureBox11, destinationPictureBox, resultLabel11);
-                }
-                else if (destinationPictureBox.Tag == "colorOfFill")
-                {
-                    ChangePicturePosition(SourcePictureBox12, destinationPictureBox, resultLabel12);
-                }
-            }
+            Image image = destinationPictureBox.Image;
+            string tag = "";
+            if (destinationPictureBox.Tag == null)
+                tag = null;
+            else
+                tag = destinationPictureBox.Tag.ToString();
+            destinationPictureBox.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
+            destinationPictureBox.Tag = srcPictureBox.Tag;
+            srcPictureBox.Image = image;
+            srcPictureBox.Tag = tag;
+            CheckCorrectness();
         }
 
         private void ChangePicturePosition(PictureBox destinationPictureBox, PictureBox sourcePictureBox, Label resultLabel, string tag = null)
@@ -287,14 +229,6 @@ namespace MyOfficeTable.Forms
             Hide();
             form.ShowDialog();
             Close();
-        }
-
-        private void DestinationPictureBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            srcPictureBox = sender as PictureBox;
-            PictureBox pictureBox = sender as PictureBox;
-            if (e.Button == MouseButtons.Left && pictureBox.Image != null)
-                pictureBox.DoDragDrop(pictureBox.Image, DragDropEffects.Move);
         }
     }
 }
