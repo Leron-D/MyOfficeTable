@@ -207,6 +207,7 @@
             // 
             // timerLabel
             // 
+            this.timerLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.DarkCyan;
