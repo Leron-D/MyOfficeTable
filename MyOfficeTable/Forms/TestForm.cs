@@ -417,14 +417,7 @@ namespace MyOfficeTable
 
         private void AnswerTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
-            {
-                var question = MessageBox.Show("Вы уверены, что хотите продолжить?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if(question == DialogResult.Yes)
-                {
-                    GoNextQuestionButton_Click(sender, e);
-                }
-            }
+            GoNextQuestionButton_Click(sender, e);
         }
 
         private void AnswerCheckBox_CheckedChanged(object sender, EventArgs e)
