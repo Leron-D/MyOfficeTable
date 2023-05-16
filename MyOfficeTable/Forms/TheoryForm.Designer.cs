@@ -28,23 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheoryForm));
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.panel = new System.Windows.Forms.Panel();
+            this.rightPanel = new System.Windows.Forms.Panel();
             this.webBrowser = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.leftPanel = new System.Windows.Forms.Panel();
             this.goToLectionButton = new System.Windows.Forms.Button();
             this.testingButton = new System.Windows.Forms.Button();
+            this.changeSizePanelButton = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.goBackButton = new WindowsFormsApp1.MyButton();
-            this.panel.SuspendLayout();
+            this.rightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.leftPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // cancelButton
@@ -89,27 +92,29 @@
             this.headerLabel.Text = "Теоретический материал";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel
+            // rightPanel
             // 
-            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.rightPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.Controls.Add(this.webBrowser);
-            this.panel.Location = new System.Drawing.Point(300, 225);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1092, 635);
-            this.panel.TabIndex = 1;
+            this.rightPanel.Controls.Add(this.webBrowser);
+            this.rightPanel.Location = new System.Drawing.Point(300, 251);
+            this.rightPanel.Name = "rightPanel";
+            this.rightPanel.Size = new System.Drawing.Size(1092, 651);
+            this.rightPanel.TabIndex = 1;
             // 
             // webBrowser
             // 
             this.webBrowser.AllowExternalDrop = true;
+            this.webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.webBrowser.BackColor = System.Drawing.Color.White;
             this.webBrowser.CreationProperties = null;
             this.webBrowser.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser.Location = new System.Drawing.Point(0, 3);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(1092, 635);
+            this.webBrowser.Size = new System.Drawing.Size(1092, 645);
             this.webBrowser.TabIndex = 0;
             this.webBrowser.ZoomFactor = 1D;
             // 
@@ -133,14 +138,14 @@
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // leftPanel
             // 
-            this.panel2.Controls.Add(this.goToLectionButton);
-            this.panel2.Controls.Add(this.testingButton);
-            this.panel2.Location = new System.Drawing.Point(3, 225);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(291, 635);
-            this.panel2.TabIndex = 31;
+            this.leftPanel.Controls.Add(this.goToLectionButton);
+            this.leftPanel.Controls.Add(this.testingButton);
+            this.leftPanel.Location = new System.Drawing.Point(3, 251);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(290, 650);
+            this.leftPanel.TabIndex = 31;
             // 
             // goToLectionButton
             // 
@@ -150,9 +155,9 @@
             this.goToLectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goToLectionButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goToLectionButton.ForeColor = System.Drawing.Color.White;
-            this.goToLectionButton.Location = new System.Drawing.Point(3, 231);
+            this.goToLectionButton.Location = new System.Drawing.Point(3, 239);
             this.goToLectionButton.Name = "goToLectionButton";
-            this.goToLectionButton.Size = new System.Drawing.Size(285, 50);
+            this.goToLectionButton.Size = new System.Drawing.Size(284, 50);
             this.goToLectionButton.TabIndex = 34;
             this.goToLectionButton.Text = "Лекция";
             this.goToLectionButton.UseVisualStyleBackColor = false;
@@ -166,16 +171,38 @@
             this.testingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testingButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testingButton.ForeColor = System.Drawing.Color.White;
-            this.testingButton.Location = new System.Drawing.Point(3, 314);
+            this.testingButton.Location = new System.Drawing.Point(3, 322);
             this.testingButton.Name = "testingButton";
-            this.testingButton.Size = new System.Drawing.Size(285, 50);
+            this.testingButton.Size = new System.Drawing.Size(284, 50);
             this.testingButton.TabIndex = 33;
             this.testingButton.Text = "Пройти тестирование\r\n";
             this.testingButton.UseVisualStyleBackColor = false;
             this.testingButton.Click += new System.EventHandler(this.TestingButton_Click);
             // 
+            // changeSizePanelButton
+            // 
+            this.changeSizePanelButton.BackColor = System.Drawing.Color.LightCyan;
+            this.changeSizePanelButton.FlatAppearance.BorderSize = 0;
+            this.changeSizePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeSizePanelButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeSizePanelButton.ForeColor = System.Drawing.Color.White;
+            this.changeSizePanelButton.Image = global::MyOfficeTable.Properties.Resources.Collapse;
+            this.changeSizePanelButton.Location = new System.Drawing.Point(6, 202);
+            this.changeSizePanelButton.Name = "changeSizePanelButton";
+            this.changeSizePanelButton.Size = new System.Drawing.Size(44, 43);
+            this.changeSizePanelButton.TabIndex = 35;
+            this.changeSizePanelButton.Tag = "Свернуть";
+            this.changeSizePanelButton.UseVisualStyleBackColor = true;
+            this.changeSizePanelButton.Click += new System.EventHandler(this.ChangeSizePanelButton_Click);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 20;
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
             // goBackButton
             // 
+            this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.goBackButton.BackColor = System.Drawing.Color.LightSeaGreen;
             this.goBackButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.goBackButton.BorderColor = System.Drawing.Color.LightSeaGreen;
@@ -185,7 +212,7 @@
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goBackButton.ForeColor = System.Drawing.Color.White;
-            this.goBackButton.Location = new System.Drawing.Point(0, 865);
+            this.goBackButton.Location = new System.Drawing.Point(0, 907);
             this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(151, 40);
@@ -199,15 +226,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1394, 906);
+            this.ClientSize = new System.Drawing.Size(1394, 948);
+            this.Controls.Add(this.changeSizePanelButton);
             this.Controls.Add(this.goBackButton);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.minimizeButton);
-            this.Controls.Add(this.panel);
+            this.Controls.Add(this.rightPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -217,12 +244,12 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TheoryForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TheoryForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TheoryForm_MouseUp);
-            this.panel.ResumeLayout(false);
+            this.rightPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.leftPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -231,13 +258,15 @@
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button minimizeButton;
-        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel leftPanel;
         private WindowsFormsApp1.MyButton goBackButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Microsoft.Web.WebView2.WinForms.WebView2 webBrowser;
         private System.Windows.Forms.Button testingButton;
         private System.Windows.Forms.Button goToLectionButton;
+        private System.Windows.Forms.Button changeSizePanelButton;
+        private System.Windows.Forms.Timer timer;
     }
 }

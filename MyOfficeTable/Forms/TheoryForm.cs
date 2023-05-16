@@ -1,4 +1,5 @@
 ﻿using MyOfficeTable.Forms;
+using MyOfficeTable.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,18 +15,21 @@ namespace MyOfficeTable
 {
     public partial class TheoryForm : Form
     {
+        bool isCollapsed = false;
         string file;
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
+        ToolTip toolTip = new ToolTip();
+
         public TheoryForm(string lection)
         {
             InitializeComponent();
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
             file = lection;
-            ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
+            toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
             InitialWebView();
         }
 
@@ -110,6 +114,55 @@ namespace MyOfficeTable
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void ChangeSizePanelButton_Click(object sender, EventArgs e)
+        {
+            if(changeSizePanelButton.Tag == "Свернуть")
+            {
+                isCollapsed = false;
+            }
+            else
+            {
+                isCollapsed = true;
+            }
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (!isCollapsed)
+            {
+                if (leftPanel.Width > 0)
+                {
+                    leftPanel.Width -= 29;
+                    rightPanel.Left -= 29;
+                    rightPanel.Width += 29;
+                }
+                else
+                {
+                    timer.Stop();
+                    changeSizePanelButton.Image = Resources.Expand;
+                    changeSizePanelButton.Tag = "Развернуть";
+                    toolTip.SetToolTip(changeSizePanelButton, "Развернуть панель");
+                }
+            }
+            else
+            {
+                if (leftPanel.Width < 290)
+                {
+                    leftPanel.Width += 29;
+                    rightPanel.Left += 29;
+                    rightPanel.Width -= 29;
+                }
+                else
+                {
+                    timer.Stop();
+                    changeSizePanelButton.Image = Resources.Collapse;
+                    changeSizePanelButton.Tag = "Свернуть";
+                    toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
+                }
+            }
         }
     }
 }

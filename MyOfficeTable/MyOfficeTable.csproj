@@ -227,6 +227,7 @@
     <Content Include="Resources\EvaulationCriterias.html" />
     <None Include="Resources\minimize.png" />
     <None Include="Resources\Incorrect.png" />
+    <None Include="Resources\Expand.png" />
     <Content Include="Resources\MyOfficeTable.ico" />
     <None Include="Resources\MyOfficeTable.jpg" />
     <Content Include="Resources\question.png" />
@@ -242,6 +243,7 @@
     <None Include="Resources\Сохранить.png" />
     <None Include="Resources\Все буквы прописные.jpg" />
     <None Include="Resources\unchecked.png" />
+    <None Include="Resources\Свернуть.png" />
     <Content Include="Resources\фон.S97zP.jpg" />
   </ItemGroup>
   <ItemGroup />
