@@ -48,7 +48,7 @@ namespace MyOfficeTable
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new SelectThemeForm(true));
+            GoToForm(new SelectThemeForm("Тестирование"));
         }
 
         private void EvaluationCriteriasForm_MouseDown(object sender, MouseEventArgs e)

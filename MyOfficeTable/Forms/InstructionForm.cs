@@ -16,10 +16,12 @@ namespace MyOfficeTable.Forms
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
+        string theme = "";
 
-        public InstructionForm()
+        public InstructionForm(string taskName)
         {
             InitializeComponent();
+            theme = taskName;
             if (Properties.Settings.Default.firstLoadInstruction)
             {
                 goNextButton.Visible = true;
@@ -82,7 +84,7 @@ namespace MyOfficeTable.Forms
 
         private void LoadInteractiveTask()
         {
-            InteractiveTaskForm form = new InteractiveTaskForm("Интерактивные задания");
+            InteractiveTaskForm form = new InteractiveTaskForm(theme);
             Hide();
             form.ShowDialog();
             Close();

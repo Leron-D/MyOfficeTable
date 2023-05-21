@@ -87,7 +87,7 @@ namespace MyOfficeTable
 
         private void InteractiveTasksButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new InstructionForm());
+            GoToForm(new SelectThemeForm("Интерактивные задания"));
         }
 
         void GoToForm(Form form)

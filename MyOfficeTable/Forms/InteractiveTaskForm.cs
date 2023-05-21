@@ -44,6 +44,14 @@ namespace MyOfficeTable.Forms
             SourcePictureBox5.AllowDrop = SourcePictureBox6.AllowDrop = SourcePictureBox7.AllowDrop = SourcePictureBox8.AllowDrop = SourcePictureBox9.AllowDrop =
             SourcePictureBox10.AllowDrop = SourcePictureBox11.AllowDrop = SourcePictureBox12.AllowDrop = true;
             srcPictureBox = null;
+            if (theme == "Интерфейс табличного процессора")
+            {
+                tabControl.SelectedTab = tabControl.TabPages[0];
+            }
+            else if (theme == "Ссылка на ячейки в табличном процессоре")
+            {
+                tabControl.SelectedTab = tabControl.TabPages[3];
+            }
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -269,7 +277,7 @@ namespace MyOfficeTable.Forms
         private void HelpButton_Click(object sender, EventArgs e)
         {
             helpButton.Enabled = false;
-            InstructionForm form = new InstructionForm();
+            InstructionForm form = new InstructionForm(theme);
             form.FormClosed += InstructionForm_Closed;
             form.Show();
         }

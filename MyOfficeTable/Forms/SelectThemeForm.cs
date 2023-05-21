@@ -36,10 +36,14 @@ namespace MyOfficeTable
                 transitionButton.Text = "Перейти к лекции";
                 goToEvaluationCriteriasButton.Visible = false;
             }
+            if (mode == "Интерактивные задания")
+            {
+                transitionButton.Text = "Перейти к заданию";
+                goToEvaluationCriteriasButton.Visible = false;
+            }
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
-            AddItemsToComboBox();
             listOfTheoryThemes = new List<string>
             {
                 "Работа в табличном процессоре",
@@ -55,6 +59,7 @@ namespace MyOfficeTable
                 "Использование формул и функций в табличном процессоре",
                 "Построение графиков и диаграмм"
             };
+            AddItemsToComboBox();
         }
 
         void AddItemsToComboBox()
@@ -118,7 +123,7 @@ namespace MyOfficeTable
                 }
                 else
                 {
-                    GoToForm(new InstructionForm());
+                    GoToForm(new InstructionForm($"{selectThemeComboBox.SelectedItem}"));
                 }
             }
             catch (Exception ex)
