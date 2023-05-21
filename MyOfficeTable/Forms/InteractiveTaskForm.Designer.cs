@@ -125,14 +125,14 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.resultLabel20 = new System.Windows.Forms.Label();
+            this.resultLabel19 = new System.Windows.Forms.Label();
+            this.resultLabel18 = new System.Windows.Forms.Label();
+            this.resultLabel17 = new System.Windows.Forms.Label();
+            this.resultLabel16 = new System.Windows.Forms.Label();
+            this.resultLabel15 = new System.Windows.Forms.Label();
+            this.resultLabel14 = new System.Windows.Forms.Label();
+            this.resultLabel13 = new System.Windows.Forms.Label();
             this.task4Page.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -279,10 +279,10 @@
             // task4Page
             // 
             this.task4Page.BackColor = System.Drawing.Color.LightCyan;
-            this.task4Page.Controls.Add(this.label23);
-            this.task4Page.Controls.Add(this.label24);
-            this.task4Page.Controls.Add(this.label25);
-            this.task4Page.Controls.Add(this.label26);
+            this.task4Page.Controls.Add(this.resultLabel16);
+            this.task4Page.Controls.Add(this.resultLabel15);
+            this.task4Page.Controls.Add(this.resultLabel14);
+            this.task4Page.Controls.Add(this.resultLabel13);
             this.task4Page.Controls.Add(this.answerTextBox4);
             this.task4Page.Controls.Add(this.answerTextBox3);
             this.task4Page.Controls.Add(this.answerTextBox2);
@@ -1247,10 +1247,10 @@
             // task5Page
             // 
             this.task5Page.BackColor = System.Drawing.Color.LightCyan;
-            this.task5Page.Controls.Add(this.label19);
-            this.task5Page.Controls.Add(this.label20);
-            this.task5Page.Controls.Add(this.label21);
-            this.task5Page.Controls.Add(this.label22);
+            this.task5Page.Controls.Add(this.resultLabel20);
+            this.task5Page.Controls.Add(this.resultLabel19);
+            this.task5Page.Controls.Add(this.resultLabel18);
+            this.task5Page.Controls.Add(this.resultLabel17);
             this.task5Page.Controls.Add(this.answerTextBox8);
             this.task5Page.Controls.Add(this.answerTextBox7);
             this.task5Page.Controls.Add(this.answerTextBox6);
@@ -1461,109 +1461,109 @@
             this.pictureBox13.TabIndex = 56;
             this.pictureBox13.TabStop = false;
             // 
-            // label19
+            // resultLabel20
             // 
-            this.label19.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label19.Location = new System.Drawing.Point(975, 589);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 37);
-            this.label19.TabIndex = 59;
-            this.label19.Tag = "Incorrect";
-            this.label19.Text = "4";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label19.Visible = false;
+            this.resultLabel20.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel20.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel20.Location = new System.Drawing.Point(975, 589);
+            this.resultLabel20.Name = "resultLabel20";
+            this.resultLabel20.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel20.TabIndex = 59;
+            this.resultLabel20.Tag = "Incorrect";
+            this.resultLabel20.Text = "4";
+            this.resultLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel20.Visible = false;
             // 
-            // label20
+            // resultLabel19
             // 
-            this.label20.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label20.Location = new System.Drawing.Point(423, 589);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 37);
-            this.label20.TabIndex = 58;
-            this.label20.Tag = "Incorrect";
-            this.label20.Text = "3";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label20.Visible = false;
+            this.resultLabel19.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel19.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel19.Location = new System.Drawing.Point(423, 589);
+            this.resultLabel19.Name = "resultLabel19";
+            this.resultLabel19.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel19.TabIndex = 58;
+            this.resultLabel19.Tag = "Incorrect";
+            this.resultLabel19.Text = "3";
+            this.resultLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel19.Visible = false;
             // 
-            // label21
+            // resultLabel18
             // 
-            this.label21.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label21.Location = new System.Drawing.Point(975, 339);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(37, 37);
-            this.label21.TabIndex = 57;
-            this.label21.Tag = "Incorrect";
-            this.label21.Text = "2";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label21.Visible = false;
+            this.resultLabel18.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel18.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel18.Location = new System.Drawing.Point(975, 339);
+            this.resultLabel18.Name = "resultLabel18";
+            this.resultLabel18.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel18.TabIndex = 57;
+            this.resultLabel18.Tag = "Incorrect";
+            this.resultLabel18.Text = "2";
+            this.resultLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel18.Visible = false;
             // 
-            // label22
+            // resultLabel17
             // 
-            this.label22.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label22.Location = new System.Drawing.Point(423, 338);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(37, 37);
-            this.label22.TabIndex = 56;
-            this.label22.Tag = "Incorrect";
-            this.label22.Text = "1";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label22.Visible = false;
+            this.resultLabel17.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel17.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel17.Location = new System.Drawing.Point(423, 338);
+            this.resultLabel17.Name = "resultLabel17";
+            this.resultLabel17.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel17.TabIndex = 56;
+            this.resultLabel17.Tag = "Incorrect";
+            this.resultLabel17.Text = "1";
+            this.resultLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel17.Visible = false;
             // 
-            // label23
+            // resultLabel16
             // 
-            this.label23.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label23.Location = new System.Drawing.Point(975, 590);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(37, 37);
-            this.label23.TabIndex = 67;
-            this.label23.Tag = "Incorrect";
-            this.label23.Text = "4";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label23.Visible = false;
+            this.resultLabel16.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel16.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel16.Location = new System.Drawing.Point(975, 590);
+            this.resultLabel16.Name = "resultLabel16";
+            this.resultLabel16.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel16.TabIndex = 67;
+            this.resultLabel16.Tag = "Incorrect";
+            this.resultLabel16.Text = "4";
+            this.resultLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel16.Visible = false;
             // 
-            // label24
+            // resultLabel15
             // 
-            this.label24.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label24.Location = new System.Drawing.Point(423, 590);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(37, 37);
-            this.label24.TabIndex = 66;
-            this.label24.Tag = "Incorrect";
-            this.label24.Text = "3";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label24.Visible = false;
+            this.resultLabel15.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel15.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel15.Location = new System.Drawing.Point(423, 590);
+            this.resultLabel15.Name = "resultLabel15";
+            this.resultLabel15.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel15.TabIndex = 66;
+            this.resultLabel15.Tag = "Incorrect";
+            this.resultLabel15.Text = "3";
+            this.resultLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel15.Visible = false;
             // 
-            // label25
+            // resultLabel14
             // 
-            this.label25.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label25.Location = new System.Drawing.Point(975, 339);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(37, 37);
-            this.label25.TabIndex = 65;
-            this.label25.Tag = "Incorrect";
-            this.label25.Text = "2";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label25.Visible = false;
+            this.resultLabel14.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel14.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel14.Location = new System.Drawing.Point(975, 339);
+            this.resultLabel14.Name = "resultLabel14";
+            this.resultLabel14.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel14.TabIndex = 65;
+            this.resultLabel14.Tag = "Incorrect";
+            this.resultLabel14.Text = "2";
+            this.resultLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel14.Visible = false;
             // 
-            // label26
+            // resultLabel13
             // 
-            this.label26.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label26.Location = new System.Drawing.Point(423, 338);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(37, 37);
-            this.label26.TabIndex = 64;
-            this.label26.Tag = "Incorrect";
-            this.label26.Text = "1";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label26.Visible = false;
+            this.resultLabel13.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel13.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel13.Location = new System.Drawing.Point(423, 338);
+            this.resultLabel13.Name = "resultLabel13";
+            this.resultLabel13.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel13.TabIndex = 64;
+            this.resultLabel13.Tag = "Incorrect";
+            this.resultLabel13.Text = "1";
+            this.resultLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel13.Visible = false;
             // 
             // InteractiveTaskForm
             // 
@@ -1751,13 +1751,13 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label resultLabel20;
+        private System.Windows.Forms.Label resultLabel19;
+        private System.Windows.Forms.Label resultLabel18;
+        private System.Windows.Forms.Label resultLabel17;
+        private System.Windows.Forms.Label resultLabel16;
+        private System.Windows.Forms.Label resultLabel15;
+        private System.Windows.Forms.Label resultLabel14;
+        private System.Windows.Forms.Label resultLabel13;
     }
 }

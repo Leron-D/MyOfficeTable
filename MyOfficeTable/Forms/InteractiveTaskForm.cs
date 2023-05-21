@@ -122,15 +122,6 @@ namespace MyOfficeTable.Forms
             CheckCorrectness();
         }
 
-        private void ChangePicturePosition(PictureBox destinationPictureBox, PictureBox sourcePictureBox, Label resultLabel, string tag = null)
-        {
-            destinationPictureBox.Image = sourcePictureBox.Image;
-            sourcePictureBox.Image = null;
-            sourcePictureBox.Tag = null;
-            resultLabel.Tag = tag;
-            CheckCorrectness();
-        }
-
         private void GoToNextTask()
         {
             if (tabControl.SelectedTab == tabControl.TabPages[0] && resultLabel1.Tag == "Correct" && resultLabel2.Tag == "Correct" && resultLabel3.Tag == "Correct" && resultLabel4.Tag == "Correct")
@@ -150,9 +141,9 @@ namespace MyOfficeTable.Forms
             }
             else
             {
-                CheckCorrectness();
                 MessageBox.Show("Задание решено неверно, попробуйте снова", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            CheckCorrectness();
         }
 
         private void GoNextButton_Click(object sender, EventArgs e)
@@ -218,6 +209,11 @@ namespace MyOfficeTable.Forms
                 resultLabel.Image = Resources.Correct;
                 resultLabel.Tag = "Correct";
             }
+        }
+
+        private void ChangeImageOfLabel(TextBox textBox, string formula, Label resultLabel)
+        {
+
         }
 
         private void HelpButton_Click(object sender, EventArgs e)
