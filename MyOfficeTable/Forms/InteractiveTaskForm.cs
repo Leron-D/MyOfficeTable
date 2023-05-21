@@ -17,10 +17,12 @@ namespace MyOfficeTable.Forms
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
+        string theme;
 
-        public InteractiveTaskForm()
+        public InteractiveTaskForm(string taskName)
         {
             InitializeComponent();
+            theme = taskName;
             LoadForm();
         }
 
@@ -139,6 +141,16 @@ namespace MyOfficeTable.Forms
             {
                 ShowForm(new ResultInteractiveForm());
             }
+            if (tabControl.SelectedTab == tabControl.TabPages[3] && resultLabel13.Tag == "Correct" && resultLabel14.Tag == "Correct" && resultLabel15.Tag == "Correct" && resultLabel16.Tag == "Correct")
+            {
+                tabControl.SelectedTab = tabControl.TabPages[4];
+                goNextButton.Text = "Завершить";
+                goBackButton.Enabled = true;
+            }
+            else if (tabControl.SelectedTab == tabControl.TabPages[4] && resultLabel17.Tag == "Correct" && resultLabel18.Tag == "Correct" && resultLabel19.Tag == "Correct" && resultLabel20.Tag == "Correct")
+            {
+                ShowForm(new ResultInteractiveForm());
+            }
             else
             {
                 MessageBox.Show("Задание решено неверно, попробуйте снова", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -153,15 +165,31 @@ namespace MyOfficeTable.Forms
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            if (tabControl.SelectedTab == tabControl.TabPages[1])
+            if (theme == "Интерфейс")
             {
-                tabControl.SelectedTab = tabControl.TabPages[0];
-                goBackButton.Enabled = false;
+                if (tabControl.SelectedTab == tabControl.TabPages[1])
+                {
+                    tabControl.SelectedTab = tabControl.TabPages[0];
+                    goBackButton.Enabled = false;
+                }
+                else
+                {
+                    tabControl.SelectedTab = tabControl.TabPages[1];
+                    goNextButton.Text = "Продолжить";
+                }
             }
-            else
+            else if (theme == "Ссылки")
             {
-                tabControl.SelectedTab = tabControl.TabPages[1];
-                goNextButton.Text = "Продолжить";
+                if (tabControl.SelectedTab == tabControl.TabPages[4])
+                {
+                    tabControl.SelectedTab = tabControl.TabPages[3];
+                    goBackButton.Enabled = false;
+                }
+                else
+                {
+                    tabControl.SelectedTab = tabControl.TabPages[4];
+                    goNextButton.Text = "Продолжить";
+                }
             }
         }
 
@@ -190,7 +218,17 @@ namespace MyOfficeTable.Forms
             }
             else if (tabControl.SelectedTab == tabControl.TabPages[3])
             {
-
+                ChangeImageOfLabel(answerTextBox1, "=A3+$B$2", resultLabel13);
+                ChangeImageOfLabel(answerTextBox2, "=B3+$B$2*C3", resultLabel14);
+                ChangeImageOfLabel(answerTextBox3, "=$A4+B4", resultLabel15);
+                ChangeImageOfLabel(answerTextBox4, "=$B5/B$2", resultLabel16);
+            }
+            else if (tabControl.SelectedTab == tabControl.TabPages[4])
+            {
+                ChangeImageOfLabel(answerTextBox5, "=$A$1-C3+B$2", resultLabel17);
+                ChangeImageOfLabel(answerTextBox6, "=A$1*B$1", resultLabel18);
+                ChangeImageOfLabel(answerTextBox7, "=$B5-B$3/C3", resultLabel19);
+                ChangeImageOfLabel(answerTextBox8, "=$B$2/C$3", resultLabel20);
             }
         }
 
@@ -213,7 +251,19 @@ namespace MyOfficeTable.Forms
 
         private void ChangeImageOfLabel(TextBox textBox, string formula, Label resultLabel)
         {
-
+            resultLabel.Visible = true;
+            if(textBox.Text.ToLower() != formula.ToLower())
+            {
+                resultLabel.Text = "";
+                resultLabel.Image = Resources.Incorrect;
+                resultLabel.Tag = "Incorrect";
+            }
+            else
+            {
+                resultLabel.Text = "";
+                resultLabel.Image = Resources.Correct;
+                resultLabel.Tag = "Correct";
+            }
         }
 
         private void HelpButton_Click(object sender, EventArgs e)
@@ -234,6 +284,11 @@ namespace MyOfficeTable.Forms
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void AnswerTextBox_TextChanged(object sender, EventArgs e)
+        {
+            CheckCorrectness();
         }
     }
 }

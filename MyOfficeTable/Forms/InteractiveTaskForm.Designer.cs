@@ -1356,6 +1356,7 @@
             this.answerTextBox5.Name = "answerTextBox5";
             this.answerTextBox5.Size = new System.Drawing.Size(327, 36);
             this.answerTextBox5.TabIndex = 52;
+            this.answerTextBox5.TextChanged += new System.EventHandler(this.AnswerTextBox_TextChanged);
             // 
             // answerTextBox6
             // 
