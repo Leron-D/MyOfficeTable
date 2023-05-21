@@ -36,10 +36,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.interactiveTasksButton = new MyOfficeTable.ButtonCard();
             this.testingButton = new MyOfficeTable.ButtonCard();
             this.theoryButton = new MyOfficeTable.ButtonCard();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -134,6 +134,14 @@
             this.panel2.Size = new System.Drawing.Size(1139, 434);
             this.panel2.TabIndex = 42;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Salmon;
+            this.panel3.Location = new System.Drawing.Point(51, 229);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1139, 19);
+            this.panel3.TabIndex = 9;
+            // 
             // interactiveTasksButton
             // 
             this.interactiveTasksButton.BackColor = System.Drawing.Color.White;
@@ -147,8 +155,8 @@
             this.interactiveTasksButton.Name = "interactiveTasksButton";
             this.interactiveTasksButton.Size = new System.Drawing.Size(271, 277);
             this.interactiveTasksButton.TabIndex = 2;
-            this.interactiveTasksButton.Text = "Выбор 3";
-            this.interactiveTasksButton.TextDescrition = "Проверка знания теоретического материала в виде интерактивных заданий";
+            this.interactiveTasksButton.TextDescrition = "Упражнения для проверки знаний лекционного материала в виде интерактивных заданий" +
+    "";
             this.interactiveTasksButton.TextHeader = "Интерактивные задания";
             this.interactiveTasksButton.Click += new System.EventHandler(this.InteractiveTasksButton_Click);
             // 
@@ -165,8 +173,7 @@
             this.testingButton.Name = "testingButton";
             this.testingButton.Size = new System.Drawing.Size(271, 277);
             this.testingButton.TabIndex = 1;
-            this.testingButton.Text = "Выбор 2";
-            this.testingButton.TextDescrition = "Проверка знания теоретического материала в виде тестов";
+            this.testingButton.TextDescrition = "Проверка знаний лекционного материала в виде тестирования";
             this.testingButton.TextHeader = "Тестирование";
             this.testingButton.Click += new System.EventHandler(this.TestingButton_Click);
             // 
@@ -183,18 +190,10 @@
             this.theoryButton.Name = "theoryButton";
             this.theoryButton.Size = new System.Drawing.Size(271, 277);
             this.theoryButton.TabIndex = 0;
-            this.theoryButton.Text = "Выбор 1";
-            this.theoryButton.TextDescrition = "Теоретический материал по табличному процессору «МойОфис Таблица»";
+            this.theoryButton.TextDescrition = "Лекционный материал для самостоятельной подготовки по работе в табличном процессо" +
+    "ре «МойОфис Таблица»";
             this.theoryButton.TextHeader = "Теория";
             this.theoryButton.Click += new System.EventHandler(this.TheoryButton_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Salmon;
-            this.panel3.Location = new System.Drawing.Point(51, 229);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1139, 19);
-            this.panel3.TabIndex = 9;
             // 
             // MainForm
             // 

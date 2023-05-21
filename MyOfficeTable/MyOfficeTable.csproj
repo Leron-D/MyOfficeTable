@@ -228,6 +228,14 @@
     <None Include="Resources\minimize.png" />
     <None Include="Resources\Incorrect.png" />
     <None Include="Resources\Expand.png" />
+    <None Include="Resources\InteractiveTask6.jpg" />
+    <None Include="Resources\InteractiveTask7.jpg" />
+    <None Include="Resources\InteractiveTask8.jpg" />
+    <None Include="Resources\InteractiveTask1.jpg" />
+    <None Include="Resources\InteractiveTask2.jpg" />
+    <None Include="Resources\InteractiveTask3.jpg" />
+    <None Include="Resources\InteractiveTask4.jpg" />
+    <None Include="Resources\InteractiveTask5.jpg" />
     <Content Include="Resources\MyOfficeTable.ico" />
     <None Include="Resources\MyOfficeTable.jpg" />
     <Content Include="Resources\question.png" />
