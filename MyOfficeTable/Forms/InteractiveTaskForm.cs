@@ -190,12 +190,16 @@ namespace MyOfficeTable.Forms
                 ChangeImageOfLabel(DestinationPictureBox7, "copy", resultLabel7);
                 ChangeImageOfLabel(DestinationPictureBox8, "enter", resultLabel8);
             }
-            else
+            else if (tabControl.SelectedTab == tabControl.TabPages[2])
             {
                 ChangeImageOfLabel(DestinationPictureBox9, "underlined", resultLabel9);
                 ChangeImageOfLabel(DestinationPictureBox10, "colorOfFill", resultLabel10);
                 ChangeImageOfLabel(DestinationPictureBox11, "italic", resultLabel11);
                 ChangeImageOfLabel(DestinationPictureBox12, "colorOfText", resultLabel12);
+            }
+            else if (tabControl.SelectedTab == tabControl.TabPages[3])
+            {
+
             }
         }
 
