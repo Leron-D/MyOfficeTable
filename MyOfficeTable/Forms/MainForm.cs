@@ -72,15 +72,15 @@ namespace MyOfficeTable
 
         private void TheoryButton_Click(object sender, EventArgs e)
         {
-            GoToSelectTheme(false);
+            GoToSelectTheme("Теория");
         }
 
         private void TestingButton_Click(object sender, EventArgs e)
         {
-            GoToSelectTheme(true);
+            GoToSelectTheme("Тестирование");
         }
 
-        private void GoToSelectTheme(bool mode)
+        private void GoToSelectTheme(string mode)
         {
             GoToForm(new SelectThemeForm(mode));
         }

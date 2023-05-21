@@ -82,7 +82,7 @@ namespace MyOfficeTable.Forms
 
         private void LoadInteractiveTask()
         {
-            InteractiveTaskForm form = new InteractiveTaskForm();
+            InteractiveTaskForm form = new InteractiveTaskForm("Интерактивные задания");
             Hide();
             form.ShowDialog();
             Close();

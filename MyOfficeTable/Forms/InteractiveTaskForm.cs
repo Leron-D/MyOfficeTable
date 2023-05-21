@@ -17,7 +17,7 @@ namespace MyOfficeTable.Forms
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        string theme;
+        string theme = "";
 
         public InteractiveTaskForm(string taskName)
         {
@@ -139,7 +139,7 @@ namespace MyOfficeTable.Forms
             }
             else if (tabControl.SelectedTab == tabControl.TabPages[2] && resultLabel9.Tag == "Correct" && resultLabel10.Tag == "Correct" && resultLabel11.Tag == "Correct" && resultLabel12.Tag == "Correct")
             {
-                ShowForm(new ResultInteractiveForm());
+                ShowForm(new ResultInteractiveForm(theme));
             }
             if (tabControl.SelectedTab == tabControl.TabPages[3] && resultLabel13.Tag == "Correct" && resultLabel14.Tag == "Correct" && resultLabel15.Tag == "Correct" && resultLabel16.Tag == "Correct")
             {
@@ -149,7 +149,7 @@ namespace MyOfficeTable.Forms
             }
             else if (tabControl.SelectedTab == tabControl.TabPages[4] && resultLabel17.Tag == "Correct" && resultLabel18.Tag == "Correct" && resultLabel19.Tag == "Correct" && resultLabel20.Tag == "Correct")
             {
-                ShowForm(new ResultInteractiveForm());
+                ShowForm(new ResultInteractiveForm(theme));
             }
             else
             {

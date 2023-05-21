@@ -15,8 +15,11 @@ namespace MyOfficeTable.Forms
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        public ResultInteractiveForm()
+        string theme = "";
+
+        public ResultInteractiveForm(string taskName)
         {
+            theme = taskName;
             InitializeComponent();
             LoadForm();
         }
@@ -68,7 +71,7 @@ namespace MyOfficeTable.Forms
 
         private void TakeTestAgainButton_Click(object sender, EventArgs e)
         {
-            InteractiveTaskForm form = new InteractiveTaskForm();
+            InteractiveTaskForm form = new InteractiveTaskForm(theme);
             Hide();
             form.ShowDialog();
             Close();

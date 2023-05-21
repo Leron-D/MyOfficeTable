@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyOfficeTable.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,17 +14,24 @@ namespace MyOfficeTable
 {
     public partial class SelectThemeForm : Form
     {
-        bool selectMode;
+        string selectMode;
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        public SelectThemeForm(bool mode)
+        List<string> listOfTheoryThemes = new List<string>();
+        List<string> listOfTestsThemes = new List<string>();
+
+        public SelectThemeForm(string mode)
         {
             InitializeComponent();
-            //headerLabel.Left = (ClientSize.Width - headerPictureBox.Width) / 2;
+            LoadForm(mode);
+        }
+
+        private void LoadForm(string mode)
+        {
             transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
             selectMode = mode;
-            if(!mode)
+            if (mode == "Теория")
             {
                 transitionButton.Text = "Перейти к лекции";
                 goToEvaluationCriteriasButton.Visible = false;
@@ -32,28 +40,47 @@ namespace MyOfficeTable
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
             AddItemsToComboBox();
+            listOfTheoryThemes = new List<string>
+            {
+                "Работа в табличном процессоре",
+                "Создание, редактирование и форматирование рабочих листов табличного процессора",
+                "Использование формул и функций в табличном процессоре",
+                "Построение графиков и диаграмм",
+                "Работа с данными в табличном процессоре",
+                "Ссылки на ячейки в табличном процессоре"
+            };
+            listOfTestsThemes = new List<string>
+            {
+                "Создание, редактирование и форматирование рабочих листов табличного процессора",
+                "Использование формул и функций в табличном процессоре",
+                "Построение графиков и диаграмм"
+            };
         }
 
         void AddItemsToComboBox()
         {
             try
             {
-                if (selectMode)
+                if (selectMode == "Тестирование")
                 {
-                    var items = Directory.GetFiles(Directory.GetCurrentDirectory() + @"\Tests", "*.xml");
-                    foreach (var file in items)
+                    foreach (string theme in listOfTestsThemes)
                     {
-                        selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(file));
+                        selectThemeComboBox.Items.Add(theme);
+                    }
+                    selectThemeComboBox.SelectedIndex = 0;
+                }
+                else if (selectMode == "Теория")
+                {
+                    foreach (string theme in listOfTheoryThemes)
+                    {
+                        selectThemeComboBox.Items.Add(theme);
                     }
                     selectThemeComboBox.SelectedIndex = 0;
                 }
                 else
                 {
-                    var items = Directory.GetFiles(Directory.GetCurrentDirectory() + @"\Lections", "*.html");
-                    foreach (var file in items)
-                    {
-                        selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(file));
-                    }
+                    selectThemeComboBox.Items.Add("Интерфейс табличного процессора");
+                    selectThemeComboBox.Items.Add("Ссылка на ячейки в табличном процессоре");
                     selectThemeComboBox.SelectedIndex = 0;
                 }
             }
@@ -81,13 +108,17 @@ namespace MyOfficeTable
         {
             try
             {
-                if (selectMode)
+                if (selectMode == "Тестирование")
                 {
                     GoToForm(new TestForm(Directory.GetCurrentDirectory() + $@"\Tests\{selectThemeComboBox.SelectedItem}.xml"));
                 }
-                else
+                else if (selectMode == "Теория")
                 {
                     GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html"));
+                }
+                else
+                {
+                    GoToForm(new InstructionForm());
                 }
             }
             catch (Exception ex)
