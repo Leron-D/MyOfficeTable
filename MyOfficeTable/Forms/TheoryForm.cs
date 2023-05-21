@@ -25,6 +25,15 @@ namespace MyOfficeTable
         public TheoryForm(string lection)
         {
             InitializeComponent();
+            LoadForm(lection);
+        }
+
+        private void LoadForm(string lection)
+        {
+            if (!File.Exists($@"Tests\{lection}.xml"))
+            {
+                testingButton.Visible = false;
+            }
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
             file = lection;
             toolTip.SetToolTip(minimizeButton, "Свернуть");
