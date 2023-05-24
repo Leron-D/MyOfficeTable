@@ -62,8 +62,10 @@ namespace MyOfficeTable
             labelText.Padding = new Padding(8, 0, 0, 0);
             labelText.Font = new Font(this.Font.Name, 10F);
 
-            
-            labelText.Click += new EventHandler(Surface_Click);
+
+            //labelText.Click += new EventHandler(Surface_Click);
+            labelText.Click += new EventHandler(LabelText_Click);
+            labelText.Cursor = Cursors.Hand;
             labelText.MouseEnter += new EventHandler(Surface_MouseEnter);
             labelText.MouseLeave += new EventHandler(Surface_MouseLeave);
             
@@ -86,6 +88,12 @@ namespace MyOfficeTable
             comboBoxList.Select();
             if (comboBoxList.DropDownStyle == ComboBoxStyle.DropDownList)
                 comboBoxList.DroppedDown = true;
+        }
+
+        private void LabelText_Click(object sender, EventArgs e)
+        {
+            comboBoxList.Select();
+            comboBoxList.DroppedDown = true;
         }
 
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
