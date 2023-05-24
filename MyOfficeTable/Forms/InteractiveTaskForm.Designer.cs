@@ -32,8 +32,6 @@
             this.helpButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
-            this.goNextButton = new MyOfficeTable.MyButton();
-            this.goBackButton = new MyOfficeTable.MyButton();
             this.task4Page = new System.Windows.Forms.TabPage();
             this.resultLabel16 = new System.Windows.Forms.Label();
             this.resultLabel15 = new System.Windows.Forms.Label();
@@ -49,7 +47,7 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
+            this.headerLabel4 = new System.Windows.Forms.Label();
             this.task3TabPage = new System.Windows.Forms.TabPage();
             this.resultLabel12 = new System.Windows.Forms.Label();
             this.resultLabel11 = new System.Windows.Forms.Label();
@@ -67,7 +65,7 @@
             this.SourcePictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.headerLabel3 = new System.Windows.Forms.Label();
             this.DestinationPictureBox12 = new System.Windows.Forms.PictureBox();
             this.DestinationPictureBox11 = new System.Windows.Forms.PictureBox();
             this.DestinationPictureBox10 = new System.Windows.Forms.PictureBox();
@@ -89,7 +87,7 @@
             this.SourcePictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.headerLabel2 = new System.Windows.Forms.Label();
             this.DestinationPictureBox8 = new System.Windows.Forms.PictureBox();
             this.DestinationPictureBox6 = new System.Windows.Forms.PictureBox();
             this.DestinationPictureBox7 = new System.Windows.Forms.PictureBox();
@@ -115,7 +113,7 @@
             this.DestinationPictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.firstTaskLabel = new System.Windows.Forms.Label();
+            this.headerLabel1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.task5Page = new System.Windows.Forms.TabPage();
             this.resultLabel20 = new System.Windows.Forms.Label();
@@ -132,12 +130,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.headerLabel5 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.numOfTaskLabel = new System.Windows.Forms.Label();
+            this.goNextButton = new MyOfficeTable.MyButton();
+            this.goBackButton = new MyOfficeTable.MyButton();
             this.task4Page.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -235,51 +236,6 @@
             this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.minimizeButton.UseVisualStyleBackColor = false;
             this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
-            // 
-            // goNextButton
-            // 
-            this.goNextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.goNextButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.goNextButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            this.goNextButton.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.goNextButton.BorderRadius = 20;
-            this.goNextButton.BorderSize = 0;
-            this.goNextButton.FlatAppearance.BorderSize = 0;
-            this.goNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goNextButton.ForeColor = System.Drawing.Color.White;
-            this.goNextButton.Location = new System.Drawing.Point(862, 840);
-            this.goNextButton.MinimumSize = new System.Drawing.Size(150, 40);
-            this.goNextButton.Name = "goNextButton";
-            this.goNextButton.Size = new System.Drawing.Size(172, 40);
-            this.goNextButton.TabIndex = 58;
-            this.goNextButton.Text = "Продолжить";
-            this.goNextButton.TextColor = System.Drawing.Color.White;
-            this.goNextButton.UseVisualStyleBackColor = false;
-            this.goNextButton.Click += new System.EventHandler(this.GoNextButton_Click);
-            // 
-            // goBackButton
-            // 
-            this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.goBackButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BorderRadius = 20;
-            this.goBackButton.BorderSize = 0;
-            this.goBackButton.Enabled = false;
-            this.goBackButton.FlatAppearance.BorderSize = 0;
-            this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.ForeColor = System.Drawing.Color.White;
-            this.goBackButton.Location = new System.Drawing.Point(-1, 840);
-            this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
-            this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(151, 40);
-            this.goBackButton.TabIndex = 57;
-            this.goBackButton.Text = "Назад";
-            this.goBackButton.TextColor = System.Drawing.Color.White;
-            this.goBackButton.UseVisualStyleBackColor = false;
-            this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
             // task4Page
             // 
@@ -444,7 +400,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Controls.Add(this.label27);
+            this.panel5.Controls.Add(this.headerLabel4);
             this.panel5.Location = new System.Drawing.Point(0, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1043, 133);
@@ -460,20 +416,19 @@
             this.pictureBox6.TabIndex = 47;
             this.pictureBox6.TabStop = false;
             // 
-            // label27
+            // headerLabel4
             // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.headerLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(414, 40);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(270, 55);
-            this.label27.TabIndex = 17;
-            this.label27.Text = "Задание 1";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel4.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel4.ForeColor = System.Drawing.Color.White;
+            this.headerLabel4.Location = new System.Drawing.Point(131, 0);
+            this.headerLabel4.Name = "headerLabel4";
+            this.headerLabel4.Size = new System.Drawing.Size(908, 132);
+            this.headerLabel4.TabIndex = 17;
+            this.headerLabel4.Text = "Задание 1";
+            this.headerLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // task3TabPage
             // 
@@ -688,7 +643,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.headerLabel3);
             this.panel4.Location = new System.Drawing.Point(0, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1043, 133);
@@ -704,20 +659,19 @@
             this.pictureBox5.TabIndex = 47;
             this.pictureBox5.TabStop = false;
             // 
-            // label17
+            // headerLabel3
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.headerLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(414, 40);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(270, 55);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "Задание 3";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel3.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel3.ForeColor = System.Drawing.Color.White;
+            this.headerLabel3.Location = new System.Drawing.Point(131, 0);
+            this.headerLabel3.Name = "headerLabel3";
+            this.headerLabel3.Size = new System.Drawing.Size(908, 132);
+            this.headerLabel3.TabIndex = 17;
+            this.headerLabel3.Text = "Задание 3";
+            this.headerLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DestinationPictureBox12
             // 
@@ -987,7 +941,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.headerLabel2);
             this.panel3.Location = new System.Drawing.Point(0, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1043, 133);
@@ -1003,20 +957,19 @@
             this.pictureBox8.TabIndex = 47;
             this.pictureBox8.TabStop = false;
             // 
-            // label1
+            // headerLabel2
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.headerLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(414, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 55);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Задание 2";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel2.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel2.ForeColor = System.Drawing.Color.White;
+            this.headerLabel2.Location = new System.Drawing.Point(131, 0);
+            this.headerLabel2.Name = "headerLabel2";
+            this.headerLabel2.Size = new System.Drawing.Size(908, 132);
+            this.headerLabel2.TabIndex = 17;
+            this.headerLabel2.Text = "Задание 2";
+            this.headerLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DestinationPictureBox8
             // 
@@ -1342,7 +1295,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel2.Controls.Add(this.pictureBox7);
-            this.panel2.Controls.Add(this.firstTaskLabel);
+            this.panel2.Controls.Add(this.headerLabel1);
             this.panel2.Location = new System.Drawing.Point(0, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1043, 133);
@@ -1358,20 +1311,19 @@
             this.pictureBox7.TabIndex = 47;
             this.pictureBox7.TabStop = false;
             // 
-            // firstTaskLabel
+            // headerLabel1
             // 
-            this.firstTaskLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.headerLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.firstTaskLabel.AutoSize = true;
-            this.firstTaskLabel.BackColor = System.Drawing.Color.Transparent;
-            this.firstTaskLabel.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstTaskLabel.ForeColor = System.Drawing.Color.White;
-            this.firstTaskLabel.Location = new System.Drawing.Point(414, 40);
-            this.firstTaskLabel.Name = "firstTaskLabel";
-            this.firstTaskLabel.Size = new System.Drawing.Size(270, 55);
-            this.firstTaskLabel.TabIndex = 17;
-            this.firstTaskLabel.Text = "Задание 1";
-            this.firstTaskLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel1.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel1.ForeColor = System.Drawing.Color.White;
+            this.headerLabel1.Location = new System.Drawing.Point(131, 0);
+            this.headerLabel1.Name = "headerLabel1";
+            this.headerLabel1.Size = new System.Drawing.Size(908, 132);
+            this.headerLabel1.TabIndex = 17;
+            this.headerLabel1.Text = "Задание 1";
+            this.headerLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControl
             // 
@@ -1553,7 +1505,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.headerLabel5);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1043, 133);
@@ -1569,20 +1521,19 @@
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
-            // label18
+            // headerLabel5
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.headerLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(414, 40);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(270, 55);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "Задание 2";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel5.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel5.ForeColor = System.Drawing.Color.White;
+            this.headerLabel5.Location = new System.Drawing.Point(131, 0);
+            this.headerLabel5.Name = "headerLabel5";
+            this.headerLabel5.Size = new System.Drawing.Size(908, 132);
+            this.headerLabel5.TabIndex = 17;
+            this.headerLabel5.Text = "Задание 2";
+            this.headerLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
             // 
@@ -1596,7 +1547,6 @@
             this.label19.Text = "Требуется ввести формулу, которая будет написана в выделенной ячейке при копирова" +
     "нии";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label19.Visible = false;
             // 
             // label20
             // 
@@ -1610,7 +1560,6 @@
             this.label20.Text = "Требуется ввести формулу, которая будет написана в выделенной ячейке при копирова" +
     "нии";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label20.Visible = false;
             // 
             // label21
             // 
@@ -1623,7 +1572,6 @@
             this.label21.Tag = "Incorrect";
             this.label21.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label21.Visible = false;
             // 
             // label22
             // 
@@ -1636,7 +1584,6 @@
             this.label22.Tag = "Incorrect";
             this.label22.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label22.Visible = false;
             // 
             // label23
             // 
@@ -1649,7 +1596,65 @@
             this.label23.Tag = "Incorrect";
             this.label23.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label23.Visible = false;
+            // 
+            // numOfTaskLabel
+            // 
+            this.numOfTaskLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.numOfTaskLabel.AutoSize = true;
+            this.numOfTaskLabel.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOfTaskLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.numOfTaskLabel.Location = new System.Drawing.Point(453, 840);
+            this.numOfTaskLabel.Name = "numOfTaskLabel";
+            this.numOfTaskLabel.Size = new System.Drawing.Size(110, 37);
+            this.numOfTaskLabel.TabIndex = 70;
+            this.numOfTaskLabel.Tag = "Incorrect";
+            this.numOfTaskLabel.Text = "1 из 3";
+            this.numOfTaskLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // goNextButton
+            // 
+            this.goNextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.goNextButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.goNextButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.goNextButton.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.goNextButton.BorderRadius = 20;
+            this.goNextButton.BorderSize = 0;
+            this.goNextButton.FlatAppearance.BorderSize = 0;
+            this.goNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goNextButton.ForeColor = System.Drawing.Color.White;
+            this.goNextButton.Location = new System.Drawing.Point(862, 840);
+            this.goNextButton.MinimumSize = new System.Drawing.Size(150, 40);
+            this.goNextButton.Name = "goNextButton";
+            this.goNextButton.Size = new System.Drawing.Size(172, 40);
+            this.goNextButton.TabIndex = 58;
+            this.goNextButton.Text = "Продолжить";
+            this.goNextButton.TextColor = System.Drawing.Color.White;
+            this.goNextButton.UseVisualStyleBackColor = false;
+            this.goNextButton.Click += new System.EventHandler(this.GoNextButton_Click);
+            // 
+            // goBackButton
+            // 
+            this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.goBackButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.goBackButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.goBackButton.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.goBackButton.BorderRadius = 20;
+            this.goBackButton.BorderSize = 0;
+            this.goBackButton.Enabled = false;
+            this.goBackButton.FlatAppearance.BorderSize = 0;
+            this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goBackButton.ForeColor = System.Drawing.Color.White;
+            this.goBackButton.Location = new System.Drawing.Point(-1, 840);
+            this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(151, 40);
+            this.goBackButton.TabIndex = 57;
+            this.goBackButton.Text = "Назад";
+            this.goBackButton.TextColor = System.Drawing.Color.White;
+            this.goBackButton.UseVisualStyleBackColor = false;
+            this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
             // InteractiveTaskForm
             // 
@@ -1657,6 +1662,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1037, 883);
+            this.Controls.Add(this.numOfTaskLabel);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.minimizeButton);
@@ -1679,7 +1685,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.task3TabPage.ResumeLayout(false);
             this.task3TabPage.PerformLayout();
@@ -1690,7 +1695,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox9)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox11)).EndInit();
@@ -1705,7 +1709,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox8)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox6)).EndInit();
@@ -1724,7 +1727,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.task5Page.ResumeLayout(false);
@@ -1734,9 +1736,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1750,7 +1752,7 @@
         private System.Windows.Forms.TabPage task4Page;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label headerLabel4;
         private System.Windows.Forms.TabPage task3TabPage;
         private System.Windows.Forms.Label resultLabel12;
         private System.Windows.Forms.Label resultLabel11;
@@ -1768,7 +1770,7 @@
         private System.Windows.Forms.PictureBox SourcePictureBox9;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label headerLabel3;
         private System.Windows.Forms.PictureBox DestinationPictureBox12;
         private System.Windows.Forms.PictureBox DestinationPictureBox11;
         private System.Windows.Forms.PictureBox DestinationPictureBox10;
@@ -1790,7 +1792,7 @@
         private System.Windows.Forms.PictureBox SourcePictureBox8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label headerLabel2;
         private System.Windows.Forms.PictureBox DestinationPictureBox8;
         private System.Windows.Forms.PictureBox DestinationPictureBox6;
         private System.Windows.Forms.PictureBox DestinationPictureBox7;
@@ -1816,7 +1818,7 @@
         private System.Windows.Forms.PictureBox DestinationPictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label firstTaskLabel;
+        private System.Windows.Forms.Label headerLabel1;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage task5Page;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -1825,7 +1827,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label headerLabel5;
         private System.Windows.Forms.TextBox answerTextBox8;
         private System.Windows.Forms.TextBox answerTextBox7;
         private System.Windows.Forms.TextBox answerTextBox6;
@@ -1851,5 +1853,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label numOfTaskLabel;
     }
 }

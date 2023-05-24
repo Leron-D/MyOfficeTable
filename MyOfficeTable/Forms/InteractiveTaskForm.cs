@@ -18,6 +18,7 @@ namespace MyOfficeTable.Forms
         private Point currentOffset;
         private bool isMouseDown = false;
         string theme = "";
+        int numOfTask = 1;
 
         public InteractiveTaskForm(string taskName)
         {
@@ -43,7 +44,9 @@ namespace MyOfficeTable.Forms
             SourcePictureBox1.AllowDrop = SourcePictureBox2.AllowDrop = SourcePictureBox3.AllowDrop = SourcePictureBox4.AllowDrop = SourcePictureBox4.AllowDrop =
             SourcePictureBox5.AllowDrop = SourcePictureBox6.AllowDrop = SourcePictureBox7.AllowDrop = SourcePictureBox8.AllowDrop = SourcePictureBox9.AllowDrop =
             SourcePictureBox10.AllowDrop = SourcePictureBox11.AllowDrop = SourcePictureBox12.AllowDrop = true;
+            headerLabel1.Text = headerLabel2.Text = headerLabel3.Text = headerLabel4.Text = headerLabel5.Text = theme;
             srcPictureBox = null;
+            numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
             if (theme == "Интерфейс табличного процессора")
             {
                 tabControl.SelectedTab = tabControl.TabPages[0];
@@ -149,7 +152,7 @@ namespace MyOfficeTable.Forms
             {
                 ShowForm(new ResultInteractiveForm(theme));
             }
-            if (tabControl.SelectedTab == tabControl.TabPages[3] && resultLabel13.Tag == "Correct" && resultLabel14.Tag == "Correct" && resultLabel15.Tag == "Correct" && resultLabel16.Tag == "Correct")
+            else if (tabControl.SelectedTab == tabControl.TabPages[3] && resultLabel13.Tag == "Correct" && resultLabel14.Tag == "Correct" && resultLabel15.Tag == "Correct" && resultLabel16.Tag == "Correct")
             {
                 tabControl.SelectedTab = tabControl.TabPages[4];
                 goNextButton.Text = "Завершить";
@@ -161,7 +164,7 @@ namespace MyOfficeTable.Forms
             }
             else
             {
-                MessageBox.Show("Задание решено неверно, попробуйте снова", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Задание решено неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             CheckCorrectness();
         }
@@ -169,6 +172,8 @@ namespace MyOfficeTable.Forms
         private void GoNextButton_Click(object sender, EventArgs e)
         {
             GoToNextTask();
+            numOfTask++;
+            numOfTaskLabel.Text = $"{numOfTask} из 3";
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)

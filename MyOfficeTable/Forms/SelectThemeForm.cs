@@ -92,7 +92,7 @@ namespace MyOfficeTable
                 else
                 {
                     selectThemeComboBox.Items.Add("Интерфейс табличного процессора");
-                    selectThemeComboBox.Items.Add("Ссылка на ячейки в табличном процессоре");
+                    selectThemeComboBox.Items.Add("Ссылки на ячейки в табличном процессоре");
                     selectThemeComboBox.SelectedIndex = 0;
                 }
             }
