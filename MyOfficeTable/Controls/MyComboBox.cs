@@ -64,7 +64,7 @@ namespace MyOfficeTable
 
 
             //labelText.Click += new EventHandler(Surface_Click);
-            labelText.Click += new EventHandler(LabelText_Click);
+            labelText.Click += new EventHandler(Icon_Click);
             labelText.Cursor = Cursors.Hand;
             labelText.MouseEnter += new EventHandler(Surface_MouseEnter);
             labelText.MouseLeave += new EventHandler(Surface_MouseLeave);
