@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace WindowsFormsApp1
+namespace MyOfficeTable
 {
     public class MyButton : Button
     {

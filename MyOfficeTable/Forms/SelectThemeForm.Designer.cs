@@ -35,9 +35,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.headerPictureBox = new System.Windows.Forms.PictureBox();
             this.selectThemeComboBox = new MyOfficeTable.MyComboBox();
-            this.transitionButton = new WindowsFormsApp1.MyButton();
-            this.goToEvaluationCriteriasButton = new WindowsFormsApp1.MyButton();
-            this.goBackButton = new WindowsFormsApp1.MyButton();
+            this.transitionButton = new MyOfficeTable.MyButton();
+            this.goToEvaluationCriteriasButton = new MyOfficeTable.MyButton();
+            this.goBackButton = new MyOfficeTable.MyButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -226,9 +226,9 @@
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Panel panel1;
         private MyComboBox selectThemeComboBox;
-        private WindowsFormsApp1.MyButton transitionButton;
-        private WindowsFormsApp1.MyButton goToEvaluationCriteriasButton;
+        private MyOfficeTable.MyButton transitionButton;
+        private MyOfficeTable.MyButton goToEvaluationCriteriasButton;
         private System.Windows.Forms.PictureBox headerPictureBox;
-        private WindowsFormsApp1.MyButton goBackButton;
+        private MyOfficeTable.MyButton goBackButton;
     }
 }

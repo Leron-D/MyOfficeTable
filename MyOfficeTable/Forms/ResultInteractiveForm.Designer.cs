@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultInteractiveForm));
-            this.goTestAgainButton = new WindowsFormsApp1.MyButton();
+            this.goTestAgainButton = new MyOfficeTable.MyButton();
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
@@ -167,7 +167,7 @@
 
         #endregion
 
-        private WindowsFormsApp1.MyButton goTestAgainButton;
+        private MyOfficeTable.MyButton goTestAgainButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Panel panel;

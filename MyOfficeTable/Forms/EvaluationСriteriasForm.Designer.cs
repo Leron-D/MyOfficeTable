@@ -36,8 +36,8 @@
             this.headerLabel = new System.Windows.Forms.Label();
             this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.goBackButton = new WindowsFormsApp1.MyButton();
-            this.goToTestButton = new WindowsFormsApp1.MyButton();
+            this.goBackButton = new MyOfficeTable.MyButton();
+            this.goToTestButton = new MyOfficeTable.MyButton();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -204,8 +204,8 @@
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.WebBrowser webBrowser;
         private System.Windows.Forms.Panel panel1;
-        private WindowsFormsApp1.MyButton goBackButton;
+        private MyOfficeTable.MyButton goBackButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private WindowsFormsApp1.MyButton goToTestButton;
+        private MyOfficeTable.MyButton goToTestButton;
     }
 }

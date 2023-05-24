@@ -42,7 +42,7 @@
             this.testingButton = new System.Windows.Forms.Button();
             this.changeSizePanelButton = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.goBackButton = new WindowsFormsApp1.MyButton();
+            this.goBackButton = new MyOfficeTable.MyButton();
             this.rightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).BeginInit();
             this.panel1.SuspendLayout();
@@ -261,7 +261,7 @@
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel leftPanel;
-        private WindowsFormsApp1.MyButton goBackButton;
+        private MyOfficeTable.MyButton goBackButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Microsoft.Web.WebView2.WinForms.WebView2 webBrowser;
         private System.Windows.Forms.Button testingButton;

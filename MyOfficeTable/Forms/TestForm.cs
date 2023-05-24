@@ -12,7 +12,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Xml;
 using System.IO;
 using System.Threading;
-using WindowsFormsApp1;
 using CheckBox = System.Windows.Forms.CheckBox;
 using Polly;
 using Microsoft.Web.WebView2.Core;
@@ -22,34 +21,39 @@ namespace MyOfficeTable
     public partial class TestForm : Form
     {
         private List<MyRadioButton> radioButtons;
-        int mark = 0;
+        double mark = 0;
         int numOfQuestion = 1;
         int[] questionsArray = new int[15] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
         int numQuestion = 0;
+        double numOfQuestions = 0;
         int seconds = 0;
+        int minutes = 0;
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
         string testName;
         XmlNode successfulAnswer;
 
-        public TestForm(string fileName)
+        public TestForm(string fileName, double numberOfQuestions)
         {
             InitializeComponent();
+            numOfQuestions = numberOfQuestions;
             LoadForm(fileName);
         }
 
         private void LoadForm(string fileName)
         {
             try
-            {                
-                testName = fileName;                
+            {
+                testName = fileName;
+                minutes = Convert.ToInt32(numOfQuestions);             
                 headerLabel.Text = Path.GetFileNameWithoutExtension(testName);
                 startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
                 startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
                 offLabel.Left = (ClientSize.Width - offLabel.Width) / 2;
                 numOfQuestionLabel.Left = offLabel.Left - 51;
                 allNumQuestionLabel.Left = offLabel.Left + 51;
+                allNumQuestionLabel.Text = numOfQuestions.ToString();
                 //firstAnswerCheckBox.Location = answerTextBox.Location = firstAnswerRadioButton.Location;
                 //secondAnswerCheckBox.Location = new Point(1, firstAnswerCheckBox.Location.Y + 42);
                 //thirdAnswerCheckBox.Location = new Point(1, secondAnswerCheckBox.Location.Y + 42);
@@ -66,6 +70,7 @@ namespace MyOfficeTable
                     questionsArray[i] = temp;
                 }
                 ChangeVisibilityButtons();
+                timer.Start();
             }
             catch (Exception ex)
             {
@@ -117,7 +122,7 @@ namespace MyOfficeTable
             numOfQuestionLabel.Visible = offLabel.Visible = allNumQuestionLabel.Visible = true;
             numOfQuestionLabel.Text = $"{numOfQuestion}";
             GetXml();
-            timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
+            timerLabel.Text = $"Осталось {minutes} мин {seconds} сек";
         }
 
         void ChangeVisibilityButtons()
@@ -146,8 +151,6 @@ namespace MyOfficeTable
                     questionLabel.Text = $"Вопрос {numQuestion + 1}. {question.Value}";
                     if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Single")
                     {
-                        seconds = 30;
-                        timer.Start();
                         AnswerRadioButton1.Visible = AnswerRadioButton2.Visible = AnswerRadioButton3.Visible = true;
                         successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                         XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
@@ -214,8 +217,6 @@ namespace MyOfficeTable
                     }
                     else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Multiple")
                     {
-                        seconds = 60;
-                        timer.Start();
                         AnswerCheckBox1.Visible = AnswerCheckBox2.Visible = AnswerCheckBox3.Visible = true;
                         successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                         XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
@@ -283,8 +284,6 @@ namespace MyOfficeTable
 
                     else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "String")
                     {
-                        seconds = 90;
-                        timer.Start();
                         answerTextBox.Visible = true;
                         successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                     }
@@ -295,6 +294,7 @@ namespace MyOfficeTable
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void CheckСorrectness()
         {
             try
@@ -319,6 +319,26 @@ namespace MyOfficeTable
                     if (AnswerRadioButton4.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
+                else if (AnswerRadioButton5.Checked)
+                {
+                    if (AnswerRadioButton5.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
+                else if (AnswerRadioButton6.Checked)
+                {
+                    if (AnswerRadioButton6.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
+                else if (AnswerRadioButton7.Checked)
+                {
+                    if (AnswerRadioButton7.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
+                else if (AnswerRadioButton8.Checked)
+                {
+                    if (AnswerRadioButton8.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
                 if (AnswerCheckBox1.Visible)
                 {
                     string answerString = "";
@@ -332,14 +352,23 @@ namespace MyOfficeTable
                         answerString += AnswerCheckBox4.Text;
                     if (answerString == successfulAnswer.Value)
                         mark++;
+                    if (AnswerCheckBox5.Checked)
+                        answerString += AnswerCheckBox6.Text;
+                    if (AnswerCheckBox6.Checked)
+                        answerString += AnswerCheckBox6.Text;
+                    if (AnswerCheckBox7.Checked)
+                        answerString += AnswerCheckBox7.Text;
+                    if (AnswerCheckBox8.Checked)
+                        answerString += AnswerCheckBox8.Text;
+                    if (answerString == successfulAnswer.Value)
+                        mark++;
                 }
                 if (answerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower())
                     mark++;
                 numQuestion++;
-                if (numQuestion > 9)
+                if (numQuestion > numOfQuestions - 1)
                 {
-                    timer.Stop();
-                    if (mark > 8)
+                    if (mark/numOfQuestions > 80)
                         OpenResultForm(mark, 5);
                     else if (mark > 7)
                         OpenResultForm(mark, 4);
@@ -355,10 +384,10 @@ namespace MyOfficeTable
             }
         }
 
-        void OpenResultForm(int rightNum, int mark)
+        void OpenResultForm(double rightNum, int mark)
         {
             Hide();
-            TestResultForm form = new TestResultForm(rightNum, mark);
+            TestResultForm form = new TestResultForm(rightNum, mark, numOfQuestions);
             form.ShowDialog();
             Close();
         }
@@ -366,45 +395,29 @@ namespace MyOfficeTable
         private void Timer_Tick(object sender, EventArgs e)
         {
             seconds--;
-            timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
-            if (AnswerRadioButton1.Visible == true)
+            if (seconds < 0)
             {
-                if (seconds == 0)
-                {
-                    seconds = 30;
-                    GoNextQuestionButton_Click(this, EventArgs.Empty);
-                }
+                seconds = 59;
+                minutes--;
             }
-
-            else if (AnswerCheckBox1.Visible == true)
+            if (minutes == 0)
             {
-                if (seconds == 0)
-                {
-                    seconds = 60;
-                    GoNextQuestionButton_Click(this, EventArgs.Empty);
-                }
-            }           
-            else if (answerTextBox.Visible == true)
+                timerLabel.Text = $"Осталось {seconds} сек";
+            }
+            else
             {
-                if (seconds == 0)
-                {
-                    seconds = 90;
-                    GoNextQuestionButton_Click(this, EventArgs.Empty);
-                }
+                timerLabel.Text = $"Осталось {minutes} мин {seconds} сек";
             }
         }
 
         private void GoNextQuestionButton_Click(object sender, EventArgs e)
         {
-            timer.Stop();
             numOfQuestion++;
             numOfQuestionLabel.Text = $"{numOfQuestion}";
             Height = MinimumSize.Height;
             CheckСorrectness();            
             ChangeVisibilityButtons();
             GetXml();
-            timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
-            timer.Start();
 
         }
 

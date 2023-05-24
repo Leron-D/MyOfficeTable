@@ -18,10 +18,13 @@ namespace MyOfficeTable
         private Point currentOffset;
         private bool isMouseDown = false;
         string file = "";
+        int num = 0;
 
-        public EvaluationСriteriasForm(string fileName = "")
+        public EvaluationСriteriasForm(int numberOfQuestions = 0, string fileName = "")
         {
             InitializeComponent();
+
+            num = numberOfQuestions;
 
             file = fileName;
 
@@ -75,7 +78,7 @@ namespace MyOfficeTable
         private void GoToTestButton_Click(object sender, EventArgs e)
         {
             if (file != "")
-                GoToForm(new TestForm(file));
+                GoToForm(new TestForm(file, num));
         }
 
         void GoToForm(Form form)

@@ -15,7 +15,8 @@ namespace MyOfficeTable
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        public TestResultForm(int rightNum, int mark)
+
+        public TestResultForm(double rightNum, int mark, double numberOfQuestions)
         {
             InitializeComponent();
             ToolTip toolTip = new ToolTip();
@@ -23,6 +24,7 @@ namespace MyOfficeTable
             toolTip.SetToolTip(cancelButton, "Закрыть");
             rightNumLabel.Text = rightNum.ToString();
             markLabel.Text = mark.ToString();
+            fullNumberOfQuestionsLabel.Text = $"{numberOfQuestions} вопросов";
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
         }
 

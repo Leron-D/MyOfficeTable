@@ -30,9 +30,14 @@ namespace MyOfficeTable
 
         private void LoadForm(string lection)
         {
-            if (!File.Exists($@"Tests\{lection}.xml"))
+            string fileTest = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(lection)}.xml";
+            if (!File.Exists(fileTest))
             {
                 testingButton.Visible = false;
+            }
+            else
+            {
+                testingButton.Visible = true;
             }
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
             file = lection;
@@ -108,9 +113,9 @@ namespace MyOfficeTable
             try
             {
                 string fileName = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(file)}.xml";
-                Properties.Settings.Default.goFromTheory = true;
-                Properties.Settings.Default.Save();
-                GoToForm(new EvaluationСriteriasForm(fileName));
+                Settings.Default.goFromTheory = true;
+                Settings.Default.Save();
+                GoToForm(new EvaluationСriteriasForm(0, fileName));
             }
             catch (Exception ex)
             {

@@ -32,8 +32,8 @@
             this.helpButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
-            this.goNextButton = new WindowsFormsApp1.MyButton();
-            this.goBackButton = new WindowsFormsApp1.MyButton();
+            this.goNextButton = new MyOfficeTable.MyButton();
+            this.goBackButton = new MyOfficeTable.MyButton();
             this.task4Page = new System.Windows.Forms.TabPage();
             this.resultLabel16 = new System.Windows.Forms.Label();
             this.resultLabel15 = new System.Windows.Forms.Label();
@@ -1664,8 +1664,8 @@
 
         #endregion
 
-        private WindowsFormsApp1.MyButton goNextButton;
-        private WindowsFormsApp1.MyButton goBackButton;
+        private MyOfficeTable.MyButton goNextButton;
+        private MyOfficeTable.MyButton goBackButton;
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button minimizeButton;

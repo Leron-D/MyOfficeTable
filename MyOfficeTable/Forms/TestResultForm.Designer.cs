@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rightNumLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.fullNumberOfQuestionsLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.markLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
@@ -122,19 +122,19 @@
             this.label3.Text = "из";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label4
+            // fullNumberOfQuestionsLabel
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fullNumberOfQuestionsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label4.Location = new System.Drawing.Point(410, 215);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 27);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "10 вопросов";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.fullNumberOfQuestionsLabel.AutoSize = true;
+            this.fullNumberOfQuestionsLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullNumberOfQuestionsLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.fullNumberOfQuestionsLabel.Location = new System.Drawing.Point(410, 215);
+            this.fullNumberOfQuestionsLabel.Name = "fullNumberOfQuestionsLabel";
+            this.fullNumberOfQuestionsLabel.Size = new System.Drawing.Size(151, 27);
+            this.fullNumberOfQuestionsLabel.TabIndex = 36;
+            this.fullNumberOfQuestionsLabel.Text = "10 вопросов";
+            this.fullNumberOfQuestionsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
@@ -202,7 +202,7 @@
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.markLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.fullNumberOfQuestionsLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.rightNumLabel);
             this.Controls.Add(this.label1);
@@ -230,7 +230,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label rightNumLabel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label fullNumberOfQuestionsLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label markLabel;
         private System.Windows.Forms.Button cancelButton;

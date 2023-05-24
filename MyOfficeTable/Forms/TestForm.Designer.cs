@@ -51,16 +51,16 @@
             this.AnswerCheckBox7 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox6 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox5 = new System.Windows.Forms.CheckBox();
-            this.AnswerRadioButton6 = new WindowsFormsApp1.MyRadioButton();
-            this.goNextQuestionButton = new WindowsFormsApp1.MyButton();
-            this.AnswerRadioButton8 = new WindowsFormsApp1.MyRadioButton();
-            this.startTestButton = new WindowsFormsApp1.MyButton();
-            this.AnswerRadioButton7 = new WindowsFormsApp1.MyRadioButton();
-            this.AnswerRadioButton5 = new WindowsFormsApp1.MyRadioButton();
-            this.AnswerRadioButton1 = new WindowsFormsApp1.MyRadioButton();
-            this.AnswerRadioButton3 = new WindowsFormsApp1.MyRadioButton();
-            this.AnswerRadioButton4 = new WindowsFormsApp1.MyRadioButton();
-            this.AnswerRadioButton2 = new WindowsFormsApp1.MyRadioButton();
+            this.AnswerRadioButton6 = new MyOfficeTable.MyRadioButton();
+            this.goNextQuestionButton = new MyOfficeTable.MyButton();
+            this.AnswerRadioButton8 = new MyOfficeTable.MyRadioButton();
+            this.startTestButton = new MyOfficeTable.MyButton();
+            this.AnswerRadioButton7 = new MyOfficeTable.MyRadioButton();
+            this.AnswerRadioButton5 = new MyOfficeTable.MyRadioButton();
+            this.AnswerRadioButton1 = new MyOfficeTable.MyRadioButton();
+            this.AnswerRadioButton3 = new MyOfficeTable.MyRadioButton();
+            this.AnswerRadioButton4 = new MyOfficeTable.MyRadioButton();
+            this.AnswerRadioButton2 = new MyOfficeTable.MyRadioButton();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -207,7 +207,7 @@
             // 
             // timerLabel
             // 
-            this.timerLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.timerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.DarkCyan;
@@ -644,17 +644,17 @@
         private System.Windows.Forms.Label numOfQuestionLabel;
         private System.Windows.Forms.Label offLabel;
         private System.Windows.Forms.Label allNumQuestionLabel;
-        private WindowsFormsApp1.MyButton startTestButton;
-        private WindowsFormsApp1.MyButton goNextQuestionButton;
+        private MyOfficeTable.MyButton startTestButton;
+        private MyOfficeTable.MyButton goNextQuestionButton;
         private System.Windows.Forms.PictureBox headerPictureBox;
-        private WindowsFormsApp1.MyRadioButton AnswerRadioButton1;
-        private WindowsFormsApp1.MyRadioButton AnswerRadioButton3;
-        private WindowsFormsApp1.MyRadioButton AnswerRadioButton4;
-        private WindowsFormsApp1.MyRadioButton AnswerRadioButton2;
-        private WindowsFormsApp1.MyRadioButton AnswerRadioButton6;
-        private WindowsFormsApp1.MyRadioButton AnswerRadioButton8;
-        private WindowsFormsApp1.MyRadioButton AnswerRadioButton7;
-        private WindowsFormsApp1.MyRadioButton AnswerRadioButton5;
+        private MyOfficeTable.MyRadioButton AnswerRadioButton1;
+        private MyOfficeTable.MyRadioButton AnswerRadioButton3;
+        private MyOfficeTable.MyRadioButton AnswerRadioButton4;
+        private MyOfficeTable.MyRadioButton AnswerRadioButton2;
+        private MyOfficeTable.MyRadioButton AnswerRadioButton6;
+        private MyOfficeTable.MyRadioButton AnswerRadioButton8;
+        private MyOfficeTable.MyRadioButton AnswerRadioButton7;
+        private MyOfficeTable.MyRadioButton AnswerRadioButton5;
         private System.Windows.Forms.CheckBox AnswerCheckBox8;
         private System.Windows.Forms.CheckBox AnswerCheckBox7;
         private System.Windows.Forms.CheckBox AnswerCheckBox6;

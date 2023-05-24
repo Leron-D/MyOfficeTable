@@ -20,6 +20,7 @@ namespace MyOfficeTable
         private bool isMouseDown = false;
         List<string> listOfTheoryThemes = new List<string>();
         List<string> listOfTestsThemes = new List<string>();
+        List<int> listOfNumberOfQuestions = new List<int>();
 
         public SelectThemeForm(string mode)
         {
@@ -58,6 +59,12 @@ namespace MyOfficeTable
                 "Создание, редактирование и форматирование рабочих листов табличного процессора",
                 "Использование формул и функций в табличном процессоре",
                 "Построение графиков и диаграмм"
+            };
+            listOfNumberOfQuestions = new List<int>
+            {
+                13,
+                11,
+                9
             };
             AddItemsToComboBox();
         }
@@ -115,7 +122,7 @@ namespace MyOfficeTable
             {
                 if (selectMode == "Тестирование")
                 {
-                    GoToForm(new TestForm(Directory.GetCurrentDirectory() + $@"\Tests\{selectThemeComboBox.SelectedItem}.xml"));
+                    GoToForm(new TestForm(Directory.GetCurrentDirectory() + $@"\Tests\{selectThemeComboBox.SelectedItem}.xml", listOfNumberOfQuestions[selectThemeComboBox.SelectedIndex]));
                 }
                 else if (selectMode == "Теория")
                 {
@@ -154,7 +161,7 @@ namespace MyOfficeTable
 
         private void GoToEvaulationCriterias_Click(object sender, EventArgs e)
         {
-            GoToForm(new EvaluationСriteriasForm());
+            GoToForm(new EvaluationСriteriasForm(listOfNumberOfQuestions[selectThemeComboBox.SelectedIndex]));
         }
         
         void GoToForm(Form form)

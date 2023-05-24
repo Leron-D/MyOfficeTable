@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Net;
 
-namespace WindowsFormsApp1
+namespace MyOfficeTable
 {
     class MyRadioButton : RadioButton
     {
