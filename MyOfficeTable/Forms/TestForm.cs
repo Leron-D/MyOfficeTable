@@ -73,11 +73,14 @@ namespace MyOfficeTable
                     changeWindowBoxButton.Tag = "Normalscreen";
                     changeWindowBoxButton.Image = Resources.NormalScreen;
                     questionLabel.MaximumSize = new Size(1500, 130);
-                    headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
                     startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
                     startTestButton.Size = new Size(404, 49);
                     startTestButton.Left = (Screen.GetWorkingArea(this).Width - startTestButton.Width) / 2;
                     startTestButton.Top = ((Screen.GetWorkingArea(this).Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+                    ChangeWindowBoxButton_Click(changeWindowBoxButton, new EventArgs());
+                    ChangeWindowBoxButton_Click(changeWindowBoxButton, new EventArgs());
+                    //timerLabel.Location = new Point(Screen.GetWorkingArea(this).Width - timerLabel.Width - 30, timerLabel.Location.Y);
+                    ChangeControlsToFullscreen();
                 }
                 else
                 {
@@ -94,6 +97,14 @@ namespace MyOfficeTable
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ChangeControlsToFullscreen()
+        {
+            goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 22, FontStyle.Bold);
+            goNextQuestionButton.Size = new Size(389, 49);
+            goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+            headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -146,9 +157,10 @@ namespace MyOfficeTable
             answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
             if (Settings.Default.isFullSize)
             {
-                timerLabel.Left -= 70;
                 timerLabel.Width += 70;
+                ChangeControlsToFullscreen();
             }
+            timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
         }
 
         void ChangeVisibilityButtons()
@@ -464,6 +476,12 @@ namespace MyOfficeTable
             GetXml();
             answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
             answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+            if (numOfQuestion == numOfQuestions)
+            {
+                goNextQuestionButton.Text = "Завершить тестирование";
+                goNextQuestionButton.Width += 30;
+                goNextQuestionButton.Left -= 30;
+            }
         }
 
         private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -475,7 +493,8 @@ namespace MyOfficeTable
 
         private void AnswerTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            GoNextQuestionButton_Click(sender, e);
+            if (e.KeyCode == Keys.Enter)
+                GoNextQuestionButton_Click(sender, e);
         }
 
         private void AnswerCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -546,9 +565,8 @@ namespace MyOfficeTable
                 new Font(answerCheckBox1.Font.Name, 22, FontStyle.Bold);
                 answerTextBox.Font = new Font(answerTextBox.Font.Name, 22);
                 questionLabel.Font = new Font(questionLabel.Font.Name, 22, FontStyle.Bold);
-                headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
                 timerLabel.Font = new Font(timerLabel.Font.Name, 22, FontStyle.Bold);
-                timerLabel.Left -= 70;
+                timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
                 timerLabel.Width += 70;
                 numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 22, FontStyle.Bold);
 
@@ -556,6 +574,13 @@ namespace MyOfficeTable
                 startTestButton.Size = new Size(404, 49);
                 startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
                 startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+
+                goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 22, FontStyle.Bold);
+                if (numOfQuestion != numOfQuestions)
+                    goNextQuestionButton.Size = new Size(389, 49);
+                else
+                    goNextQuestionButton.Size = new Size(309, 49);
+                goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
             }
             else
             {
@@ -574,7 +599,8 @@ namespace MyOfficeTable
                 questionLabel.Font = new Font(questionLabel.Font.Name, 18, FontStyle.Bold);
                 headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
                 timerLabel.Font = new Font(timerLabel.Font.Name, 18, FontStyle.Bold);
-                timerLabel.Location = new Point(953, 199);
+                //timerLabel.Location = new Point(953, 199);
+                timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
                 timerLabel.Width -= 70;
                 numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 18, FontStyle.Bold);
 
@@ -582,6 +608,13 @@ namespace MyOfficeTable
                 startTestButton.Size = new Size(348, 40);
                 startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
                 startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+
+                goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 18, FontStyle.Bold);
+                if (numOfQuestion != numOfQuestions)
+                    goNextQuestionButton.Size = new Size(282, 40);
+                else
+                    goNextQuestionButton.Size = new Size(346, 40);
+                goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
             }
             answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
             answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
