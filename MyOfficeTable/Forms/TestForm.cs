@@ -50,10 +50,10 @@ namespace MyOfficeTable
                 testName = fileName;
                 minutes = Convert.ToInt32(numOfQuestions);             
                 headerLabel.Text = Path.GetFileNameWithoutExtension(testName);
-                AnswerCheckBox1.Top = AnswerTextBox.Top = AnswerRadioButton1.Top = questionLabel.Location.Y + questionLabel.Height + 42;
-                AnswerCheckBox2.Location = new Point(1, AnswerCheckBox1.Location.Y + 42);
-                AnswerCheckBox3.Location = new Point(1, AnswerCheckBox2.Location.Y + 42);
-                AnswerCheckBox4.Location = new Point(1, AnswerCheckBox3.Location.Y + 42);
+                answerCheckBox1.Top = answerTextBox.Top = answerRadioButton1.Top = questionLabel.Location.Y + questionLabel.Height + 42;
+                answerCheckBox2.Location = new Point(1, answerCheckBox1.Location.Y + 42);
+                answerCheckBox3.Location = new Point(1, answerCheckBox2.Location.Y + 42);
+                answerCheckBox4.Location = new Point(1, answerCheckBox3.Location.Y + 42);
                 ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(minimizeButton, "Свернуть");
                 toolTip.SetToolTip(cancelButton, "Закрыть");
@@ -142,8 +142,8 @@ namespace MyOfficeTable
             numOfQuestionLabel.Text = $"{numOfQuestion} из {numOfQuestions}";
             numOfQuestionLabel.Left = (ClientSize.Width - numOfQuestionLabel.Width) / 2;
             timerLabel.Text = $"Осталось {minutes} мин {seconds} сек";
-            AnswerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
-            AnswerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+            answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+            answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
             if (Settings.Default.isFullSize)
             {
                 timerLabel.Left -= 70;
@@ -153,14 +153,14 @@ namespace MyOfficeTable
 
         void ChangeVisibilityButtons()
         {
-            AnswerRadioButton1.Visible = AnswerRadioButton2.Visible = AnswerRadioButton3.Visible = AnswerCheckBox1.Visible = timerLabel.Visible = goNextQuestionButton.Visible =
-            AnswerCheckBox2.Visible = AnswerCheckBox3.Visible = AnswerCheckBox4.Visible = AnswerCheckBox4.Checked = AnswerRadioButton4.Visible = AnswerRadioButton4.Checked = 
-            AnswerTextBox.Visible = AnswerRadioButton1.Checked = AnswerRadioButton2.Checked = AnswerRadioButton3.Checked = AnswerRadioButton4.Checked = AnswerRadioButton5.Checked = 
-            AnswerRadioButton6.Checked = AnswerRadioButton7.Checked = AnswerRadioButton8.Checked = AnswerCheckBox1.Checked = AnswerCheckBox2.Checked = AnswerCheckBox3.Checked = 
-            AnswerCheckBox4.Checked = questionLabel.Visible = AnswerCheckBox5.Checked = AnswerCheckBox6.Checked = AnswerCheckBox7.Checked = AnswerCheckBox8.Checked = 
-            AnswerRadioButton5.Visible = AnswerCheckBox5.Visible = AnswerRadioButton6.Visible = AnswerCheckBox6.Visible = AnswerRadioButton7.Visible = AnswerCheckBox7.Visible = 
-            AnswerRadioButton8.Visible = AnswerCheckBox8.Visible = false;
-            AnswerTextBox.Text = "";
+            answerRadioButton1.Visible = answerRadioButton2.Visible = answerRadioButton3.Visible = answerCheckBox1.Visible = timerLabel.Visible = goNextQuestionButton.Visible =
+            answerCheckBox2.Visible = answerCheckBox3.Visible = answerCheckBox4.Visible = answerCheckBox4.Checked = answerRadioButton4.Visible = answerRadioButton4.Checked = 
+            answerTextBox.Visible = answerRadioButton1.Checked = answerRadioButton2.Checked = answerRadioButton3.Checked = answerRadioButton4.Checked = answerRadioButton5.Checked = 
+            answerRadioButton6.Checked = answerRadioButton7.Checked = answerRadioButton8.Checked = answerCheckBox1.Checked = answerCheckBox2.Checked = answerCheckBox3.Checked = 
+            answerCheckBox4.Checked = questionLabel.Visible = answerCheckBox5.Checked = answerCheckBox6.Checked = answerCheckBox7.Checked = answerCheckBox8.Checked = 
+            answerRadioButton5.Visible = answerCheckBox5.Visible = answerRadioButton6.Visible = answerCheckBox6.Visible = answerRadioButton7.Visible = answerCheckBox7.Visible = 
+            answerRadioButton8.Visible = answerCheckBox8.Visible = false;
+            answerTextBox.Text = "";
         }
 
         void GetXml()
@@ -178,7 +178,7 @@ namespace MyOfficeTable
                     questionLabel.Text = $"Вопрос {numQuestion + 1}. {question.Value}";
                     if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Single")
                     {
-                        AnswerRadioButton1.Visible = AnswerRadioButton2.Visible = AnswerRadioButton3.Visible = true;
+                        answerRadioButton1.Visible = answerRadioButton2.Visible = answerRadioButton3.Visible = true;
                         successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                         XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
                         XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
@@ -188,13 +188,13 @@ namespace MyOfficeTable
                         XmlNode answer6 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer6");
                         XmlNode answer7 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer7");
                         XmlNode answer8 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer8");
-                        AnswerRadioButton1.Text = answer1.Value;
-                        AnswerRadioButton2.Text = answer2.Value;
-                        AnswerRadioButton3.Text = answer3.Value;
+                        answerRadioButton1.Text = answer1.Value;
+                        answerRadioButton2.Text = answer2.Value;
+                        answerRadioButton3.Text = answer3.Value;
                         if (answer4 != null)
                         {
-                            AnswerRadioButton4.Visible = true;
-                            AnswerRadioButton4.Text = answer4.Value;
+                            answerRadioButton4.Visible = true;
+                            answerRadioButton4.Text = answer4.Value;
                         }
 
                         if (answer5 != null)
@@ -203,8 +203,8 @@ namespace MyOfficeTable
                                 Height += 42;
                             else
                                 addedHeight += 42;
-                            AnswerRadioButton5.Visible = true;
-                            AnswerRadioButton5.Text = answer5.Value;
+                            answerRadioButton5.Visible = true;
+                            answerRadioButton5.Text = answer5.Value;
                         }
                         else
                         {
@@ -217,8 +217,8 @@ namespace MyOfficeTable
                                 Height += 42;
                             else
                                 addedHeight += 42;
-                            AnswerRadioButton6.Visible = true;
-                            AnswerRadioButton6.Text = answer6.Value;
+                            answerRadioButton6.Visible = true;
+                            answerRadioButton6.Text = answer6.Value;
                         }
                         else
                         {
@@ -231,8 +231,8 @@ namespace MyOfficeTable
                                 Height += 42;
                             else
                                 addedHeight += 42;
-                            AnswerRadioButton7.Visible = true;
-                            AnswerRadioButton7.Text = answer7.Value;
+                            answerRadioButton7.Visible = true;
+                            answerRadioButton7.Text = answer7.Value;
                         }
                         else
                         {
@@ -245,13 +245,13 @@ namespace MyOfficeTable
                                 Height += 42;
                             else
                                 addedHeight += 42;
-                            AnswerRadioButton8.Visible = true;
-                            AnswerRadioButton8.Text = answer8.Value;
+                            answerRadioButton8.Visible = true;
+                            answerRadioButton8.Text = answer8.Value;
                         }
                     }
                     else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Multiple")
                     {
-                        AnswerCheckBox1.Visible = AnswerCheckBox2.Visible = AnswerCheckBox3.Visible = true;
+                        answerCheckBox1.Visible = answerCheckBox2.Visible = answerCheckBox3.Visible = true;
                         successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                         XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
                         XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
@@ -261,14 +261,14 @@ namespace MyOfficeTable
                         XmlNode answer6 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer6");
                         XmlNode answer7 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer7");
                         XmlNode answer8 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer8");
-                        AnswerCheckBox1.Text = answer1.Value;
-                        AnswerCheckBox2.Text = answer2.Value;
-                        AnswerCheckBox3.Text = answer3.Value;
+                        answerCheckBox1.Text = answer1.Value;
+                        answerCheckBox2.Text = answer2.Value;
+                        answerCheckBox3.Text = answer3.Value;
 
                         if (answer4 != null)
                         {
-                            AnswerCheckBox4.Visible = true;
-                            AnswerCheckBox4.Text = answer4.Value;
+                            answerCheckBox4.Visible = true;
+                            answerCheckBox4.Text = answer4.Value;
                         }
 
                         if (answer5 != null)
@@ -277,8 +277,8 @@ namespace MyOfficeTable
                                 Height += 42;
                             else
                                 addedHeight += 42;
-                            AnswerCheckBox5.Visible = true;
-                            AnswerCheckBox5.Text = answer5.Value;
+                            answerCheckBox5.Visible = true;
+                            answerCheckBox5.Text = answer5.Value;
                         }
                         else
                         {
@@ -291,8 +291,8 @@ namespace MyOfficeTable
                                 Height += 42;
                             else
                                 addedHeight += 42;
-                            AnswerCheckBox6.Visible = true;
-                            AnswerCheckBox6.Text = answer6.Value;
+                            answerCheckBox6.Visible = true;
+                            answerCheckBox6.Text = answer6.Value;
                         }
                         else
                         {
@@ -305,8 +305,8 @@ namespace MyOfficeTable
                                 Height += 42;
                             else
                                 addedHeight += 42;
-                            AnswerCheckBox7.Visible = true;
-                            AnswerCheckBox7.Text = answer7.Value;
+                            answerCheckBox7.Visible = true;
+                            answerCheckBox7.Text = answer7.Value;
                         }
                         else
                         {
@@ -319,18 +319,18 @@ namespace MyOfficeTable
                                 Height += 42;
                             else
                                 addedHeight += 42;
-                            AnswerCheckBox8.Visible = true;
-                            AnswerCheckBox8.Text = answer8.Value;
+                            answerCheckBox8.Visible = true;
+                            answerCheckBox8.Text = answer8.Value;
                         }
                     }
 
                     else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "String")
                     {
-                        AnswerTextBox.Visible = true;
+                        answerTextBox.Visible = true;
                         successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                     }
                 }
-                AnswerCheckBox1.Top = AnswerTextBox.Top = AnswerRadioButton1.Top = questionLabel.Location.Y + questionLabel.Height + 20;
+                answerCheckBox1.Top = answerTextBox.Top = answerRadioButton1.Top = questionLabel.Location.Y + questionLabel.Height + 20;
             }
             catch (Exception ex)
             {
@@ -342,71 +342,71 @@ namespace MyOfficeTable
         {
             try
             {
-                if (AnswerRadioButton1.Checked)
+                if (answerRadioButton1.Checked)
                 {
-                    if (AnswerRadioButton1.Text.ToLower() == successfulAnswer.Value.ToLower())
+                    if (answerRadioButton1.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
-                else if (AnswerRadioButton2.Checked)
+                else if (answerRadioButton2.Checked)
                 {
-                    if (AnswerRadioButton2.Text.ToLower() == successfulAnswer.Value.ToLower())
+                    if (answerRadioButton2.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
-                else if (AnswerRadioButton3.Checked)
+                else if (answerRadioButton3.Checked)
                 {
-                    if (AnswerRadioButton3.Text.ToLower() == successfulAnswer.Value.ToLower())
+                    if (answerRadioButton3.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
-                else if (AnswerRadioButton4.Checked)
+                else if (answerRadioButton4.Checked)
                 {
-                    if (AnswerRadioButton4.Text.ToLower() == successfulAnswer.Value.ToLower())
+                    if (answerRadioButton4.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
-                else if (AnswerRadioButton5.Checked)
+                else if (answerRadioButton5.Checked)
                 {
-                    if (AnswerRadioButton5.Text.ToLower() == successfulAnswer.Value.ToLower())
+                    if (answerRadioButton5.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
-                else if (AnswerRadioButton6.Checked)
+                else if (answerRadioButton6.Checked)
                 {
-                    if (AnswerRadioButton6.Text.ToLower() == successfulAnswer.Value.ToLower())
+                    if (answerRadioButton6.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
-                else if (AnswerRadioButton7.Checked)
+                else if (answerRadioButton7.Checked)
                 {
-                    if (AnswerRadioButton7.Text.ToLower() == successfulAnswer.Value.ToLower())
+                    if (answerRadioButton7.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
-                else if (AnswerRadioButton8.Checked)
+                else if (answerRadioButton8.Checked)
                 {
-                    if (AnswerRadioButton8.Text.ToLower() == successfulAnswer.Value.ToLower())
+                    if (answerRadioButton8.Text.ToLower() == successfulAnswer.Value.ToLower())
                         mark++;
                 }
-                if (AnswerCheckBox1.Visible)
+                if (answerCheckBox1.Visible)
                 {
                     string answerString = "";
-                    if (AnswerCheckBox1.Checked)
-                        answerString += AnswerCheckBox1.Text;
-                    if (AnswerCheckBox2.Checked)
-                        answerString += AnswerCheckBox2.Text;
-                    if (AnswerCheckBox3.Checked)
-                        answerString += AnswerCheckBox3.Text;
-                    if(AnswerCheckBox4.Checked)
-                        answerString += AnswerCheckBox4.Text;
+                    if (answerCheckBox1.Checked)
+                        answerString += answerCheckBox1.Text;
+                    if (answerCheckBox2.Checked)
+                        answerString += answerCheckBox2.Text;
+                    if (answerCheckBox3.Checked)
+                        answerString += answerCheckBox3.Text;
+                    if(answerCheckBox4.Checked)
+                        answerString += answerCheckBox4.Text;
                     if (answerString == successfulAnswer.Value)
                         mark++;
-                    if (AnswerCheckBox5.Checked)
-                        answerString += AnswerCheckBox6.Text;
-                    if (AnswerCheckBox6.Checked)
-                        answerString += AnswerCheckBox6.Text;
-                    if (AnswerCheckBox7.Checked)
-                        answerString += AnswerCheckBox7.Text;
-                    if (AnswerCheckBox8.Checked)
-                        answerString += AnswerCheckBox8.Text;
+                    if (answerCheckBox5.Checked)
+                        answerString += answerCheckBox6.Text;
+                    if (answerCheckBox6.Checked)
+                        answerString += answerCheckBox6.Text;
+                    if (answerCheckBox7.Checked)
+                        answerString += answerCheckBox7.Text;
+                    if (answerCheckBox8.Checked)
+                        answerString += answerCheckBox8.Text;
                     if (answerString == successfulAnswer.Value)
                         mark++;
                 }
-                if (AnswerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower())
+                if (answerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower())
                     mark++;
                 numQuestion++;
                 if (numQuestion > numOfQuestions - 1)
@@ -462,8 +462,8 @@ namespace MyOfficeTable
             CheckСorrectness();            
             ChangeVisibilityButtons();
             GetXml();
-            AnswerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
-            AnswerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+            answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+            answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
         }
 
         private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -501,14 +501,14 @@ namespace MyOfficeTable
 
         private void ChangePositionOfRadioButtons(int y)
         {
-            AnswerTextBox.Location = AnswerRadioButton1.Location;
-            AnswerRadioButton2.Location = new Point(17, AnswerRadioButton1.Location.Y + y);
-            AnswerRadioButton3.Location = new Point(17, AnswerRadioButton2.Location.Y + y);
-            AnswerRadioButton4.Location = new Point(17, AnswerRadioButton3.Location.Y + y);
-            AnswerRadioButton5.Location = new Point(17, AnswerRadioButton4.Location.Y + y);
-            AnswerRadioButton6.Location = new Point(17, AnswerRadioButton5.Location.Y + y);
-            AnswerRadioButton7.Location = new Point(17, AnswerRadioButton6.Location.Y + y);
-            AnswerRadioButton8.Location = new Point(17, AnswerRadioButton7.Location.Y + y);
+            answerTextBox.Location = answerRadioButton1.Location;
+            answerRadioButton2.Location = new Point(17, answerRadioButton1.Location.Y + y);
+            answerRadioButton3.Location = new Point(17, answerRadioButton2.Location.Y + y);
+            answerRadioButton4.Location = new Point(17, answerRadioButton3.Location.Y + y);
+            answerRadioButton5.Location = new Point(17, answerRadioButton4.Location.Y + y);
+            answerRadioButton6.Location = new Point(17, answerRadioButton5.Location.Y + y);
+            answerRadioButton7.Location = new Point(17, answerRadioButton6.Location.Y + y);
+            answerRadioButton8.Location = new Point(17, answerRadioButton7.Location.Y + y);
         }
 
         private void FirstAnswerCheckBox_LocationChanged(object sender, EventArgs e)
@@ -521,13 +521,13 @@ namespace MyOfficeTable
 
         private void ChangePositionOfCheckBoxes(int y)
         {
-            AnswerCheckBox2.Location = new Point(1, AnswerCheckBox1.Location.Y + y);
-            AnswerCheckBox3.Location = new Point(1, AnswerCheckBox2.Location.Y + y);
-            AnswerCheckBox4.Location = new Point(1, AnswerCheckBox3.Location.Y + y);
-            AnswerCheckBox5.Location = new Point(1, AnswerCheckBox4.Location.Y + y);
-            AnswerCheckBox6.Location = new Point(1, AnswerCheckBox5.Location.Y + y);
-            AnswerCheckBox7.Location = new Point(1, AnswerCheckBox6.Location.Y + y);
-            AnswerCheckBox8.Location = new Point(1, AnswerCheckBox7.Location.Y + y);
+            answerCheckBox2.Location = new Point(1, answerCheckBox1.Location.Y + y);
+            answerCheckBox3.Location = new Point(1, answerCheckBox2.Location.Y + y);
+            answerCheckBox4.Location = new Point(1, answerCheckBox3.Location.Y + y);
+            answerCheckBox5.Location = new Point(1, answerCheckBox4.Location.Y + y);
+            answerCheckBox6.Location = new Point(1, answerCheckBox5.Location.Y + y);
+            answerCheckBox7.Location = new Point(1, answerCheckBox6.Location.Y + y);
+            answerCheckBox8.Location = new Point(1, answerCheckBox7.Location.Y + y);
         }
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
@@ -540,11 +540,11 @@ namespace MyOfficeTable
                 changeWindowBoxButton.Tag = "NormalScreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
                 questionLabel.MaximumSize = new Size(1300, 150);
-                AnswerRadioButton1.Font = AnswerRadioButton2.Font = AnswerRadioButton3.Font = AnswerRadioButton4.Font = AnswerRadioButton5.Font =
-                AnswerRadioButton6.Font = AnswerRadioButton7.Font = AnswerRadioButton8.Font = AnswerCheckBox1.Font = AnswerCheckBox2.Font =
-                AnswerCheckBox3.Font = AnswerCheckBox4.Font = AnswerCheckBox5.Font = AnswerCheckBox6.Font = AnswerCheckBox7.Font = AnswerCheckBox8.Font =
-                new Font(AnswerCheckBox1.Font.Name, 22, FontStyle.Bold);
-                AnswerTextBox.Font = new Font(AnswerTextBox.Font.Name, 22);
+                answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
+                answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
+                answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
+                new Font(answerCheckBox1.Font.Name, 22, FontStyle.Bold);
+                answerTextBox.Font = new Font(answerTextBox.Font.Name, 22);
                 questionLabel.Font = new Font(questionLabel.Font.Name, 22, FontStyle.Bold);
                 headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
                 timerLabel.Font = new Font(timerLabel.Font.Name, 22, FontStyle.Bold);
@@ -566,11 +566,11 @@ namespace MyOfficeTable
                 questionLabel.MaximumSize = new Size(900, 150);
                 Height += addedHeight;
                 addedHeight = 0;
-                AnswerRadioButton1.Font = AnswerRadioButton2.Font = AnswerRadioButton3.Font = AnswerRadioButton4.Font = AnswerRadioButton5.Font =
-                AnswerRadioButton6.Font = AnswerRadioButton7.Font = AnswerRadioButton8.Font = AnswerCheckBox1.Font = AnswerCheckBox2.Font =
-                AnswerCheckBox3.Font = AnswerCheckBox4.Font = AnswerCheckBox5.Font = AnswerCheckBox6.Font = AnswerCheckBox7.Font = AnswerCheckBox8.Font =
-                new Font(AnswerCheckBox1.Font.Name, 18, FontStyle.Bold);
-                AnswerTextBox.Font = new Font(AnswerTextBox.Font.Name, 18);
+                answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
+                answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
+                answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
+                new Font(answerCheckBox1.Font.Name, 18, FontStyle.Bold);
+                answerTextBox.Font = new Font(answerTextBox.Font.Name, 18);
                 questionLabel.Font = new Font(questionLabel.Font.Name, 18, FontStyle.Bold);
                 headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
                 timerLabel.Font = new Font(timerLabel.Font.Name, 18, FontStyle.Bold);
@@ -583,8 +583,8 @@ namespace MyOfficeTable
                 startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
                 startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
             }
-            AnswerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
-            AnswerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+            answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+            answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
         }
     }
 }

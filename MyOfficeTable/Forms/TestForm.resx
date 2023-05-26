@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="AnswerCheckBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="answerCheckBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAATdJREFUWEft
         16FKREEUxvHLlkVc3C2WfRyNWl1MFrvFlzCZdTeIxbLRxxBU8AFEi2AQgyjLde/4P+CADF/RmXDACb/y
@@ -129,7 +129,7 @@
         R2i+ALvc/m6XD3XAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="AnswerCheckBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="answerCheckBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAATdJREFUWEft
         16FKREEUxvHLlkVc3C2WfRyNWl1MFrvFlzCZdTeIxbLRxxBU8AFEi2AQgyjLde/4P+CADF/RmXDACb/y
@@ -140,7 +140,7 @@
         R2i+ALvc/m6XD3XAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="AnswerCheckBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="answerCheckBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAATdJREFUWEft
         16FKREEUxvHLlkVc3C2WfRyNWl1MFrvFlzCZdTeIxbLRxxBU8AFEi2AQgyjLde/4P+CADF/RmXDACb/y
@@ -154,7 +154,7 @@
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="AnswerCheckBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="answerCheckBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAATdJREFUWEft
         16FKREEUxvHLlkVc3C2WfRyNWl1MFrvFlzCZdTeIxbLRxxBU8AFEi2AQgyjLde/4P+CADF/RmXDACb/y
@@ -165,7 +165,7 @@
         R2i+ALvc/m6XD3XAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="AnswerCheckBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="answerCheckBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAATdJREFUWEft
         16FKREEUxvHLlkVc3C2WfRyNWl1MFrvFlzCZdTeIxbLRxxBU8AFEi2AQgyjLde/4P+CADF/RmXDACb/y
@@ -176,7 +176,7 @@
         R2i+ALvc/m6XD3XAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="AnswerCheckBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="answerCheckBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAATdJREFUWEft
         16FKREEUxvHLlkVc3C2WfRyNWl1MFrvFlzCZdTeIxbLRxxBU8AFEi2AQgyjLde/4P+CADF/RmXDACb/y
@@ -187,7 +187,7 @@
         R2i+ALvc/m6XD3XAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="AnswerCheckBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="answerCheckBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAATdJREFUWEft
         16FKREEUxvHLlkVc3C2WfRyNWl1MFrvFlzCZdTeIxbLRxxBU8AFEi2AQgyjLde/4P+CADF/RmXDACb/y
@@ -198,7 +198,7 @@
         R2i+ALvc/m6XD3XAAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="AnswerCheckBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="answerCheckBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAATdJREFUWEft
         16FKREEUxvHLlkVc3C2WfRyNWl1MFrvFlzCZdTeIxbLRxxBU8AFEi2AQgyjLde/4P+CADF/RmXDACb/y
