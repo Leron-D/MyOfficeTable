@@ -15,12 +15,12 @@ using System.Threading;
 using CheckBox = System.Windows.Forms.CheckBox;
 using Polly;
 using Microsoft.Web.WebView2.Core;
+using MyOfficeTable.Properties;
 
 namespace MyOfficeTable
 {
     public partial class TestForm : Form
     {
-        private List<MyRadioButton> radioButtons;
         double mark = 0;
         int numOfQuestion = 1;
         int[] questionsArray = new int[15] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
@@ -33,6 +33,8 @@ namespace MyOfficeTable
         private bool isMouseDown = false;
         string testName;
         XmlNode successfulAnswer;
+        bool loadForm = true;
+        int addedHeight = 0;
 
         public TestForm(string fileName, double numberOfQuestions)
         {
@@ -48,16 +50,10 @@ namespace MyOfficeTable
                 testName = fileName;
                 minutes = Convert.ToInt32(numOfQuestions);             
                 headerLabel.Text = Path.GetFileNameWithoutExtension(testName);
-                startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
-                startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
-                offLabel.Left = (ClientSize.Width - offLabel.Width) / 2;
-                numOfQuestionLabel.Left = offLabel.Left - 51;
-                allNumQuestionLabel.Left = offLabel.Left + 51;
-                allNumQuestionLabel.Text = numOfQuestions.ToString();
-                //firstAnswerCheckBox.Location = answerTextBox.Location = firstAnswerRadioButton.Location;
-                //secondAnswerCheckBox.Location = new Point(1, firstAnswerCheckBox.Location.Y + 42);
-                //thirdAnswerCheckBox.Location = new Point(1, secondAnswerCheckBox.Location.Y + 42);
-                //fourthAnswerCheckBox.Location = new Point(1, thirdAnswerCheckBox.Location.Y + 42);
+                AnswerCheckBox1.Top = AnswerTextBox.Top = AnswerRadioButton1.Top = questionLabel.Location.Y + questionLabel.Height + 42;
+                AnswerCheckBox2.Location = new Point(1, AnswerCheckBox1.Location.Y + 42);
+                AnswerCheckBox3.Location = new Point(1, AnswerCheckBox2.Location.Y + 42);
+                AnswerCheckBox4.Location = new Point(1, AnswerCheckBox3.Location.Y + 42);
                 ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(minimizeButton, "Свернуть");
                 toolTip.SetToolTip(cancelButton, "Закрыть");
@@ -70,6 +66,28 @@ namespace MyOfficeTable
                     questionsArray[i] = temp;
                 }
                 ChangeVisibilityButtons();
+                if (Settings.Default.isFullSize)
+                {
+                    loadForm = false;
+                    WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Tag = "Normalscreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                    questionLabel.MaximumSize = new Size(1500, 130);
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
+                    startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
+                    startTestButton.Size = new Size(404, 49);
+                    startTestButton.Left = (Screen.GetWorkingArea(this).Width - startTestButton.Width) / 2;
+                    startTestButton.Top = ((Screen.GetWorkingArea(this).Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+                }
+                else
+                {
+                    WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                    startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
+                    startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+                }
+
                 timer.Start();
             }
             catch (Exception ex)
@@ -119,21 +137,30 @@ namespace MyOfficeTable
         private void StartTestButton_Click(object sender, EventArgs e)
         {
             startTestButton.Visible = false;
-            numOfQuestionLabel.Visible = offLabel.Visible = allNumQuestionLabel.Visible = true;
-            numOfQuestionLabel.Text = $"{numOfQuestion}";
+            numOfQuestionLabel.Visible = true;
             GetXml();
+            numOfQuestionLabel.Text = $"{numOfQuestion} из {numOfQuestions}";
+            numOfQuestionLabel.Left = (ClientSize.Width - numOfQuestionLabel.Width) / 2;
             timerLabel.Text = $"Осталось {minutes} мин {seconds} сек";
+            AnswerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+            AnswerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+            if (Settings.Default.isFullSize)
+            {
+                timerLabel.Left -= 70;
+                timerLabel.Width += 70;
+            }
         }
 
         void ChangeVisibilityButtons()
         {
-            
             AnswerRadioButton1.Visible = AnswerRadioButton2.Visible = AnswerRadioButton3.Visible = AnswerCheckBox1.Visible = timerLabel.Visible = goNextQuestionButton.Visible =
-            AnswerCheckBox2.Visible = AnswerCheckBox3.Visible = AnswerCheckBox4.Visible = AnswerCheckBox4.Checked = AnswerRadioButton4.Visible = AnswerRadioButton4.Checked = answerTextBox.Visible = AnswerRadioButton1.Checked = 
-            AnswerRadioButton2.Checked = AnswerRadioButton3.Checked = AnswerCheckBox1.Checked = AnswerCheckBox2.Checked = AnswerCheckBox3.Checked = questionLabel.Visible = 
+            AnswerCheckBox2.Visible = AnswerCheckBox3.Visible = AnswerCheckBox4.Visible = AnswerCheckBox4.Checked = AnswerRadioButton4.Visible = AnswerRadioButton4.Checked = 
+            AnswerTextBox.Visible = AnswerRadioButton1.Checked = AnswerRadioButton2.Checked = AnswerRadioButton3.Checked = AnswerRadioButton4.Checked = AnswerRadioButton5.Checked = 
+            AnswerRadioButton6.Checked = AnswerRadioButton7.Checked = AnswerRadioButton8.Checked = AnswerCheckBox1.Checked = AnswerCheckBox2.Checked = AnswerCheckBox3.Checked = 
+            AnswerCheckBox4.Checked = questionLabel.Visible = AnswerCheckBox5.Checked = AnswerCheckBox6.Checked = AnswerCheckBox7.Checked = AnswerCheckBox8.Checked = 
             AnswerRadioButton5.Visible = AnswerCheckBox5.Visible = AnswerRadioButton6.Visible = AnswerCheckBox6.Visible = AnswerRadioButton7.Visible = AnswerCheckBox7.Visible = 
             AnswerRadioButton8.Visible = AnswerCheckBox8.Visible = false;
-            answerTextBox.Text = "";
+            AnswerTextBox.Text = "";
         }
 
         void GetXml()
@@ -168,13 +195,14 @@ namespace MyOfficeTable
                         {
                             AnswerRadioButton4.Visible = true;
                             AnswerRadioButton4.Text = answer4.Value;
-                            Height += 42;
                         }
 
                         if (answer5 != null)
                         {
-                            Height += 42;
-                            AnswerRadioButton5.Location = new Point(17, AnswerRadioButton4.Location.Y + 42);
+                            if (WindowState != FormWindowState.Maximized)
+                                Height += 42;
+                            else
+                                addedHeight += 42;
                             AnswerRadioButton5.Visible = true;
                             AnswerRadioButton5.Text = answer5.Value;
                         }
@@ -185,8 +213,10 @@ namespace MyOfficeTable
 
                         if (answer6 != null)
                         {
-                            Height += 42;
-                            AnswerRadioButton6.Location = new Point(17, AnswerRadioButton5.Location.Y + 42);
+                            if (WindowState != FormWindowState.Maximized)
+                                Height += 42;
+                            else
+                                addedHeight += 42;
                             AnswerRadioButton6.Visible = true;
                             AnswerRadioButton6.Text = answer6.Value;
                         }
@@ -197,8 +227,10 @@ namespace MyOfficeTable
 
                         if (answer7 != null)
                         {
-                            Height += 42;
-                            AnswerRadioButton7.Location = new Point(17, AnswerRadioButton6.Location.Y + 42);
+                            if (WindowState != FormWindowState.Maximized)
+                                Height += 42;
+                            else
+                                addedHeight += 42;
                             AnswerRadioButton7.Visible = true;
                             AnswerRadioButton7.Text = answer7.Value;
                         }
@@ -209,8 +241,10 @@ namespace MyOfficeTable
 
                         if (answer8 != null)
                         {
-                            Height += 42;
-                            AnswerRadioButton8.Location = new Point(17, AnswerRadioButton7.Location.Y + 42);
+                            if (WindowState != FormWindowState.Maximized)
+                                Height += 42;
+                            else
+                                addedHeight += 42;
                             AnswerRadioButton8.Visible = true;
                             AnswerRadioButton8.Text = answer8.Value;
                         }
@@ -239,8 +273,10 @@ namespace MyOfficeTable
 
                         if (answer5 != null)
                         {
-                            Height += 42;
-                            AnswerCheckBox5.Location = new Point(1, AnswerCheckBox4.Location.Y + 42);
+                            if (WindowState != FormWindowState.Maximized)
+                                Height += 42;
+                            else
+                                addedHeight += 42;
                             AnswerCheckBox5.Visible = true;
                             AnswerCheckBox5.Text = answer5.Value;
                         }
@@ -251,8 +287,10 @@ namespace MyOfficeTable
 
                         if (answer6 != null)
                         {
-                            Height += 42;
-                            AnswerCheckBox6.Location = new Point(1, AnswerCheckBox5.Location.Y + 42);
+                            if (WindowState != FormWindowState.Maximized)
+                                Height += 42;
+                            else
+                                addedHeight += 42;
                             AnswerCheckBox6.Visible = true;
                             AnswerCheckBox6.Text = answer6.Value;
                         }
@@ -263,8 +301,10 @@ namespace MyOfficeTable
 
                         if (answer7 != null)
                         {
-                            Height += 42;
-                            AnswerCheckBox7.Location = new Point(1, AnswerCheckBox6.Location.Y + 42);
+                            if (WindowState != FormWindowState.Maximized)
+                                Height += 42;
+                            else
+                                addedHeight += 42;
                             AnswerCheckBox7.Visible = true;
                             AnswerCheckBox7.Text = answer7.Value;
                         }
@@ -275,8 +315,10 @@ namespace MyOfficeTable
 
                         if (answer8 != null)
                         {
-                            Height += 42;
-                            AnswerCheckBox8.Location = new Point(1, AnswerCheckBox7.Location.Y + 42);
+                            if (WindowState != FormWindowState.Maximized)
+                                Height += 42;
+                            else
+                                addedHeight += 42;
                             AnswerCheckBox8.Visible = true;
                             AnswerCheckBox8.Text = answer8.Value;
                         }
@@ -284,10 +326,11 @@ namespace MyOfficeTable
 
                     else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "String")
                     {
-                        answerTextBox.Visible = true;
+                        AnswerTextBox.Visible = true;
                         successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                     }
                 }
+                AnswerCheckBox1.Top = AnswerTextBox.Top = AnswerRadioButton1.Top = questionLabel.Location.Y + questionLabel.Height + 20;
             }
             catch (Exception ex)
             {
@@ -363,7 +406,7 @@ namespace MyOfficeTable
                     if (answerString == successfulAnswer.Value)
                         mark++;
                 }
-                if (answerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower())
+                if (AnswerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower())
                     mark++;
                 numQuestion++;
                 if (numQuestion > numOfQuestions - 1)
@@ -413,12 +456,14 @@ namespace MyOfficeTable
         private void GoNextQuestionButton_Click(object sender, EventArgs e)
         {
             numOfQuestion++;
-            numOfQuestionLabel.Text = $"{numOfQuestion}";
+            numOfQuestionLabel.Text = $"{numOfQuestion} из {numOfQuestions}";
             Height = MinimumSize.Height;
+            addedHeight = 0;
             CheckСorrectness();            
             ChangeVisibilityButtons();
             GetXml();
-
+            AnswerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+            AnswerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
         }
 
         private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -438,41 +483,108 @@ namespace MyOfficeTable
             var checkBox = sender as CheckBox;
             if (checkBox.Checked)
             {
-                checkBox.Image = Properties.Resources._checked;
+                checkBox.Image = Resources._checked;
             }
             else
             {
-                checkBox.Image = Properties.Resources._unchecked;
+                checkBox.Image = Resources._unchecked;
             }
         }
 
         private void FirstAnswerRadioButton_LocationChanged(object sender, EventArgs e)
         {
-            AnswerRadioButton2.Location = new Point(17, AnswerRadioButton1.Location.Y + 42);
-            AnswerRadioButton3.Location = new Point(17, AnswerRadioButton2.Location.Y + 42);
-            AnswerRadioButton4.Location = new Point(17, AnswerRadioButton3.Location.Y + 42);
+            if (WindowState != FormWindowState.Maximized)
+                ChangePositionOfRadioButtons(42);
+            else
+                ChangePositionOfRadioButtons(82);
         }
 
-        private void QuestionLabel_Resize(object sender, EventArgs e)
+        private void ChangePositionOfRadioButtons(int y)
         {
-            int height = questionLabel.Size.Height + questionLabel.Location.Y;
-            if (height > 275)
-            {
-                AnswerRadioButton1.Location = answerTextBox.Location = new Point(17, height + 16);
-                AnswerCheckBox1.Location = new Point(1, height + 16);
-            }
-            else
-            {
-                AnswerRadioButton1.Location = answerTextBox.Location = new Point(17, 267);
-                AnswerCheckBox1.Location = new Point(1, 260);
-            }
+            AnswerTextBox.Location = AnswerRadioButton1.Location;
+            AnswerRadioButton2.Location = new Point(17, AnswerRadioButton1.Location.Y + y);
+            AnswerRadioButton3.Location = new Point(17, AnswerRadioButton2.Location.Y + y);
+            AnswerRadioButton4.Location = new Point(17, AnswerRadioButton3.Location.Y + y);
+            AnswerRadioButton5.Location = new Point(17, AnswerRadioButton4.Location.Y + y);
+            AnswerRadioButton6.Location = new Point(17, AnswerRadioButton5.Location.Y + y);
+            AnswerRadioButton7.Location = new Point(17, AnswerRadioButton6.Location.Y + y);
+            AnswerRadioButton8.Location = new Point(17, AnswerRadioButton7.Location.Y + y);
         }
 
         private void FirstAnswerCheckBox_LocationChanged(object sender, EventArgs e)
         {
-            AnswerCheckBox2.Location = new Point(1, AnswerCheckBox1.Location.Y + 42);
-            AnswerCheckBox3.Location = new Point(1, AnswerCheckBox2.Location.Y + 42);
-            AnswerCheckBox4.Location = new Point(1, AnswerCheckBox3.Location.Y + 42);
+            if (WindowState != FormWindowState.Maximized)
+                ChangePositionOfCheckBoxes(42);
+            else
+                ChangePositionOfCheckBoxes(92);
+        }
+
+        private void ChangePositionOfCheckBoxes(int y)
+        {
+            AnswerCheckBox2.Location = new Point(1, AnswerCheckBox1.Location.Y + y);
+            AnswerCheckBox3.Location = new Point(1, AnswerCheckBox2.Location.Y + y);
+            AnswerCheckBox4.Location = new Point(1, AnswerCheckBox3.Location.Y + y);
+            AnswerCheckBox5.Location = new Point(1, AnswerCheckBox4.Location.Y + y);
+            AnswerCheckBox6.Location = new Point(1, AnswerCheckBox5.Location.Y + y);
+            AnswerCheckBox7.Location = new Point(1, AnswerCheckBox6.Location.Y + y);
+            AnswerCheckBox8.Location = new Point(1, AnswerCheckBox7.Location.Y + y);
+        }
+
+        private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
+        {
+            loadForm = false;
+            if (changeWindowBoxButton.Tag == "Fullscreen")
+            {
+                Settings.Default.isFullSize = true;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+                questionLabel.MaximumSize = new Size(1300, 150);
+                AnswerRadioButton1.Font = AnswerRadioButton2.Font = AnswerRadioButton3.Font = AnswerRadioButton4.Font = AnswerRadioButton5.Font =
+                AnswerRadioButton6.Font = AnswerRadioButton7.Font = AnswerRadioButton8.Font = AnswerCheckBox1.Font = AnswerCheckBox2.Font =
+                AnswerCheckBox3.Font = AnswerCheckBox4.Font = AnswerCheckBox5.Font = AnswerCheckBox6.Font = AnswerCheckBox7.Font = AnswerCheckBox8.Font =
+                new Font(AnswerCheckBox1.Font.Name, 22, FontStyle.Bold);
+                AnswerTextBox.Font = new Font(AnswerTextBox.Font.Name, 22);
+                questionLabel.Font = new Font(questionLabel.Font.Name, 22, FontStyle.Bold);
+                headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
+                timerLabel.Font = new Font(timerLabel.Font.Name, 22, FontStyle.Bold);
+                timerLabel.Left -= 70;
+                timerLabel.Width += 70;
+                numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 22, FontStyle.Bold);
+
+                startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
+                startTestButton.Size = new Size(404, 49);
+                startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
+                startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+            }
+            else
+            {
+                Settings.Default.isFullSize = false;
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+                questionLabel.MaximumSize = new Size(900, 150);
+                Height += addedHeight;
+                addedHeight = 0;
+                AnswerRadioButton1.Font = AnswerRadioButton2.Font = AnswerRadioButton3.Font = AnswerRadioButton4.Font = AnswerRadioButton5.Font =
+                AnswerRadioButton6.Font = AnswerRadioButton7.Font = AnswerRadioButton8.Font = AnswerCheckBox1.Font = AnswerCheckBox2.Font =
+                AnswerCheckBox3.Font = AnswerCheckBox4.Font = AnswerCheckBox5.Font = AnswerCheckBox6.Font = AnswerCheckBox7.Font = AnswerCheckBox8.Font =
+                new Font(AnswerCheckBox1.Font.Name, 18, FontStyle.Bold);
+                AnswerTextBox.Font = new Font(AnswerTextBox.Font.Name, 18);
+                questionLabel.Font = new Font(questionLabel.Font.Name, 18, FontStyle.Bold);
+                headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
+                timerLabel.Font = new Font(timerLabel.Font.Name, 18, FontStyle.Bold);
+                timerLabel.Location = new Point(953, 199);
+                timerLabel.Width -= 70;
+                numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 18, FontStyle.Bold);
+
+                startTestButton.Font = new Font(startTestButton.Font.Name, 18, FontStyle.Bold);
+                startTestButton.Size = new Size(348, 40);
+                startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
+                startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+            }
+            AnswerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+            AnswerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
         }
     }
 }

@@ -32,11 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
-            this.referenceButton = new System.Windows.Forms.Button();
             this.AnswerCheckBox1 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox2 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox3 = new System.Windows.Forms.CheckBox();
-            this.answerTextBox = new System.Windows.Forms.TextBox();
+            this.AnswerTextBox = new System.Windows.Forms.TextBox();
             this.questionLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
@@ -45,22 +44,21 @@
             this.headerPictureBox = new System.Windows.Forms.PictureBox();
             this.headerLabel = new System.Windows.Forms.Label();
             this.numOfQuestionLabel = new System.Windows.Forms.Label();
-            this.offLabel = new System.Windows.Forms.Label();
-            this.allNumQuestionLabel = new System.Windows.Forms.Label();
             this.AnswerCheckBox8 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox7 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox6 = new System.Windows.Forms.CheckBox();
             this.AnswerCheckBox5 = new System.Windows.Forms.CheckBox();
+            this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.AnswerRadioButton6 = new MyOfficeTable.MyRadioButton();
             this.goNextQuestionButton = new MyOfficeTable.MyButton();
             this.AnswerRadioButton8 = new MyOfficeTable.MyRadioButton();
-            this.startTestButton = new MyOfficeTable.MyButton();
             this.AnswerRadioButton7 = new MyOfficeTable.MyRadioButton();
             this.AnswerRadioButton5 = new MyOfficeTable.MyRadioButton();
             this.AnswerRadioButton1 = new MyOfficeTable.MyRadioButton();
             this.AnswerRadioButton3 = new MyOfficeTable.MyRadioButton();
             this.AnswerRadioButton4 = new MyOfficeTable.MyRadioButton();
             this.AnswerRadioButton2 = new MyOfficeTable.MyRadioButton();
+            this.startTestButton = new MyOfficeTable.MyButton();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -87,28 +85,13 @@
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(1213, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(1172, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
             this.minimizeButton.TabIndex = 1;
             this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.minimizeButton.UseVisualStyleBackColor = false;
             this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
-            // 
-            // referenceButton
-            // 
-            this.referenceButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
-            this.referenceButton.FlatAppearance.BorderSize = 0;
-            this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.referenceButton.Location = new System.Drawing.Point(1172, 4);
-            this.referenceButton.Name = "referenceButton";
-            this.referenceButton.Size = new System.Drawing.Size(22, 29);
-            this.referenceButton.TabIndex = 0;
-            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.referenceButton.UseVisualStyleBackColor = false;
             // 
             // AnswerCheckBox1
             // 
@@ -177,14 +160,14 @@
             this.AnswerCheckBox3.UseVisualStyleBackColor = false;
             this.AnswerCheckBox3.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // answerTextBox
+            // AnswerTextBox
             // 
-            this.answerTextBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox.Location = new System.Drawing.Point(17, 424);
-            this.answerTextBox.Name = "answerTextBox";
-            this.answerTextBox.Size = new System.Drawing.Size(352, 36);
-            this.answerTextBox.TabIndex = 12;
-            this.answerTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnswerTextBox_KeyDown);
+            this.AnswerTextBox.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerTextBox.Location = new System.Drawing.Point(17, 424);
+            this.AnswerTextBox.Name = "AnswerTextBox";
+            this.AnswerTextBox.Size = new System.Drawing.Size(352, 36);
+            this.AnswerTextBox.TabIndex = 12;
+            this.AnswerTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnswerTextBox_KeyDown);
             // 
             // questionLabel
             // 
@@ -198,7 +181,6 @@
             this.questionLabel.Size = new System.Drawing.Size(104, 29);
             this.questionLabel.TabIndex = 27;
             this.questionLabel.Text = "Вопрос";
-            this.questionLabel.Resize += new System.EventHandler(this.QuestionLabel_Resize);
             // 
             // timer
             // 
@@ -211,10 +193,11 @@
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.timerLabel.Location = new System.Drawing.Point(984, 223);
+            this.timerLabel.Location = new System.Drawing.Point(953, 199);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(290, 27);
+            this.timerLabel.Size = new System.Drawing.Size(321, 51);
             this.timerLabel.TabIndex = 28;
+            this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AnswerCheckBox4
             // 
@@ -240,6 +223,8 @@
             // 
             // headerPanel
             // 
+            this.headerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.headerPanel.BackColor = System.Drawing.Color.LightSeaGreen;
             this.headerPanel.Controls.Add(this.headerPictureBox);
             this.headerPanel.Controls.Add(this.headerLabel);
@@ -263,11 +248,11 @@
             this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.headerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(138, 9);
+            this.headerLabel.Location = new System.Drawing.Point(130, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(1137, 113);
+            this.headerLabel.Size = new System.Drawing.Size(1156, 133);
             this.headerLabel.TabIndex = 17;
             this.headerLabel.Text = "Тестирование";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -275,44 +260,17 @@
             // numOfQuestionLabel
             // 
             this.numOfQuestionLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.numOfQuestionLabel.AutoSize = true;
             this.numOfQuestionLabel.BackColor = System.Drawing.Color.Transparent;
             this.numOfQuestionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOfQuestionLabel.ForeColor = System.Drawing.Color.DarkCyan;
             this.numOfQuestionLabel.Location = new System.Drawing.Point(545, 553);
             this.numOfQuestionLabel.MaximumSize = new System.Drawing.Size(850, 90);
             this.numOfQuestionLabel.Name = "numOfQuestionLabel";
-            this.numOfQuestionLabel.Size = new System.Drawing.Size(45, 32);
+            this.numOfQuestionLabel.Size = new System.Drawing.Size(180, 27);
             this.numOfQuestionLabel.TabIndex = 32;
-            this.numOfQuestionLabel.Text = "#";
+            this.numOfQuestionLabel.Text = "Номер вопроса";
             this.numOfQuestionLabel.Visible = false;
-            // 
-            // offLabel
-            // 
-            this.offLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.offLabel.BackColor = System.Drawing.Color.Transparent;
-            this.offLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.offLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.offLabel.Location = new System.Drawing.Point(596, 553);
-            this.offLabel.MaximumSize = new System.Drawing.Size(850, 90);
-            this.offLabel.Name = "offLabel";
-            this.offLabel.Size = new System.Drawing.Size(45, 32);
-            this.offLabel.TabIndex = 33;
-            this.offLabel.Text = "из";
-            this.offLabel.Visible = false;
-            // 
-            // allNumQuestionLabel
-            // 
-            this.allNumQuestionLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.allNumQuestionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.allNumQuestionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.allNumQuestionLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.allNumQuestionLabel.Location = new System.Drawing.Point(647, 553);
-            this.allNumQuestionLabel.MaximumSize = new System.Drawing.Size(850, 90);
-            this.allNumQuestionLabel.Name = "allNumQuestionLabel";
-            this.allNumQuestionLabel.Size = new System.Drawing.Size(45, 32);
-            this.allNumQuestionLabel.TabIndex = 34;
-            this.allNumQuestionLabel.Text = "10";
-            this.allNumQuestionLabel.Visible = false;
             // 
             // AnswerCheckBox8
             // 
@@ -402,6 +360,22 @@
             this.AnswerCheckBox5.UseVisualStyleBackColor = false;
             this.AnswerCheckBox5.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeWindowBoxButton.BackColor = System.Drawing.Color.Transparent;
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(1213, 1);
+            this.changeWindowBoxButton.Name = "changeWindowBoxButton";
+            this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
+            this.changeWindowBoxButton.TabIndex = 74;
+            this.changeWindowBoxButton.Tag = "Fullscreen";
+            this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.changeWindowBoxButton.UseVisualStyleBackColor = false;
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
+            // 
             // AnswerRadioButton6
             // 
             this.AnswerRadioButton6.AutoSize = true;
@@ -455,27 +429,6 @@
             this.AnswerRadioButton8.Text = "Ответ 8";
             this.AnswerRadioButton8.UnCheckedColor = System.Drawing.Color.Gray;
             this.AnswerRadioButton8.UseVisualStyleBackColor = true;
-            // 
-            // startTestButton
-            // 
-            this.startTestButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.startTestButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            this.startTestButton.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.startTestButton.BorderRadius = 20;
-            this.startTestButton.BorderSize = 0;
-            this.startTestButton.FlatAppearance.BorderSize = 0;
-            this.startTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.startTestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startTestButton.ForeColor = System.Drawing.Color.White;
-            this.startTestButton.Location = new System.Drawing.Point(504, 333);
-            this.startTestButton.MinimumSize = new System.Drawing.Size(150, 40);
-            this.startTestButton.Name = "startTestButton";
-            this.startTestButton.Size = new System.Drawing.Size(297, 40);
-            this.startTestButton.TabIndex = 3;
-            this.startTestButton.Text = "Начать тестирование";
-            this.startTestButton.TextColor = System.Drawing.Color.White;
-            this.startTestButton.UseVisualStyleBackColor = false;
-            this.startTestButton.Click += new System.EventHandler(this.StartTestButton_Click);
             // 
             // AnswerRadioButton7
             // 
@@ -574,6 +527,27 @@
             this.AnswerRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
             this.AnswerRadioButton2.UseVisualStyleBackColor = true;
             // 
+            // startTestButton
+            // 
+            this.startTestButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.startTestButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.startTestButton.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.startTestButton.BorderRadius = 20;
+            this.startTestButton.BorderSize = 0;
+            this.startTestButton.FlatAppearance.BorderSize = 0;
+            this.startTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startTestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startTestButton.ForeColor = System.Drawing.Color.White;
+            this.startTestButton.Location = new System.Drawing.Point(490, 333);
+            this.startTestButton.MinimumSize = new System.Drawing.Size(150, 40);
+            this.startTestButton.Name = "startTestButton";
+            this.startTestButton.Size = new System.Drawing.Size(348, 40);
+            this.startTestButton.TabIndex = 3;
+            this.startTestButton.Text = "Начать тестирование";
+            this.startTestButton.TextColor = System.Drawing.Color.White;
+            this.startTestButton.UseVisualStyleBackColor = false;
+            this.startTestButton.Click += new System.EventHandler(this.StartTestButton_Click);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -581,17 +555,15 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1286, 594);
+            this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.AnswerCheckBox2);
             this.Controls.Add(this.AnswerRadioButton6);
-            this.Controls.Add(this.referenceButton);
             this.Controls.Add(this.AnswerCheckBox1);
             this.Controls.Add(this.goNextQuestionButton);
             this.Controls.Add(this.AnswerRadioButton8);
             this.Controls.Add(this.startTestButton);
             this.Controls.Add(this.AnswerCheckBox3);
-            this.Controls.Add(this.allNumQuestionLabel);
             this.Controls.Add(this.AnswerRadioButton7);
-            this.Controls.Add(this.offLabel);
             this.Controls.Add(this.AnswerCheckBox4);
             this.Controls.Add(this.numOfQuestionLabel);
             this.Controls.Add(this.AnswerRadioButton5);
@@ -606,7 +578,7 @@
             this.Controls.Add(this.AnswerRadioButton4);
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.AnswerCheckBox6);
-            this.Controls.Add(this.answerTextBox);
+            this.Controls.Add(this.AnswerTextBox);
             this.Controls.Add(this.AnswerCheckBox5);
             this.Controls.Add(this.AnswerRadioButton2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -631,20 +603,16 @@
 
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button minimizeButton;
-        private System.Windows.Forms.Button referenceButton;
         private System.Windows.Forms.CheckBox AnswerCheckBox1;
         private System.Windows.Forms.CheckBox AnswerCheckBox2;
         private System.Windows.Forms.CheckBox AnswerCheckBox3;
-        private System.Windows.Forms.TextBox answerTextBox;
+        private System.Windows.Forms.TextBox AnswerTextBox;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.CheckBox AnswerCheckBox4;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label numOfQuestionLabel;
-        private System.Windows.Forms.Label offLabel;
-        private System.Windows.Forms.Label allNumQuestionLabel;
-        private MyOfficeTable.MyButton startTestButton;
         private MyOfficeTable.MyButton goNextQuestionButton;
         private System.Windows.Forms.PictureBox headerPictureBox;
         private MyOfficeTable.MyRadioButton AnswerRadioButton1;
@@ -660,5 +628,7 @@
         private System.Windows.Forms.CheckBox AnswerCheckBox6;
         private System.Windows.Forms.CheckBox AnswerCheckBox5;
         private System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Button changeWindowBoxButton;
+        private MyButton startTestButton;
     }
 }
