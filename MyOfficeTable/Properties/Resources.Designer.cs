@@ -83,6 +83,26 @@ namespace MyOfficeTable.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AllLettersUppercase {
+            get {
+                object obj = ResourceManager.GetObject("AllLettersUppercase", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bold {
+            get {
+                object obj = ResourceManager.GetObject("Bold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
@@ -103,6 +123,46 @@ namespace MyOfficeTable.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ColorOfFill {
+            get {
+                object obj = ResourceManager.GetObject("ColorOfFill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ColorOfText {
+            get {
+                object obj = ResourceManager.GetObject("ColorOfText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Copy {
+            get {
+                object obj = ResourceManager.GetObject("Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CopyFormat {
+            get {
+                object obj = ResourceManager.GetObject("CopyFormat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Correct {
             get {
                 object obj = ResourceManager.GetObject("Correct", resourceCulture);
@@ -116,6 +176,16 @@ namespace MyOfficeTable.Properties {
         internal static System.Drawing.Bitmap Cut {
             get {
                 object obj = ResourceManager.GetObject("Cut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Enter {
+            get {
+                object obj = ResourceManager.GetObject("Enter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +303,16 @@ namespace MyOfficeTable.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Italic {
+            get {
+                object obj = ResourceManager.GetObject("Italic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
@@ -273,6 +353,16 @@ namespace MyOfficeTable.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Print {
+            get {
+                object obj = ResourceManager.GetObject("Print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap question {
             get {
                 object obj = ResourceManager.GetObject("question", resourceCulture);
@@ -283,9 +373,9 @@ namespace MyOfficeTable.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Все_буквы_прописные {
+        internal static System.Drawing.Bitmap Save {
             get {
-                object obj = ResourceManager.GetObject("Все_буквы_прописные", resourceCulture);
+                object obj = ResourceManager.GetObject("Save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,79 +383,9 @@ namespace MyOfficeTable.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Вставить {
+        internal static System.Drawing.Bitmap Underlined {
             get {
-                object obj = ResourceManager.GetObject("Вставить", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Копировать {
-            get {
-                object obj = ResourceManager.GetObject("Копировать", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Копировать_формат {
-            get {
-                object obj = ResourceManager.GetObject("Копировать_формат", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Курсив {
-            get {
-                object obj = ResourceManager.GetObject("Курсив", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Печать {
-            get {
-                object obj = ResourceManager.GetObject("Печать", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Подчёркнутый {
-            get {
-                object obj = ResourceManager.GetObject("Подчёркнутый", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Полужирное_начертание {
-            get {
-                object obj = ResourceManager.GetObject("Полужирное_начертание", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Сохранить {
-            get {
-                object obj = ResourceManager.GetObject("Сохранить", resourceCulture);
+                object obj = ResourceManager.GetObject("Underlined", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,26 +396,6 @@ namespace MyOfficeTable.Properties {
         internal static System.Drawing.Bitmap фон_S97zP {
             get {
                 object obj = ResourceManager.GetObject("фон_S97zP", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Цвет_заливки {
-            get {
-                object obj = ResourceManager.GetObject("Цвет_заливки", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Цвет_текста {
-            get {
-                object obj = ResourceManager.GetObject("Цвет_текста", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

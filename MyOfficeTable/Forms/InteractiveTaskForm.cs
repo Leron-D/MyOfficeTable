@@ -19,6 +19,23 @@ namespace MyOfficeTable.Forms
         private bool isMouseDown = false;
         string theme = "";
         int numOfTask = 1;
+        int numberOfTasks;
+        int index1;
+        int index2;
+        List<string> listOfNames;
+        List<string> listOfTags1;
+        List<string> listOfTags2;
+        List<int> listOfIndexes1;
+        List<int> listOfIndexes2;
+        List<Image> listOfImages1;
+        List<Image> listOfImages2;
+        List<PictureBox> listOfSourcePictureBoxes;
+        List<PictureBox> listOfDestinationPictureBoxes;
+        List<PictureBox> listOfFormulaPictureBoxes;
+        List<Label> listOfNameLabels;
+        List<Label> listOfResultLabels1;
+        List<Label> listOfResultLabels2;
+        List<TextBox> listOfTextBoxes;
 
         public InteractiveTaskForm(string taskName)
         {
@@ -39,22 +56,198 @@ namespace MyOfficeTable.Forms
             tabControl.SizeMode = TabSizeMode.Fixed;
             tabControl.TabStop = false;
             DestinationPictureBox1.AllowDrop = DestinationPictureBox2.AllowDrop = DestinationPictureBox3.AllowDrop = DestinationPictureBox4.AllowDrop =
-            DestinationPictureBox5.AllowDrop = DestinationPictureBox6.AllowDrop = DestinationPictureBox7.AllowDrop = DestinationPictureBox8.AllowDrop =
-            DestinationPictureBox9.AllowDrop = DestinationPictureBox10.AllowDrop = DestinationPictureBox11.AllowDrop = DestinationPictureBox12.AllowDrop =
-            SourcePictureBox1.AllowDrop = SourcePictureBox2.AllowDrop = SourcePictureBox3.AllowDrop = SourcePictureBox4.AllowDrop = SourcePictureBox4.AllowDrop =
-            SourcePictureBox5.AllowDrop = SourcePictureBox6.AllowDrop = SourcePictureBox7.AllowDrop = SourcePictureBox8.AllowDrop = SourcePictureBox9.AllowDrop =
-            SourcePictureBox10.AllowDrop = SourcePictureBox11.AllowDrop = SourcePictureBox12.AllowDrop = true;
-            headerLabel1.Text = headerLabel2.Text = headerLabel3.Text = headerLabel4.Text = headerLabel5.Text = theme;
+            SourcePictureBox1.AllowDrop = SourcePictureBox2.AllowDrop = SourcePictureBox3.AllowDrop = SourcePictureBox4.AllowDrop = SourcePictureBox4.AllowDrop = true;
+            headerLabel1.Text = headerLabel3.Text = headerLabel4.Text = theme;
             srcPictureBox = null;
             numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
             if (theme == "Интерфейс табличного процессора")
             {
+                listOfNames = new List<string>
+                {
+                    "Вырезать",
+                    "Копировать\nформатирование",
+                    "Полужирное\nначертание",
+                    "Все буквы\nпрописные",
+                    "Сохранить",
+                    "Печать",
+                    "Копировать",
+                    "Вставить",
+                    "Подчёркнутый",
+                    "Цвет заливки",
+                    "Курсив",
+                    "Цвет текста"
+                };
+
+                listOfTags1 = new List<string>
+                {
+                    "cut",
+                    "copyFormat",
+                    "bold",
+                    "allLettersUppercase",
+                    "save",
+                    "print",
+                    "copy",
+                    "enter",
+                    "underlined",
+                    "colorOfFill",
+                    "italic",
+                    "colorOfText"
+                };
+
+                listOfImages1 = new List<Image>
+                {
+                    Resources.Cut,
+                    Resources.CopyFormat,
+                    Resources.Bold,
+                    Resources.AllLettersUppercase,
+                    Resources.Save,
+                    Resources.Print,
+                    Resources.Copy,
+                    Resources.Enter,
+                    Resources.Underlined,
+                    Resources.ColorOfFill,
+                    Resources.Italic,
+                    Resources.ColorOfText
+                };
+
+                listOfSourcePictureBoxes = new List<PictureBox>
+                {
+                    SourcePictureBox1,
+                    SourcePictureBox2,
+                    SourcePictureBox3,
+                    SourcePictureBox4
+                };
+
+                listOfDestinationPictureBoxes = new List<PictureBox>
+                {
+                    DestinationPictureBox1,
+                    DestinationPictureBox2,
+                    DestinationPictureBox3,
+                    DestinationPictureBox4
+                };
+
+                listOfNameLabels = new List<Label>
+                {
+                    nameLabel1,
+                    nameLabel2,
+                    nameLabel3,
+                    nameLabel4
+                };
+
+
+                listOfIndexes1 = new List<int>
+                {
+                    0,
+                    4,
+                    8
+                };
+
+                listOfResultLabels1 = new List<Label>
+                {
+                    resultLabel1,
+                    resultLabel2,
+                    resultLabel3,
+                    resultLabel4
+                };
+
+                numberOfTasks = 1;
                 tabControl.SelectedTab = tabControl.TabPages[0];
+                TakeTaskByInterface();
             }
-            else if (theme == "Ссылка на ячейки в табличном процессоре")
+            else if (theme == "Ссылки на ячейки в табличном процессоре")
             {
-                tabControl.SelectedTab = tabControl.TabPages[3];
+                tabControl.SelectedTab = tabControl.TabPages[1];
+
+                listOfImages2 = new List<Image>
+                {
+                    Resources.InteractiveTask1,
+                    Resources.InteractiveTask2,
+                    Resources.InteractiveTask3,
+                    Resources.InteractiveTask4, 
+                    Resources.InteractiveTask5,
+                    Resources.InteractiveTask6,
+                    Resources.InteractiveTask7,
+                    Resources.InteractiveTask8
+                };
+
+                listOfTags2 = new List<string>
+                {
+                    "=A3+$B$2",
+                    "=B3+$B$2*C3",
+                    "=$A4+B4",
+                    "=$B5/B$2",
+                    "=$A$1-C3+B$2",
+                    "=A$1*B$1",
+                    "=$B5-B$3/C3",
+                    "=$B$2/C$3",
+                };
+
+                listOfIndexes2 = new List<int>
+                {
+                    0,
+                    4
+                };
+
+                listOfFormulaPictureBoxes = new List<PictureBox>
+                {
+                    formulaPictureBox1,
+                    formulaPictureBox2,
+                    formulaPictureBox3,
+                    formulaPictureBox4
+                };
+
+                listOfTextBoxes = new List<TextBox>
+                {
+                    answerTextBox1,
+                    answerTextBox2,
+                    answerTextBox3,
+                    answerTextBox4
+                };
+
+                listOfResultLabels2 = new List<Label>
+                {
+                    resultLabel5,
+                    resultLabel10,
+                    resultLabel7,
+                    resultLabel8
+                };
+
+                numberOfTasks = 1;
+
+                TakeFirstTaskByReferences();
             }
+            numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
+        }
+
+        private void TakeTaskByInterface()
+        {
+            Random random = new Random();
+            int randomIndex = random.Next(0, 3);
+            index1 = listOfIndexes1[randomIndex];
+            int k = 0;
+            for (int i = index1; i < index1 + 4; i++)
+            {
+                listOfSourcePictureBoxes[k].Image = listOfImages1[i];
+                listOfSourcePictureBoxes[k].Tag = listOfTags1[i];
+                listOfNameLabels[k].Text = listOfNames[i];
+                k++;
+            }
+            goNextButton.Text = "Завершить";
+        }
+
+        private void TakeFirstTaskByReferences()
+        {
+            Random random = new Random();
+            int randomIndex = random.Next(0, 2);
+            index2 = listOfIndexes2[randomIndex];
+            int k = 0;
+            for (int i = index2; i < index2 + 4; i++)
+            {
+                listOfFormulaPictureBoxes[k].Image = listOfImages2[i];
+                listOfTextBoxes[k].Tag = listOfTags2[i];
+                k++;
+            }
+            goNextButton.Text = "Завершить";
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -139,26 +332,13 @@ namespace MyOfficeTable.Forms
         {
             if (tabControl.SelectedTab == tabControl.TabPages[0] && resultLabel1.Tag == "Correct" && resultLabel2.Tag == "Correct" && resultLabel3.Tag == "Correct" && resultLabel4.Tag == "Correct")
             {
-                tabControl.SelectedTab = tabControl.TabPages[1];
-                goNextButton.Text = "Продолжить";
-                goBackButton.Enabled = true;
+                ShowForm(new SelectThemeForm("Интерактивные задания"));
             }
-            else if (tabControl.SelectedTab == tabControl.TabPages[1] && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
+            else if (tabControl.SelectedTab == tabControl.TabPages[1] && resultLabel5.Tag == "Correct" && resultLabel10.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
             {
-                tabControl.SelectedTab = tabControl.TabPages[2];
-                goNextButton.Text = "Завершить";
+                ShowForm(new SelectThemeForm("Интерактивные задания"));
             }
-            else if (tabControl.SelectedTab == tabControl.TabPages[2] && resultLabel9.Tag == "Correct" && resultLabel10.Tag == "Correct" && resultLabel11.Tag == "Correct" && resultLabel12.Tag == "Correct")
-            {
-                ShowForm(new ResultInteractiveForm(theme));
-            }
-            else if (tabControl.SelectedTab == tabControl.TabPages[3] && resultLabel13.Tag == "Correct" && resultLabel14.Tag == "Correct" && resultLabel15.Tag == "Correct" && resultLabel16.Tag == "Correct")
-            {
-                tabControl.SelectedTab = tabControl.TabPages[4];
-                goNextButton.Text = "Завершить";
-                goBackButton.Enabled = true;
-            }
-            else if (tabControl.SelectedTab == tabControl.TabPages[4] && resultLabel17.Tag == "Correct" && resultLabel18.Tag == "Correct" && resultLabel19.Tag == "Correct" && resultLabel20.Tag == "Correct")
+            else if (tabControl.SelectedTab == tabControl.TabPages[2] && resultLabel17.Tag == "Correct" && resultLabel18.Tag == "Correct" && resultLabel19.Tag == "Correct" && resultLabel20.Tag == "Correct")
             {
                 ShowForm(new ResultInteractiveForm(theme));
             }
@@ -172,8 +352,11 @@ namespace MyOfficeTable.Forms
         private void GoNextButton_Click(object sender, EventArgs e)
         {
             GoToNextTask();
-            numOfTask++;
-            numOfTaskLabel.Text = $"{numOfTask} из 3";
+            if(numberOfTasks > 1)
+            {
+                numOfTask++;
+                numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
+            }
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -210,38 +393,32 @@ namespace MyOfficeTable.Forms
         {
             if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
-                ChangeImageOfLabel(DestinationPictureBox1, "cut", resultLabel1);
-                ChangeImageOfLabel(DestinationPictureBox2, "copyFormat", resultLabel2);
-                ChangeImageOfLabel(DestinationPictureBox3, "bold", resultLabel3);
-                ChangeImageOfLabel(DestinationPictureBox4, "allLettersUppercase", resultLabel4);
+                int k = 0;
+                for (int i = index1; i < index1 + 4; i++)
+                {
+                    ChangeImageOfLabel(listOfDestinationPictureBoxes[k], listOfTags1[i], listOfResultLabels1[k]);
+                    k++;
+                }
             }
             else if (tabControl.SelectedTab == tabControl.TabPages[1])
             {
-                ChangeImageOfLabel(DestinationPictureBox5, "save", resultLabel5);
-                ChangeImageOfLabel(DestinationPictureBox6, "print", resultLabel6);
-                ChangeImageOfLabel(DestinationPictureBox7, "copy", resultLabel7);
-                ChangeImageOfLabel(DestinationPictureBox8, "enter", resultLabel8);
+                //ChangeImageOfLabel(answerTextBox1, "=A3+$B$2", resultLabel5);
+                //ChangeImageOfLabel(answerTextBox2, "=B3+$B$2*C3", resultLabel7);
+                //ChangeImageOfLabel(answerTextBox3, "=$A4+B4", resultLabel6);
+                //ChangeImageOfLabel(answerTextBox4, "=$B5/B$2", resultLabel8);
+                int k = 0;
+                for (int i = index2; i < index2 + 4; i++)
+                {
+                    ChangeImageOfLabel(listOfTextBoxes[k], listOfResultLabels2[k]);
+                    k++;
+                }
             }
             else if (tabControl.SelectedTab == tabControl.TabPages[2])
             {
-                ChangeImageOfLabel(DestinationPictureBox9, "underlined", resultLabel9);
-                ChangeImageOfLabel(DestinationPictureBox10, "colorOfFill", resultLabel10);
-                ChangeImageOfLabel(DestinationPictureBox11, "italic", resultLabel11);
-                ChangeImageOfLabel(DestinationPictureBox12, "colorOfText", resultLabel12);
-            }
-            else if (tabControl.SelectedTab == tabControl.TabPages[3])
-            {
-                ChangeImageOfLabel(answerTextBox1, "=A3+$B$2", resultLabel13);
-                ChangeImageOfLabel(answerTextBox2, "=B3+$B$2*C3", resultLabel14);
-                ChangeImageOfLabel(answerTextBox3, "=$A4+B4", resultLabel15);
-                ChangeImageOfLabel(answerTextBox4, "=$B5/B$2", resultLabel16);
-            }
-            else if (tabControl.SelectedTab == tabControl.TabPages[4])
-            {
-                ChangeImageOfLabel(answerTextBox5, "=$A$1-C3+B$2", resultLabel17);
-                ChangeImageOfLabel(answerTextBox6, "=A$1*B$1", resultLabel18);
-                ChangeImageOfLabel(answerTextBox7, "=$B5-B$3/C3", resultLabel19);
-                ChangeImageOfLabel(answerTextBox8, "=$B$2/C$3", resultLabel20);
+                //ChangeImageOfLabel(answerTextBox5, "=$A$1-C3+B$2", resultLabel17);
+                //ChangeImageOfLabel(answerTextBox6, "=A$1*B$1", resultLabel18);
+                //ChangeImageOfLabel(answerTextBox7, "=$B5-B$3/C3", resultLabel19);
+                //ChangeImageOfLabel(answerTextBox8, "=$B$2/C$3", resultLabel20);
             }
         }
 
@@ -262,10 +439,10 @@ namespace MyOfficeTable.Forms
             }
         }
 
-        private void ChangeImageOfLabel(TextBox textBox, string formula, Label resultLabel)
+        private void ChangeImageOfLabel(TextBox textBox, Label resultLabel)
         {
             resultLabel.Visible = true;
-            if(textBox.Text.ToLower() != formula.ToLower())
+            if(textBox.Text.ToLower() != textBox.Tag.ToString().ToLower())
             {
                 resultLabel.Text = "";
                 resultLabel.Image = Resources.Incorrect;
