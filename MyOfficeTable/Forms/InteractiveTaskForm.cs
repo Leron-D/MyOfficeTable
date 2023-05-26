@@ -57,7 +57,7 @@ namespace MyOfficeTable.Forms
             tabControl.TabStop = false;
             DestinationPictureBox1.AllowDrop = DestinationPictureBox2.AllowDrop = DestinationPictureBox3.AllowDrop = DestinationPictureBox4.AllowDrop =
             SourcePictureBox1.AllowDrop = SourcePictureBox2.AllowDrop = SourcePictureBox3.AllowDrop = SourcePictureBox4.AllowDrop = SourcePictureBox4.AllowDrop = true;
-            headerLabel1.Text = headerLabel3.Text = headerLabel4.Text = theme;
+            headerLabel1.Text = headerLabel2.Text = theme;
             srcPictureBox = null;
             numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
             if (theme == "Интерфейс табличного процессора")
@@ -337,10 +337,6 @@ namespace MyOfficeTable.Forms
             else if (tabControl.SelectedTab == tabControl.TabPages[1] && resultLabel5.Tag == "Correct" && resultLabel10.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
             {
                 ShowForm(new SelectThemeForm("Интерактивные задания"));
-            }
-            else if (tabControl.SelectedTab == tabControl.TabPages[2] && resultLabel17.Tag == "Correct" && resultLabel18.Tag == "Correct" && resultLabel19.Tag == "Correct" && resultLabel20.Tag == "Correct")
-            {
-                ShowForm(new ResultInteractiveForm(theme));
             }
             else
             {

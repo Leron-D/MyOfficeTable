@@ -47,7 +47,7 @@
             this.formulaPictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.headerLabel3 = new System.Windows.Forms.Label();
+            this.headerLabel2 = new System.Windows.Forms.Label();
             this.task1InterfaceTabPage = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
             this.resultLabel4 = new System.Windows.Forms.Label();
@@ -304,7 +304,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Controls.Add(this.headerLabel3);
+            this.panel5.Controls.Add(this.headerLabel2);
             this.panel5.Location = new System.Drawing.Point(0, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1043, 133);
@@ -320,19 +320,19 @@
             this.pictureBox6.TabIndex = 47;
             this.pictureBox6.TabStop = false;
             // 
-            // headerLabel3
+            // headerLabel2
             // 
-            this.headerLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.headerLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel3.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel3.ForeColor = System.Drawing.Color.White;
-            this.headerLabel3.Location = new System.Drawing.Point(131, 0);
-            this.headerLabel3.Name = "headerLabel3";
-            this.headerLabel3.Size = new System.Drawing.Size(908, 132);
-            this.headerLabel3.TabIndex = 17;
-            this.headerLabel3.Text = "Задание 1";
-            this.headerLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.headerLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.headerLabel2.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel2.ForeColor = System.Drawing.Color.White;
+            this.headerLabel2.Location = new System.Drawing.Point(131, 0);
+            this.headerLabel2.Name = "headerLabel2";
+            this.headerLabel2.Size = new System.Drawing.Size(908, 132);
+            this.headerLabel2.TabIndex = 17;
+            this.headerLabel2.Text = "Задание 1";
+            this.headerLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // task1InterfaceTabPage
             // 
@@ -790,7 +790,7 @@
         private System.Windows.Forms.TabPage task1ReferencesTabPage;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label headerLabel3;
+        private System.Windows.Forms.Label headerLabel2;
         private System.Windows.Forms.TabPage task1InterfaceTabPage;
         private System.Windows.Forms.Label resultLabel4;
         private System.Windows.Forms.Label resultLabel3;
