@@ -1,4 +1,5 @@
 ﻿using MyOfficeTable.Forms;
+using MyOfficeTable.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace MyOfficeTable
         private bool isMouseDown = false;
         string file = "";
         int num = 0;
+        bool loadForm = true;
 
         public EvaluationСriteriasForm(int numberOfQuestions = 0, string fileName = "")
         {
@@ -90,8 +92,27 @@ namespace MyOfficeTable
 
         private void EvaluationСriteriasForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Properties.Settings.Default.goFromTheory = false;
-            Properties.Settings.Default.Save();
+            Settings.Default.goFromTheory = false;
+            Settings.Default.Save();
+        }
+
+        private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
+        {
+            loadForm = false;
+            if (changeWindowBoxButton.Tag == "Fullscreen")
+            {
+                Settings.Default.isFullSize = true;
+                this.WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                Settings.Default.isFullSize = false;
+                this.WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
         }
     }
 }

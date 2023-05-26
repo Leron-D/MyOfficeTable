@@ -18,6 +18,7 @@ namespace MyOfficeTable
             Application.SetCompatibleTextRenderingDefault(false);
             Properties.Settings.Default.IsFirstLoad = Properties.Settings.Default.firstLoadInstruction = true;
             Properties.Settings.Default.goFromTheory = false;
+            Properties.Settings.Default.isFullSize = false;
             Properties.Settings.Default.Save();
             Application.Run(new MainForm());
         }

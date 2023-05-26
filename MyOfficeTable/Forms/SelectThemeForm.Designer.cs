@@ -77,11 +77,11 @@
             // 
             this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(130, 0);
+            this.headerLabel.Location = new System.Drawing.Point(3, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(927, 133);
+            this.headerLabel.Size = new System.Drawing.Size(1054, 133);
             this.headerLabel.TabIndex = 14;
             this.headerLabel.Text = "Выбор темы";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,7 +192,7 @@
             // 
             this.selectThemeComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.selectThemeComboBox.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.selectThemeComboBox.BorderSize = 1;
+            this.selectThemeComboBox.BorderSize = 2;
             this.selectThemeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.selectThemeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selectThemeComboBox.ForeColor = System.Drawing.Color.DimGray;
@@ -202,7 +202,7 @@
             this.selectThemeComboBox.Location = new System.Drawing.Point(97, 225);
             this.selectThemeComboBox.MinimumSize = new System.Drawing.Size(200, 2);
             this.selectThemeComboBox.Name = "selectThemeComboBox";
-            this.selectThemeComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.selectThemeComboBox.Padding = new System.Windows.Forms.Padding(2);
             this.selectThemeComboBox.Size = new System.Drawing.Size(866, 36);
             this.selectThemeComboBox.TabIndex = 40;
             this.selectThemeComboBox.Texts = "";

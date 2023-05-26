@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -39,7 +40,7 @@ namespace MyOfficeTable
                 transitionButton.Text = "Перейти к лекции";
                 goToEvaluationCriteriasButton.Visible = false;
             }
-            if (mode == "Интерактивные задания")
+            else if (mode == "Интерактивные задания")
             {
                 transitionButton.Text = "Перейти к заданию";
                 goToEvaluationCriteriasButton.Visible = false;
@@ -74,11 +75,18 @@ namespace MyOfficeTable
                 loadForm = false;
                 WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
+                changeWindowBoxButton.Image = Resources.NormalScreen;                
+                goBackButton.Location = new Point(goBackButton.Location.X, goBackButton.Bottom - 10);
+                headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
             }
             else
             {
                 WindowState = FormWindowState.Normal;
+                if (selectMode != "Тестирование")
+                {
+                    selectThemeComboBox.Location = new Point(97, 250);
+                    transitionButton.Location = new Point(transitionButton.Location.X, 310);
+                }
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
             }
@@ -213,30 +221,46 @@ namespace MyOfficeTable
             {
                 if (WindowState == FormWindowState.Maximized)
                 {
-                    selectThemeComboBox.Size = new Size(1170, 52);
+                    selectThemeComboBox.Size = new Size(1400, 70);
                     selectThemeComboBox.Left = (ClientSize.Width - selectThemeComboBox.Width) / 2;
-                    selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2;
+                    if (selectMode == "Тестирование")
+                        selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2 - 50;
+                    else
+                        selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2 + 10;
                     selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 22);
+                    selectThemeComboBox.BorderSize = 1;
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
 
                     transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(440, 50);
                     transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
-                    transitionButton.Top = selectThemeComboBox.Location.Y + 80;
+                    transitionButton.Top = selectThemeComboBox.Location.Y + 130;
                     goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 80;
                     goBackButton.Size = new Size(261, 50);
+                    goBackButton.Location = new Point(goBackButton.Location.X, goBackButton.Location.Y - 10);
                     transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 24, FontStyle.Bold);
                 }
                 else
                 {
                     selectThemeComboBox.Size = new Size(866, 36);
                     selectThemeComboBox.Left = (ClientSize.Width - selectThemeComboBox.Width) / 2;
-                    selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2;
+                    if (selectMode == "Тестирование")
+                        selectThemeComboBox.Location = new Point(97, 225);
+                    else
+                    {
+                        selectThemeComboBox.Location = new Point(97, 250);
+                        transitionButton.Location = new Point(transitionButton.Location.X, 310);
+                    }
+
                     selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 14);
+                    selectThemeComboBox.BorderSize = 1;
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
 
                     transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(411, 44);
                     transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
                     transitionButton.Top = selectThemeComboBox.Location.Y + 60;
                     goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 60;
                     goBackButton.Size = new Size(151, 40);
+                    goBackButton.Location = new Point(0, 411);
                     transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
                 }
             }

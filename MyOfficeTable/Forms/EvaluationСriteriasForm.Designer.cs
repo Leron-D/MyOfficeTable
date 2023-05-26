@@ -38,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.goBackButton = new MyOfficeTable.MyButton();
             this.goToTestButton = new MyOfficeTable.MyButton();
+            this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,7 +64,7 @@
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(835, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(794, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
             this.minimizeButton.TabIndex = 49;
@@ -97,15 +98,14 @@
             // 
             this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(281, 52);
+            this.headerLabel.Location = new System.Drawing.Point(130, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(395, 39);
+            this.headerLabel.Size = new System.Drawing.Size(788, 133);
             this.headerLabel.TabIndex = 41;
             this.headerLabel.Text = "Критерии оценивания";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // webBrowser
             // 
@@ -118,6 +118,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.webBrowser);
             this.panel1.Location = new System.Drawing.Point(9, 206);
             this.panel1.Name = "panel1";
@@ -126,6 +129,7 @@
             // 
             // goBackButton
             // 
+            this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.goBackButton.BackColor = System.Drawing.Color.LightSeaGreen;
             this.goBackButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.goBackButton.BorderColor = System.Drawing.Color.LightSeaGreen;
@@ -135,7 +139,7 @@
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goBackButton.ForeColor = System.Drawing.Color.White;
-            this.goBackButton.Location = new System.Drawing.Point(9, 616);
+            this.goBackButton.Location = new System.Drawing.Point(1, 616);
             this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(151, 40);
@@ -147,6 +151,7 @@
             // 
             // goToTestButton
             // 
+            this.goToTestButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.goToTestButton.BackColor = System.Drawing.Color.LightSeaGreen;
             this.goToTestButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.goToTestButton.BorderColor = System.Drawing.Color.LightSeaGreen;
@@ -156,7 +161,7 @@
             this.goToTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goToTestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goToTestButton.ForeColor = System.Drawing.Color.White;
-            this.goToTestButton.Location = new System.Drawing.Point(687, 616);
+            this.goToTestButton.Location = new System.Drawing.Point(695, 616);
             this.goToTestButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goToTestButton.Name = "goToTestButton";
             this.goToTestButton.Size = new System.Drawing.Size(211, 40);
@@ -167,12 +172,29 @@
             this.goToTestButton.Visible = false;
             this.goToTestButton.Click += new System.EventHandler(this.GoToTestButton_Click);
             // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeWindowBoxButton.BackColor = System.Drawing.Color.Transparent;
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(835, 1);
+            this.changeWindowBoxButton.Name = "changeWindowBoxButton";
+            this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
+            this.changeWindowBoxButton.TabIndex = 74;
+            this.changeWindowBoxButton.Tag = "Fullscreen";
+            this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.changeWindowBoxButton.UseVisualStyleBackColor = false;
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
+            // 
             // EvaluationСriteriasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(910, 659);
+            this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.goToTestButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.panel1);
@@ -189,7 +211,6 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseUp);
             this.panel.ResumeLayout(false);
-            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -207,5 +228,6 @@
         private MyOfficeTable.MyButton goBackButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MyOfficeTable.MyButton goToTestButton;
+        private System.Windows.Forms.Button changeWindowBoxButton;
     }
 }
