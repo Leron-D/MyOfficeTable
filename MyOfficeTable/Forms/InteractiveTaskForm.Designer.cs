@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InteractiveTaskForm));
-            this.helpButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.task4Page = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
             this.resultLabel16 = new System.Windows.Forms.Label();
             this.resultLabel15 = new System.Windows.Forms.Label();
             this.resultLabel14 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.headerLabel4 = new System.Windows.Forms.Label();
             this.task3TabPage = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
             this.resultLabel12 = new System.Windows.Forms.Label();
             this.resultLabel11 = new System.Windows.Forms.Label();
             this.resultLabel10 = new System.Windows.Forms.Label();
@@ -71,6 +72,7 @@
             this.DestinationPictureBox10 = new System.Windows.Forms.PictureBox();
             this.DestinationPictureBox9 = new System.Windows.Forms.PictureBox();
             this.task2TabPage = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
             this.resultLabel8 = new System.Windows.Forms.Label();
             this.resultLabel7 = new System.Windows.Forms.Label();
             this.resultLabel6 = new System.Windows.Forms.Label();
@@ -93,6 +95,7 @@
             this.DestinationPictureBox7 = new System.Windows.Forms.PictureBox();
             this.DestinationPictureBox5 = new System.Windows.Forms.PictureBox();
             this.task1TabPage = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
             this.resultLabel4 = new System.Windows.Forms.Label();
             this.resultLabel3 = new System.Windows.Forms.Label();
             this.resultLabel2 = new System.Windows.Forms.Label();
@@ -116,6 +119,7 @@
             this.headerLabel1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.task5Page = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
             this.resultLabel20 = new System.Windows.Forms.Label();
             this.resultLabel19 = new System.Windows.Forms.Label();
             this.resultLabel18 = new System.Windows.Forms.Label();
@@ -131,12 +135,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerLabel5 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.numOfTaskLabel = new System.Windows.Forms.Label();
+            this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.goNextButton = new MyOfficeTable.MyButton();
             this.goBackButton = new MyOfficeTable.MyButton();
             this.task4Page.SuspendLayout();
@@ -192,21 +192,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // helpButton
-            // 
-            this.helpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.helpButton.BackColor = System.Drawing.Color.Transparent;
-            this.helpButton.FlatAppearance.BorderSize = 0;
-            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.helpButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.helpButton.Location = new System.Drawing.Point(922, 1);
-            this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(21, 32);
-            this.helpButton.TabIndex = 61;
-            this.helpButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.helpButton.UseVisualStyleBackColor = false;
-            this.helpButton.Click += new System.EventHandler(this.HelpButton_Click);
-            // 
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -229,7 +214,7 @@
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(962, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(921, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
             this.minimizeButton.TabIndex = 59;
@@ -259,6 +244,19 @@
             this.task4Page.Size = new System.Drawing.Size(1039, 769);
             this.task4Page.TabIndex = 4;
             this.task4Page.Text = "Задание 1 - Ссылки";
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label19.Location = new System.Drawing.Point(75, 148);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(879, 97);
+            this.label19.TabIndex = 68;
+            this.label19.Tag = "Incorrect";
+            this.label19.Text = "Требуется ввести формулу, которая будет написана в выделенной ячейке при копирова" +
+    "нии";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // resultLabel16
             // 
@@ -453,6 +451,18 @@
             this.task3TabPage.Size = new System.Drawing.Size(1039, 769);
             this.task3TabPage.TabIndex = 2;
             this.task3TabPage.Text = "Задание 3 - Интерфейс";
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label23.Location = new System.Drawing.Point(96, 140);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(879, 97);
+            this.label23.TabIndex = 71;
+            this.label23.Tag = "Incorrect";
+            this.label23.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // resultLabel12
             // 
@@ -752,6 +762,18 @@
             this.task2TabPage.TabIndex = 1;
             this.task2TabPage.Text = "Задание 2 - Интерфейс";
             // 
+            // label22
+            // 
+            this.label22.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label22.Location = new System.Drawing.Point(96, 140);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(879, 97);
+            this.label22.TabIndex = 70;
+            this.label22.Tag = "Incorrect";
+            this.label22.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // resultLabel8
             // 
             this.resultLabel8.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1050,6 +1072,18 @@
             this.task1TabPage.TabIndex = 0;
             this.task1TabPage.Text = "Задание 1 - Интерфейс";
             // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label21.Location = new System.Drawing.Point(96, 140);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(879, 97);
+            this.label21.TabIndex = 69;
+            this.label21.Tag = "Incorrect";
+            this.label21.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // resultLabel4
             // 
             this.resultLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1298,7 +1332,7 @@
             this.panel2.Controls.Add(this.headerLabel1);
             this.panel2.Location = new System.Drawing.Point(0, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1043, 133);
+            this.panel2.Size = new System.Drawing.Size(1039, 133);
             this.panel2.TabIndex = 30;
             // 
             // pictureBox7
@@ -1364,6 +1398,19 @@
             this.task5Page.TabIndex = 5;
             this.task5Page.Text = "Задание 2 - Ссылки";
             this.task5Page.TextChanged += new System.EventHandler(this.AnswerTextBox_TextChanged);
+            // 
+            // label20
+            // 
+            this.label20.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label20.Location = new System.Drawing.Point(75, 148);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(879, 97);
+            this.label20.TabIndex = 69;
+            this.label20.Tag = "Incorrect";
+            this.label20.Text = "Требуется ввести формулу, которая будет написана в выделенной ячейке при копирова" +
+    "нии";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // resultLabel20
             // 
@@ -1535,68 +1582,6 @@
             this.headerLabel5.Text = "Задание 2";
             this.headerLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label19.Location = new System.Drawing.Point(75, 148);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(879, 97);
-            this.label19.TabIndex = 68;
-            this.label19.Tag = "Incorrect";
-            this.label19.Text = "Требуется ввести формулу, которая будет написана в выделенной ячейке при копирова" +
-    "нии";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label20.Location = new System.Drawing.Point(75, 148);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(879, 97);
-            this.label20.TabIndex = 69;
-            this.label20.Tag = "Incorrect";
-            this.label20.Text = "Требуется ввести формулу, которая будет написана в выделенной ячейке при копирова" +
-    "нии";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label21.Location = new System.Drawing.Point(96, 140);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(879, 97);
-            this.label21.TabIndex = 69;
-            this.label21.Tag = "Incorrect";
-            this.label21.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label22.Location = new System.Drawing.Point(96, 140);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(879, 97);
-            this.label22.TabIndex = 70;
-            this.label22.Tag = "Incorrect";
-            this.label22.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label23.Location = new System.Drawing.Point(96, 140);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(879, 97);
-            this.label23.TabIndex = 71;
-            this.label23.Tag = "Incorrect";
-            this.label23.Text = "Требуется соотнести элемент панели управления и его графическое обозначение";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // numOfTaskLabel
             // 
             this.numOfTaskLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -1610,6 +1595,22 @@
             this.numOfTaskLabel.Tag = "Incorrect";
             this.numOfTaskLabel.Text = "1 из 3";
             this.numOfTaskLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeWindowBoxButton.BackColor = System.Drawing.Color.Transparent;
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(962, 1);
+            this.changeWindowBoxButton.Name = "changeWindowBoxButton";
+            this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
+            this.changeWindowBoxButton.TabIndex = 71;
+            this.changeWindowBoxButton.Tag = "Fullscreen";
+            this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.changeWindowBoxButton.UseVisualStyleBackColor = false;
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
             // 
             // goNextButton
             // 
@@ -1662,8 +1663,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1037, 883);
+            this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.numOfTaskLabel);
-            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.goNextButton);
@@ -1746,7 +1747,6 @@
 
         private MyOfficeTable.MyButton goNextButton;
         private MyOfficeTable.MyButton goBackButton;
-        private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.TabPage task4Page;
@@ -1854,5 +1854,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label numOfTaskLabel;
+        private System.Windows.Forms.Button changeWindowBoxButton;
     }
 }

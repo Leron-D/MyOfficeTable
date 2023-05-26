@@ -1,4 +1,5 @@
 ﻿using MyOfficeTable.Forms;
+using MyOfficeTable.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace MyOfficeTable
         List<string> listOfTheoryThemes = new List<string>();
         List<string> listOfTestsThemes = new List<string>();
         List<int> listOfNumberOfQuestions = new List<int>();
+        bool loadForm = true;
 
         public SelectThemeForm(string mode)
         {
@@ -66,6 +68,21 @@ namespace MyOfficeTable
                 11,
                 9
             };
+
+            if (Settings.Default.isFullSize)
+            {
+                loadForm = false;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
+
             AddItemsToComboBox();
         }
 
@@ -169,6 +186,60 @@ namespace MyOfficeTable
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void СhangeWindowBoxButton_Click(object sender, EventArgs e)
+        {
+            loadForm = false;
+            if (changeWindowBoxButton.Tag == "Fullscreen")
+            {
+                Settings.Default.isFullSize = true;
+                this.WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                Settings.Default.isFullSize = false;
+                this.WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
+        }
+
+        private void SelectThemeForm_Resize(object sender, EventArgs e)
+        {
+            if (!loadForm)
+            {
+                if (WindowState == FormWindowState.Maximized)
+                {
+                    selectThemeComboBox.Size = new Size(1170, 52);
+                    selectThemeComboBox.Left = (ClientSize.Width - selectThemeComboBox.Width) / 2;
+                    selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2;
+                    selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 22);
+
+                    transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(440, 50);
+                    transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
+                    transitionButton.Top = selectThemeComboBox.Location.Y + 80;
+                    goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 80;
+                    goBackButton.Size = new Size(261, 50);
+                    transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 24, FontStyle.Bold);
+                }
+                else
+                {
+                    selectThemeComboBox.Size = new Size(866, 36);
+                    selectThemeComboBox.Left = (ClientSize.Width - selectThemeComboBox.Width) / 2;
+                    selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2;
+                    selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 14);
+
+                    transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(411, 44);
+                    transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
+                    transitionButton.Top = selectThemeComboBox.Location.Y + 60;
+                    goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 60;
+                    goBackButton.Size = new Size(151, 40);
+                    transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
+                }
+            }
         }
     }
 }

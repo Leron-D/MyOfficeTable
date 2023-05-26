@@ -21,6 +21,7 @@ namespace MyOfficeTable
         private Point currentOffset;
         private bool isMouseDown = false;
         ToolTip toolTip = new ToolTip();
+        bool loadForm = true;
 
         public TheoryForm(string lection)
         {
@@ -45,6 +46,20 @@ namespace MyOfficeTable
             toolTip.SetToolTip(cancelButton, "Закрыть");
             toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
             InitialWebView();
+
+            if (Settings.Default.isFullSize)
+            {
+                loadForm = false;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "Normalscreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
         }
 
         async void InitialWebView()
@@ -176,6 +191,25 @@ namespace MyOfficeTable
                     changeSizePanelButton.Tag = "Свернуть";
                     toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
                 }
+            }
+        }
+
+        private void СhangeWindowBoxButton_Click(object sender, EventArgs e)
+        {
+            loadForm = false;
+            if (changeWindowBoxButton.Tag == "Fullscreen")
+            {
+                Settings.Default.isFullSize = true;
+                this.WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                Settings.Default.isFullSize = false;
+                this.WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
             }
         }
     }

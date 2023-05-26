@@ -35,27 +35,29 @@
             this.referenceButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.interactiveTasksButton = new MyOfficeTable.ButtonCard();
             this.testingButton = new MyOfficeTable.ButtonCard();
             this.theoryButton = new MyOfficeTable.ButtonCard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.buttonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // headerLabel
             // 
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(343, 39);
+            this.headerLabel.Location = new System.Drawing.Point(133, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(607, 74);
+            this.headerLabel.Size = new System.Drawing.Size(1111, 134);
             this.headerLabel.TabIndex = 6;
             this.headerLabel.Text = "Электронное пособие\r\n«Основы работы в МойОфис Таблица»";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cancelButton
             // 
@@ -79,7 +81,7 @@
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(1155, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(1124, 0);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
             this.minimizeButton.TabIndex = 10;
@@ -105,12 +107,14 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Location = new System.Drawing.Point(-1, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1248, 134);
+            this.panel1.Size = new System.Drawing.Size(1247, 134);
             this.panel1.TabIndex = 41;
             // 
             // pictureBox1
@@ -123,35 +127,57 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // buttonPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel2.Controls.Add(this.interactiveTasksButton);
-            this.panel2.Controls.Add(this.testingButton);
-            this.panel2.Controls.Add(this.theoryButton);
-            this.panel2.Location = new System.Drawing.Point(51, 229);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1139, 434);
-            this.panel2.TabIndex = 42;
+            this.buttonPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPanel.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonPanel.Controls.Add(this.interactiveTasksButton);
+            this.buttonPanel.Controls.Add(this.testingButton);
+            this.buttonPanel.Controls.Add(this.theoryButton);
+            this.buttonPanel.Location = new System.Drawing.Point(51, 229);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(1139, 434);
+            this.buttonPanel.TabIndex = 42;
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Salmon;
             this.panel3.Location = new System.Drawing.Point(51, 229);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1139, 19);
             this.panel3.TabIndex = 9;
             // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeWindowBoxButton.BackColor = System.Drawing.Color.Transparent;
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(1165, 0);
+            this.changeWindowBoxButton.Name = "changeWindowBoxButton";
+            this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
+            this.changeWindowBoxButton.TabIndex = 72;
+            this.changeWindowBoxButton.Tag = "Fullscreen";
+            this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.changeWindowBoxButton.UseVisualStyleBackColor = false;
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
+            // 
             // interactiveTasksButton
             // 
+            this.interactiveTasksButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.interactiveTasksButton.BackColor = System.Drawing.Color.White;
             this.interactiveTasksButton.BackColorCurtain = System.Drawing.Color.RoyalBlue;
             this.interactiveTasksButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.interactiveTasksButton.FontDescrition = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.interactiveTasksButton.FontDescrition = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.interactiveTasksButton.FontHeader = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.interactiveTasksButton.ForeColorDescrition = System.Drawing.Color.Black;
             this.interactiveTasksButton.ForeColorHeader = System.Drawing.Color.White;
-            this.interactiveTasksButton.Location = new System.Drawing.Point(795, 93);
+            this.interactiveTasksButton.Location = new System.Drawing.Point(813, 93);
             this.interactiveTasksButton.Name = "interactiveTasksButton";
             this.interactiveTasksButton.Size = new System.Drawing.Size(271, 277);
             this.interactiveTasksButton.TabIndex = 2;
@@ -162,14 +188,15 @@
             // 
             // testingButton
             // 
+            this.testingButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.testingButton.BackColor = System.Drawing.Color.White;
             this.testingButton.BackColorCurtain = System.Drawing.Color.SeaGreen;
             this.testingButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.testingButton.FontDescrition = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.testingButton.FontDescrition = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.testingButton.FontHeader = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.testingButton.ForeColorDescrition = System.Drawing.Color.Black;
             this.testingButton.ForeColorHeader = System.Drawing.Color.White;
-            this.testingButton.Location = new System.Drawing.Point(433, 93);
+            this.testingButton.Location = new System.Drawing.Point(436, 93);
             this.testingButton.Name = "testingButton";
             this.testingButton.Size = new System.Drawing.Size(271, 277);
             this.testingButton.TabIndex = 1;
@@ -179,14 +206,15 @@
             // 
             // theoryButton
             // 
+            this.theoryButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.theoryButton.BackColor = System.Drawing.Color.White;
             this.theoryButton.BackColorCurtain = System.Drawing.Color.Tomato;
             this.theoryButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.theoryButton.FontDescrition = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.theoryButton.FontDescrition = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.theoryButton.FontHeader = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.theoryButton.ForeColorDescrition = System.Drawing.Color.Black;
             this.theoryButton.ForeColorHeader = System.Drawing.Color.White;
-            this.theoryButton.Location = new System.Drawing.Point(63, 93);
+            this.theoryButton.Location = new System.Drawing.Point(57, 93);
             this.theoryButton.Name = "theoryButton";
             this.theoryButton.Size = new System.Drawing.Size(271, 277);
             this.theoryButton.TabIndex = 0;
@@ -202,8 +230,9 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1240, 703);
+            this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.referenceButton);
@@ -212,16 +241,17 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1240, 703);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.buttonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -233,10 +263,11 @@
         private System.Windows.Forms.Button referenceButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel buttonPanel;
         private System.Windows.Forms.Panel panel3;
         private ButtonCard theoryButton;
         private ButtonCard interactiveTasksButton;
         private ButtonCard testingButton;
+        private System.Windows.Forms.Button changeWindowBoxButton;
     }
 }

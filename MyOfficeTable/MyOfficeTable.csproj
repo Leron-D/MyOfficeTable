@@ -220,10 +220,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MyOfficeTable.ico" />
-    <Content Include="Resources\cancel.png" />
     <None Include="Resources\Cut.jpg" />
     <None Include="Resources\checked.png" />
     <None Include="Resources\Correct.png" />
+    <None Include="Resources\cancel.png" />
     <Content Include="Resources\EvaulationCriterias.html" />
     <None Include="Resources\minimize.png" />
     <None Include="Resources\Incorrect.png" />
@@ -236,8 +236,10 @@
     <None Include="Resources\InteractiveTask3.jpg" />
     <None Include="Resources\InteractiveTask4.jpg" />
     <None Include="Resources\InteractiveTask5.jpg" />
+    <None Include="Resources\Fullscreen.png" />
     <Content Include="Resources\MyOfficeTable.ico" />
     <None Include="Resources\MyOfficeTable.jpg" />
+    <None Include="Resources\NormalScreen.png" />
     <Content Include="Resources\question.png" />
     <None Include="Resources\Цвет текста.png" />
     <None Include="Resources\Цвет заливки.png" />

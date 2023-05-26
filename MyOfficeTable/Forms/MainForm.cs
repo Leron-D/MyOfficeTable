@@ -1,4 +1,5 @@
 ﻿using MyOfficeTable.Forms;
+using MyOfficeTable.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,21 +17,35 @@ namespace MyOfficeTable
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        
+        bool loadForm = true;
+
         public MainForm()
         {
             InitializeComponent();
-            if(Properties.Settings.Default.IsFirstLoad)
+            if (Settings.Default.IsFirstLoad)
             {
                 Animator.Start();
-                Properties.Settings.Default.IsFirstLoad = false;
-                Properties.Settings.Default.Save();
+                Settings.Default.IsFirstLoad = false;
+                Settings.Default.Save();
             }
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(referenceButton, "Справка о программе");
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
+            if (Settings.Default.isFullSize)
+            {
+                loadForm = false;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "Normalscreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -95,6 +110,54 @@ namespace MyOfficeTable
             Hide();
             form.ShowDialog();
             Close();
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (!loadForm)
+            {
+                if (WindowState == FormWindowState.Maximized)
+                {
+                    interactiveTasksButton.Size = testingButton.Size = theoryButton.Size = new Size(328, 349);
+                    theoryButton.Left = 88;
+                    interactiveTasksButton.Left = buttonPanel.Width - 88 - interactiveTasksButton.Width;
+                    testingButton.Left = (buttonPanel.Width - testingButton.Width) / 2;
+                    theoryButton.Font = testingButton.Font = interactiveTasksButton.Font = theoryButton.FontDescrition = testingButton.FontDescrition =
+                    interactiveTasksButton.FontDescrition = new Font(theoryButton.Font.Name, 16);
+                    theoryButton.FontHeader = testingButton.FontHeader = interactiveTasksButton.FontHeader = new Font(theoryButton.Font.Name, 16, FontStyle.Bold);
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
+                }
+                else
+                {
+                    interactiveTasksButton.Size = testingButton.Size = theoryButton.Size = new Size(271, 277);
+                    theoryButton.Location = new Point(57, 93);
+                    testingButton.Location = new Point(436, 93);
+                    interactiveTasksButton.Location = new Point(813, 93);
+                    theoryButton.Font = testingButton.Font = interactiveTasksButton.Font = theoryButton.FontDescrition = testingButton.FontDescrition =
+                    interactiveTasksButton.FontDescrition = new Font(theoryButton.Font.Name, 12);
+                    theoryButton.FontHeader = testingButton.FontHeader = interactiveTasksButton.FontHeader = new Font(theoryButton.Font.Name, 12, FontStyle.Bold);
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
+                }
+            }
+        }
+
+        private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
+        {
+            loadForm = false;
+            if (changeWindowBoxButton.Tag == "Fullscreen")
+            {
+                Settings.Default.isFullSize = true;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                Settings.Default.isFullSize = false;
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
         }
     }
 }

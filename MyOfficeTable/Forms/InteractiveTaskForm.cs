@@ -29,10 +29,10 @@ namespace MyOfficeTable.Forms
 
         private void LoadForm()
         {
+            AutoScaleMode = AutoScaleMode.Font;
             Settings.Default.firstLoadInstruction = false;
             Settings.Default.Save();
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(helpButton, "Помощь");
             tabControl.Multiline = true;
             tabControl.Appearance = TabAppearance.Buttons;
             tabControl.ItemSize = new System.Drawing.Size(0, 1);
@@ -279,19 +279,6 @@ namespace MyOfficeTable.Forms
             }
         }
 
-        private void HelpButton_Click(object sender, EventArgs e)
-        {
-            helpButton.Enabled = false;
-            InstructionForm form = new InstructionForm(theme);
-            form.FormClosed += InstructionForm_Closed;
-            form.Show();
-        }
-
-        private void InstructionForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            helpButton.Enabled = true;
-        }
-
         void ShowForm(Form form)
         {
             Hide();
@@ -302,6 +289,22 @@ namespace MyOfficeTable.Forms
         private void AnswerTextBox_TextChanged(object sender, EventArgs e)
         {
             CheckCorrectness();
+        }
+
+        private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
+        {
+            if (changeWindowBoxButton.Tag == "Fullscreen")
+            {
+                this.WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
         }
     }
 }

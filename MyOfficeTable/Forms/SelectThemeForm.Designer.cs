@@ -34,10 +34,11 @@
             this.headerLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.headerPictureBox = new System.Windows.Forms.PictureBox();
-            this.selectThemeComboBox = new MyOfficeTable.MyComboBox();
-            this.transitionButton = new MyOfficeTable.MyButton();
-            this.goToEvaluationCriteriasButton = new MyOfficeTable.MyButton();
+            this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.goBackButton = new MyOfficeTable.MyButton();
+            this.goToEvaluationCriteriasButton = new MyOfficeTable.MyButton();
+            this.transitionButton = new MyOfficeTable.MyButton();
+            this.selectThemeComboBox = new MyOfficeTable.MyComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(981, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(940, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
             this.minimizeButton.TabIndex = 12;
@@ -76,15 +77,14 @@
             // 
             this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(416, 57);
+            this.headerLabel.Location = new System.Drawing.Point(130, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(228, 39);
+            this.headerLabel.Size = new System.Drawing.Size(927, 133);
             this.headerLabel.TabIndex = 14;
             this.headerLabel.Text = "Выбор темы";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -108,24 +108,64 @@
             this.headerPictureBox.TabIndex = 43;
             this.headerPictureBox.TabStop = false;
             // 
-            // selectThemeComboBox
+            // changeWindowBoxButton
             // 
-            this.selectThemeComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.selectThemeComboBox.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.selectThemeComboBox.BorderSize = 1;
-            this.selectThemeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.selectThemeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.selectThemeComboBox.ForeColor = System.Drawing.Color.DimGray;
-            this.selectThemeComboBox.IconColor = System.Drawing.Color.LightSeaGreen;
-            this.selectThemeComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.selectThemeComboBox.ListTextColor = System.Drawing.Color.DimGray;
-            this.selectThemeComboBox.Location = new System.Drawing.Point(97, 225);
-            this.selectThemeComboBox.MinimumSize = new System.Drawing.Size(200, 0);
-            this.selectThemeComboBox.Name = "selectThemeComboBox";
-            this.selectThemeComboBox.Padding = new System.Windows.Forms.Padding(1);
-            this.selectThemeComboBox.Size = new System.Drawing.Size(866, 36);
-            this.selectThemeComboBox.TabIndex = 40;
-            this.selectThemeComboBox.Texts = "";
+            this.changeWindowBoxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeWindowBoxButton.BackColor = System.Drawing.Color.Transparent;
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(981, 1);
+            this.changeWindowBoxButton.Name = "changeWindowBoxButton";
+            this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
+            this.changeWindowBoxButton.TabIndex = 74;
+            this.changeWindowBoxButton.Tag = "Fullscreen";
+            this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.changeWindowBoxButton.UseVisualStyleBackColor = false;
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.СhangeWindowBoxButton_Click);
+            // 
+            // goBackButton
+            // 
+            this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.goBackButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.goBackButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.goBackButton.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.goBackButton.BorderRadius = 20;
+            this.goBackButton.BorderSize = 0;
+            this.goBackButton.FlatAppearance.BorderSize = 0;
+            this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goBackButton.ForeColor = System.Drawing.Color.White;
+            this.goBackButton.Location = new System.Drawing.Point(0, 411);
+            this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(151, 40);
+            this.goBackButton.TabIndex = 43;
+            this.goBackButton.Text = "Назад";
+            this.goBackButton.TextColor = System.Drawing.Color.White;
+            this.goBackButton.UseVisualStyleBackColor = false;
+            this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
+            // 
+            // goToEvaluationCriteriasButton
+            // 
+            this.goToEvaluationCriteriasButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.goToEvaluationCriteriasButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.goToEvaluationCriteriasButton.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.goToEvaluationCriteriasButton.BorderRadius = 20;
+            this.goToEvaluationCriteriasButton.BorderSize = 0;
+            this.goToEvaluationCriteriasButton.FlatAppearance.BorderSize = 0;
+            this.goToEvaluationCriteriasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goToEvaluationCriteriasButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goToEvaluationCriteriasButton.ForeColor = System.Drawing.Color.White;
+            this.goToEvaluationCriteriasButton.Location = new System.Drawing.Point(327, 345);
+            this.goToEvaluationCriteriasButton.MinimumSize = new System.Drawing.Size(150, 40);
+            this.goToEvaluationCriteriasButton.Name = "goToEvaluationCriteriasButton";
+            this.goToEvaluationCriteriasButton.Size = new System.Drawing.Size(411, 44);
+            this.goToEvaluationCriteriasButton.TabIndex = 42;
+            this.goToEvaluationCriteriasButton.Text = "Посмотреть критерии оценивания";
+            this.goToEvaluationCriteriasButton.TextColor = System.Drawing.Color.White;
+            this.goToEvaluationCriteriasButton.UseVisualStyleBackColor = false;
+            this.goToEvaluationCriteriasButton.Click += new System.EventHandler(this.GoToEvaulationCriterias_Click);
             // 
             // transitionButton
             // 
@@ -148,47 +188,24 @@
             this.transitionButton.UseVisualStyleBackColor = false;
             this.transitionButton.Click += new System.EventHandler(this.TransitionButton_Click);
             // 
-            // goToEvaluationCriteriasButton
+            // selectThemeComboBox
             // 
-            this.goToEvaluationCriteriasButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.goToEvaluationCriteriasButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            this.goToEvaluationCriteriasButton.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.goToEvaluationCriteriasButton.BorderRadius = 20;
-            this.goToEvaluationCriteriasButton.BorderSize = 0;
-            this.goToEvaluationCriteriasButton.FlatAppearance.BorderSize = 0;
-            this.goToEvaluationCriteriasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goToEvaluationCriteriasButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goToEvaluationCriteriasButton.ForeColor = System.Drawing.Color.White;
-            this.goToEvaluationCriteriasButton.Location = new System.Drawing.Point(327, 351);
-            this.goToEvaluationCriteriasButton.MinimumSize = new System.Drawing.Size(150, 40);
-            this.goToEvaluationCriteriasButton.Name = "goToEvaluationCriteriasButton";
-            this.goToEvaluationCriteriasButton.Size = new System.Drawing.Size(411, 44);
-            this.goToEvaluationCriteriasButton.TabIndex = 42;
-            this.goToEvaluationCriteriasButton.Text = "Посмотреть критерии оценивания";
-            this.goToEvaluationCriteriasButton.TextColor = System.Drawing.Color.White;
-            this.goToEvaluationCriteriasButton.UseVisualStyleBackColor = false;
-            this.goToEvaluationCriteriasButton.Click += new System.EventHandler(this.GoToEvaulationCriterias_Click);
-            // 
-            // goBackButton
-            // 
-            this.goBackButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BorderRadius = 20;
-            this.goBackButton.BorderSize = 0;
-            this.goBackButton.FlatAppearance.BorderSize = 0;
-            this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.ForeColor = System.Drawing.Color.White;
-            this.goBackButton.Location = new System.Drawing.Point(0, 411);
-            this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
-            this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(151, 40);
-            this.goBackButton.TabIndex = 43;
-            this.goBackButton.Text = "Назад";
-            this.goBackButton.TextColor = System.Drawing.Color.White;
-            this.goBackButton.UseVisualStyleBackColor = false;
-            this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
+            this.selectThemeComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.selectThemeComboBox.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.selectThemeComboBox.BorderSize = 1;
+            this.selectThemeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectThemeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectThemeComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.selectThemeComboBox.IconColor = System.Drawing.Color.LightSeaGreen;
+            this.selectThemeComboBox.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.selectThemeComboBox.ListTextColor = System.Drawing.Color.DimGray;
+            this.selectThemeComboBox.Location = new System.Drawing.Point(97, 225);
+            this.selectThemeComboBox.MinimumSize = new System.Drawing.Size(200, 2);
+            this.selectThemeComboBox.Name = "selectThemeComboBox";
+            this.selectThemeComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.selectThemeComboBox.Size = new System.Drawing.Size(866, 36);
+            this.selectThemeComboBox.TabIndex = 40;
+            this.selectThemeComboBox.Texts = "";
             // 
             // SelectThemeForm
             // 
@@ -196,6 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1054, 452);
+            this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.goToEvaluationCriteriasButton);
             this.Controls.Add(this.transitionButton);
@@ -206,14 +224,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1054, 452);
             this.Name = "SelectThemeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выбор темы";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseUp);
+            this.Resize += new System.EventHandler(this.SelectThemeForm_Resize);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -230,5 +249,6 @@
         private MyOfficeTable.MyButton goToEvaluationCriteriasButton;
         private System.Windows.Forms.PictureBox headerPictureBox;
         private MyOfficeTable.MyButton goBackButton;
+        private System.Windows.Forms.Button changeWindowBoxButton;
     }
 }

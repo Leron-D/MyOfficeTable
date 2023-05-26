@@ -133,6 +133,16 @@ namespace MyOfficeTable.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fullscreen {
+            get {
+                object obj = ResourceManager.GetObject("Fullscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Incorrect {
             get {
                 object obj = ResourceManager.GetObject("Incorrect", resourceCulture);
@@ -247,6 +257,16 @@ namespace MyOfficeTable.Properties {
             get {
                 object obj = ResourceManager.GetObject("MyOfficeTable1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NormalScreen {
+            get {
+                object obj = ResourceManager.GetObject("NormalScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

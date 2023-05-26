@@ -70,5 +70,17 @@ namespace MyOfficeTable.Properties {
                 this["testFileName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isFullSize {
+            get {
+                return ((bool)(this["isFullSize"]));
+            }
+            set {
+                this["isFullSize"] = value;
+            }
+        }
     }
 }

@@ -42,6 +42,7 @@
             this.testingButton = new System.Windows.Forms.Button();
             this.changeSizePanelButton = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.goBackButton = new MyOfficeTable.MyButton();
             this.rightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).BeginInit();
@@ -70,7 +71,7 @@
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(1320, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(1279, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
             this.minimizeButton.TabIndex = 12;
@@ -82,15 +83,14 @@
             // 
             this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(482, 49);
+            this.headerLabel.Location = new System.Drawing.Point(131, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(453, 39);
+            this.headerLabel.Size = new System.Drawing.Size(1266, 133);
             this.headerLabel.TabIndex = 7;
             this.headerLabel.Text = "Теоретический материал";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rightPanel
             // 
@@ -120,12 +120,14 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1403, 135);
+            this.panel1.Size = new System.Drawing.Size(1400, 135);
             this.panel1.TabIndex = 30;
             // 
             // pictureBox1
@@ -153,13 +155,13 @@
             this.goToLectionButton.BackColor = System.Drawing.Color.LightSeaGreen;
             this.goToLectionButton.FlatAppearance.BorderSize = 0;
             this.goToLectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goToLectionButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goToLectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.goToLectionButton.ForeColor = System.Drawing.Color.White;
             this.goToLectionButton.Location = new System.Drawing.Point(3, 239);
             this.goToLectionButton.Name = "goToLectionButton";
             this.goToLectionButton.Size = new System.Drawing.Size(284, 50);
             this.goToLectionButton.TabIndex = 34;
-            this.goToLectionButton.Text = "Лекция";
+            this.goToLectionButton.Text = "Перейти к лекции";
             this.goToLectionButton.UseVisualStyleBackColor = false;
             this.goToLectionButton.Click += new System.EventHandler(this.GoToLectionButton_Click);
             // 
@@ -169,7 +171,7 @@
             this.testingButton.BackColor = System.Drawing.Color.LightSeaGreen;
             this.testingButton.FlatAppearance.BorderSize = 0;
             this.testingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testingButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.testingButton.ForeColor = System.Drawing.Color.White;
             this.testingButton.Location = new System.Drawing.Point(3, 322);
             this.testingButton.Name = "testingButton";
@@ -200,6 +202,22 @@
             this.timer.Interval = 20;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeWindowBoxButton.BackColor = System.Drawing.Color.Transparent;
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(1320, 1);
+            this.changeWindowBoxButton.Name = "changeWindowBoxButton";
+            this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
+            this.changeWindowBoxButton.TabIndex = 73;
+            this.changeWindowBoxButton.Tag = "Fullscreen";
+            this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.changeWindowBoxButton.UseVisualStyleBackColor = false;
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.СhangeWindowBoxButton_Click);
+            // 
             // goBackButton
             // 
             this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -215,9 +233,9 @@
             this.goBackButton.Location = new System.Drawing.Point(0, 907);
             this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(151, 40);
+            this.goBackButton.Size = new System.Drawing.Size(290, 40);
             this.goBackButton.TabIndex = 44;
-            this.goBackButton.Text = "Назад";
+            this.goBackButton.Text = "Назад к выбору темы";
             this.goBackButton.TextColor = System.Drawing.Color.White;
             this.goBackButton.UseVisualStyleBackColor = false;
             this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
@@ -228,6 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1394, 948);
+            this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.changeSizePanelButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.leftPanel);
@@ -247,7 +266,6 @@
             this.rightPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.leftPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -268,5 +286,6 @@
         private System.Windows.Forms.Button goToLectionButton;
         private System.Windows.Forms.Button changeSizePanelButton;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button changeWindowBoxButton;
     }
 }
