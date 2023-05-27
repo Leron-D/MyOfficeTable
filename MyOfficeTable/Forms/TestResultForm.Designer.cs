@@ -32,10 +32,7 @@
             this.headerLabel = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rightNumLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.fullNumberOfQuestionsLabel = new System.Windows.Forms.Label();
+            this.rightNumberLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.markLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
@@ -80,61 +77,19 @@
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // rightNumberLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.rightNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(13, 215);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 27);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Вы ответили правильно на";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // rightNumLabel
-            // 
-            this.rightNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rightNumLabel.AutoSize = true;
-            this.rightNumLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightNumLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.rightNumLabel.Location = new System.Drawing.Point(326, 215);
-            this.rightNumLabel.Name = "rightNumLabel";
-            this.rightNumLabel.Size = new System.Drawing.Size(27, 27);
-            this.rightNumLabel.TabIndex = 34;
-            this.rightNumLabel.Text = "#";
-            this.rightNumLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label3.Location = new System.Drawing.Point(367, 215);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 27);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "из";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // fullNumberOfQuestionsLabel
-            // 
-            this.fullNumberOfQuestionsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullNumberOfQuestionsLabel.AutoSize = true;
-            this.fullNumberOfQuestionsLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullNumberOfQuestionsLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.fullNumberOfQuestionsLabel.Location = new System.Drawing.Point(410, 215);
-            this.fullNumberOfQuestionsLabel.Name = "fullNumberOfQuestionsLabel";
-            this.fullNumberOfQuestionsLabel.Size = new System.Drawing.Size(151, 27);
-            this.fullNumberOfQuestionsLabel.TabIndex = 36;
-            this.fullNumberOfQuestionsLabel.Text = "10 вопросов";
-            this.fullNumberOfQuestionsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.rightNumberLabel.AutoSize = true;
+            this.rightNumberLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightNumberLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.rightNumberLabel.Location = new System.Drawing.Point(13, 215);
+            this.rightNumberLabel.Name = "rightNumberLabel";
+            this.rightNumberLabel.Size = new System.Drawing.Size(495, 27);
+            this.rightNumberLabel.TabIndex = 33;
+            this.rightNumberLabel.Text = "Вы ответили правильно на # из # вопросов";
+            this.rightNumberLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
@@ -202,10 +157,7 @@
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.markLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.fullNumberOfQuestionsLabel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.rightNumLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.rightNumberLabel);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -227,10 +179,7 @@
 
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label rightNumLabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label fullNumberOfQuestionsLabel;
+        private System.Windows.Forms.Label rightNumberLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label markLabel;
         private System.Windows.Forms.Button cancelButton;

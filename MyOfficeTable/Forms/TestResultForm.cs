@@ -22,9 +22,8 @@ namespace MyOfficeTable
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
-            rightNumLabel.Text = rightNum.ToString();
+            rightNumberLabel.Text = $"Вы ответили правильно на {rightNum} из {numberOfQuestions} вопросов";
             markLabel.Text = mark.ToString();
-            fullNumberOfQuestionsLabel.Text = $"{numberOfQuestions} вопросов";
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
         }
 
