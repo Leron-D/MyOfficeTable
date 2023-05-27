@@ -147,7 +147,7 @@
             this.task1ReferencesTabPage.Controls.Add(this.panel5);
             this.task1ReferencesTabPage.Location = new System.Drawing.Point(4, 22);
             this.task1ReferencesTabPage.Name = "task1ReferencesTabPage";
-            this.task1ReferencesTabPage.Size = new System.Drawing.Size(1039, 769);
+            this.task1ReferencesTabPage.Size = new System.Drawing.Size(1039, 754);
             this.task1ReferencesTabPage.TabIndex = 4;
             this.task1ReferencesTabPage.Text = "Задание 1 - Ссылки";
             // 
@@ -359,7 +359,7 @@
             this.task1InterfaceTabPage.Location = new System.Drawing.Point(4, 22);
             this.task1InterfaceTabPage.Name = "task1InterfaceTabPage";
             this.task1InterfaceTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.task1InterfaceTabPage.Size = new System.Drawing.Size(1039, 769);
+            this.task1InterfaceTabPage.Size = new System.Drawing.Size(1039, 754);
             this.task1InterfaceTabPage.TabIndex = 0;
             this.task1InterfaceTabPage.Text = "Задание 1 - Интерфейс";
             // 
@@ -383,7 +383,7 @@
             this.resultLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel4.Location = new System.Drawing.Point(475, 674);
+            this.resultLabel4.Location = new System.Drawing.Point(475, 667);
             this.resultLabel4.Name = "resultLabel4";
             this.resultLabel4.Size = new System.Drawing.Size(37, 37);
             this.resultLabel4.TabIndex = 40;
@@ -397,7 +397,7 @@
             this.resultLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel3.Location = new System.Drawing.Point(475, 551);
+            this.resultLabel3.Location = new System.Drawing.Point(475, 544);
             this.resultLabel3.Name = "resultLabel3";
             this.resultLabel3.Size = new System.Drawing.Size(37, 37);
             this.resultLabel3.TabIndex = 39;
@@ -411,7 +411,7 @@
             this.resultLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel2.Location = new System.Drawing.Point(475, 421);
+            this.resultLabel2.Location = new System.Drawing.Point(475, 414);
             this.resultLabel2.Name = "resultLabel2";
             this.resultLabel2.Size = new System.Drawing.Size(37, 37);
             this.resultLabel2.TabIndex = 38;
@@ -425,7 +425,7 @@
             this.resultLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel1.Location = new System.Drawing.Point(475, 290);
+            this.resultLabel1.Location = new System.Drawing.Point(475, 283);
             this.resultLabel1.Name = "resultLabel1";
             this.resultLabel1.Size = new System.Drawing.Size(37, 37);
             this.resultLabel1.TabIndex = 37;
@@ -439,7 +439,7 @@
             this.nameLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel4.Location = new System.Drawing.Point(0, 643);
+            this.nameLabel4.Location = new System.Drawing.Point(0, 636);
             this.nameLabel4.Name = "nameLabel4";
             this.nameLabel4.Size = new System.Drawing.Size(303, 100);
             this.nameLabel4.TabIndex = 36;
@@ -455,7 +455,7 @@
             this.imagesPanel.Controls.Add(this.sourcePictureBox1);
             this.imagesPanel.Controls.Add(this.sourcePictureBox3);
             this.imagesPanel.Controls.Add(this.sourcePictureBox4);
-            this.imagesPanel.Location = new System.Drawing.Point(574, 347);
+            this.imagesPanel.Location = new System.Drawing.Point(574, 340);
             this.imagesPanel.Name = "imagesPanel";
             this.imagesPanel.Size = new System.Drawing.Size(429, 314);
             this.imagesPanel.TabIndex = 12;
@@ -541,7 +541,7 @@
             this.nameLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel3.Location = new System.Drawing.Point(0, 519);
+            this.nameLabel3.Location = new System.Drawing.Point(0, 512);
             this.nameLabel3.Name = "nameLabel3";
             this.nameLabel3.Size = new System.Drawing.Size(303, 100);
             this.nameLabel3.TabIndex = 35;
@@ -552,7 +552,7 @@
             // 
             this.destinationPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.destinationPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.destinationPictureBox4.Location = new System.Drawing.Point(333, 643);
+            this.destinationPictureBox4.Location = new System.Drawing.Point(333, 636);
             this.destinationPictureBox4.Name = "destinationPictureBox4";
             this.destinationPictureBox4.Size = new System.Drawing.Size(100, 100);
             this.destinationPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -567,7 +567,7 @@
             this.destinationPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.destinationPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.destinationPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.destinationPictureBox2.Location = new System.Drawing.Point(333, 387);
+            this.destinationPictureBox2.Location = new System.Drawing.Point(333, 380);
             this.destinationPictureBox2.Name = "destinationPictureBox2";
             this.destinationPictureBox2.Size = new System.Drawing.Size(100, 100);
             this.destinationPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -582,7 +582,7 @@
             this.nameLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel2.Location = new System.Drawing.Point(0, 387);
+            this.nameLabel2.Location = new System.Drawing.Point(0, 380);
             this.nameLabel2.Name = "nameLabel2";
             this.nameLabel2.Size = new System.Drawing.Size(303, 100);
             this.nameLabel2.TabIndex = 32;
@@ -594,7 +594,7 @@
             this.nameLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel1.Location = new System.Drawing.Point(0, 257);
+            this.nameLabel1.Location = new System.Drawing.Point(0, 250);
             this.nameLabel1.Name = "nameLabel1";
             this.nameLabel1.Size = new System.Drawing.Size(303, 100);
             this.nameLabel1.TabIndex = 31;
@@ -606,7 +606,7 @@
             // 
             this.destinationPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.destinationPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.destinationPictureBox3.Location = new System.Drawing.Point(333, 516);
+            this.destinationPictureBox3.Location = new System.Drawing.Point(333, 509);
             this.destinationPictureBox3.Name = "destinationPictureBox3";
             this.destinationPictureBox3.Size = new System.Drawing.Size(100, 100);
             this.destinationPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -621,7 +621,7 @@
             this.destinationPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.destinationPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.destinationPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.destinationPictureBox1.Location = new System.Drawing.Point(333, 257);
+            this.destinationPictureBox1.Location = new System.Drawing.Point(333, 250);
             this.destinationPictureBox1.Name = "destinationPictureBox1";
             this.destinationPictureBox1.Size = new System.Drawing.Size(100, 100);
             this.destinationPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -679,7 +679,7 @@
             this.tabControl.Location = new System.Drawing.Point(-5, 39);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1047, 795);
+            this.tabControl.Size = new System.Drawing.Size(1047, 780);
             this.tabControl.TabIndex = 56;
             // 
             // numOfTaskLabel
@@ -687,9 +687,9 @@
             this.numOfTaskLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.numOfTaskLabel.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOfTaskLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.numOfTaskLabel.Location = new System.Drawing.Point(398, 833);
+            this.numOfTaskLabel.Location = new System.Drawing.Point(398, 822);
             this.numOfTaskLabel.Name = "numOfTaskLabel";
-            this.numOfTaskLabel.Size = new System.Drawing.Size(255, 47);
+            this.numOfTaskLabel.Size = new System.Drawing.Size(255, 58);
             this.numOfTaskLabel.TabIndex = 70;
             this.numOfTaskLabel.Tag = "Incorrect";
             this.numOfTaskLabel.Text = "Номер вопроса";
@@ -721,12 +721,12 @@
             this.goNextButton.BorderSize = 0;
             this.goNextButton.FlatAppearance.BorderSize = 0;
             this.goNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goNextButton.ForeColor = System.Drawing.Color.White;
-            this.goNextButton.Location = new System.Drawing.Point(862, 840);
+            this.goNextButton.Location = new System.Drawing.Point(840, 840);
             this.goNextButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goNextButton.Name = "goNextButton";
-            this.goNextButton.Size = new System.Drawing.Size(172, 40);
+            this.goNextButton.Size = new System.Drawing.Size(194, 40);
             this.goNextButton.TabIndex = 58;
             this.goNextButton.Text = "Продолжить";
             this.goNextButton.TextColor = System.Drawing.Color.White;
@@ -744,12 +744,12 @@
             this.goBackButton.Enabled = false;
             this.goBackButton.FlatAppearance.BorderSize = 0;
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goBackButton.ForeColor = System.Drawing.Color.White;
-            this.goBackButton.Location = new System.Drawing.Point(-1, 840);
+            this.goBackButton.Location = new System.Drawing.Point(0, 840);
             this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(151, 40);
+            this.goBackButton.Size = new System.Drawing.Size(194, 40);
             this.goBackButton.TabIndex = 57;
             this.goBackButton.Text = "Назад";
             this.goBackButton.TextColor = System.Drawing.Color.White;
