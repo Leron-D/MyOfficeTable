@@ -35,7 +35,7 @@
             this.taskLabel2 = new System.Windows.Forms.Label();
             this.resultLabel8 = new System.Windows.Forms.Label();
             this.resultLabel7 = new System.Windows.Forms.Label();
-            this.resultLabel10 = new System.Windows.Forms.Label();
+            this.resultLabel6 = new System.Windows.Forms.Label();
             this.resultLabel5 = new System.Windows.Forms.Label();
             this.answerTextBox4 = new System.Windows.Forms.TextBox();
             this.answerTextBox3 = new System.Windows.Forms.TextBox();
@@ -134,7 +134,7 @@
             this.task1ReferencesTabPage.Controls.Add(this.taskLabel2);
             this.task1ReferencesTabPage.Controls.Add(this.resultLabel8);
             this.task1ReferencesTabPage.Controls.Add(this.resultLabel7);
-            this.task1ReferencesTabPage.Controls.Add(this.resultLabel10);
+            this.task1ReferencesTabPage.Controls.Add(this.resultLabel6);
             this.task1ReferencesTabPage.Controls.Add(this.resultLabel5);
             this.task1ReferencesTabPage.Controls.Add(this.answerTextBox4);
             this.task1ReferencesTabPage.Controls.Add(this.answerTextBox3);
@@ -168,6 +168,7 @@
             // 
             // resultLabel8
             // 
+            this.resultLabel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.resultLabel8.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel8.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel8.Location = new System.Drawing.Point(975, 686);
@@ -181,6 +182,7 @@
             // 
             // resultLabel7
             // 
+            this.resultLabel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel7.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel7.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel7.Location = new System.Drawing.Point(423, 686);
@@ -192,21 +194,23 @@
             this.resultLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.resultLabel7.Visible = false;
             // 
-            // resultLabel10
+            // resultLabel6
             // 
-            this.resultLabel10.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultLabel10.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel10.Location = new System.Drawing.Point(975, 435);
-            this.resultLabel10.Name = "resultLabel10";
-            this.resultLabel10.Size = new System.Drawing.Size(37, 37);
-            this.resultLabel10.TabIndex = 65;
-            this.resultLabel10.Tag = "Incorrect";
-            this.resultLabel10.Text = "2";
-            this.resultLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.resultLabel10.Visible = false;
+            this.resultLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.resultLabel6.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel6.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.resultLabel6.Location = new System.Drawing.Point(975, 435);
+            this.resultLabel6.Name = "resultLabel6";
+            this.resultLabel6.Size = new System.Drawing.Size(37, 37);
+            this.resultLabel6.TabIndex = 65;
+            this.resultLabel6.Tag = "Incorrect";
+            this.resultLabel6.Text = "2";
+            this.resultLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel6.Visible = false;
             // 
             // resultLabel5
             // 
+            this.resultLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel5.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel5.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel5.Location = new System.Drawing.Point(423, 434);
@@ -220,6 +224,7 @@
             // 
             // answerTextBox4
             // 
+            this.answerTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.answerTextBox4.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerTextBox4.Location = new System.Drawing.Point(627, 686);
             this.answerTextBox4.Name = "answerTextBox4";
@@ -229,6 +234,7 @@
             // 
             // answerTextBox3
             // 
+            this.answerTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.answerTextBox3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerTextBox3.Location = new System.Drawing.Point(75, 686);
             this.answerTextBox3.Name = "answerTextBox3";
@@ -238,6 +244,7 @@
             // 
             // answerTextBox2
             // 
+            this.answerTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.answerTextBox2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerTextBox2.Location = new System.Drawing.Point(627, 435);
             this.answerTextBox2.Name = "answerTextBox2";
@@ -247,6 +254,7 @@
             // 
             // answerTextBox1
             // 
+            this.answerTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.answerTextBox1.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerTextBox1.Location = new System.Drawing.Point(75, 435);
             this.answerTextBox1.Name = "answerTextBox1";
@@ -256,6 +264,7 @@
             // 
             // formulaPictureBox4
             // 
+            this.formulaPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.formulaPictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.formulaPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.formulaPictureBox4.Image = global::MyOfficeTable.Properties.Resources.InteractiveTask4;
@@ -268,6 +277,7 @@
             // 
             // formulaPictureBox2
             // 
+            this.formulaPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.formulaPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.formulaPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.formulaPictureBox2.Image = global::MyOfficeTable.Properties.Resources.InteractiveTask2;
@@ -280,6 +290,7 @@
             // 
             // formulaPictureBox3
             // 
+            this.formulaPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.formulaPictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.formulaPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.formulaPictureBox3.Image = global::MyOfficeTable.Properties.Resources.InteractiveTask3;
@@ -292,6 +303,7 @@
             // 
             // formulaPictureBox1
             // 
+            this.formulaPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.formulaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.formulaPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.formulaPictureBox1.Image = global::MyOfficeTable.Properties.Resources.InteractiveTask1;
@@ -301,6 +313,8 @@
             this.formulaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.formulaPictureBox1.TabIndex = 56;
             this.formulaPictureBox1.TabStop = false;
+            this.formulaPictureBox1.LocationChanged += new System.EventHandler(this.FormulaPictureBox1_LocationChanged);
+            this.formulaPictureBox1.Resize += new System.EventHandler(this.FormulaPictureBox1_Resize);
             // 
             // panel5
             // 
@@ -837,7 +851,7 @@
         private System.Windows.Forms.PictureBox formulaPictureBox1;
         private System.Windows.Forms.Label resultLabel8;
         private System.Windows.Forms.Label resultLabel7;
-        private System.Windows.Forms.Label resultLabel10;
+        private System.Windows.Forms.Label resultLabel6;
         private System.Windows.Forms.Label resultLabel5;
         private System.Windows.Forms.Label taskLabel2;
         private System.Windows.Forms.Label taskLabel1;

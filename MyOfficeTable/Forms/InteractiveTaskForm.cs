@@ -60,7 +60,6 @@ namespace MyOfficeTable.Forms
             sourcePictureBox1.AllowDrop = sourcePictureBox2.AllowDrop = sourcePictureBox3.AllowDrop = sourcePictureBox4.AllowDrop = sourcePictureBox4.AllowDrop = true;
             headerLabel1.Text = headerLabel2.Text = theme;
             srcPictureBox = null;
-            numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
 
             if (theme == "Интерфейс табличного процессора")
             {
@@ -218,7 +217,7 @@ namespace MyOfficeTable.Forms
                 listOfResultLabels2 = new List<Label>
                 {
                     resultLabel5,
-                    resultLabel10,
+                    resultLabel6,
                     resultLabel7,
                     resultLabel8
                 };
@@ -364,7 +363,7 @@ namespace MyOfficeTable.Forms
                 else
                     ShowForm(new SelectThemeForm("Интерактивные задания"));
             }
-            else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel10.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
+            else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
             {
                 if (numOfTask != numberOfTasks)
                     TakeTaskByReferences();
@@ -517,6 +516,13 @@ namespace MyOfficeTable.Forms
             changeWindowBoxButton.Image = Resources.Fullscreen;
             headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 28, FontStyle.Bold);
             taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 24, FontStyle.Bold);
+            numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 24, FontStyle.Bold);
+
+            goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 18, FontStyle.Bold);
+            goBackButton.Size = goNextButton.Size = new Size(194, 40);
+            goBackButton.Location = new Point(0, 840);
+            goNextButton.Location = new Point(840, 840);
+
             if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
                 imagesPanel.Size = new Size(429, 314);
@@ -525,15 +531,17 @@ namespace MyOfficeTable.Forms
                 sourcePictureBox1.Size = sourcePictureBox2.Size = sourcePictureBox3.Size = sourcePictureBox4.Size = new Size(100, 100);
                 destinationPictureBox1.Location = new Point(333, taskLabel1.Location.Y + taskLabel1.Height + 27);
                 nameLabel1.Font = nameLabel2.Font = nameLabel3.Font = nameLabel4.Font = new Font(nameLabel1.Font.Name, 24, FontStyle.Bold);
+
                 sourcePictureBox2.Location = new Point(63, 75);
                 sourcePictureBox3.Location = new Point(63, 199);
                 sourcePictureBox4.Location = new Point(266, 75);
                 sourcePictureBox1.Location = new Point(266, 199);
-                numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 24, FontStyle.Bold);
-                goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 18, FontStyle.Bold);
-                goBackButton.Size = goNextButton.Size = new Size(194, 40);
-                goBackButton.Location = new Point(0, 840);
-                goNextButton.Location = new Point(840, 840);
+            }
+            else
+            {
+                formulaPictureBox1.Size = formulaPictureBox2.Size = formulaPictureBox3.Size = formulaPictureBox4.Size = new Size(327, 134);
+                formulaPictureBox1.Location = new Point(75, 277);
+                answerTextBox1.Font = answerTextBox2.Font = answerTextBox3.Font = answerTextBox4.Font = new Font(answerTextBox1.Font.Name, 22, FontStyle.Bold);
             }
             Settings.Default.isFullSize = false;
         }
@@ -542,7 +550,14 @@ namespace MyOfficeTable.Forms
         {
             changeWindowBoxButton.Image = Resources.NormalScreen;
             headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 36, FontStyle.Bold);
-            taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 28, FontStyle.Bold);
+            taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 32, FontStyle.Bold);
+            numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 28, FontStyle.Bold);
+
+            goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 22, FontStyle.Bold);
+            goBackButton.Size = goNextButton.Size = new Size(230, 47);
+            goBackButton.Location = new Point(goBackButton.Location.X + 5, goBackButton.Location.Y - 7);
+            goNextButton.Location = new Point(goNextButton.Location.X - 40, goNextButton.Location.Y - 7);
+
             if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
                 //imagesPanel.Location = new Point(imagesPanel.Location.X - 500, imagesPanel.Location.Y);
@@ -559,11 +574,12 @@ namespace MyOfficeTable.Forms
                 sourcePictureBox4.Location = new Point(sourcePictureBox2.Location.X + sourcePictureBox2.Width + 239, sourcePictureBox2.Location.Y);
                 sourcePictureBox1.Location = new Point(sourcePictureBox4.Location.X, sourcePictureBox4.Location.Y + sourcePictureBox4.Height + 39);
 
-                numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 28, FontStyle.Bold);
-                goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 22, FontStyle.Bold);
-                goBackButton.Size = goNextButton.Size = new Size(230, 47);
-                goBackButton.Location = new Point(goBackButton.Location.X + 5, goBackButton.Location.Y - 7);
-                goNextButton.Location = new Point(goNextButton.Location.X - 40, goNextButton.Location.Y - 7);
+            }
+            else
+            {
+                formulaPictureBox1.Size = formulaPictureBox2.Size = formulaPictureBox3.Size = formulaPictureBox4.Size = new Size(551, 224);
+                formulaPictureBox1.Location = new Point(75, taskLabel2.Location.Y + taskLabel2.Height + 32);
+                answerTextBox1.Font = answerTextBox2.Font = answerTextBox3.Font = answerTextBox4.Font = new Font(answerTextBox1.Font.Name, 22, FontStyle.Bold);
             }
             Settings.Default.isFullSize = true;
         }
@@ -627,21 +643,43 @@ namespace MyOfficeTable.Forms
             if (Settings.Default.isFullSize)
             {
                 loadForm = false;
-
                 WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Image = Resources.NormalScreen;
                 changeWindowBoxButton.Tag = "Normalscreen";
             }
             else
             {
-                //WindowState = FormWindowState.Normal;
-                //changeWindowBoxButton.Tag = "Fullscreen";
-                //changeWindowBoxButton.Image = Resources.Fullscreen;
-                //imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
                 WindowState = FormWindowState.Normal;
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
             }
+        }
+
+        private void FormulaPictureBox1_LocationChanged(object sender, EventArgs e)
+        {
+            if (!loadForm)
+            {
+                answerTextBox1.Location = new Point(formulaPictureBox1.Location.X, formulaPictureBox1.Location.Y + formulaPictureBox1.Height + 24);
+                formulaPictureBox2.Location = new Point(ClientSize.Width - formulaPictureBox1.Width - 75, formulaPictureBox1.Location.Y);
+
+                formulaPictureBox3.Location = new Point(formulaPictureBox1.Location.X, answerTextBox1.Location.Y + answerTextBox1.Height + 53);
+
+                answerTextBox2.Location = new Point(formulaPictureBox2.Location.X, formulaPictureBox2.Location.Y + formulaPictureBox2.Height + 24);
+                formulaPictureBox4.Location = new Point(formulaPictureBox2.Location.X, answerTextBox2.Location.Y + answerTextBox2.Height + 53);
+
+                answerTextBox3.Location = new Point(formulaPictureBox3.Location.X, formulaPictureBox3.Location.Y + formulaPictureBox3.Height + 24);
+                answerTextBox4.Location = new Point(formulaPictureBox4.Location.X, formulaPictureBox4.Location.Y + formulaPictureBox4.Height + 24);
+
+                resultLabel5.Location = new Point(answerTextBox1.Location.X + answerTextBox1.Width + 28, answerTextBox1.Location.Y);
+                resultLabel6.Location = new Point(answerTextBox2.Location.X + answerTextBox2.Width + 28, answerTextBox2.Location.Y);
+                resultLabel7.Location = new Point(answerTextBox3.Location.X + answerTextBox3.Width + 28, answerTextBox3.Location.Y);
+                resultLabel8.Location = new Point(answerTextBox4.Location.X + answerTextBox4.Width + 28, answerTextBox4.Location.Y);
+            }
+        }
+
+        private void FormulaPictureBox1_Resize(object sender, EventArgs e)
+        {
+            answerTextBox1.Width = answerTextBox2.Width = answerTextBox3.Width = answerTextBox4.Width = formulaPictureBox1.Width;
         }
     }
 }
