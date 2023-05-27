@@ -149,7 +149,7 @@
             this.task1ReferencesTabPage.Name = "task1ReferencesTabPage";
             this.task1ReferencesTabPage.Size = new System.Drawing.Size(1039, 754);
             this.task1ReferencesTabPage.TabIndex = 4;
-            this.task1ReferencesTabPage.Text = "Задание 1 - Ссылки";
+            this.task1ReferencesTabPage.Text = "Задание - Ссылки";
             // 
             // taskLabel2
             // 
@@ -375,7 +375,7 @@
             this.task1InterfaceTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.task1InterfaceTabPage.Size = new System.Drawing.Size(1039, 754);
             this.task1InterfaceTabPage.TabIndex = 0;
-            this.task1InterfaceTabPage.Text = "Задание 1 - Интерфейс";
+            this.task1InterfaceTabPage.Text = "Задание - Интерфейс";
             // 
             // taskLabel1
             // 
