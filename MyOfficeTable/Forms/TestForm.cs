@@ -75,10 +75,8 @@ namespace MyOfficeTable
                     questionLabel.MaximumSize = new Size(1500, 130);
                     startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
                     startTestButton.Size = new Size(404, 49);
-                    startTestButton.Left = (Screen.GetWorkingArea(this).Width - startTestButton.Width) / 2;
-                    startTestButton.Top = ((Screen.GetWorkingArea(this).Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
-                    ChangeWindowBoxButton_Click(changeWindowBoxButton, new EventArgs());
-                    ChangeWindowBoxButton_Click(changeWindowBoxButton, new EventArgs());
+                    startTestButton.Left = (SystemInformation.VirtualScreen.Width - startTestButton.Width) / 2;
+                    startTestButton.Top = ((SystemInformation.VirtualScreen.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
                     //timerLabel.Location = new Point(Screen.GetWorkingArea(this).Width - timerLabel.Width - 30, timerLabel.Location.Y);
                     ChangeControlsToFullscreen();
                 }

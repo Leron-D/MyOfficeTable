@@ -380,7 +380,6 @@
             // 
             // resultLabel4
             // 
-            this.resultLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel4.Location = new System.Drawing.Point(475, 667);
@@ -394,7 +393,6 @@
             // 
             // resultLabel3
             // 
-            this.resultLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel3.Location = new System.Drawing.Point(475, 544);
@@ -408,7 +406,6 @@
             // 
             // resultLabel2
             // 
-            this.resultLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel2.Location = new System.Drawing.Point(475, 414);
@@ -422,7 +419,6 @@
             // 
             // resultLabel1
             // 
-            this.resultLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel1.Location = new System.Drawing.Point(475, 283);
@@ -436,7 +432,6 @@
             // 
             // nameLabel4
             // 
-            this.nameLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.nameLabel4.Location = new System.Drawing.Point(0, 636);
@@ -448,7 +443,7 @@
             // 
             // imagesPanel
             // 
-            this.imagesPanel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.imagesPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imagesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imagesPanel.Controls.Add(this.label6);
             this.imagesPanel.Controls.Add(this.sourcePictureBox2);
@@ -538,7 +533,6 @@
             // 
             // nameLabel3
             // 
-            this.nameLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.nameLabel3.Location = new System.Drawing.Point(0, 512);
@@ -550,7 +544,6 @@
             // 
             // destinationPictureBox4
             // 
-            this.destinationPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.destinationPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.destinationPictureBox4.Location = new System.Drawing.Point(333, 636);
             this.destinationPictureBox4.Name = "destinationPictureBox4";
@@ -564,7 +557,6 @@
             // 
             // destinationPictureBox2
             // 
-            this.destinationPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.destinationPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.destinationPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.destinationPictureBox2.Location = new System.Drawing.Point(333, 380);
@@ -579,7 +571,6 @@
             // 
             // nameLabel2
             // 
-            this.nameLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.nameLabel2.Location = new System.Drawing.Point(0, 380);
@@ -591,7 +582,6 @@
             // 
             // nameLabel1
             // 
-            this.nameLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.nameLabel1.Location = new System.Drawing.Point(0, 250);
@@ -604,7 +594,6 @@
             // 
             // destinationPictureBox3
             // 
-            this.destinationPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.destinationPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.destinationPictureBox3.Location = new System.Drawing.Point(333, 509);
             this.destinationPictureBox3.Name = "destinationPictureBox3";
@@ -618,7 +607,6 @@
             // 
             // destinationPictureBox1
             // 
-            this.destinationPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.destinationPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.destinationPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.destinationPictureBox1.Location = new System.Drawing.Point(333, 250);
@@ -776,9 +764,11 @@
             this.Name = "InteractiveTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InteractiveTaskForm";
+            this.Load += new System.EventHandler(this.InteractiveTaskForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseUp);
+            this.Resize += new System.EventHandler(this.InteractiveTaskForm_Resize);
             this.task1ReferencesTabPage.ResumeLayout(false);
             this.task1ReferencesTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.formulaPictureBox4)).EndInit();

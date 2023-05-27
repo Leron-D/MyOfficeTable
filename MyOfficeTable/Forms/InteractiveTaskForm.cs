@@ -62,24 +62,6 @@ namespace MyOfficeTable.Forms
             srcPictureBox = null;
             numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
 
-            if (Settings.Default.isFullSize)
-            {
-                loadForm = false;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "Normalscreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 36, FontStyle.Bold);
-                imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
-                taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 28, FontStyle.Bold);
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-                imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
-            }
-
             if (theme == "Интерфейс табличного процессора")
             {
                 listOfNames = new List<string>
@@ -183,11 +165,11 @@ namespace MyOfficeTable.Forms
                     Resources.InteractiveTask1,
                     Resources.InteractiveTask2,
                     Resources.InteractiveTask3,
-                    Resources.InteractiveTask4, 
+                    Resources.InteractiveTask4,
                     Resources.InteractiveTask5,
                     Resources.InteractiveTask6,
                     Resources.InteractiveTask7,
-                    Resources.InteractiveTask8,                 
+                    Resources.InteractiveTask8,
                     Resources.InteractiveTask9,
                     Resources.InteractiveTask10,
                     Resources.InteractiveTask11,
@@ -484,7 +466,7 @@ namespace MyOfficeTable.Forms
         private void ChangeImageOfLabel(TextBox textBox, Label resultLabel)
         {
             resultLabel.Visible = true;
-            if(textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
+            if (textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
             {
                 resultLabel.Text = "";
                 resultLabel.Image = Resources.Incorrect;
@@ -512,72 +494,78 @@ namespace MyOfficeTable.Forms
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
         {
+            loadForm = false;
             if (changeWindowBoxButton.Tag == "Fullscreen")
             {
-                ChangeScreen("NormalScreen");
+                Settings.Default.isFullSize = true;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
             }
             else
             {
-                ChangeScreen("Fullscreen");
+                Settings.Default.isFullSize = false;
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
             }
+            CenterToScreen();
         }
 
-        private void ChangeScreen(string tag)
+        private void ChangeControlsForNormalscreen()
         {
-            changeWindowBoxButton.Tag = tag;
-            loadForm = false;
-            if (tag == "Fullscreen")
-            {            
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-                headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 28, FontStyle.Bold);
-                taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 24, FontStyle.Bold);
-                if (tabControl.SelectedTab == tabControl.TabPages[0])
-                {
-                    imagesPanel.Size = new Size(429, 314);
-                    imagesPanel.Location = new Point(574, 347);
-                    destinationPictureBox1.Size = destinationPictureBox2.Size = destinationPictureBox3.Size = destinationPictureBox4.Size =
-                    sourcePictureBox1.Size = sourcePictureBox2.Size = sourcePictureBox3.Size = sourcePictureBox4.Size = new Size(100, 100);
-                    destinationPictureBox1.Location = new Point(333, taskLabel1.Location.Y + taskLabel1.Height + 27);
-                    nameLabel1.Font = nameLabel2.Font = nameLabel3.Font = nameLabel4.Font = new Font(nameLabel1.Font.Name, 24, FontStyle.Bold);
-                    sourcePictureBox2.Location = new Point(63, 75);
-                    sourcePictureBox3.Location = new Point(63, 199);
-                    sourcePictureBox4.Location = new Point(266, 75);
-                    sourcePictureBox1.Location = new Point(266, 199);
-                    numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 24, FontStyle.Bold);
-                    goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 18, FontStyle.Bold);
-                    goBackButton.Size = goNextButton.Size = new Size(194, 40);
-                    goBackButton.Location = new Point(0, 840);
-                    goNextButton.Location = new Point(840, 840);
-                }
-            }
-            else
+            changeWindowBoxButton.Image = Resources.Fullscreen;
+            headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 28, FontStyle.Bold);
+            taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 24, FontStyle.Bold);
+            if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 36, FontStyle.Bold);
-                taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 28, FontStyle.Bold);
-                if (tabControl.SelectedTab == tabControl.TabPages[0])
-                {
-                    imagesPanel.Size = new Size(658, 453);
-                    imagesPanel.Location = new Point(imagesPanel.Location.X - 500, imagesPanel.Location.Y);
-                    destinationPictureBox1.Size = destinationPictureBox2.Size = destinationPictureBox3.Size = destinationPictureBox4.Size =
-                    sourcePictureBox1.Size = sourcePictureBox2.Size = sourcePictureBox3.Size = sourcePictureBox4.Size = new Size(146, 146);
-                    destinationPictureBox1.Location = new Point(destinationPictureBox1.Location.X + 50, taskLabel1.Location.Y + taskLabel1.Height + 27);
-                    nameLabel1.Font = nameLabel2.Font = nameLabel3.Font = nameLabel4.Font = new Font(nameLabel1.Font.Name, 28, FontStyle.Bold);
-                    sourcePictureBox2.Location = new Point(63, 88);
-                    sourcePictureBox3.Location = new Point(sourcePictureBox2.Location.X, sourcePictureBox2.Location.Y + sourcePictureBox2.Height + 39);
-                    sourcePictureBox4.Location = new Point(sourcePictureBox2.Location.X + sourcePictureBox2.Width + 239, sourcePictureBox2.Location.Y);
-                    sourcePictureBox1.Location = new Point(sourcePictureBox4.Location.X, sourcePictureBox4.Location.Y + sourcePictureBox4.Height + 39);
-                    numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 28, FontStyle.Bold);
-                    goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 22, FontStyle.Bold);
-                    goBackButton.Size = goNextButton.Size = new Size(230, 47);
-                    goBackButton.Location = new Point(goBackButton.Location.X + 5, goBackButton.Location.Y - 7);
-                    goNextButton.Location = new Point(goNextButton.Location.X - 40, goNextButton.Location.Y - 7);
-                }
+                imagesPanel.Size = new Size(429, 314);
+                imagesPanel.Location = new Point(574, 340);
+                destinationPictureBox1.Size = destinationPictureBox2.Size = destinationPictureBox3.Size = destinationPictureBox4.Size =
+                sourcePictureBox1.Size = sourcePictureBox2.Size = sourcePictureBox3.Size = sourcePictureBox4.Size = new Size(100, 100);
+                destinationPictureBox1.Location = new Point(333, taskLabel1.Location.Y + taskLabel1.Height + 27);
+                nameLabel1.Font = nameLabel2.Font = nameLabel3.Font = nameLabel4.Font = new Font(nameLabel1.Font.Name, 24, FontStyle.Bold);
+                sourcePictureBox2.Location = new Point(63, 75);
+                sourcePictureBox3.Location = new Point(63, 199);
+                sourcePictureBox4.Location = new Point(266, 75);
+                sourcePictureBox1.Location = new Point(266, 199);
+                numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 24, FontStyle.Bold);
+                goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 18, FontStyle.Bold);
+                goBackButton.Size = goNextButton.Size = new Size(194, 40);
+                goBackButton.Location = new Point(0, 840);
+                goNextButton.Location = new Point(840, 840);
             }
-            imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
-            CenterToScreen();
+            Settings.Default.isFullSize = false;
+        }
+
+        private void ChangeControlsForFullscreen()
+        {
+            changeWindowBoxButton.Image = Resources.NormalScreen;
+            headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 36, FontStyle.Bold);
+            taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 28, FontStyle.Bold);
+            if (tabControl.SelectedTab == tabControl.TabPages[0])
+            {
+                //imagesPanel.Location = new Point(imagesPanel.Location.X - 500, imagesPanel.Location.Y);
+                destinationPictureBox1.Size = destinationPictureBox2.Size = destinationPictureBox3.Size = destinationPictureBox4.Size =
+                sourcePictureBox1.Size = sourcePictureBox2.Size = sourcePictureBox3.Size = sourcePictureBox4.Size = new Size(146, 146);
+                destinationPictureBox1.Location = new Point(destinationPictureBox1.Location.X + 50, taskLabel1.Location.Y + taskLabel1.Height + 27);
+                nameLabel1.Font = nameLabel2.Font = nameLabel3.Font = nameLabel4.Font = new Font(nameLabel1.Font.Name, 28, FontStyle.Bold);
+
+                imagesPanel.Size = new Size(658, 453);
+                imagesPanel.Location = new Point((SystemInformation.VirtualScreen.Width - (resultLabel1.Location.X + resultLabel1.Width - imagesPanel.Width)) / 2, imagesPanel.Location.Y);
+
+                sourcePictureBox2.Location = new Point(63, 88);
+                sourcePictureBox3.Location = new Point(sourcePictureBox2.Location.X, sourcePictureBox2.Location.Y + sourcePictureBox2.Height + 39);
+                sourcePictureBox4.Location = new Point(sourcePictureBox2.Location.X + sourcePictureBox2.Width + 239, sourcePictureBox2.Location.Y);
+                sourcePictureBox1.Location = new Point(sourcePictureBox4.Location.X, sourcePictureBox4.Location.Y + sourcePictureBox4.Height + 39);
+
+                numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 28, FontStyle.Bold);
+                goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 22, FontStyle.Bold);
+                goBackButton.Size = goNextButton.Size = new Size(230, 47);
+                goBackButton.Location = new Point(goBackButton.Location.X + 5, goBackButton.Location.Y - 7);
+                goNextButton.Location = new Point(goNextButton.Location.X - 40, goNextButton.Location.Y - 7);
+            }
+            Settings.Default.isFullSize = true;
         }
 
         private void DestinationPictureBox1_LocationChanged(object sender, EventArgs e)
@@ -590,9 +578,9 @@ namespace MyOfficeTable.Forms
 
                 nameLabel1.Location = new Point(destinationPictureBox1.Location.X - nameLabel1.Width - 30, destinationPictureBox1.Location.Y);
 
-                resultLabel1.Location = new Point(destinationPictureBox1.Location.X + destinationPictureBox1.Width + 42, 
+                resultLabel1.Location = new Point(destinationPictureBox1.Location.X + destinationPictureBox1.Width + 42,
                                                   destinationPictureBox1.Location.Y + (destinationPictureBox1.Height - resultLabel1.Height) / 2);
-                resultLabel2.Location = new Point(destinationPictureBox2.Location.X + destinationPictureBox2.Width + 42, 
+                resultLabel2.Location = new Point(destinationPictureBox2.Location.X + destinationPictureBox2.Width + 42,
                                                   destinationPictureBox2.Location.Y + (destinationPictureBox2.Height - resultLabel2.Height) / 2);
                 resultLabel3.Location = new Point(destinationPictureBox3.Location.X + destinationPictureBox3.Width + 42,
                                                   destinationPictureBox3.Location.Y + (destinationPictureBox3.Height - resultLabel3.Height) / 2);
@@ -616,6 +604,43 @@ namespace MyOfficeTable.Forms
                 nameLabel2.Location = new Point(nameLabel1.Location.X, destinationPictureBox2.Location.Y);
                 nameLabel3.Location = new Point(nameLabel2.Location.X, destinationPictureBox3.Location.Y);
                 nameLabel4.Location = new Point(nameLabel3.Location.X, destinationPictureBox4.Location.Y);
+            }
+        }
+
+        private void InteractiveTaskForm_Resize(object sender, EventArgs e)
+        {
+            if (!loadForm)
+            {
+                if (WindowState == FormWindowState.Maximized)
+                {
+                    ChangeControlsForFullscreen();
+                }
+                else
+                {
+                    ChangeControlsForNormalscreen();
+                }
+            }
+        }
+
+        private void InteractiveTaskForm_Load(object sender, EventArgs e)
+        {
+            if (Settings.Default.isFullSize)
+            {
+                loadForm = false;
+
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+                changeWindowBoxButton.Tag = "Normalscreen";
+            }
+            else
+            {
+                //WindowState = FormWindowState.Normal;
+                //changeWindowBoxButton.Tag = "Fullscreen";
+                //changeWindowBoxButton.Image = Resources.Fullscreen;
+                //imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
             }
         }
     }
