@@ -56,14 +56,15 @@ namespace MyOfficeTable.Forms
             tabControl.ItemSize = new Size(0, 1);
             tabControl.SizeMode = TabSizeMode.Fixed;
             tabControl.TabStop = false;
-            DestinationPictureBox1.AllowDrop = DestinationPictureBox2.AllowDrop = DestinationPictureBox3.AllowDrop = DestinationPictureBox4.AllowDrop =
-            SourcePictureBox1.AllowDrop = SourcePictureBox2.AllowDrop = SourcePictureBox3.AllowDrop = SourcePictureBox4.AllowDrop = SourcePictureBox4.AllowDrop = true;
+            destinationPictureBox1.AllowDrop = destinationPictureBox2.AllowDrop = destinationPictureBox3.AllowDrop = destinationPictureBox4.AllowDrop =
+            sourcePictureBox1.AllowDrop = sourcePictureBox2.AllowDrop = sourcePictureBox3.AllowDrop = sourcePictureBox4.AllowDrop = sourcePictureBox4.AllowDrop = true;
             headerLabel1.Text = headerLabel2.Text = theme;
             srcPictureBox = null;
             numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
 
             if (Settings.Default.isFullSize)
             {
+                loadForm = false;
                 WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "Normalscreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
@@ -131,18 +132,18 @@ namespace MyOfficeTable.Forms
 
                 listOfSourcePictureBoxes = new List<PictureBox>
                 {
-                    SourcePictureBox1,
-                    SourcePictureBox2,
-                    SourcePictureBox3,
-                    SourcePictureBox4
+                    sourcePictureBox1,
+                    sourcePictureBox2,
+                    sourcePictureBox3,
+                    sourcePictureBox4
                 };
 
                 listOfDestinationPictureBoxes = new List<PictureBox>
                 {
-                    DestinationPictureBox1,
-                    DestinationPictureBox2,
-                    DestinationPictureBox3,
-                    DestinationPictureBox4
+                    destinationPictureBox1,
+                    destinationPictureBox2,
+                    destinationPictureBox3,
+                    destinationPictureBox4
                 };
 
                 listOfNameLabels = new List<Label>
@@ -523,12 +524,20 @@ namespace MyOfficeTable.Forms
         private void ChangeScreen(string tag)
         {
             changeWindowBoxButton.Tag = tag;
+            loadForm = false;
             if (tag == "Fullscreen")
             {            
                 WindowState = FormWindowState.Normal;
                 changeWindowBoxButton.Image = Resources.Fullscreen;
                 headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 28, FontStyle.Bold);
                 taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 24, FontStyle.Bold);
+                if (tabControl.SelectedTab == tabControl.TabPages[0])
+                {
+                    destinationPictureBox1.Size = destinationPictureBox2.Size = destinationPictureBox3.Size = destinationPictureBox4.Size =
+                    sourcePictureBox1.Size = sourcePictureBox2.Size = sourcePictureBox3.Size = sourcePictureBox4.Size = new Size(100, 100);
+                    destinationPictureBox1.Location = new Point(destinationPictureBox1.Location.X, taskLabel1.Location.Y + taskLabel1.Height + 27);
+                    nameLabel1.Font = nameLabel2.Font = nameLabel3.Font = nameLabel4.Font = new Font(nameLabel1.Font.Name, 24, FontStyle.Bold);
+                }
             }
             else
             {
@@ -536,9 +545,46 @@ namespace MyOfficeTable.Forms
                 changeWindowBoxButton.Image = Resources.NormalScreen;
                 headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 36, FontStyle.Bold);
                 taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 28, FontStyle.Bold);
+                if (tabControl.SelectedTab == tabControl.TabPages[0])
+                {
+                    destinationPictureBox1.Size = destinationPictureBox2.Size = destinationPictureBox3.Size = destinationPictureBox4.Size =
+                    sourcePictureBox1.Size = sourcePictureBox2.Size = sourcePictureBox3.Size = sourcePictureBox4.Size = new Size(146, 146);
+                    destinationPictureBox1.Location = new Point(destinationPictureBox1.Location.X, taskLabel1.Location.Y + taskLabel1.Height + 27);
+                    nameLabel1.Font = nameLabel2.Font = nameLabel3.Font = nameLabel4.Font = new Font(nameLabel1.Font.Name, 28, FontStyle.Bold);
+                }
             }
             imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
             CenterToScreen();
+        }
+
+        private void DestinationPictureBox1_LocationChanged(object sender, EventArgs e)
+        {
+            if (!loadForm)
+            {
+                destinationPictureBox2.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox1.Location.Y + destinationPictureBox1.Height + 25);
+                destinationPictureBox3.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox2.Location.Y + destinationPictureBox2.Height + 25);
+                destinationPictureBox4.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox3.Location.Y + destinationPictureBox3.Height + 25);
+
+                nameLabel1.Location = new Point(destinationPictureBox1.Location.X - nameLabel1.Width - 30, destinationPictureBox1.Location.Y);
+            }
+        }
+
+        private void DestinationPictureBox1_Resize(object sender, EventArgs e)
+        {
+            if (!loadForm)
+            {
+                nameLabel1.Size = nameLabel2.Size = nameLabel3.Size = nameLabel4.Size = new Size(nameLabel1.Width, destinationPictureBox1.Height);
+            }
+        }
+
+        private void NameLabel1_LocationChanged(object sender, EventArgs e)
+        {
+            if (!loadForm)
+            {
+                nameLabel2.Location = new Point(nameLabel1.Location.X, destinationPictureBox2.Location.Y);
+                nameLabel3.Location = new Point(nameLabel2.Location.X, destinationPictureBox3.Location.Y);
+                nameLabel4.Location = new Point(nameLabel3.Location.X, destinationPictureBox4.Location.Y);
+            }
         }
     }
 }

@@ -57,17 +57,17 @@
             this.nameLabel4 = new System.Windows.Forms.Label();
             this.imagesPanel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.SourcePictureBox2 = new System.Windows.Forms.PictureBox();
-            this.SourcePictureBox1 = new System.Windows.Forms.PictureBox();
-            this.SourcePictureBox3 = new System.Windows.Forms.PictureBox();
-            this.SourcePictureBox4 = new System.Windows.Forms.PictureBox();
+            this.sourcePictureBox2 = new System.Windows.Forms.PictureBox();
+            this.sourcePictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sourcePictureBox3 = new System.Windows.Forms.PictureBox();
+            this.sourcePictureBox4 = new System.Windows.Forms.PictureBox();
             this.nameLabel3 = new System.Windows.Forms.Label();
-            this.DestinationPictureBox4 = new System.Windows.Forms.PictureBox();
-            this.DestinationPictureBox2 = new System.Windows.Forms.PictureBox();
+            this.destinationPictureBox4 = new System.Windows.Forms.PictureBox();
+            this.destinationPictureBox2 = new System.Windows.Forms.PictureBox();
             this.nameLabel2 = new System.Windows.Forms.Label();
             this.nameLabel1 = new System.Windows.Forms.Label();
-            this.DestinationPictureBox3 = new System.Windows.Forms.PictureBox();
-            this.DestinationPictureBox1 = new System.Windows.Forms.PictureBox();
+            this.destinationPictureBox3 = new System.Windows.Forms.PictureBox();
+            this.destinationPictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.headerLabel1 = new System.Windows.Forms.Label();
@@ -85,14 +85,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.task1InterfaceTabPage.SuspendLayout();
             this.imagesPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabControl.SuspendLayout();
@@ -349,12 +349,12 @@
             this.task1InterfaceTabPage.Controls.Add(this.nameLabel4);
             this.task1InterfaceTabPage.Controls.Add(this.imagesPanel);
             this.task1InterfaceTabPage.Controls.Add(this.nameLabel3);
-            this.task1InterfaceTabPage.Controls.Add(this.DestinationPictureBox4);
-            this.task1InterfaceTabPage.Controls.Add(this.DestinationPictureBox2);
+            this.task1InterfaceTabPage.Controls.Add(this.destinationPictureBox4);
+            this.task1InterfaceTabPage.Controls.Add(this.destinationPictureBox2);
             this.task1InterfaceTabPage.Controls.Add(this.nameLabel2);
             this.task1InterfaceTabPage.Controls.Add(this.nameLabel1);
-            this.task1InterfaceTabPage.Controls.Add(this.DestinationPictureBox3);
-            this.task1InterfaceTabPage.Controls.Add(this.DestinationPictureBox1);
+            this.task1InterfaceTabPage.Controls.Add(this.destinationPictureBox3);
+            this.task1InterfaceTabPage.Controls.Add(this.destinationPictureBox1);
             this.task1InterfaceTabPage.Controls.Add(this.panel2);
             this.task1InterfaceTabPage.Location = new System.Drawing.Point(4, 22);
             this.task1InterfaceTabPage.Name = "task1InterfaceTabPage";
@@ -383,7 +383,7 @@
             this.resultLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel4.Location = new System.Drawing.Point(470, 674);
+            this.resultLabel4.Location = new System.Drawing.Point(475, 674);
             this.resultLabel4.Name = "resultLabel4";
             this.resultLabel4.Size = new System.Drawing.Size(37, 37);
             this.resultLabel4.TabIndex = 40;
@@ -397,7 +397,7 @@
             this.resultLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel3.Location = new System.Drawing.Point(470, 551);
+            this.resultLabel3.Location = new System.Drawing.Point(475, 551);
             this.resultLabel3.Name = "resultLabel3";
             this.resultLabel3.Size = new System.Drawing.Size(37, 37);
             this.resultLabel3.TabIndex = 39;
@@ -411,7 +411,7 @@
             this.resultLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel2.Location = new System.Drawing.Point(470, 421);
+            this.resultLabel2.Location = new System.Drawing.Point(475, 421);
             this.resultLabel2.Name = "resultLabel2";
             this.resultLabel2.Size = new System.Drawing.Size(37, 37);
             this.resultLabel2.TabIndex = 38;
@@ -425,7 +425,7 @@
             this.resultLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel1.Location = new System.Drawing.Point(470, 290);
+            this.resultLabel1.Location = new System.Drawing.Point(475, 290);
             this.resultLabel1.Name = "resultLabel1";
             this.resultLabel1.Size = new System.Drawing.Size(37, 37);
             this.resultLabel1.TabIndex = 37;
@@ -439,9 +439,9 @@
             this.nameLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel4.Location = new System.Drawing.Point(13, 643);
+            this.nameLabel4.Location = new System.Drawing.Point(0, 643);
             this.nameLabel4.Name = "nameLabel4";
-            this.nameLabel4.Size = new System.Drawing.Size(285, 100);
+            this.nameLabel4.Size = new System.Drawing.Size(303, 100);
             this.nameLabel4.TabIndex = 36;
             this.nameLabel4.Text = "Все буквы\r\nпрописные\r\n";
             this.nameLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -451,11 +451,11 @@
             this.imagesPanel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.imagesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imagesPanel.Controls.Add(this.label6);
-            this.imagesPanel.Controls.Add(this.SourcePictureBox2);
-            this.imagesPanel.Controls.Add(this.SourcePictureBox1);
-            this.imagesPanel.Controls.Add(this.SourcePictureBox3);
-            this.imagesPanel.Controls.Add(this.SourcePictureBox4);
-            this.imagesPanel.Location = new System.Drawing.Point(569, 347);
+            this.imagesPanel.Controls.Add(this.sourcePictureBox2);
+            this.imagesPanel.Controls.Add(this.sourcePictureBox1);
+            this.imagesPanel.Controls.Add(this.sourcePictureBox3);
+            this.imagesPanel.Controls.Add(this.sourcePictureBox4);
+            this.imagesPanel.Location = new System.Drawing.Point(574, 347);
             this.imagesPanel.Name = "imagesPanel";
             this.imagesPanel.Size = new System.Drawing.Size(429, 314);
             this.imagesPanel.TabIndex = 12;
@@ -473,118 +473,118 @@
             this.label6.Text = "Графические обозначения";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SourcePictureBox2
+            // sourcePictureBox2
             // 
-            this.SourcePictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SourcePictureBox2.Image = global::MyOfficeTable.Properties.Resources.CopyFormat;
-            this.SourcePictureBox2.Location = new System.Drawing.Point(63, 75);
-            this.SourcePictureBox2.Name = "SourcePictureBox2";
-            this.SourcePictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.SourcePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SourcePictureBox2.TabIndex = 8;
-            this.SourcePictureBox2.TabStop = false;
-            this.SourcePictureBox2.Tag = "copyFormat";
-            this.SourcePictureBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
-            this.SourcePictureBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
-            this.SourcePictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.sourcePictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sourcePictureBox2.Image = global::MyOfficeTable.Properties.Resources.CopyFormat;
+            this.sourcePictureBox2.Location = new System.Drawing.Point(63, 75);
+            this.sourcePictureBox2.Name = "sourcePictureBox2";
+            this.sourcePictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.sourcePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sourcePictureBox2.TabIndex = 8;
+            this.sourcePictureBox2.TabStop = false;
+            this.sourcePictureBox2.Tag = "copyFormat";
+            this.sourcePictureBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
+            this.sourcePictureBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.sourcePictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
-            // SourcePictureBox1
+            // sourcePictureBox1
             // 
-            this.SourcePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SourcePictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SourcePictureBox1.Image = global::MyOfficeTable.Properties.Resources.Cut;
-            this.SourcePictureBox1.Location = new System.Drawing.Point(266, 199);
-            this.SourcePictureBox1.Name = "SourcePictureBox1";
-            this.SourcePictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.SourcePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SourcePictureBox1.TabIndex = 6;
-            this.SourcePictureBox1.TabStop = false;
-            this.SourcePictureBox1.Tag = "cut";
-            this.SourcePictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
-            this.SourcePictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
-            this.SourcePictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.sourcePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sourcePictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sourcePictureBox1.Image = global::MyOfficeTable.Properties.Resources.Cut;
+            this.sourcePictureBox1.Location = new System.Drawing.Point(266, 199);
+            this.sourcePictureBox1.Name = "sourcePictureBox1";
+            this.sourcePictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.sourcePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sourcePictureBox1.TabIndex = 6;
+            this.sourcePictureBox1.TabStop = false;
+            this.sourcePictureBox1.Tag = "cut";
+            this.sourcePictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
+            this.sourcePictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.sourcePictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
-            // SourcePictureBox3
+            // sourcePictureBox3
             // 
-            this.SourcePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SourcePictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SourcePictureBox3.Image = global::MyOfficeTable.Properties.Resources.AllLettersUppercase;
-            this.SourcePictureBox3.Location = new System.Drawing.Point(63, 199);
-            this.SourcePictureBox3.Name = "SourcePictureBox3";
-            this.SourcePictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.SourcePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SourcePictureBox3.TabIndex = 10;
-            this.SourcePictureBox3.TabStop = false;
-            this.SourcePictureBox3.Tag = "allLettersUppercase";
-            this.SourcePictureBox3.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
-            this.SourcePictureBox3.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
-            this.SourcePictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.sourcePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.sourcePictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sourcePictureBox3.Image = global::MyOfficeTable.Properties.Resources.AllLettersUppercase;
+            this.sourcePictureBox3.Location = new System.Drawing.Point(63, 199);
+            this.sourcePictureBox3.Name = "sourcePictureBox3";
+            this.sourcePictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.sourcePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sourcePictureBox3.TabIndex = 10;
+            this.sourcePictureBox3.TabStop = false;
+            this.sourcePictureBox3.Tag = "allLettersUppercase";
+            this.sourcePictureBox3.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
+            this.sourcePictureBox3.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.sourcePictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
-            // SourcePictureBox4
+            // sourcePictureBox4
             // 
-            this.SourcePictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SourcePictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SourcePictureBox4.Image = global::MyOfficeTable.Properties.Resources.Bold;
-            this.SourcePictureBox4.Location = new System.Drawing.Point(266, 75);
-            this.SourcePictureBox4.Name = "SourcePictureBox4";
-            this.SourcePictureBox4.Size = new System.Drawing.Size(100, 100);
-            this.SourcePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SourcePictureBox4.TabIndex = 9;
-            this.SourcePictureBox4.TabStop = false;
-            this.SourcePictureBox4.Tag = "bold";
-            this.SourcePictureBox4.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
-            this.SourcePictureBox4.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
-            this.SourcePictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.sourcePictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sourcePictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sourcePictureBox4.Image = global::MyOfficeTable.Properties.Resources.Bold;
+            this.sourcePictureBox4.Location = new System.Drawing.Point(266, 75);
+            this.sourcePictureBox4.Name = "sourcePictureBox4";
+            this.sourcePictureBox4.Size = new System.Drawing.Size(100, 100);
+            this.sourcePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sourcePictureBox4.TabIndex = 9;
+            this.sourcePictureBox4.TabStop = false;
+            this.sourcePictureBox4.Tag = "bold";
+            this.sourcePictureBox4.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
+            this.sourcePictureBox4.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.sourcePictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // nameLabel3
             // 
             this.nameLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel3.Location = new System.Drawing.Point(13, 519);
+            this.nameLabel3.Location = new System.Drawing.Point(0, 519);
             this.nameLabel3.Name = "nameLabel3";
-            this.nameLabel3.Size = new System.Drawing.Size(285, 100);
+            this.nameLabel3.Size = new System.Drawing.Size(303, 100);
             this.nameLabel3.TabIndex = 35;
             this.nameLabel3.Text = "Полужирное\r\nначертание";
             this.nameLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // DestinationPictureBox4
+            // destinationPictureBox4
             // 
-            this.DestinationPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DestinationPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DestinationPictureBox4.Location = new System.Drawing.Point(328, 643);
-            this.DestinationPictureBox4.Name = "DestinationPictureBox4";
-            this.DestinationPictureBox4.Size = new System.Drawing.Size(100, 100);
-            this.DestinationPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.DestinationPictureBox4.TabIndex = 34;
-            this.DestinationPictureBox4.TabStop = false;
-            this.DestinationPictureBox4.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
-            this.DestinationPictureBox4.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
-            this.DestinationPictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.destinationPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.destinationPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.destinationPictureBox4.Location = new System.Drawing.Point(333, 643);
+            this.destinationPictureBox4.Name = "destinationPictureBox4";
+            this.destinationPictureBox4.Size = new System.Drawing.Size(100, 100);
+            this.destinationPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.destinationPictureBox4.TabIndex = 34;
+            this.destinationPictureBox4.TabStop = false;
+            this.destinationPictureBox4.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
+            this.destinationPictureBox4.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.destinationPictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
-            // DestinationPictureBox2
+            // destinationPictureBox2
             // 
-            this.DestinationPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DestinationPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.DestinationPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DestinationPictureBox2.Location = new System.Drawing.Point(328, 387);
-            this.DestinationPictureBox2.Name = "DestinationPictureBox2";
-            this.DestinationPictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.DestinationPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.DestinationPictureBox2.TabIndex = 33;
-            this.DestinationPictureBox2.TabStop = false;
-            this.DestinationPictureBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
-            this.DestinationPictureBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
-            this.DestinationPictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.destinationPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.destinationPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.destinationPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.destinationPictureBox2.Location = new System.Drawing.Point(333, 387);
+            this.destinationPictureBox2.Name = "destinationPictureBox2";
+            this.destinationPictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.destinationPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.destinationPictureBox2.TabIndex = 33;
+            this.destinationPictureBox2.TabStop = false;
+            this.destinationPictureBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
+            this.destinationPictureBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.destinationPictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
             // nameLabel2
             // 
             this.nameLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel2.Location = new System.Drawing.Point(13, 389);
+            this.nameLabel2.Location = new System.Drawing.Point(0, 387);
             this.nameLabel2.Name = "nameLabel2";
-            this.nameLabel2.Size = new System.Drawing.Size(285, 100);
+            this.nameLabel2.Size = new System.Drawing.Size(303, 100);
             this.nameLabel2.TabIndex = 32;
             this.nameLabel2.Text = "Копировать \r\nформатирование\r\n";
             this.nameLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -594,41 +594,44 @@
             this.nameLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel1.Location = new System.Drawing.Point(13, 257);
+            this.nameLabel1.Location = new System.Drawing.Point(0, 257);
             this.nameLabel1.Name = "nameLabel1";
-            this.nameLabel1.Size = new System.Drawing.Size(285, 100);
+            this.nameLabel1.Size = new System.Drawing.Size(303, 100);
             this.nameLabel1.TabIndex = 31;
             this.nameLabel1.Text = "Вырезать";
             this.nameLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nameLabel1.LocationChanged += new System.EventHandler(this.NameLabel1_LocationChanged);
             // 
-            // DestinationPictureBox3
+            // destinationPictureBox3
             // 
-            this.DestinationPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DestinationPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DestinationPictureBox3.Location = new System.Drawing.Point(328, 516);
-            this.DestinationPictureBox3.Name = "DestinationPictureBox3";
-            this.DestinationPictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.DestinationPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.DestinationPictureBox3.TabIndex = 11;
-            this.DestinationPictureBox3.TabStop = false;
-            this.DestinationPictureBox3.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
-            this.DestinationPictureBox3.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
-            this.DestinationPictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.destinationPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.destinationPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.destinationPictureBox3.Location = new System.Drawing.Point(333, 516);
+            this.destinationPictureBox3.Name = "destinationPictureBox3";
+            this.destinationPictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.destinationPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.destinationPictureBox3.TabIndex = 11;
+            this.destinationPictureBox3.TabStop = false;
+            this.destinationPictureBox3.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
+            this.destinationPictureBox3.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.destinationPictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
             // 
-            // DestinationPictureBox1
+            // destinationPictureBox1
             // 
-            this.DestinationPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DestinationPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.DestinationPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DestinationPictureBox1.Location = new System.Drawing.Point(328, 257);
-            this.DestinationPictureBox1.Name = "DestinationPictureBox1";
-            this.DestinationPictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.DestinationPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.DestinationPictureBox1.TabIndex = 7;
-            this.DestinationPictureBox1.TabStop = false;
-            this.DestinationPictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
-            this.DestinationPictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
-            this.DestinationPictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.destinationPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.destinationPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.destinationPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.destinationPictureBox1.Location = new System.Drawing.Point(333, 257);
+            this.destinationPictureBox1.Name = "destinationPictureBox1";
+            this.destinationPictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.destinationPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.destinationPictureBox1.TabIndex = 7;
+            this.destinationPictureBox1.TabStop = false;
+            this.destinationPictureBox1.LocationChanged += new System.EventHandler(this.DestinationPictureBox1_LocationChanged);
+            this.destinationPictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
+            this.destinationPictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
+            this.destinationPictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
+            this.destinationPictureBox1.Resize += new System.EventHandler(this.DestinationPictureBox1_Resize);
             // 
             // panel2
             // 
@@ -786,14 +789,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.task1InterfaceTabPage.ResumeLayout(false);
             this.imagesPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DestinationPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabControl.ResumeLayout(false);
@@ -819,17 +822,17 @@
         private System.Windows.Forms.Label nameLabel4;
         private System.Windows.Forms.Panel imagesPanel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox SourcePictureBox2;
-        private System.Windows.Forms.PictureBox SourcePictureBox1;
-        private System.Windows.Forms.PictureBox SourcePictureBox3;
-        private System.Windows.Forms.PictureBox SourcePictureBox4;
+        private System.Windows.Forms.PictureBox sourcePictureBox2;
+        private System.Windows.Forms.PictureBox sourcePictureBox1;
+        private System.Windows.Forms.PictureBox sourcePictureBox3;
+        private System.Windows.Forms.PictureBox sourcePictureBox4;
         private System.Windows.Forms.Label nameLabel3;
-        private System.Windows.Forms.PictureBox DestinationPictureBox4;
-        private System.Windows.Forms.PictureBox DestinationPictureBox2;
+        private System.Windows.Forms.PictureBox destinationPictureBox4;
+        private System.Windows.Forms.PictureBox destinationPictureBox2;
         private System.Windows.Forms.Label nameLabel2;
         private System.Windows.Forms.Label nameLabel1;
-        private System.Windows.Forms.PictureBox DestinationPictureBox3;
-        private System.Windows.Forms.PictureBox DestinationPictureBox1;
+        private System.Windows.Forms.PictureBox destinationPictureBox3;
+        private System.Windows.Forms.PictureBox destinationPictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label headerLabel1;
