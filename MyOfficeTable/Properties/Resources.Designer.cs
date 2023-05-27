@@ -233,6 +233,36 @@ namespace MyOfficeTable.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap InteractiveTask10 {
+            get {
+                object obj = ResourceManager.GetObject("InteractiveTask10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InteractiveTask11 {
+            get {
+                object obj = ResourceManager.GetObject("InteractiveTask11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InteractiveTask12 {
+            get {
+                object obj = ResourceManager.GetObject("InteractiveTask12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap InteractiveTask2 {
             get {
                 object obj = ResourceManager.GetObject("InteractiveTask2", resourceCulture);
@@ -296,6 +326,16 @@ namespace MyOfficeTable.Properties {
         internal static System.Drawing.Bitmap InteractiveTask8 {
             get {
                 object obj = ResourceManager.GetObject("InteractiveTask8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InteractiveTask9 {
+            get {
+                object obj = ResourceManager.GetObject("InteractiveTask9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

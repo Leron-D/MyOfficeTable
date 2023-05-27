@@ -237,6 +237,10 @@
     <None Include="Resources\InteractiveTask4.jpg" />
     <None Include="Resources\InteractiveTask5.jpg" />
     <None Include="Resources\Fullscreen.png" />
+    <None Include="Resources\InteractiveTask12.jpg" />
+    <None Include="Resources\InteractiveTask9.jpg" />
+    <None Include="Resources\InteractiveTask10.jpg" />
+    <None Include="Resources\InteractiveTask11.jpg" />
     <Content Include="Resources\MyOfficeTable.ico" />
     <None Include="Resources\MyOfficeTable.jpg" />
     <None Include="Resources\NormalScreen.png" />

@@ -102,17 +102,18 @@ namespace MyOfficeTable
             if (changeWindowBoxButton.Tag == "Fullscreen")
             {
                 Settings.Default.isFullSize = true;
-                this.WindowState = FormWindowState.Maximized;
+                WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "NormalScreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
             }
             else
             {
                 Settings.Default.isFullSize = false;
-                this.WindowState = FormWindowState.Normal;
+                WindowState = FormWindowState.Normal;
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
             }
+            CenterToScreen();
         }
     }
 }

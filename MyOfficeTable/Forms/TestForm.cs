@@ -618,6 +618,7 @@ namespace MyOfficeTable
             }
             answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
             answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+            CenterToScreen();
         }
     }
 }

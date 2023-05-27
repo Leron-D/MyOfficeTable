@@ -158,6 +158,7 @@ namespace MyOfficeTable
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
             }
+            CenterToScreen();
         }
     }
 }

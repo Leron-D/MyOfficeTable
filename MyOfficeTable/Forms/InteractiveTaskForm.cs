@@ -36,6 +36,7 @@ namespace MyOfficeTable.Forms
         List<Label> listOfResultLabels1;
         List<Label> listOfResultLabels2;
         List<TextBox> listOfTextBoxes;
+        bool loadForm = true;
 
         public InteractiveTaskForm(string taskName)
         {
@@ -52,7 +53,7 @@ namespace MyOfficeTable.Forms
             ToolTip toolTip = new ToolTip();
             tabControl.Multiline = true;
             tabControl.Appearance = TabAppearance.Buttons;
-            tabControl.ItemSize = new System.Drawing.Size(0, 1);
+            tabControl.ItemSize = new Size(0, 1);
             tabControl.SizeMode = TabSizeMode.Fixed;
             tabControl.TabStop = false;
             DestinationPictureBox1.AllowDrop = DestinationPictureBox2.AllowDrop = DestinationPictureBox3.AllowDrop = DestinationPictureBox4.AllowDrop =
@@ -60,6 +61,24 @@ namespace MyOfficeTable.Forms
             headerLabel1.Text = headerLabel2.Text = theme;
             srcPictureBox = null;
             numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
+
+            if (Settings.Default.isFullSize)
+            {
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "Normalscreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+                headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 36, FontStyle.Bold);
+                imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
+                taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 28, FontStyle.Bold);
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+                imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
+            }
+
             if (theme == "Интерфейс табличного процессора")
             {
                 listOfNames = new List<string>
@@ -150,7 +169,7 @@ namespace MyOfficeTable.Forms
                     resultLabel4
                 };
 
-                numberOfTasks = 1;
+                numberOfTasks = 2;
                 tabControl.SelectedTab = tabControl.TabPages[0];
                 TakeTaskByInterface();
             }
@@ -167,7 +186,11 @@ namespace MyOfficeTable.Forms
                     Resources.InteractiveTask5,
                     Resources.InteractiveTask6,
                     Resources.InteractiveTask7,
-                    Resources.InteractiveTask8
+                    Resources.InteractiveTask8,                 
+                    Resources.InteractiveTask9,
+                    Resources.InteractiveTask10,
+                    Resources.InteractiveTask11,
+                    Resources.InteractiveTask12
                 };
 
                 listOfTags2 = new List<string>
@@ -180,12 +203,17 @@ namespace MyOfficeTable.Forms
                     "=A$1*B$1",
                     "=$B5-B$3/C3",
                     "=$B$2/C$3",
+                    "Смешанная",
+                    "Абсолютная",
+                    "Относительная",
+                    "Объемная"
                 };
 
                 listOfIndexes2 = new List<int>
                 {
                     0,
-                    4
+                    4,
+                    8
                 };
 
                 listOfFormulaPictureBoxes = new List<PictureBox>
@@ -212,9 +240,9 @@ namespace MyOfficeTable.Forms
                     resultLabel8
                 };
 
-                numberOfTasks = 1;
+                numberOfTasks = 2;
 
-                TakeFirstTaskByReferences();
+                TakeTaskByReferences();
             }
             numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
         }
@@ -222,8 +250,15 @@ namespace MyOfficeTable.Forms
         private void TakeTaskByInterface()
         {
             Random random = new Random();
+            for (int i = 0; i < 4; i++)
+            {
+                listOfDestinationPictureBoxes[i].Image = null;
+                listOfDestinationPictureBoxes[i].Tag = false;
+                listOfResultLabels1[i].Visible = false;
+            }
             int randomIndex = random.Next(0, 3);
             index1 = listOfIndexes1[randomIndex];
+            listOfIndexes1.RemoveAt(randomIndex);
             int k = 0;
             for (int i = index1; i < index1 + 4; i++)
             {
@@ -232,14 +267,23 @@ namespace MyOfficeTable.Forms
                 listOfNameLabels[k].Text = listOfNames[i];
                 k++;
             }
-            goNextButton.Text = "Завершить";
         }
 
-        private void TakeFirstTaskByReferences()
+        private void TakeTaskByReferences()
         {
             Random random = new Random();
-            int randomIndex = random.Next(0, 2);
+            for (int i = 0; i < 4; i++)
+            {
+                listOfTextBoxes[i].Text = "";
+                listOfResultLabels2[i].Visible = false;
+            }
+            int randomIndex = random.Next(0, 3);
+            if (randomIndex == 2)
+                taskLabel2.Text = "Задание: Требуется ввести тип ссылки, которая записана в выделенной ячейке";
+            else
+                taskLabel2.Text = "Задание: Требуется ввести формулу, которая будет написана в выделенной ячейке при копировании";
             index2 = listOfIndexes2[randomIndex];
+            listOfIndexes2.RemoveAt(randomIndex);
             int k = 0;
             for (int i = index2; i < index2 + 4; i++)
             {
@@ -247,7 +291,6 @@ namespace MyOfficeTable.Forms
                 listOfTextBoxes[k].Tag = listOfTags2[i];
                 k++;
             }
-            goNextButton.Text = "Завершить";
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -332,11 +375,17 @@ namespace MyOfficeTable.Forms
         {
             if (tabControl.SelectedTab == tabControl.TabPages[0] && resultLabel1.Tag == "Correct" && resultLabel2.Tag == "Correct" && resultLabel3.Tag == "Correct" && resultLabel4.Tag == "Correct")
             {
-                ShowForm(new SelectThemeForm("Интерактивные задания"));
+                if (numOfTask != numberOfTasks)
+                    TakeTaskByInterface();
+                else
+                    ShowForm(new SelectThemeForm("Интерактивные задания"));
             }
-            else if (tabControl.SelectedTab == tabControl.TabPages[1] && resultLabel5.Tag == "Correct" && resultLabel10.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
+            else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel10.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
             {
-                ShowForm(new SelectThemeForm("Интерактивные задания"));
+                if (numOfTask != numberOfTasks)
+                    TakeTaskByReferences();
+                else
+                    ShowForm(new SelectThemeForm("Интерактивные задания"));
             }
             else
             {
@@ -348,11 +397,13 @@ namespace MyOfficeTable.Forms
         private void GoNextButton_Click(object sender, EventArgs e)
         {
             GoToNextTask();
-            if(numberOfTasks > 1)
+            numOfTask++;
+            if (numOfTask != numberOfTasks)
             {
-                numOfTask++;
                 numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
             }
+            else
+                goNextButton.Text = "Завершить";
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -396,7 +447,7 @@ namespace MyOfficeTable.Forms
                     k++;
                 }
             }
-            else if (tabControl.SelectedTab == tabControl.TabPages[1])
+            else
             {
                 //ChangeImageOfLabel(answerTextBox1, "=A3+$B$2", resultLabel5);
                 //ChangeImageOfLabel(answerTextBox2, "=B3+$B$2*C3", resultLabel7);
@@ -408,13 +459,6 @@ namespace MyOfficeTable.Forms
                     ChangeImageOfLabel(listOfTextBoxes[k], listOfResultLabels2[k]);
                     k++;
                 }
-            }
-            else if (tabControl.SelectedTab == tabControl.TabPages[2])
-            {
-                //ChangeImageOfLabel(answerTextBox5, "=$A$1-C3+B$2", resultLabel17);
-                //ChangeImageOfLabel(answerTextBox6, "=A$1*B$1", resultLabel18);
-                //ChangeImageOfLabel(answerTextBox7, "=$B5-B$3/C3", resultLabel19);
-                //ChangeImageOfLabel(answerTextBox8, "=$B$2/C$3", resultLabel20);
             }
         }
 
@@ -438,7 +482,7 @@ namespace MyOfficeTable.Forms
         private void ChangeImageOfLabel(TextBox textBox, Label resultLabel)
         {
             resultLabel.Visible = true;
-            if(textBox.Text.ToLower() != textBox.Tag.ToString().ToLower())
+            if(textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
             {
                 resultLabel.Text = "";
                 resultLabel.Image = Resources.Incorrect;
@@ -468,16 +512,33 @@ namespace MyOfficeTable.Forms
         {
             if (changeWindowBoxButton.Tag == "Fullscreen")
             {
-                this.WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
+                ChangeScreen("NormalScreen");
             }
             else
             {
-                this.WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
+                ChangeScreen("Fullscreen");
             }
+        }
+
+        private void ChangeScreen(string tag)
+        {
+            changeWindowBoxButton.Tag = tag;
+            if (tag == "Fullscreen")
+            {            
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+                headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 28, FontStyle.Bold);
+                taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 24, FontStyle.Bold);
+            }
+            else
+            {
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+                headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 36, FontStyle.Bold);
+                taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 28, FontStyle.Bold);
+            }
+            imagesPanel.Top = (ClientSize.Height - imagesPanel.Height) / 2 + 70;
+            CenterToScreen();
         }
     }
 }
