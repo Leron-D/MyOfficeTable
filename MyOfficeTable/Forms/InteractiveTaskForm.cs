@@ -37,6 +37,7 @@ namespace MyOfficeTable.Forms
         List<Label> listOfResultLabels2;
         List<TextBox> listOfTextBoxes;
         bool loadForm = true;
+        int randomCount = 3;
 
         public InteractiveTaskForm(string taskName)
         {
@@ -63,6 +64,8 @@ namespace MyOfficeTable.Forms
 
             if (theme == "Интерфейс табличного процессора")
             {
+                Random random = new Random();
+
                 listOfNames = new List<string>
                 {
                     "Вырезать",
@@ -151,7 +154,7 @@ namespace MyOfficeTable.Forms
                     resultLabel4
                 };
 
-                numberOfTasks = 2;
+                numberOfTasks = random.Next(2, 4);
                 tabControl.SelectedTab = tabControl.TabPages[0];
                 TakeTaskByInterface();
             }
@@ -239,9 +242,10 @@ namespace MyOfficeTable.Forms
                 listOfDestinationPictureBoxes[i].Tag = false;
                 listOfResultLabels1[i].Visible = false;
             }
-            int randomIndex = random.Next(0, 3);
+            int randomIndex = random.Next(0, randomCount);
             index1 = listOfIndexes1[randomIndex];
             listOfIndexes1.RemoveAt(randomIndex);
+            randomCount--;
             int k = 0;
             for (int i = index1; i < index1 + 4; i++)
             {
@@ -361,14 +365,22 @@ namespace MyOfficeTable.Forms
                 if (numOfTask != numberOfTasks)
                     TakeTaskByInterface();
                 else
+                {
+                    Settings.Default.firstLoadInstruction = true;
+                    Settings.Default.Save();
                     ShowForm(new SelectThemeForm("Интерактивные задания"));
+                }
             }
             else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
             {
                 if (numOfTask != numberOfTasks)
                     TakeTaskByReferences();
                 else
+                {
+                    Settings.Default.firstLoadInstruction = true;
+                    Settings.Default.Save();
                     ShowForm(new SelectThemeForm("Интерактивные задания"));
+                }
             }
             else
             {
@@ -381,12 +393,11 @@ namespace MyOfficeTable.Forms
         {
             GoToNextTask();
             numOfTask++;
-            if (numOfTask != numberOfTasks)
+            if (numOfTask == numberOfTasks)
             {
-                numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
-            }
-            else
                 goNextButton.Text = "Завершить";
+            }
+            numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -540,7 +551,7 @@ namespace MyOfficeTable.Forms
             else
             {
                 formulaPictureBox1.Size = formulaPictureBox2.Size = formulaPictureBox3.Size = formulaPictureBox4.Size = new Size(327, 134);
-                formulaPictureBox1.Location = new Point(75, 277);
+                formulaPictureBox1.Location = new Point(100, 277);
                 answerTextBox1.Font = answerTextBox2.Font = answerTextBox3.Font = answerTextBox4.Font = new Font(answerTextBox1.Font.Name, 22, FontStyle.Bold);
             }
             Settings.Default.isFullSize = false;
@@ -578,7 +589,7 @@ namespace MyOfficeTable.Forms
             else
             {
                 formulaPictureBox1.Size = formulaPictureBox2.Size = formulaPictureBox3.Size = formulaPictureBox4.Size = new Size(551, 224);
-                formulaPictureBox1.Location = new Point(75, taskLabel2.Location.Y + taskLabel2.Height + 32);
+                formulaPictureBox1.Location = new Point(100, taskLabel2.Location.Y + taskLabel2.Height + 32);
                 answerTextBox1.Font = answerTextBox2.Font = answerTextBox3.Font = answerTextBox4.Font = new Font(answerTextBox1.Font.Name, 22, FontStyle.Bold);
             }
             Settings.Default.isFullSize = true;
@@ -660,7 +671,7 @@ namespace MyOfficeTable.Forms
             if (!loadForm)
             {
                 answerTextBox1.Location = new Point(formulaPictureBox1.Location.X, formulaPictureBox1.Location.Y + formulaPictureBox1.Height + 24);
-                formulaPictureBox2.Location = new Point(ClientSize.Width - formulaPictureBox1.Width - 75, formulaPictureBox1.Location.Y);
+                formulaPictureBox2.Location = new Point(ClientSize.Width - formulaPictureBox1.Width - 100, formulaPictureBox1.Location.Y);
 
                 formulaPictureBox3.Location = new Point(formulaPictureBox1.Location.X, answerTextBox1.Location.Y + answerTextBox1.Height + 53);
 

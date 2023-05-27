@@ -155,7 +155,10 @@ namespace MyOfficeTable
                 }
                 else
                 {
-                    GoToForm(new InstructionForm($"{selectThemeComboBox.SelectedItem}"));
+                    if (selectThemeComboBox.SelectedIndex == 0)
+                        GoToForm(new InstructionForm($"{selectThemeComboBox.SelectedItem}"));
+                    else
+                        GoToForm(new InteractiveTaskForm($"{selectThemeComboBox.SelectedItem}"));
                 }
             }
             catch (Exception ex)

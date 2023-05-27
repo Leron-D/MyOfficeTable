@@ -171,7 +171,7 @@
             this.resultLabel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.resultLabel8.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel8.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel8.Location = new System.Drawing.Point(975, 686);
+            this.resultLabel8.Location = new System.Drawing.Point(960, 686);
             this.resultLabel8.Name = "resultLabel8";
             this.resultLabel8.Size = new System.Drawing.Size(37, 37);
             this.resultLabel8.TabIndex = 67;
@@ -185,7 +185,7 @@
             this.resultLabel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel7.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel7.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel7.Location = new System.Drawing.Point(423, 686);
+            this.resultLabel7.Location = new System.Drawing.Point(448, 686);
             this.resultLabel7.Name = "resultLabel7";
             this.resultLabel7.Size = new System.Drawing.Size(37, 37);
             this.resultLabel7.TabIndex = 66;
@@ -199,7 +199,7 @@
             this.resultLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.resultLabel6.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel6.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel6.Location = new System.Drawing.Point(975, 435);
+            this.resultLabel6.Location = new System.Drawing.Point(960, 435);
             this.resultLabel6.Name = "resultLabel6";
             this.resultLabel6.Size = new System.Drawing.Size(37, 37);
             this.resultLabel6.TabIndex = 65;
@@ -213,7 +213,7 @@
             this.resultLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel5.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel5.Location = new System.Drawing.Point(423, 434);
+            this.resultLabel5.Location = new System.Drawing.Point(448, 434);
             this.resultLabel5.Name = "resultLabel5";
             this.resultLabel5.Size = new System.Drawing.Size(37, 37);
             this.resultLabel5.TabIndex = 64;
@@ -226,7 +226,7 @@
             // 
             this.answerTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.answerTextBox4.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox4.Location = new System.Drawing.Point(627, 686);
+            this.answerTextBox4.Location = new System.Drawing.Point(612, 686);
             this.answerTextBox4.Name = "answerTextBox4";
             this.answerTextBox4.Size = new System.Drawing.Size(327, 36);
             this.answerTextBox4.TabIndex = 63;
@@ -236,7 +236,7 @@
             // 
             this.answerTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.answerTextBox3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox3.Location = new System.Drawing.Point(75, 686);
+            this.answerTextBox3.Location = new System.Drawing.Point(100, 686);
             this.answerTextBox3.Name = "answerTextBox3";
             this.answerTextBox3.Size = new System.Drawing.Size(327, 36);
             this.answerTextBox3.TabIndex = 62;
@@ -246,7 +246,7 @@
             // 
             this.answerTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.answerTextBox2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox2.Location = new System.Drawing.Point(627, 435);
+            this.answerTextBox2.Location = new System.Drawing.Point(612, 435);
             this.answerTextBox2.Name = "answerTextBox2";
             this.answerTextBox2.Size = new System.Drawing.Size(327, 36);
             this.answerTextBox2.TabIndex = 61;
@@ -256,7 +256,7 @@
             // 
             this.answerTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.answerTextBox1.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox1.Location = new System.Drawing.Point(75, 435);
+            this.answerTextBox1.Location = new System.Drawing.Point(100, 435);
             this.answerTextBox1.Name = "answerTextBox1";
             this.answerTextBox1.Size = new System.Drawing.Size(327, 36);
             this.answerTextBox1.TabIndex = 60;
@@ -268,7 +268,7 @@
             this.formulaPictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.formulaPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.formulaPictureBox4.Image = global::MyOfficeTable.Properties.Resources.InteractiveTask4;
-            this.formulaPictureBox4.Location = new System.Drawing.Point(627, 530);
+            this.formulaPictureBox4.Location = new System.Drawing.Point(612, 530);
             this.formulaPictureBox4.Name = "formulaPictureBox4";
             this.formulaPictureBox4.Size = new System.Drawing.Size(327, 134);
             this.formulaPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -281,7 +281,7 @@
             this.formulaPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.formulaPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.formulaPictureBox2.Image = global::MyOfficeTable.Properties.Resources.InteractiveTask2;
-            this.formulaPictureBox2.Location = new System.Drawing.Point(627, 277);
+            this.formulaPictureBox2.Location = new System.Drawing.Point(612, 277);
             this.formulaPictureBox2.Name = "formulaPictureBox2";
             this.formulaPictureBox2.Size = new System.Drawing.Size(327, 134);
             this.formulaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -294,7 +294,7 @@
             this.formulaPictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.formulaPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.formulaPictureBox3.Image = global::MyOfficeTable.Properties.Resources.InteractiveTask3;
-            this.formulaPictureBox3.Location = new System.Drawing.Point(75, 530);
+            this.formulaPictureBox3.Location = new System.Drawing.Point(100, 530);
             this.formulaPictureBox3.Name = "formulaPictureBox3";
             this.formulaPictureBox3.Size = new System.Drawing.Size(327, 134);
             this.formulaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +307,7 @@
             this.formulaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.formulaPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.formulaPictureBox1.Image = global::MyOfficeTable.Properties.Resources.InteractiveTask1;
-            this.formulaPictureBox1.Location = new System.Drawing.Point(75, 277);
+            this.formulaPictureBox1.Location = new System.Drawing.Point(100, 277);
             this.formulaPictureBox1.Name = "formulaPictureBox1";
             this.formulaPictureBox1.Size = new System.Drawing.Size(327, 134);
             this.formulaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
