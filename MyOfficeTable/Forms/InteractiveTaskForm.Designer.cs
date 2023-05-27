@@ -375,6 +375,7 @@
             // 
             // resultLabel4
             // 
+            this.resultLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel4.Location = new System.Drawing.Point(470, 674);
@@ -388,6 +389,7 @@
             // 
             // resultLabel3
             // 
+            this.resultLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel3.Location = new System.Drawing.Point(470, 551);
@@ -401,6 +403,7 @@
             // 
             // resultLabel2
             // 
+            this.resultLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel2.Location = new System.Drawing.Point(470, 421);
@@ -414,6 +417,7 @@
             // 
             // resultLabel1
             // 
+            this.resultLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resultLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.resultLabel1.Location = new System.Drawing.Point(470, 290);
@@ -427,6 +431,7 @@
             // 
             // nameLabel4
             // 
+            this.nameLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.nameLabel4.Location = new System.Drawing.Point(13, 643);
@@ -438,25 +443,27 @@
             // 
             // imagesPanel1
             // 
+            this.imagesPanel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.imagesPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imagesPanel1.Controls.Add(this.label6);
             this.imagesPanel1.Controls.Add(this.SourcePictureBox2);
             this.imagesPanel1.Controls.Add(this.SourcePictureBox1);
             this.imagesPanel1.Controls.Add(this.SourcePictureBox3);
             this.imagesPanel1.Controls.Add(this.SourcePictureBox4);
-            this.imagesPanel1.Location = new System.Drawing.Point(552, 338);
+            this.imagesPanel1.Location = new System.Drawing.Point(569, 347);
             this.imagesPanel1.Name = "imagesPanel1";
             this.imagesPanel1.Size = new System.Drawing.Size(429, 314);
             this.imagesPanel1.TabIndex = 12;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label6.Location = new System.Drawing.Point(10, 17);
+            this.label6.Location = new System.Drawing.Point(7, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(412, 37);
+            this.label6.Size = new System.Drawing.Size(414, 37);
             this.label6.TabIndex = 37;
             this.label6.Text = "Графические обозначения";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -468,7 +475,7 @@
             this.SourcePictureBox2.Location = new System.Drawing.Point(63, 75);
             this.SourcePictureBox2.Name = "SourcePictureBox2";
             this.SourcePictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.SourcePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SourcePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SourcePictureBox2.TabIndex = 8;
             this.SourcePictureBox2.TabStop = false;
             this.SourcePictureBox2.Tag = "copyFormat";
@@ -478,12 +485,13 @@
             // 
             // SourcePictureBox1
             // 
+            this.SourcePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SourcePictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SourcePictureBox1.Image = global::MyOfficeTable.Properties.Resources.Cut;
             this.SourcePictureBox1.Location = new System.Drawing.Point(266, 199);
             this.SourcePictureBox1.Name = "SourcePictureBox1";
             this.SourcePictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.SourcePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SourcePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SourcePictureBox1.TabIndex = 6;
             this.SourcePictureBox1.TabStop = false;
             this.SourcePictureBox1.Tag = "cut";
@@ -493,12 +501,13 @@
             // 
             // SourcePictureBox3
             // 
+            this.SourcePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SourcePictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SourcePictureBox3.Image = global::MyOfficeTable.Properties.Resources.AllLettersUppercase;
             this.SourcePictureBox3.Location = new System.Drawing.Point(63, 199);
             this.SourcePictureBox3.Name = "SourcePictureBox3";
             this.SourcePictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.SourcePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SourcePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SourcePictureBox3.TabIndex = 10;
             this.SourcePictureBox3.TabStop = false;
             this.SourcePictureBox3.Tag = "allLettersUppercase";
@@ -508,12 +517,13 @@
             // 
             // SourcePictureBox4
             // 
+            this.SourcePictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SourcePictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SourcePictureBox4.Image = global::MyOfficeTable.Properties.Resources.Bold;
             this.SourcePictureBox4.Location = new System.Drawing.Point(266, 75);
             this.SourcePictureBox4.Name = "SourcePictureBox4";
             this.SourcePictureBox4.Size = new System.Drawing.Size(100, 100);
-            this.SourcePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SourcePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SourcePictureBox4.TabIndex = 9;
             this.SourcePictureBox4.TabStop = false;
             this.SourcePictureBox4.Tag = "bold";
@@ -523,6 +533,7 @@
             // 
             // nameLabel3
             // 
+            this.nameLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.nameLabel3.Location = new System.Drawing.Point(13, 519);
@@ -534,6 +545,7 @@
             // 
             // DestinationPictureBox4
             // 
+            this.DestinationPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DestinationPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DestinationPictureBox4.Location = new System.Drawing.Point(328, 643);
             this.DestinationPictureBox4.Name = "DestinationPictureBox4";
@@ -547,6 +559,7 @@
             // 
             // DestinationPictureBox2
             // 
+            this.DestinationPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DestinationPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.DestinationPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DestinationPictureBox2.Location = new System.Drawing.Point(328, 387);
@@ -561,6 +574,7 @@
             // 
             // nameLabel2
             // 
+            this.nameLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel2.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.nameLabel2.Location = new System.Drawing.Point(13, 389);
@@ -572,6 +586,7 @@
             // 
             // nameLabel1
             // 
+            this.nameLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nameLabel1.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.nameLabel1.Location = new System.Drawing.Point(13, 257);
@@ -583,6 +598,7 @@
             // 
             // DestinationPictureBox3
             // 
+            this.DestinationPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DestinationPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DestinationPictureBox3.Location = new System.Drawing.Point(328, 516);
             this.DestinationPictureBox3.Name = "DestinationPictureBox3";
@@ -596,6 +612,7 @@
             // 
             // DestinationPictureBox1
             // 
+            this.DestinationPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DestinationPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.DestinationPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DestinationPictureBox1.Location = new System.Drawing.Point(328, 257);
@@ -660,12 +677,11 @@
             // numOfTaskLabel
             // 
             this.numOfTaskLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.numOfTaskLabel.AutoSize = true;
             this.numOfTaskLabel.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOfTaskLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.numOfTaskLabel.Location = new System.Drawing.Point(398, 838);
+            this.numOfTaskLabel.Location = new System.Drawing.Point(398, 833);
             this.numOfTaskLabel.Name = "numOfTaskLabel";
-            this.numOfTaskLabel.Size = new System.Drawing.Size(255, 37);
+            this.numOfTaskLabel.Size = new System.Drawing.Size(255, 47);
             this.numOfTaskLabel.TabIndex = 70;
             this.numOfTaskLabel.Tag = "Incorrect";
             this.numOfTaskLabel.Text = "Номер вопроса";
@@ -747,7 +763,8 @@
             this.Controls.Add(this.goBackButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1037, 795);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(1037, 883);
             this.Name = "InteractiveTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InteractiveTaskForm";
@@ -764,7 +781,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.task1InterfaceTabPage.ResumeLayout(false);
             this.imagesPanel1.ResumeLayout(false);
-            this.imagesPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SourcePictureBox3)).EndInit();
@@ -777,7 +793,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
