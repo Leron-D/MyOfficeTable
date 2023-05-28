@@ -189,9 +189,18 @@ namespace MyOfficeTable
 
         private void GoToEvaulationCriterias_Click(object sender, EventArgs e)
         {
-            GoToForm(new EvaluationСriteriasForm(listOfNumberOfQuestions[selectThemeComboBox.SelectedIndex]));
+            //GoToForm(new EvaluationСriteriasForm(listOfNumberOfQuestions[selectThemeComboBox.SelectedIndex]));
+            EvaluationСriteriasForm form = new EvaluationСriteriasForm();
+            goToEvaluationCriteriasButton.Enabled = transitionButton.Enabled = goBackButton.Enabled = cancelButton.Enabled = false;
+            form.Show();
+            form.FormClosed += Form_FormClosed;
         }
-        
+
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            goToEvaluationCriteriasButton.Enabled = transitionButton.Enabled = goBackButton.Enabled = cancelButton.Enabled = true;
+        }
+
         void GoToForm(Form form)
         {
             Hide();

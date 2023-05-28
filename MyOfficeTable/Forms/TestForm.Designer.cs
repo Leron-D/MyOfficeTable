@@ -115,6 +115,7 @@
             this.answerCheckBox1.UseVisualStyleBackColor = false;
             this.answerCheckBox1.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             this.answerCheckBox1.LocationChanged += new System.EventHandler(this.FirstAnswerCheckBox_LocationChanged);
+            this.answerCheckBox1.VisibleChanged += new System.EventHandler(this.AnswerCheckBox_VisibleChanged);
             // 
             // answerCheckBox2
             // 
@@ -265,7 +266,7 @@
             this.numOfQuestionLabel.BackColor = System.Drawing.Color.Transparent;
             this.numOfQuestionLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numOfQuestionLabel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.numOfQuestionLabel.Location = new System.Drawing.Point(545, 553);
+            this.numOfQuestionLabel.Location = new System.Drawing.Point(545, 489);
             this.numOfQuestionLabel.MaximumSize = new System.Drawing.Size(850, 90);
             this.numOfQuestionLabel.Name = "numOfQuestionLabel";
             this.numOfQuestionLabel.Size = new System.Drawing.Size(180, 27);
@@ -405,7 +406,7 @@
             this.goNextQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goNextQuestionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goNextQuestionButton.ForeColor = System.Drawing.Color.White;
-            this.goNextQuestionButton.Location = new System.Drawing.Point(1003, 553);
+            this.goNextQuestionButton.Location = new System.Drawing.Point(1003, 489);
             this.goNextQuestionButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goNextQuestionButton.Name = "goNextQuestionButton";
             this.goNextQuestionButton.Size = new System.Drawing.Size(282, 40);
@@ -555,7 +556,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1286, 594);
+            this.ClientSize = new System.Drawing.Size(1286, 530);
             this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.answerCheckBox2);
             this.Controls.Add(this.answerRadioButton6);
@@ -586,11 +587,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1286, 594);
+            this.MinimumSize = new System.Drawing.Size(1286, 530);
             this.Name = "TestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Тестирование";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestForm_FormClosed);
+            this.Load += new System.EventHandler(this.TestForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseUp);

@@ -30,10 +30,10 @@ namespace MyOfficeTable
 
             file = fileName;
 
-            if (Properties.Settings.Default.goFromTheory)
-                goToTestButton.Visible = true;
+            if (Settings.Default.goFromTheory)
+                goToTestButton.Visible = goBackButton.Visible = true;
             else
-                goToTestButton.Visible = false;
+                goToTestButton.Visible = goBackButton.Visible = false;
 
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(minimizeButton, "Свернуть");
@@ -48,12 +48,10 @@ namespace MyOfficeTable
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new MainForm());
-        }
-
-        private void GoBackButton_Click(object sender, EventArgs e)
-        {
-            GoToForm(new SelectThemeForm("Тестирование"));
+            if (!Settings.Default.goFromTheory)
+                Close();
+            else
+                GoToForm(new MainForm());
         }
 
         private void EvaluationCriteriasForm_MouseDown(object sender, MouseEventArgs e)
@@ -98,22 +96,27 @@ namespace MyOfficeTable
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
         {
-            loadForm = false;
-            if (changeWindowBoxButton.Tag == "Fullscreen")
-            {
-                Settings.Default.isFullSize = true;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-            }
-            else
-            {
-                Settings.Default.isFullSize = false;
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-            }
-            CenterToScreen();
+            //loadForm = false;
+            //if (changeWindowBoxButton.Tag == "Fullscreen")
+            //{
+            //    Settings.Default.isFullSize = true;
+            //    WindowState = FormWindowState.Maximized;
+            //    changeWindowBoxButton.Tag = "NormalScreen";
+            //    changeWindowBoxButton.Image = Resources.NormalScreen;
+            //}
+            //else
+            //{
+            //    Settings.Default.isFullSize = false;
+            //    WindowState = FormWindowState.Normal;
+            //    changeWindowBoxButton.Tag = "Fullscreen";
+            //    changeWindowBoxButton.Image = Resources.Fullscreen;
+            //}
+            //CenterToScreen();
+        }
+
+        private void GoBackButton_Click(object sender, EventArgs e)
+        {
+            GoToForm(new TheoryForm($@"{Directory.GetCurrentDirectory()}\Lections\{Path.GetFileNameWithoutExtension(file)}.html"));
         }
     }
 }

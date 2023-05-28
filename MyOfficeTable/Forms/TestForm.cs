@@ -64,28 +64,6 @@ namespace MyOfficeTable
                     questionsArray[i] = temp;
                 }
                 ChangeVisibilityButtons();
-                if (Settings.Default.isFullSize)
-                {
-                    loadForm = false;
-                    WindowState = FormWindowState.Maximized;
-                    changeWindowBoxButton.Tag = "Normalscreen";
-                    changeWindowBoxButton.Image = Resources.NormalScreen;
-                    questionLabel.MaximumSize = new Size(1500, 130);
-                    startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
-                    startTestButton.Size = new Size(404, 49);
-                    startTestButton.Left = (SystemInformation.VirtualScreen.Width - startTestButton.Width) / 2;
-                    startTestButton.Top = ((SystemInformation.VirtualScreen.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
-                    //timerLabel.Location = new Point(Screen.GetWorkingArea(this).Width - timerLabel.Width - 30, timerLabel.Location.Y);
-                    ChangeControlsToFullscreen();
-                }
-                else
-                {
-                    WindowState = FormWindowState.Normal;
-                    changeWindowBoxButton.Tag = "Fullscreen";
-                    changeWindowBoxButton.Image = Resources.Fullscreen;
-                    startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
-                    startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
-                }
 
                 timer.Start();
             }
@@ -93,14 +71,6 @@ namespace MyOfficeTable
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void ChangeControlsToFullscreen()
-        {
-            goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 22, FontStyle.Bold);
-            goNextQuestionButton.Size = new Size(389, 49);
-            goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
-            headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -154,7 +124,6 @@ namespace MyOfficeTable
             if (Settings.Default.isFullSize)
             {
                 timerLabel.Width += 70;
-                ChangeControlsToFullscreen();
             }
             timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
         }
@@ -569,71 +538,116 @@ namespace MyOfficeTable
             loadForm = false;
             if (changeWindowBoxButton.Tag == "Fullscreen")
             {
-                Settings.Default.isFullSize = true;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                questionLabel.MaximumSize = new Size(1300, 150);
-                answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
-                answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
-                answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
-                new Font(answerCheckBox1.Font.Name, 22, FontStyle.Bold);
-                answerTextBox.Font = new Font(answerTextBox.Font.Name, 22);
-                questionLabel.Font = new Font(questionLabel.Font.Name, 22, FontStyle.Bold);
-                timerLabel.Font = new Font(timerLabel.Font.Name, 22, FontStyle.Bold);
-                timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
-                timerLabel.Width += 70;
-                numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 22, FontStyle.Bold);
-
-                startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
-                startTestButton.Size = new Size(404, 49);
-                startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
-                startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
-
-                goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 22, FontStyle.Bold);
-                if (numOfQuestion != numOfQuestions)
-                    goNextQuestionButton.Size = new Size(389, 49);
-                else
-                    goNextQuestionButton.Size = new Size(309, 49);
-                goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+                ChangeControlsForFullscreen();
             }
             else
             {
-                Settings.Default.isFullSize = false;
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-                questionLabel.MaximumSize = new Size(900, 150);
-                Height += addedHeight;
-                addedHeight = 0;
-                answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
-                answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
-                answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
-                new Font(answerCheckBox1.Font.Name, 18, FontStyle.Bold);
-                answerTextBox.Font = new Font(answerTextBox.Font.Name, 18);
-                questionLabel.Font = new Font(questionLabel.Font.Name, 18, FontStyle.Bold);
-                headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
-                timerLabel.Font = new Font(timerLabel.Font.Name, 18, FontStyle.Bold);
-                //timerLabel.Location = new Point(953, 199);
-                timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
-                timerLabel.Width -= 70;
-                numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 18, FontStyle.Bold);
-
-                startTestButton.Font = new Font(startTestButton.Font.Name, 18, FontStyle.Bold);
-                startTestButton.Size = new Size(348, 40);
-                startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
-                startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
-
-                goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 18, FontStyle.Bold);
-                if (numOfQuestion != numOfQuestions)
-                    goNextQuestionButton.Size = new Size(282, 40);
-                else
-                    goNextQuestionButton.Size = new Size(346, 40);
-                goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+                ChangeControlsForNormalScreen();
             }
             answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
             answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
             CenterToScreen();
+        }
+
+        private void ChangeControlsForNormalScreen()
+        {
+            Settings.Default.isFullSize = false;
+            WindowState = FormWindowState.Normal;
+            changeWindowBoxButton.Tag = "Fullscreen";
+            changeWindowBoxButton.Image = Resources.Fullscreen;
+            questionLabel.MaximumSize = new Size(900, 150);
+            Height += addedHeight;
+            addedHeight = 0;
+            answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
+            answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
+            answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
+            new Font(answerCheckBox1.Font.Name, 18, FontStyle.Bold);
+            answerTextBox.Font = new Font(answerTextBox.Font.Name, 18);
+            questionLabel.Font = new Font(questionLabel.Font.Name, 18, FontStyle.Bold);
+            headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
+            timerLabel.Font = new Font(timerLabel.Font.Name, 18, FontStyle.Bold);
+            //timerLabel.Location = new Point(953, 199);
+            timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
+            timerLabel.Width -= 70;
+            numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 18, FontStyle.Bold);
+
+            startTestButton.Font = new Font(startTestButton.Font.Name, 18, FontStyle.Bold);
+            startTestButton.Size = new Size(348, 40);
+            startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
+            startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+
+            goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 18, FontStyle.Bold);
+            if (numOfQuestion != numOfQuestions)
+                goNextQuestionButton.Size = new Size(282, 40);
+            else
+                goNextQuestionButton.Size = new Size(346, 40);
+            goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+        }
+
+        private void ChangeControlsForFullscreen()
+        {
+            Settings.Default.isFullSize = true;
+            WindowState = FormWindowState.Maximized;
+            changeWindowBoxButton.Tag = "NormalScreen";
+            changeWindowBoxButton.Image = Resources.NormalScreen;
+            questionLabel.MaximumSize = new Size(1300, 150);
+            headerLabel.Font = new Font(headerLabel.Font.Name, 32, FontStyle.Bold);
+            answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
+            answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
+            answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
+            new Font(answerCheckBox1.Font.Name, 22, FontStyle.Bold);
+            answerTextBox.Font = new Font(answerTextBox.Font.Name, 22);
+            questionLabel.Font = new Font(questionLabel.Font.Name, 22, FontStyle.Bold);
+            timerLabel.Font = new Font(timerLabel.Font.Name, 22, FontStyle.Bold);
+            timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
+            timerLabel.Width += 70;
+            numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 22, FontStyle.Bold);
+
+            startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
+            startTestButton.Size = new Size(404, 49);
+            startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
+            startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+
+            goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 22, FontStyle.Bold);
+            if (numOfQuestion != numOfQuestions)
+                goNextQuestionButton.Size = new Size(389, 49);
+            else
+                goNextQuestionButton.Size = new Size(309, 49);
+            goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+        }
+
+        private void TestForm_Load(object sender, EventArgs e)
+        {
+            if (Settings.Default.isFullSize)
+            {
+                loadForm = false;
+
+                ChangeControlsForFullscreen();
+                //WindowState = FormWindowState.Maximized;
+                //changeWindowBoxButton.Tag = "Normalscreen";
+                //changeWindowBoxButton.Image = Resources.NormalScreen;
+                //questionLabel.MaximumSize = new Size(1500, 130);
+                //startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
+                //startTestButton.Size = new Size(404, 49);
+                //startTestButton.Left = (SystemInformation.VirtualScreen.Width - startTestButton.Width) / 2;
+                //startTestButton.Top = ((SystemInformation.VirtualScreen.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+                //timerLabel.Location = new Point(Screen.GetWorkingArea(this).Width - timerLabel.Width - 30, timerLabel.Location.Y);
+                //ChangeControlsToFullscreen();
+            }
+            else
+            {
+                ChangeControlsForNormalScreen();
+                //WindowState = FormWindowState.Normal;
+                //changeWindowBoxButton.Tag = "Fullscreen";
+                //changeWindowBoxButton.Image = Resources.Fullscreen;
+                //startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
+                //startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+            }
+        }
+
+        private void AnswerCheckBox_VisibleChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
