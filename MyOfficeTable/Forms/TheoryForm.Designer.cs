@@ -57,7 +57,7 @@
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(1361, 1);
+            this.cancelButton.Location = new System.Drawing.Point(1367, 1);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(31, 32);
             this.cancelButton.TabIndex = 13;
@@ -71,7 +71,7 @@
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(1279, 1);
+            this.minimizeButton.Location = new System.Drawing.Point(1285, 1);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(35, 32);
             this.minimizeButton.TabIndex = 12;
@@ -87,7 +87,7 @@
             this.headerLabel.ForeColor = System.Drawing.Color.White;
             this.headerLabel.Location = new System.Drawing.Point(131, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(1266, 133);
+            this.headerLabel.Size = new System.Drawing.Size(1272, 133);
             this.headerLabel.TabIndex = 7;
             this.headerLabel.Text = "Теоретический материал";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,7 +100,7 @@
             this.rightPanel.Controls.Add(this.webBrowser);
             this.rightPanel.Location = new System.Drawing.Point(300, 251);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(1092, 651);
+            this.rightPanel.Size = new System.Drawing.Size(1098, 651);
             this.rightPanel.TabIndex = 1;
             // 
             // webBrowser
@@ -114,7 +114,7 @@
             this.webBrowser.DefaultBackgroundColor = System.Drawing.Color.White;
             this.webBrowser.Location = new System.Drawing.Point(0, 3);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(1092, 645);
+            this.webBrowser.Size = new System.Drawing.Size(1098, 645);
             this.webBrowser.TabIndex = 0;
             this.webBrowser.ZoomFactor = 1D;
             // 
@@ -127,7 +127,7 @@
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1400, 135);
+            this.panel1.Size = new System.Drawing.Size(1406, 135);
             this.panel1.TabIndex = 30;
             // 
             // pictureBox1
@@ -209,7 +209,7 @@
             this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
             this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
-            this.changeWindowBoxButton.Location = new System.Drawing.Point(1320, 1);
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(1326, 1);
             this.changeWindowBoxButton.Name = "changeWindowBoxButton";
             this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
             this.changeWindowBoxButton.TabIndex = 73;
@@ -245,7 +245,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1394, 948);
+            this.ClientSize = new System.Drawing.Size(1400, 948);
             this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.changeSizePanelButton);
             this.Controls.Add(this.goBackButton);

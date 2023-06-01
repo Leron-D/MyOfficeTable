@@ -77,7 +77,7 @@
             this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.label1.Location = new System.Drawing.Point(74, 409);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(978, 186);
+            this.label1.Size = new System.Drawing.Size(929, 186);
             this.label1.TabIndex = 66;
             this.label1.Text = resources.GetString("label1.Text");
             // 
@@ -87,7 +87,7 @@
             this.label2.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.label2.Location = new System.Drawing.Point(74, 279);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(978, 93);
+            this.label2.Size = new System.Drawing.Size(929, 93);
             this.label2.TabIndex = 65;
             this.label2.Text = "Для выполнения задания требуется перетащить изображения, \r\nобозначающие элементы " +
     "панели инструментов в нужный  квадрат \r\nнапротив названия элемента.";
