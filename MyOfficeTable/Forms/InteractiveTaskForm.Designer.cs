@@ -162,8 +162,8 @@
             this.taskLabel2.Size = new System.Drawing.Size(879, 97);
             this.taskLabel2.TabIndex = 68;
             this.taskLabel2.Tag = "Incorrect";
-            this.taskLabel2.Text = "Задание: Требуется ввести формулу, которая будет написана в выделенной ячейке при" +
-    " копировании";
+            this.taskLabel2.Text = "Задание: Введите формулу, которая будет написана в выделенной ячейке при копирова" +
+    "нии";
             this.taskLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // resultLabel8
@@ -388,8 +388,7 @@
             this.taskLabel1.Size = new System.Drawing.Size(879, 97);
             this.taskLabel1.TabIndex = 69;
             this.taskLabel1.Tag = "Incorrect";
-            this.taskLabel1.Text = "Задание: Требуется соотнести элемент панели управления и его графическое обозначе" +
-    "ние";
+            this.taskLabel1.Text = "Задание: Соотнесите элемент панели управления и его графическое обозначение";
             this.taskLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // resultLabel4

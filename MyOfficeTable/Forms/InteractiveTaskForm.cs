@@ -189,8 +189,8 @@ namespace MyOfficeTable.Forms
                     "=$B5-B$3/C3",
                     "=$B$2/C$3",
                     "Смешанная",
-                    "Абсолютная",
                     "Относительная",
+                    "Абсолютная",
                     "Объемная"
                 };
 
@@ -266,9 +266,9 @@ namespace MyOfficeTable.Forms
             }
             int randomIndex = random.Next(0, 3);
             if (randomIndex == 2)
-                taskLabel2.Text = "Задание: Требуется ввести тип ссылки, которая записана в выделенной ячейке";
+                taskLabel2.Text = "Задание: Введите тип ссылки, которая записана в выделенной ячейке";
             else
-                taskLabel2.Text = "Задание: Требуется ввести формулу, которая будет написана в выделенной ячейке при копировании";
+                taskLabel2.Text = "Задание: Введите формулу, которая будет написана в выделенной ячейке при копировании";
             index2 = listOfIndexes2[randomIndex];
             listOfIndexes2.RemoveAt(randomIndex);
             int k = 0;
@@ -278,6 +278,12 @@ namespace MyOfficeTable.Forms
                 listOfTextBoxes[k].Tag = listOfTags2[i];
                 k++;
             }
+        }
+
+        void SetInvisibleOfResultLabels()
+        {
+            resultLabel1.Visible = resultLabel2.Visible = resultLabel3.Visible = resultLabel4.Visible = resultLabel5.Visible = resultLabel6.Visible = resultLabel7.Visible =
+            resultLabel8.Visible = false;
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -366,10 +372,9 @@ namespace MyOfficeTable.Forms
                     TakeTaskByInterface();
                 else
                 {
-                    Settings.Default.firstLoadInstruction = true;
-                    Settings.Default.Save();
-                    ShowForm(new SelectThemeForm("Интерактивные задания"));
+                    GoToSelectThemeForm();
                 }
+                CheckCorrectness();
             }
             else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
             {
@@ -377,27 +382,34 @@ namespace MyOfficeTable.Forms
                     TakeTaskByReferences();
                 else
                 {
-                    Settings.Default.firstLoadInstruction = true;
-                    Settings.Default.Save();
-                    ShowForm(new SelectThemeForm("Интерактивные задания"));
+                    GoToSelectThemeForm();
                 }
+                CheckCorrectness();
             }
             else
             {
                 MessageBox.Show("Задание решено неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CheckCorrectness();
+                return;
             }
-            CheckCorrectness();
+            numOfTask++;
+            if (numOfTask == numberOfTasks)
+                goNextButton.Text = "Завершить";
+            numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
+            SetInvisibleOfResultLabels();
+        }
+
+        private void GoToSelectThemeForm()
+        {
+            Settings.Default.firstLoadInstruction = true;
+            Settings.Default.Save();
+            MessageBox.Show("Вы завершили выполнение задания!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowForm(new SelectThemeForm("Интерактивные задания"));
         }
 
         private void GoNextButton_Click(object sender, EventArgs e)
         {
             GoToNextTask();
-            numOfTask++;
-            if (numOfTask == numberOfTasks)
-            {
-                goNextButton.Text = "Завершить";
-            }
-            numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -443,10 +455,6 @@ namespace MyOfficeTable.Forms
             }
             else
             {
-                //ChangeImageOfLabel(answerTextBox1, "=A3+$B$2", resultLabel5);
-                //ChangeImageOfLabel(answerTextBox2, "=B3+$B$2*C3", resultLabel7);
-                //ChangeImageOfLabel(answerTextBox3, "=$A4+B4", resultLabel6);
-                //ChangeImageOfLabel(answerTextBox4, "=$B5/B$2", resultLabel8);
                 int k = 0;
                 for (int i = index2; i < index2 + 4; i++)
                 {
@@ -561,7 +569,7 @@ namespace MyOfficeTable.Forms
         {
             changeWindowBoxButton.Image = Resources.NormalScreen;
             headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 36, FontStyle.Bold);
-            taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 32, FontStyle.Bold);
+            taskLabel1.Font = taskLabel2.Font = new Font(taskLabel1.Font.Name, 28, FontStyle.Bold);
             numOfTaskLabel.Font = new Font(numOfTaskLabel.Font.Name, 28, FontStyle.Bold);
 
             goBackButton.Font = goNextButton.Font = new Font(goBackButton.Font.Name, 22, FontStyle.Bold);
