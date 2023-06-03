@@ -115,7 +115,6 @@
             this.answerCheckBox1.UseVisualStyleBackColor = false;
             this.answerCheckBox1.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             this.answerCheckBox1.LocationChanged += new System.EventHandler(this.FirstAnswerCheckBox_LocationChanged);
-            this.answerCheckBox1.VisibleChanged += new System.EventHandler(this.AnswerCheckBox_VisibleChanged);
             // 
             // answerCheckBox2
             // 
