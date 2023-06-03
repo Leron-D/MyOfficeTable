@@ -125,12 +125,6 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ResultInteractiveForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ResultInteractiveForm.Designer.cs">
-      <DependentUpon>ResultInteractiveForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\StyleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,9 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ResultInteractiveForm.resx">
-      <DependentUpon>ResultInteractiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StyleForm.resx">
       <DependentUpon>StyleForm.cs</DependentUpon>
