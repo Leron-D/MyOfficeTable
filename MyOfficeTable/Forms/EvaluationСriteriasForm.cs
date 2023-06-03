@@ -15,9 +15,6 @@ namespace MyOfficeTable
 {
     public partial class EvaluationСriteriasForm : Form
     {
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         string file = "";
         int num = 0;
         bool loadForm = true;
@@ -54,27 +51,6 @@ namespace MyOfficeTable
                 GoToForm(new MainForm());
         }
 
-        private void EvaluationCriteriasForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void EvaluationCriteriasForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void EvaluationCriteriasForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
-        }
-
         private void GoToTestButton_Click(object sender, EventArgs e)
         {
             if (file != "")
@@ -92,26 +68,6 @@ namespace MyOfficeTable
         {
             Settings.Default.goFromTheory = false;
             Settings.Default.Save();
-        }
-
-        private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
-        {
-            //loadForm = false;
-            //if (changeWindowBoxButton.Tag == "Fullscreen")
-            //{
-            //    Settings.Default.isFullSize = true;
-            //    WindowState = FormWindowState.Maximized;
-            //    changeWindowBoxButton.Tag = "NormalScreen";
-            //    changeWindowBoxButton.Image = Resources.NormalScreen;
-            //}
-            //else
-            //{
-            //    Settings.Default.isFullSize = false;
-            //    WindowState = FormWindowState.Normal;
-            //    changeWindowBoxButton.Tag = "Fullscreen";
-            //    changeWindowBoxButton.Image = Resources.Fullscreen;
-            //}
-            //CenterToScreen();
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)

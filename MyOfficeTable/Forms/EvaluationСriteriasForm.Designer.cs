@@ -142,7 +142,6 @@
             this.changeWindowBoxButton.Tag = "Fullscreen";
             this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.changeWindowBoxButton.UseVisualStyleBackColor = false;
-            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
             // 
             // goBackButton
             // 
@@ -208,9 +207,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Критерии оценивания";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EvaluationСriteriasForm_FormClosed);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EvaluationCriteriasForm_MouseUp);
             this.panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
