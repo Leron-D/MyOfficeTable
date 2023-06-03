@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace MyOfficeTable
 {
-    public partial class EvaluationСriteriasForm : Form
+    public partial class EvaluationСriteriasForm : StyleForm
     {
         string file = "";
         int num = 0;

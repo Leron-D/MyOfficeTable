@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyOfficeTable.ButtonCard">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>JACAEAAIAAABQAAAAABAIACAEAgAACAAIACAgAACAAA=</HashCode>
+      <FileName>Controls\ButtonCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.MyComboBox">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>kQAJIUEICREACqABQEMAAIACIAAACAAAiZECQBADABA=</HashCode>
+      <FileName>Controls\MyComboBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.Animator">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAgACAAAAAAAIAAAAQAAAAAgAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Animation\Animator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.MyRadioButton">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACCAAAAAAAAAAAAAQCAAgAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\MyRadioButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.Animation">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="MyOfficeTable.Animation.AnimationStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Animation\Animation.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="MyOfficeTable.Animation.ControlMethod" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Animation\Animation.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAFAAQAgAQAACAAAAIAAgAAAAQAoAIiAAAAAEA=</HashCode>
+      <FileName>Animation\Animation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.MyButton">
+    <Position X="25.75" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACIgAAACIAAAAAIAgIgAABCCAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\MyButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

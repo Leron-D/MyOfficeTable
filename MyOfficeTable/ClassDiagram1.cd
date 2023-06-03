@@ -1,80 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MyOfficeTable.EvaluationСriteriasForm">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>ABAAAAQAACQAAABEgACAgABCAAABEAABAAAAAQQAAAg=</HashCode>
-      <FileName>EvaluationСriteriasForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="MyOfficeTable.MainForm">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="14.25" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>GhAAAEQgACQAAAAAgACMgAACAIACAAABAAAAAQRAAAA=</HashCode>
-      <FileName>MainForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MyOfficeTable.Program">
-    <Position X="5.75" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
+      <HashCode>AgIAABAAACBAAAAAACCIAAECIAAAABAAAADAgRAAAAA=</HashCode>
+      <FileName>Forms\MainForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.ReferenceForm">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="12.5" Y="3.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABCAAAQAECQAAAAAgACAgAUCAACAAAABAAIAAAQAAAA=</HashCode>
-      <FileName>ReferenceForm.cs</FileName>
+      <HashCode>ABAAAAAAECAAAAAAAACAAAACAACAAAAAAAIAQAQAAAA=</HashCode>
+      <FileName>Forms\ReferenceForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MyOfficeTable.SelectTestForm">
-    <Position X="2.25" Y="3.5" Width="1.5" />
+  <Class Name="MyOfficeTable.SelectThemeForm">
+    <Position X="17.75" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAAAAQAACQAAABQgECAgAACAAEIEgAJAAAAAQUCAIA=</HashCode>
-      <FileName>SelectTestForm.cs</FileName>
+      <HashCode>EBEAIBCAAChAAIDAAACAAAACAAEAEAAgAACAQhACAIA=</HashCode>
+      <FileName>Forms\SelectThemeForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.TestForm">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="8.75" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ElQIIEQAALwAMBBBhACAggACCMAIAAEJACAAQQQQzQg=</HashCode>
-      <FileName>TestForm.cs</FileName>
+      <HashCode>EEQIIBSAArkAMgBBEACAggACCIAAGAEIACDACBAAiQg=</HashCode>
+      <FileName>Forms\TestForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.TestResultForm">
-    <Position X="0.5" Y="3.75" Width="1.5" />
+    <Position X="14.25" Y="4" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAAEAQAACQAABAAgACAgAACAEAAAAABAAQCAQQAAAA=</HashCode>
-      <FileName>TestResultForm.cs</FileName>
+      <HashCode>AAAAAAAAACAAABAAAACACAACAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\TestResultForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.TheoryForm">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="16" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABBAAAQAACQAAEBFgACAsAADAAACUAABAAAAAQQAAAA=</HashCode>
-      <FileName>TheoryForm.cs</FileName>
+      <HashCode>EAUAABAAACAAAABECCCAAAACAAIAEBAABQAIABEQAEA=</HashCode>
+      <FileName>Forms\TheoryForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.Forms.InstructionForm">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="MyOfficeTable.Forms.StyleForm" ManuallyRouted="true">
+      <Path>
+        <Point X="12.5" Y="2.544" />
+        <Point X="12.25" Y="2.544" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAADCAABABAACCAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\InstructionForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.Forms.StyleForm">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAAAQAACQAABAAAADEgAACAAEAAAABAAIAQQAAAAA=</HashCode>
+      <FileName>Forms\StyleForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
