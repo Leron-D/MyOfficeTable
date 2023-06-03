@@ -4,6 +4,7 @@
     <Position X="9" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
       <HashCode>JACAEAAIAAABQAAAAABAIACAEAgAACAAIACAgAACAAA=</HashCode>
@@ -14,6 +15,7 @@
     <Position X="11" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
       <HashCode>kQAJIUEICREACqABQEMAAIACIAAACAAAiZECQBADABA=</HashCode>
@@ -31,7 +33,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.MyRadioButton">
-    <Position X="12.75" Y="2.75" Width="1.5" />
+    <Position X="9" Y="3.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -41,9 +43,10 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.Animation">
-    <Position X="14.5" Y="0.5" Width="1.5" />
+    <Position X="12.75" Y="2.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <NestedTypes>
       <Enum Name="MyOfficeTable.Animation.AnimationStatus" Collapsed="true">
@@ -63,13 +66,34 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.MyButton">
-    <Position X="25.75" Y="3.25" Width="1.5" />
+    <Position X="11" Y="5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
       <HashCode>AACIgAAACIAAAAAIAgIgAABCCAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controls\MyButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.Forms.InstructionForm">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAADCAABABAACCAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\InstructionForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.EvaluationСriteriasForm">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAADAAACAAAABEAACAAAASAgAAEgAABAAAQRAAAAA=</HashCode>
+      <FileName>Forms\EvaluationСriteriasForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

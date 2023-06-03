@@ -28,13 +28,13 @@ namespace MyOfficeTable
         int numQuestion = 0;
         double numOfQuestions = 0;
         int seconds = 60;
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         string testName;
-        XmlNode successfulAnswer;
         bool loadForm = true;
         int addedHeight = 0;
+        XmlNode successfulAnswer;
+        List<MyRadioButton> radioButtonsList;
+        List<CheckBox> checkBoxesList;
+
 
         public TestForm(string fileName, double numberOfQuestions)
         {
@@ -65,6 +65,30 @@ namespace MyOfficeTable
                     questionsArray[i] = temp;
                 }
                 ChangeVisibilityButtons();
+
+                radioButtonsList = new List<MyRadioButton>
+                {
+                    answerRadioButton1,
+                    answerRadioButton2,
+                    answerRadioButton3,
+                    answerRadioButton4,
+                    answerRadioButton5,
+                    answerRadioButton6,
+                    answerRadioButton7,
+                    answerRadioButton8
+                };
+
+                checkBoxesList = new List<CheckBox>
+                {
+                    answerCheckBox1,
+                    answerCheckBox2,
+                    answerCheckBox3,
+                    answerCheckBox4,
+                    answerCheckBox5,
+                    answerCheckBox6,
+                    answerCheckBox7,
+                    answerCheckBox8
+                };
 
                 timer.Start();
             }
@@ -335,72 +359,30 @@ namespace MyOfficeTable
         {
             try
             {
-                if (answerRadioButton1.Checked)
+                if (answerRadioButton1.Visible)
                 {
-                    if (answerRadioButton1.Text.ToLower() == successfulAnswer.Value.ToLower())
-                        mark++;
+                    for (int i = 0; i < radioButtonsList.Count - 1; i++)
+                    {
+                        if (radioButtonsList[i].Text.ToLower() == successfulAnswer.Value.ToLower() && radioButtonsList[i].Checked)
+                            mark++;
+                    }
                 }
-                else if (answerRadioButton2.Checked)
-                {
-                    if (answerRadioButton2.Text.ToLower() == successfulAnswer.Value.ToLower())
-                        mark++;
-                }
-                else if (answerRadioButton3.Checked)
-                {
-                    if (answerRadioButton3.Text.ToLower() == successfulAnswer.Value.ToLower())
-                        mark++;
-                }
-                else if (answerRadioButton4.Checked)
-                {
-                    if (answerRadioButton4.Text.ToLower() == successfulAnswer.Value.ToLower())
-                        mark++;
-                }
-                else if (answerRadioButton5.Checked)
-                {
-                    if (answerRadioButton5.Text.ToLower() == successfulAnswer.Value.ToLower())
-                        mark++;
-                }
-                else if (answerRadioButton6.Checked)
-                {
-                    if (answerRadioButton6.Text.ToLower() == successfulAnswer.Value.ToLower())
-                        mark++;
-                }
-                else if (answerRadioButton7.Checked)
-                {
-                    if (answerRadioButton7.Text.ToLower() == successfulAnswer.Value.ToLower())
-                        mark++;
-                }
-                else if (answerRadioButton8.Checked)
-                {
-                    if (answerRadioButton8.Text.ToLower() == successfulAnswer.Value.ToLower())
-                        mark++;
-                }
-                if (answerCheckBox1.Visible)
+                else if (answerCheckBox1.Visible)
                 {
                     string answerString = "";
-                    if (answerCheckBox1.Checked)
-                        answerString += answerCheckBox1.Text;
-                    if (answerCheckBox2.Checked)
-                        answerString += answerCheckBox2.Text;
-                    if (answerCheckBox3.Checked)
-                        answerString += answerCheckBox3.Text;
-                    if (answerCheckBox4.Checked)
-                        answerString += answerCheckBox4.Text;
-                    if (answerString == successfulAnswer.Value)
-                        mark++;
-                    if (answerCheckBox5.Checked)
-                        answerString += answerCheckBox6.Text;
-                    if (answerCheckBox6.Checked)
-                        answerString += answerCheckBox6.Text;
-                    if (answerCheckBox7.Checked)
-                        answerString += answerCheckBox7.Text;
-                    if (answerCheckBox8.Checked)
-                        answerString += answerCheckBox8.Text;
+                    for (int i = 0; i < checkBoxesList.Count; i++)
+                    {
+                        if (checkBoxesList[i].Checked)
+                            answerString += checkBoxesList[i].Text;
+                    }
                     if (answerString == successfulAnswer.Value)
                         mark++;
                 }
-                if (answerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower())
-                    mark++;
+                else if (answerTextBox.Visible)
+                {
+                    if (answerTextBox.Text.ToLower() == successfulAnswer.Value.ToLower())
+                        mark++;
+                }
                 numQuestion++;
                 if (numQuestion > numOfQuestions - 1)
                 {
