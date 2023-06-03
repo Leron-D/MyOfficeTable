@@ -124,10 +124,18 @@ namespace MyOfficeTable
             }
         }
 
+        void GoToForm(Form form)
+        {
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
+
         private void GoBackButton_Click(object sender, EventArgs e)
         {
             GoToForm(new MainForm());
         }
+
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -166,7 +174,6 @@ namespace MyOfficeTable
 
         private void GoToEvaulationCriterias_Click(object sender, EventArgs e)
         {
-            //GoToForm(new EvaluationСriteriasForm(listOfNumberOfQuestions[selectThemeComboBox.SelectedIndex]));
             EvaluationСriteriasForm form = new EvaluationСriteriasForm();
             goToEvaluationCriteriasButton.Enabled = transitionButton.Enabled = goBackButton.Enabled = cancelButton.Enabled = false;
             form.Show();
@@ -176,13 +183,6 @@ namespace MyOfficeTable
         private void Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             goToEvaluationCriteriasButton.Enabled = transitionButton.Enabled = goBackButton.Enabled = cancelButton.Enabled = true;
-        }
-
-        void GoToForm(Form form)
-        {
-            Hide();
-            form.ShowDialog();
-            Close();
         }
 
         private void СhangeWindowBoxButton_Click(object sender, EventArgs e)

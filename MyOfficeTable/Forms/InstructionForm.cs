@@ -31,6 +31,14 @@ namespace MyOfficeTable.Forms
             goNextButton.Left = (ClientSize.Width - goNextButton.Width) / 2;
         }
 
+        private void LoadInteractiveTask()
+        {
+            InteractiveTaskForm form = new InteractiveTaskForm(theme);
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
+
         private void CancelButton_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.firstLoadInstruction)
@@ -51,14 +59,6 @@ namespace MyOfficeTable.Forms
         private void GoNextButton_Click(object sender, EventArgs e)
         {
             LoadInteractiveTask();
-        }
-
-        private void LoadInteractiveTask()
-        {
-            InteractiveTaskForm form = new InteractiveTaskForm(theme);
-            Hide();
-            form.ShowDialog();
-            Close();
         }
     }
 }

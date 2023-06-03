@@ -59,7 +59,7 @@ namespace MyOfficeTable
             }
         }
 
-        async void InitialWebView()
+        private async void InitialWebView()
         {
             try
             {
@@ -70,6 +70,13 @@ namespace MyOfficeTable
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void GoToForm(Form form)
+        {
+            Hide();
+            form.ShowDialog();
+            Close();
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -102,13 +109,6 @@ namespace MyOfficeTable
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        void GoToForm(Form form)
-        {
-            Hide();
-            form.ShowDialog();
-            Close();
         }
 
         private void ChangeSizePanelButton_Click(object sender, EventArgs e)

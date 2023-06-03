@@ -45,6 +45,18 @@ namespace MyOfficeTable
             }
         }
 
+        private void GoToForm(Form form)
+        {
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
+
+        private void GoToSelectTheme(string mode)
+        {
+            GoToForm(new SelectThemeForm(mode));
+        }
+
         private void ReferenceButton_Click(object sender, EventArgs e)
         {
             ReferenceForm form = new ReferenceForm();
@@ -61,21 +73,9 @@ namespace MyOfficeTable
             GoToSelectTheme("Тестирование");
         }
 
-        private void GoToSelectTheme(string mode)
-        {
-            GoToForm(new SelectThemeForm(mode));
-        }
-
         private void InteractiveTasksButton_Click(object sender, EventArgs e)
         {
             GoToForm(new SelectThemeForm("Интерактивные задания"));
-        }
-
-        void GoToForm(Form form)
-        {
-            Hide();
-            form.ShowDialog();
-            Close();
         }
 
         private void MainForm_Resize(object sender, EventArgs e)

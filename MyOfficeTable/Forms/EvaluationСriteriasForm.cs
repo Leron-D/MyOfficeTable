@@ -38,6 +38,13 @@ namespace MyOfficeTable
             webBrowser.Navigate(Directory.GetCurrentDirectory() + @"\Tests\EvaulationCriterias.html");
         }
 
+        void GoToForm(Form form)
+        {
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
+
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -55,13 +62,6 @@ namespace MyOfficeTable
         {
             if (file != "")
                 GoToForm(new TestForm(file, num));
-        }
-
-        void GoToForm(Form form)
-        {
-            Hide();
-            form.ShowDialog();
-            Close();
         }
 
         private void EvaluationСriteriasForm_FormClosed(object sender, FormClosedEventArgs e)

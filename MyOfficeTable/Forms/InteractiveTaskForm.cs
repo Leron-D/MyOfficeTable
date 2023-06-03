@@ -277,233 +277,10 @@ namespace MyOfficeTable.Forms
             }
         }
 
-        void SetInvisibleOfResultLabels()
+        private void SetInvisibleOfResultLabels()
         {
             resultLabel1.Visible = resultLabel2.Visible = resultLabel3.Visible = resultLabel4.Visible = resultLabel5.Visible = resultLabel6.Visible = resultLabel7.Visible =
             resultLabel8.Visible = false;
-        }
-
-        private void MinimizeButton_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            var message = MessageBox.Show("Вы точно хотите выйти?", "Выход из задания", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (message == DialogResult.Yes)
-            {
-                Settings.Default.firstLoadInstruction = true;
-                Settings.Default.Save();
-                MainForm form = new MainForm();
-                Hide();
-                form.ShowDialog();
-                Close();
-            }
-        }
-
-        private void SourcePictureBox_DragEnter(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Move;
-        }
-
-        private void PictureBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            srcPictureBox = sender as PictureBox;
-            PictureBox pictureBox = sender as PictureBox;
-            if (e.Button == MouseButtons.Left && pictureBox.Image != null)
-                pictureBox.DoDragDrop(pictureBox.Image, DragDropEffects.Move);
-        }
-
-        private void PictureBox_DragEnter(object sender, DragEventArgs e)
-        {
-            PictureBox pictureBox = sender as PictureBox;
-            if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect & DragDropEffects.Move) != 0)
-                e.Effect = DragDropEffects.Move;
-            else
-                e.Effect = DragDropEffects.None;
-        }
-
-        private void PictureBox_DragDrop(object sender, DragEventArgs e)
-        {
-            PictureBox destinationPictureBox = sender as PictureBox;
-            Image image = destinationPictureBox.Image;
-            string tag = "";
-            if (destinationPictureBox.Tag == null)
-                tag = null;
-            else
-                tag = destinationPictureBox.Tag.ToString();
-            destinationPictureBox.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
-            destinationPictureBox.Tag = srcPictureBox.Tag;
-            srcPictureBox.Image = image;
-            srcPictureBox.Tag = tag;
-            CheckCorrectness();
-        }
-
-        private void GoToNextTask()
-        {
-            if (tabControl.SelectedTab == tabControl.TabPages[0] && resultLabel1.Tag == "Correct" && resultLabel2.Tag == "Correct" && resultLabel3.Tag == "Correct" && resultLabel4.Tag == "Correct")
-            {
-                if (numOfTask != numberOfTasks)
-                    TakeTaskByInterface();
-                else
-                {
-                    GoToSelectThemeForm();
-                }
-                CheckCorrectness();
-            }
-            else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
-            {
-                if (numOfTask != numberOfTasks)
-                    TakeTaskByReferences();
-                else
-                {
-                    GoToSelectThemeForm();
-                }
-                CheckCorrectness();
-            }
-            else
-            {
-                MessageBox.Show("Задание решено неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                CheckCorrectness();
-                return;
-            }
-            numOfTask++;
-            if (numOfTask == numberOfTasks)
-                goNextButton.Text = "Завершить";
-            numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
-            SetInvisibleOfResultLabels();
-        }
-
-        private void GoToSelectThemeForm()
-        {
-            Settings.Default.firstLoadInstruction = true;
-            Settings.Default.Save();
-            MessageBox.Show("Вы завершили выполнение задания!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ShowForm(new SelectThemeForm("Интерактивные задания"));
-        }
-
-        private void GoNextButton_Click(object sender, EventArgs e)
-        {
-            GoToNextTask();
-        }
-
-        private void GoBackButton_Click(object sender, EventArgs e)
-        {
-            if (theme == "Интерфейс")
-            {
-                if (tabControl.SelectedTab == tabControl.TabPages[1])
-                {
-                    tabControl.SelectedTab = tabControl.TabPages[0];
-                    goBackButton.Enabled = false;
-                }
-                else
-                {
-                    tabControl.SelectedTab = tabControl.TabPages[1];
-                    goNextButton.Text = "Продолжить";
-                }
-            }
-            else if (theme == "Ссылки")
-            {
-                if (tabControl.SelectedTab == tabControl.TabPages[4])
-                {
-                    tabControl.SelectedTab = tabControl.TabPages[3];
-                    goBackButton.Enabled = false;
-                }
-                else
-                {
-                    tabControl.SelectedTab = tabControl.TabPages[4];
-                    goNextButton.Text = "Продолжить";
-                }
-            }
-        }
-
-        void CheckCorrectness()
-        {
-            if (tabControl.SelectedTab == tabControl.TabPages[0])
-            {
-                int k = 0;
-                for (int i = index1; i < index1 + 4; i++)
-                {
-                    ChangeImageOfLabel(listOfDestinationPictureBoxes[k], listOfTags1[i], listOfResultLabels1[k]);
-                    k++;
-                }
-            }
-            else
-            {
-                int k = 0;
-                for (int i = index2; i < index2 + 4; i++)
-                {
-                    ChangeImageOfLabel(listOfTextBoxes[k], listOfResultLabels2[k]);
-                    k++;
-                }
-            }
-        }
-
-        private void ChangeImageOfLabel(PictureBox destination, string tag, Label resultLabel)
-        {
-            resultLabel.Visible = true;
-            if (destination.Tag != tag)
-            {
-                resultLabel.Text = "";
-                resultLabel.Image = Resources.Incorrect;
-                resultLabel.Tag = "Incorrect";
-            }
-            else
-            {
-                resultLabel.Text = "";
-                resultLabel.Image = Resources.Correct;
-                resultLabel.Tag = "Correct";
-            }
-        }
-
-        private void ChangeImageOfLabel(TextBox textBox, Label resultLabel)
-        {
-            resultLabel.Visible = true;
-            if (textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
-            {
-                resultLabel.Text = "";
-                resultLabel.Image = Resources.Incorrect;
-                resultLabel.Tag = "Incorrect";
-            }
-            else
-            {
-                resultLabel.Text = "";
-                resultLabel.Image = Resources.Correct;
-                resultLabel.Tag = "Correct";
-            }
-        }
-
-        void ShowForm(Form form)
-        {
-            Hide();
-            form.ShowDialog();
-            Close();
-        }
-
-        private void AnswerTextBox_TextChanged(object sender, EventArgs e)
-        {
-            CheckCorrectness();
-        }
-
-        private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
-        {
-            loadForm = false;
-            if (changeWindowBoxButton.Tag == "Fullscreen")
-            {
-                Settings.Default.isFullSize = true;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-            }
-            else
-            {
-                Settings.Default.isFullSize = false;
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-            }
-            CenterToScreen();
         }
 
         private void ChangeControlsForNormalscreen()
@@ -577,6 +354,229 @@ namespace MyOfficeTable.Forms
                 answerTextBox1.Font = answerTextBox2.Font = answerTextBox3.Font = answerTextBox4.Font = new Font(answerTextBox1.Font.Name, 22, FontStyle.Bold);
             }
             Settings.Default.isFullSize = true;
+        }
+
+        private void GoToNextTask()
+        {
+            if (tabControl.SelectedTab == tabControl.TabPages[0] && resultLabel1.Tag == "Correct" && resultLabel2.Tag == "Correct" && resultLabel3.Tag == "Correct" && resultLabel4.Tag == "Correct")
+            {
+                if (numOfTask != numberOfTasks)
+                    TakeTaskByInterface();
+                else
+                {
+                    GoToSelectThemeForm();
+                }
+                CheckCorrectness();
+            }
+            else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
+            {
+                if (numOfTask != numberOfTasks)
+                    TakeTaskByReferences();
+                else
+                {
+                    GoToSelectThemeForm();
+                }
+                CheckCorrectness();
+            }
+            else
+            {
+                MessageBox.Show("Задание решено неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CheckCorrectness();
+                return;
+            }
+            numOfTask++;
+            if (numOfTask == numberOfTasks)
+                goNextButton.Text = "Завершить";
+            numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
+            SetInvisibleOfResultLabels();
+        }
+
+        private void GoToSelectThemeForm()
+        {
+            Settings.Default.firstLoadInstruction = true;
+            Settings.Default.Save();
+            MessageBox.Show("Вы завершили выполнение задания!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowForm(new SelectThemeForm("Интерактивные задания"));
+        }
+
+        private void CheckCorrectness()
+        {
+            if (tabControl.SelectedTab == tabControl.TabPages[0])
+            {
+                int k = 0;
+                for (int i = index1; i < index1 + 4; i++)
+                {
+                    ChangeImageOfLabel(listOfDestinationPictureBoxes[k], listOfTags1[i], listOfResultLabels1[k]);
+                    k++;
+                }
+            }
+            else
+            {
+                int k = 0;
+                for (int i = index2; i < index2 + 4; i++)
+                {
+                    ChangeImageOfLabel(listOfTextBoxes[k], listOfResultLabels2[k]);
+                    k++;
+                }
+            }
+        }
+
+        private void ShowForm(Form form)
+        {
+            Hide();
+            form.ShowDialog();
+            Close();
+        }
+
+        private void ChangeImageOfLabel(PictureBox destination, string tag, Label resultLabel)
+        {
+            resultLabel.Visible = true;
+            if (destination.Tag != tag)
+            {
+                resultLabel.Text = "";
+                resultLabel.Image = Resources.Incorrect;
+                resultLabel.Tag = "Incorrect";
+            }
+            else
+            {
+                resultLabel.Text = "";
+                resultLabel.Image = Resources.Correct;
+                resultLabel.Tag = "Correct";
+            }
+        }
+
+        private void ChangeImageOfLabel(TextBox textBox, Label resultLabel)
+        {
+            resultLabel.Visible = true;
+            if (textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
+            {
+                resultLabel.Text = "";
+                resultLabel.Image = Resources.Incorrect;
+                resultLabel.Tag = "Incorrect";
+            }
+            else
+            {
+                resultLabel.Text = "";
+                resultLabel.Image = Resources.Correct;
+                resultLabel.Tag = "Correct";
+            }
+        }
+
+        private void MinimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            var message = MessageBox.Show("Вы точно хотите выйти?", "Выход из задания", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (message == DialogResult.Yes)
+            {
+                Settings.Default.firstLoadInstruction = true;
+                Settings.Default.Save();
+                MainForm form = new MainForm();
+                Hide();
+                form.ShowDialog();
+                Close();
+            }
+        }
+
+        private void SourcePictureBox_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+        private void PictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            srcPictureBox = sender as PictureBox;
+            PictureBox pictureBox = sender as PictureBox;
+            if (e.Button == MouseButtons.Left && pictureBox.Image != null)
+                pictureBox.DoDragDrop(pictureBox.Image, DragDropEffects.Move);
+        }
+
+        private void PictureBox_DragEnter(object sender, DragEventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect & DragDropEffects.Move) != 0)
+                e.Effect = DragDropEffects.Move;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void PictureBox_DragDrop(object sender, DragEventArgs e)
+        {
+            PictureBox destinationPictureBox = sender as PictureBox;
+            Image image = destinationPictureBox.Image;
+            string tag = "";
+            if (destinationPictureBox.Tag == null)
+                tag = null;
+            else
+                tag = destinationPictureBox.Tag.ToString();
+            destinationPictureBox.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
+            destinationPictureBox.Tag = srcPictureBox.Tag;
+            srcPictureBox.Image = image;
+            srcPictureBox.Tag = tag;
+            CheckCorrectness();
+        }
+
+        private void GoNextButton_Click(object sender, EventArgs e)
+        {
+            GoToNextTask();
+        }
+
+        private void GoBackButton_Click(object sender, EventArgs e)
+        {
+            if (theme == "Интерфейс")
+            {
+                if (tabControl.SelectedTab == tabControl.TabPages[1])
+                {
+                    tabControl.SelectedTab = tabControl.TabPages[0];
+                    goBackButton.Enabled = false;
+                }
+                else
+                {
+                    tabControl.SelectedTab = tabControl.TabPages[1];
+                    goNextButton.Text = "Продолжить";
+                }
+            }
+            else if (theme == "Ссылки")
+            {
+                if (tabControl.SelectedTab == tabControl.TabPages[4])
+                {
+                    tabControl.SelectedTab = tabControl.TabPages[3];
+                    goBackButton.Enabled = false;
+                }
+                else
+                {
+                    tabControl.SelectedTab = tabControl.TabPages[4];
+                    goNextButton.Text = "Продолжить";
+                }
+            }
+        }
+
+        private void AnswerTextBox_TextChanged(object sender, EventArgs e)
+        {
+            CheckCorrectness();
+        }
+
+        private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
+        {
+            loadForm = false;
+            if (changeWindowBoxButton.Tag == "Fullscreen")
+            {
+                Settings.Default.isFullSize = true;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                Settings.Default.isFullSize = false;
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
+            CenterToScreen();
         }
 
         private void DestinationPictureBox1_LocationChanged(object sender, EventArgs e)
