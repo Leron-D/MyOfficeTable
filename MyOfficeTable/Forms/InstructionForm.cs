@@ -11,11 +11,8 @@ using System.Windows.Forms;
 
 namespace MyOfficeTable.Forms
 {
-    public partial class InstructionForm : Form
+    public partial class InstructionForm : StyleForm
     {
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         string theme = "";
 
         public InstructionForm(string taskName)
@@ -34,11 +31,6 @@ namespace MyOfficeTable.Forms
             goNextButton.Left = (ClientSize.Width - goNextButton.Width) / 2;
         }
 
-        private void MinimizeButton_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void CancelButton_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.firstLoadInstruction)
@@ -54,27 +46,6 @@ namespace MyOfficeTable.Forms
             }
             else
                 Close();
-        }
-
-        private void InteractiveTaskForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void InteractiveTaskForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void InteractiveTaskForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
         }
 
         private void GoNextButton_Click(object sender, EventArgs e)

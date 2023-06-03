@@ -29,100 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectThemeForm));
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.minimizeButton = new System.Windows.Forms.Button();
-            this.headerLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.headerPictureBox = new System.Windows.Forms.PictureBox();
-            this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.goBackButton = new MyOfficeTable.MyButton();
             this.goToEvaluationCriteriasButton = new MyOfficeTable.MyButton();
             this.transitionButton = new MyOfficeTable.MyButton();
             this.selectThemeComboBox = new MyOfficeTable.MyComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.BackColor = System.Drawing.Color.Transparent;
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(1022, 1);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(31, 32);
-            this.cancelButton.TabIndex = 13;
-            this.cancelButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(940, 1);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(35, 32);
-            this.minimizeButton.TabIndex = 12;
-            this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.minimizeButton.UseVisualStyleBackColor = false;
-            this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
             // headerLabel
             // 
-            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(3, 0);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(1054, 133);
-            this.headerLabel.TabIndex = 14;
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.Location = new System.Drawing.Point(63, 0);
+            this.headerLabel.Size = new System.Drawing.Size(991, 134);
             this.headerLabel.Text = "Выбор темы";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel1.Controls.Add(this.headerPictureBox);
-            this.panel1.Controls.Add(this.headerLabel);
-            this.panel1.Location = new System.Drawing.Point(0, 51);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1060, 134);
-            this.panel1.TabIndex = 32;
-            // 
-            // headerPictureBox
-            // 
-            this.headerPictureBox.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
-            this.headerPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.headerPictureBox.Name = "headerPictureBox";
-            this.headerPictureBox.Size = new System.Drawing.Size(132, 133);
-            this.headerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.headerPictureBox.TabIndex = 43;
-            this.headerPictureBox.TabStop = false;
             // 
             // changeWindowBoxButton
             // 
-            this.changeWindowBoxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeWindowBoxButton.BackColor = System.Drawing.Color.Transparent;
             this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
-            this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
-            this.changeWindowBoxButton.Location = new System.Drawing.Point(981, 1);
-            this.changeWindowBoxButton.Name = "changeWindowBoxButton";
-            this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
-            this.changeWindowBoxButton.TabIndex = 74;
-            this.changeWindowBoxButton.Tag = "Fullscreen";
-            this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.changeWindowBoxButton.UseVisualStyleBackColor = false;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(979, 1);
             this.changeWindowBoxButton.Click += new System.EventHandler(this.СhangeWindowBoxButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.Location = new System.Drawing.Point(1020, 1);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.Location = new System.Drawing.Point(938, 1);
             // 
             // goBackButton
             // 
@@ -213,42 +149,34 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1054, 452);
-            this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.goToEvaluationCriteriasButton);
             this.Controls.Add(this.transitionButton);
             this.Controls.Add(this.selectThemeComboBox);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.minimizeButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1054, 452);
             this.Name = "SelectThemeForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выбор темы";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SelectTestForm_MouseUp);
             this.Resize += new System.EventHandler(this.SelectThemeForm_Resize);
+            this.Controls.SetChildIndex(this.selectThemeComboBox, 0);
+            this.Controls.SetChildIndex(this.transitionButton, 0);
+            this.Controls.SetChildIndex(this.goToEvaluationCriteriasButton, 0);
+            this.Controls.SetChildIndex(this.goBackButton, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.minimizeButton, 0);
+            this.Controls.SetChildIndex(this.cancelButton, 0);
+            this.Controls.SetChildIndex(this.changeWindowBoxButton, 0);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button minimizeButton;
-        private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.Panel panel1;
         private MyComboBox selectThemeComboBox;
         private MyOfficeTable.MyButton transitionButton;
         private MyOfficeTable.MyButton goToEvaluationCriteriasButton;
-        private System.Windows.Forms.PictureBox headerPictureBox;
         private MyOfficeTable.MyButton goBackButton;
-        private System.Windows.Forms.Button changeWindowBoxButton;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyOfficeTable.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,13 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace MyOfficeTable
 {
-    public partial class ReferenceForm : Form
+    public partial class ReferenceForm : StyleForm
     {
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         public ReferenceForm()
         {
             InitializeComponent();
@@ -37,27 +36,6 @@ namespace MyOfficeTable
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void ReferenceForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void ReferenceForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void ReferenceForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
         }
     }
 }

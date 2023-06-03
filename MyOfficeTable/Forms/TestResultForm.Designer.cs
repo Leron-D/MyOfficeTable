@@ -29,53 +29,33 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestResultForm));
-            this.headerLabel = new System.Windows.Forms.Label();
-            this.panel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rightNumberLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.markLabel = new System.Windows.Forms.Label();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.minimizeButton = new System.Windows.Forms.Button();
-            this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // headerLabel
             // 
-            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(253, 52);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(193, 39);
-            this.headerLabel.TabIndex = 18;
-            this.headerLabel.Text = "Результат";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.headerLabel.Size = new System.Drawing.Size(502, 134);
+            this.headerLabel.Text = "Результат тестирования";
             // 
-            // panel
+            // changeWindowBoxButton
             // 
-            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel.Controls.Add(this.pictureBox1);
-            this.panel.Controls.Add(this.headerLabel);
-            this.panel.Location = new System.Drawing.Point(0, 49);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(637, 135);
-            this.panel.TabIndex = 32;
+            this.changeWindowBoxButton.Enabled = false;
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(558, 2);
             // 
-            // pictureBox1
+            // cancelButton
             // 
-            this.pictureBox1.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.Location = new System.Drawing.Point(599, 2);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.Location = new System.Drawing.Point(517, 2);
             // 
             // rightNumberLabel
             // 
@@ -119,71 +99,35 @@
             this.markLabel.Text = "#";
             this.markLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // cancelButton
-            // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(606, 0);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(31, 32);
-            this.cancelButton.TabIndex = 40;
-            this.cancelButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(565, 0);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(35, 32);
-            this.minimizeButton.TabIndex = 39;
-            this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.minimizeButton.UseVisualStyleBackColor = true;
-            this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
-            // 
             // TestResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(635, 316);
-            this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.markLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rightNumberLabel);
-            this.Controls.Add(this.panel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestResultForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Результаты тестирования";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TestResultForm_MouseUp);
-            this.panel.ResumeLayout(false);
-            this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Controls.SetChildIndex(this.rightNumberLabel, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.markLabel, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.minimizeButton, 0);
+            this.Controls.SetChildIndex(this.cancelButton, 0);
+            this.Controls.SetChildIndex(this.changeWindowBoxButton, 0);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label rightNumberLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label markLabel;
-        private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button minimizeButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

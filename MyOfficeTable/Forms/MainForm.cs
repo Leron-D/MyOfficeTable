@@ -12,11 +12,8 @@ using System.Windows.Forms;
 
 namespace MyOfficeTable
 {
-    public partial class MainForm : Form
+    public partial class MainForm : StyleForm
     {
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         bool loadForm = true;
 
         public MainForm()
@@ -46,37 +43,6 @@ namespace MyOfficeTable
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
             }
-        }
-
-        private void MinimizeButton_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void MainForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void MainForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void MainForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
         }
 
         private void ReferenceButton_Click(object sender, EventArgs e)
@@ -114,7 +80,7 @@ namespace MyOfficeTable
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            if (!loadForm)
+            if (!loadForm && WindowState != FormWindowState.Minimized)
             {
                 if (WindowState == FormWindowState.Maximized)
                 {
@@ -136,7 +102,7 @@ namespace MyOfficeTable
                     theoryButton.Font = testingButton.Font = interactiveTasksButton.Font = theoryButton.FontDescrition = testingButton.FontDescrition =
                     interactiveTasksButton.FontDescrition = new Font(theoryButton.Font.Name, 12);
                     theoryButton.FontHeader = testingButton.FontHeader = interactiveTasksButton.FontHeader = new Font(theoryButton.Font.Name, 12, FontStyle.Bold);
-                    headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 30, FontStyle.Bold);
                 }
             }
         }

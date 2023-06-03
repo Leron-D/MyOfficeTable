@@ -14,12 +14,9 @@ using System.Windows.Forms;
 
 namespace MyOfficeTable
 {
-    public partial class SelectThemeForm : Form
+    public partial class SelectThemeForm : StyleForm
     {
         string selectMode;
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         List<string> listOfTheoryThemes = new List<string>();
         List<string> listOfTestsThemes = new List<string>();
         List<int> listOfNumberOfQuestions = new List<int>();
@@ -166,26 +163,6 @@ namespace MyOfficeTable
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void SelectTestForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void SelectTestForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void SelectTestForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
-        }
 
         private void GoToEvaulationCriterias_Click(object sender, EventArgs e)
         {
@@ -217,6 +194,7 @@ namespace MyOfficeTable
                 this.WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "NormalScreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
+                CenterToScreen();
             }
             else
             {
@@ -224,6 +202,7 @@ namespace MyOfficeTable
                 this.WindowState = FormWindowState.Normal;
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
+                CenterToScreen();
             }
         }
 
@@ -265,7 +244,7 @@ namespace MyOfficeTable
 
                     selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 14);
                     selectThemeComboBox.BorderSize = 1;
-                    headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 30, FontStyle.Bold);
 
                     transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(411, 44);
                     transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;

@@ -10,11 +10,8 @@ using System.Windows.Forms;
 
 namespace MyOfficeTable.Forms
 {
-    public partial class ResultInteractiveForm : Form
+    public partial class ResultInteractiveForm : StyleForm
     {
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         string theme = "";
 
         public ResultInteractiveForm(string taskName)
@@ -46,27 +43,6 @@ namespace MyOfficeTable.Forms
                 form.ShowDialog();
                 Close();
             }
-        }
-
-        private void ResultInteractiveForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void ResultInteractiveForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void ResultInteractiveForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
         }
 
         private void TakeTestAgainButton_Click(object sender, EventArgs e)

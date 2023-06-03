@@ -16,10 +16,11 @@ using CheckBox = System.Windows.Forms.CheckBox;
 using Polly;
 using Microsoft.Web.WebView2.Core;
 using MyOfficeTable.Properties;
+using MyOfficeTable.Forms;
 
 namespace MyOfficeTable
 {
-    public partial class TestForm : Form
+    public partial class TestForm : StyleForm
     {
         double mark = 0;
         int numOfQuestion = 1;
@@ -98,7 +99,7 @@ namespace MyOfficeTable
             startTestButton.Font = new Font(startTestButton.Font.Name, 18, FontStyle.Bold);
             startTestButton.Size = new Size(348, 40);
             startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
-            startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+            startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + panel1.Height - 46;
 
             goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 18, FontStyle.Bold);
             if (numOfQuestion != numOfQuestions)
@@ -130,7 +131,7 @@ namespace MyOfficeTable
             startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
             startTestButton.Size = new Size(404, 49);
             startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
-            startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + headerPanel.Height - 46;
+            startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + panel1.Height - 46;
 
             goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 22, FontStyle.Bold);
             if (numOfQuestion != numOfQuestions)
@@ -450,44 +451,6 @@ namespace MyOfficeTable
             answerCheckBox8.Location = new Point(1, answerCheckBox7.Location.Y + y);
         }
 
-        private void MinimizeButton_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            if (numOfQuestionLabel.Text != "#")
-            {
-                var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (message == DialogResult.Yes)
-                    Close();
-            }
-            else
-                Close();
-        }
-
-        private void TestForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void TestForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void TestForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
-        }
-
         private void StartTestButton_Click(object sender, EventArgs e)
         {
             startTestButton.Visible = false;
@@ -628,6 +591,18 @@ namespace MyOfficeTable
             {
                 ChangeControlsForNormalScreen();
             }
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            if (numOfQuestionLabel.Text != "#")
+            {
+                var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (message == DialogResult.Yes)
+                    Close();
+            }
+            else
+                Close();
         }
     }
 }

@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.minimizeButton = new System.Windows.Forms.Button();
             this.answerCheckBox1 = new System.Windows.Forms.CheckBox();
             this.answerCheckBox2 = new System.Windows.Forms.CheckBox();
             this.answerCheckBox3 = new System.Windows.Forms.CheckBox();
@@ -40,15 +38,11 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
             this.answerCheckBox4 = new System.Windows.Forms.CheckBox();
-            this.headerPanel = new System.Windows.Forms.Panel();
-            this.headerPictureBox = new System.Windows.Forms.PictureBox();
-            this.headerLabel = new System.Windows.Forms.Label();
             this.numOfQuestionLabel = new System.Windows.Forms.Label();
             this.answerCheckBox8 = new System.Windows.Forms.CheckBox();
             this.answerCheckBox7 = new System.Windows.Forms.CheckBox();
             this.answerCheckBox6 = new System.Windows.Forms.CheckBox();
             this.answerCheckBox5 = new System.Windows.Forms.CheckBox();
-            this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.answerRadioButton6 = new MyOfficeTable.MyRadioButton();
             this.goNextQuestionButton = new MyOfficeTable.MyButton();
             this.answerRadioButton8 = new MyOfficeTable.MyRadioButton();
@@ -59,39 +53,37 @@
             this.answerRadioButton3 = new MyOfficeTable.MyRadioButton();
             this.answerRadioButton4 = new MyOfficeTable.MyRadioButton();
             this.answerRadioButton2 = new MyOfficeTable.MyRadioButton();
-            this.headerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).BeginInit();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // cancelButton
+            // panel1
             // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.BackColor = System.Drawing.Color.Transparent;
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
-            this.cancelButton.Location = new System.Drawing.Point(1254, 1);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(31, 32);
-            this.cancelButton.TabIndex = 2;
-            this.cancelButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.panel1.Size = new System.Drawing.Size(1291, 134);
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Location = new System.Drawing.Point(131, 0);
+            this.headerLabel.Size = new System.Drawing.Size(1157, 134);
+            this.headerLabel.Text = "Тестирование";
+            // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(1213, 0);
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
             // 
             // minimizeButton
             // 
-            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
             this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Image = global::MyOfficeTable.Properties.Resources.minimize;
-            this.minimizeButton.Location = new System.Drawing.Point(1172, 1);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(35, 32);
-            this.minimizeButton.TabIndex = 1;
-            this.minimizeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.minimizeButton.UseVisualStyleBackColor = false;
-            this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
+            this.minimizeButton.Location = new System.Drawing.Point(1172, 0);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.Location = new System.Drawing.Point(1160, 495);
+            this.cancelButton.Visible = false;
             // 
             // answerCheckBox1
             // 
@@ -222,42 +214,6 @@
             this.answerCheckBox4.UseVisualStyleBackColor = false;
             this.answerCheckBox4.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // headerPanel
-            // 
-            this.headerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerPanel.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.headerPanel.Controls.Add(this.headerPictureBox);
-            this.headerPanel.Controls.Add(this.headerLabel);
-            this.headerPanel.Location = new System.Drawing.Point(-1, 46);
-            this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1292, 134);
-            this.headerPanel.TabIndex = 29;
-            // 
-            // headerPictureBox
-            // 
-            this.headerPictureBox.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
-            this.headerPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.headerPictureBox.Name = "headerPictureBox";
-            this.headerPictureBox.Size = new System.Drawing.Size(132, 133);
-            this.headerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.headerPictureBox.TabIndex = 47;
-            this.headerPictureBox.TabStop = false;
-            // 
-            // headerLabel
-            // 
-            this.headerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.headerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(130, 0);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(1156, 133);
-            this.headerLabel.TabIndex = 17;
-            this.headerLabel.Text = "Тестирование";
-            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // numOfQuestionLabel
             // 
             this.numOfQuestionLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -361,22 +317,6 @@
             this.answerCheckBox5.UseVisualStyleBackColor = false;
             this.answerCheckBox5.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
             // 
-            // changeWindowBoxButton
-            // 
-            this.changeWindowBoxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeWindowBoxButton.BackColor = System.Drawing.Color.Transparent;
-            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
-            this.changeWindowBoxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeWindowBoxButton.Image = global::MyOfficeTable.Properties.Resources.Fullscreen;
-            this.changeWindowBoxButton.Location = new System.Drawing.Point(1213, 1);
-            this.changeWindowBoxButton.Name = "changeWindowBoxButton";
-            this.changeWindowBoxButton.Size = new System.Drawing.Size(35, 32);
-            this.changeWindowBoxButton.TabIndex = 74;
-            this.changeWindowBoxButton.Tag = "Fullscreen";
-            this.changeWindowBoxButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.changeWindowBoxButton.UseVisualStyleBackColor = false;
-            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
-            // 
             // answerRadioButton6
             // 
             this.answerRadioButton6.AutoSize = true;
@@ -405,7 +345,7 @@
             this.goNextQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goNextQuestionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goNextQuestionButton.ForeColor = System.Drawing.Color.White;
-            this.goNextQuestionButton.Location = new System.Drawing.Point(1003, 489);
+            this.goNextQuestionButton.Location = new System.Drawing.Point(1006, 489);
             this.goNextQuestionButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goNextQuestionButton.Name = "goNextQuestionButton";
             this.goNextQuestionButton.Size = new System.Drawing.Size(282, 40);
@@ -549,6 +489,21 @@
             this.answerRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
             this.answerRadioButton2.UseVisualStyleBackColor = true;
             // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
+            this.closeButton.Location = new System.Drawing.Point(1254, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(31, 32);
+            this.closeButton.TabIndex = 76;
+            this.closeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,7 +511,7 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1286, 530);
-            this.Controls.Add(this.changeWindowBoxButton);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.answerCheckBox2);
             this.Controls.Add(this.answerRadioButton6);
             this.Controls.Add(this.answerCheckBox1);
@@ -568,44 +523,60 @@
             this.Controls.Add(this.answerCheckBox4);
             this.Controls.Add(this.numOfQuestionLabel);
             this.Controls.Add(this.answerRadioButton5);
-            this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.answerRadioButton1);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.answerCheckBox8);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.answerRadioButton3);
-            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.answerCheckBox7);
             this.Controls.Add(this.answerRadioButton4);
-            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.answerCheckBox6);
             this.Controls.Add(this.answerTextBox);
             this.Controls.Add(this.answerCheckBox5);
             this.Controls.Add(this.answerRadioButton2);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1286, 530);
             this.Name = "TestForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Тестирование";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestForm_FormClosed);
             this.Load += new System.EventHandler(this.TestForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TestForm_MouseUp);
-            this.headerPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox)).EndInit();
+            this.Controls.SetChildIndex(this.cancelButton, 0);
+            this.Controls.SetChildIndex(this.answerRadioButton2, 0);
+            this.Controls.SetChildIndex(this.answerCheckBox5, 0);
+            this.Controls.SetChildIndex(this.answerTextBox, 0);
+            this.Controls.SetChildIndex(this.answerCheckBox6, 0);
+            this.Controls.SetChildIndex(this.answerRadioButton4, 0);
+            this.Controls.SetChildIndex(this.answerCheckBox7, 0);
+            this.Controls.SetChildIndex(this.answerRadioButton3, 0);
+            this.Controls.SetChildIndex(this.timerLabel, 0);
+            this.Controls.SetChildIndex(this.answerCheckBox8, 0);
+            this.Controls.SetChildIndex(this.questionLabel, 0);
+            this.Controls.SetChildIndex(this.answerRadioButton1, 0);
+            this.Controls.SetChildIndex(this.answerRadioButton5, 0);
+            this.Controls.SetChildIndex(this.numOfQuestionLabel, 0);
+            this.Controls.SetChildIndex(this.answerCheckBox4, 0);
+            this.Controls.SetChildIndex(this.answerRadioButton7, 0);
+            this.Controls.SetChildIndex(this.answerCheckBox3, 0);
+            this.Controls.SetChildIndex(this.startTestButton, 0);
+            this.Controls.SetChildIndex(this.answerRadioButton8, 0);
+            this.Controls.SetChildIndex(this.goNextQuestionButton, 0);
+            this.Controls.SetChildIndex(this.answerCheckBox1, 0);
+            this.Controls.SetChildIndex(this.answerRadioButton6, 0);
+            this.Controls.SetChildIndex(this.answerCheckBox2, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.minimizeButton, 0);
+            this.Controls.SetChildIndex(this.changeWindowBoxButton, 0);
+            this.Controls.SetChildIndex(this.closeButton, 0);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.CheckBox answerCheckBox1;
         private System.Windows.Forms.CheckBox answerCheckBox2;
         private System.Windows.Forms.CheckBox answerCheckBox3;
@@ -614,10 +585,8 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.CheckBox answerCheckBox4;
-        private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label numOfQuestionLabel;
         private MyOfficeTable.MyButton goNextQuestionButton;
-        private System.Windows.Forms.PictureBox headerPictureBox;
         private MyOfficeTable.MyRadioButton answerRadioButton1;
         private MyOfficeTable.MyRadioButton answerRadioButton3;
         private MyOfficeTable.MyRadioButton answerRadioButton4;
@@ -630,8 +599,7 @@
         private System.Windows.Forms.CheckBox answerCheckBox7;
         private System.Windows.Forms.CheckBox answerCheckBox6;
         private System.Windows.Forms.CheckBox answerCheckBox5;
-        private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.Button changeWindowBoxButton;
         private MyButton startTestButton;
+        public System.Windows.Forms.Button closeButton;
     }
 }

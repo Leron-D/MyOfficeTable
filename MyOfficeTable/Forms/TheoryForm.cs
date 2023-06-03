@@ -13,13 +13,10 @@ using System.Windows.Forms;
 
 namespace MyOfficeTable
 {
-    public partial class TheoryForm : Form
+    public partial class TheoryForm : StyleForm
     {
         bool isCollapsed = false;
         string file;
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         ToolTip toolTip = new ToolTip();
         bool loadForm = true;
 
@@ -75,40 +72,9 @@ namespace MyOfficeTable
             }
         }
 
-        private void MinimizeButton_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void GoBackButton_Click(object sender, EventArgs e)
         {
             GoToForm(new SelectThemeForm("Теория"));
-        }
-
-        private void TheoryForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void TheoryForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void TheoryForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
         }
 
         private void GoToLectionButton_Click(object sender, EventArgs e)
