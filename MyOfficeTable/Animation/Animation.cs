@@ -37,7 +37,7 @@ namespace MyOfficeTable
 
         private float Step()
         {
-            float basicStep = Math.Abs(Volume) / 11; // Math.Abs - превращает числа 0< в >0
+            float basicStep = Math.Abs(Volume) / 11;
             float resultStep = 0;
 
             if (Reverse == false)
