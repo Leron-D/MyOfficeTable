@@ -14,9 +14,6 @@ namespace MyOfficeTable.Forms
     public partial class InteractiveTaskForm : Form
     {
         PictureBox srcPictureBox;
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         string theme = "";
         int numOfTask = 1;
         int numberOfTasks;
@@ -303,27 +300,6 @@ namespace MyOfficeTable.Forms
                 form.ShowDialog();
                 Close();
             }
-        }
-
-        private void InteractiveTaskForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
-        }
-
-        private void InteractiveTaskForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
-            }
-        }
-
-        private void InteractiveTaskForm_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
         }
 
         private void SourcePictureBox_DragEnter(object sender, DragEventArgs e)

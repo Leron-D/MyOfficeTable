@@ -778,9 +778,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InteractiveTaskForm";
             this.Load += new System.EventHandler(this.InteractiveTaskForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseUp);
             this.Resize += new System.EventHandler(this.InteractiveTaskForm_Resize);
             this.task1ReferencesTabPage.ResumeLayout(false);
             this.task1ReferencesTabPage.PerformLayout();
