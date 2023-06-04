@@ -254,6 +254,7 @@ namespace MyOfficeTable
                     goBackButton.Location = new Point(0, 411);
                     transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
                 }
+                CenterToScreen();
             }
         }
     }
