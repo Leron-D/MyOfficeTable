@@ -16,6 +16,7 @@ namespace MyOfficeTable
 {
     public partial class SelectThemeForm : StyleForm
     {
+        public static SelectThemeForm selectThemeForm;
         string selectMode;
         List<string> listOfTheoryThemes = new List<string>();
         List<string> listOfTestsThemes = new List<string>();
@@ -25,6 +26,7 @@ namespace MyOfficeTable
         public SelectThemeForm(string mode)
         {
             InitializeComponent();
+            selectThemeForm = this;
             LoadForm(mode);
         }
 
@@ -126,14 +128,13 @@ namespace MyOfficeTable
 
         void GoToForm(Form form)
         {
+            form.Show();
             Hide();
-            form.ShowDialog();
-            Close();
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new MainForm());
+            MainForm.mainForm.Show();
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)

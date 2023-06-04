@@ -474,10 +474,9 @@ namespace MyOfficeTable.Forms
             {
                 Settings.Default.firstLoadInstruction = true;
                 Settings.Default.Save();
-                MainForm form = new MainForm();
-                Hide();
-                form.ShowDialog();
                 Close();
+                SelectThemeForm.selectThemeForm.Close();
+                MainForm.mainForm.Show();
             }
         }
 

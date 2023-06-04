@@ -15,17 +15,19 @@ namespace MyOfficeTable
     public partial class MainForm : StyleForm
     {
         bool loadForm = true;
+        public static MainForm mainForm;
+        ToolTip toolTip = new ToolTip();
 
         public MainForm()
         {
             InitializeComponent();
+            mainForm = this;
             if (Settings.Default.IsFirstLoad)
             {
                 Animator.Start();
                 Settings.Default.IsFirstLoad = false;
                 Settings.Default.Save();
             }
-            ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(referenceButton, "Справка о программе");
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
@@ -36,25 +38,21 @@ namespace MyOfficeTable
                 WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "Normalscreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
+                toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
             }
             else
             {
                 WindowState = FormWindowState.Normal;
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
+                toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
             }
         }
 
         private void GoToForm(Form form)
         {
+            form.Show();
             Hide();
-            form.ShowDialog();
-            Close();
-        }
-
-        private void GoToSelectTheme(string mode)
-        {
-            GoToForm(new SelectThemeForm(mode));
         }
 
         private void ReferenceButton_Click(object sender, EventArgs e)
@@ -65,12 +63,12 @@ namespace MyOfficeTable
 
         private void TheoryButton_Click(object sender, EventArgs e)
         {
-            GoToSelectTheme("Теория");
+            GoToForm(new SelectThemeForm("Теория"));
         }
 
         private void TestingButton_Click(object sender, EventArgs e)
         {
-            GoToSelectTheme("Тестирование");
+            GoToForm(new SelectThemeForm("Тестирование"));
         }
 
         private void InteractiveTasksButton_Click(object sender, EventArgs e)
@@ -116,6 +114,7 @@ namespace MyOfficeTable
                 WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "NormalScreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
+                toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
             }
             else
             {
@@ -123,6 +122,7 @@ namespace MyOfficeTable
                 WindowState = FormWindowState.Normal;
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
+                toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
             }
             CenterToScreen();
         }

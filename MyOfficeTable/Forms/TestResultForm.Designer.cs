@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestResultForm));
             this.rightNumberLabel = new System.Windows.Forms.Label();
             this.markLabel = new System.Windows.Forms.Label();
+            this.closeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,8 @@
             // 
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.Location = new System.Drawing.Point(599, 2);
+            this.cancelButton.Visible = false;
+            this.cancelButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // rightNumberLabel
             // 
@@ -84,23 +87,40 @@
             this.markLabel.Text = "Ваша оценка:";
             this.markLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
+            this.closeButton.Location = new System.Drawing.Point(599, 2);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(31, 32);
+            this.closeButton.TabIndex = 77;
+            this.closeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // TestResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(635, 316);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.markLabel);
             this.Controls.Add(this.rightNumberLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestResultForm";
             this.Text = "Результаты тестирования";
+            this.Controls.SetChildIndex(this.cancelButton, 0);
             this.Controls.SetChildIndex(this.rightNumberLabel, 0);
             this.Controls.SetChildIndex(this.markLabel, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.minimizeButton, 0);
-            this.Controls.SetChildIndex(this.cancelButton, 0);
             this.Controls.SetChildIndex(this.changeWindowBoxButton, 0);
+            this.Controls.SetChildIndex(this.closeButton, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -111,5 +131,6 @@
         #endregion
         private System.Windows.Forms.Label rightNumberLabel;
         private System.Windows.Forms.Label markLabel;
+        public System.Windows.Forms.Button closeButton;
     }
 }

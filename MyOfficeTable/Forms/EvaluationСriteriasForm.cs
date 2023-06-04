@@ -15,6 +15,7 @@ namespace MyOfficeTable
 {
     public partial class EvaluationСriteriasForm : StyleForm
     {
+        public static EvaluationСriteriasForm evaluationСriteriasForm;
         string file = "";
         int num = 0;
         bool loadForm = true;
@@ -22,6 +23,8 @@ namespace MyOfficeTable
         public EvaluationСriteriasForm(int numberOfQuestions = 0, string fileName = "")
         {
             InitializeComponent();
+
+            evaluationСriteriasForm = this;
 
             num = numberOfQuestions;
 
@@ -41,8 +44,7 @@ namespace MyOfficeTable
         void GoToForm(Form form)
         {
             Hide();
-            form.ShowDialog();
-            Close();
+            form.Show();
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace MyOfficeTable
             WindowState = FormWindowState.Minimized;
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
         {
             if (!Settings.Default.goFromTheory)
                 Close();

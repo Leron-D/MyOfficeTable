@@ -33,6 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.goBackButton = new MyOfficeTable.MyButton();
             this.goToTestButton = new MyOfficeTable.MyButton();
+            this.closeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -62,6 +63,7 @@
             // 
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.Location = new System.Drawing.Point(875, 2);
+            this.cancelButton.Visible = false;
             // 
             // webBrowser
             // 
@@ -128,12 +130,28 @@
             this.goToTestButton.Visible = false;
             this.goToTestButton.Click += new System.EventHandler(this.GoToTestButton_Click);
             // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
+            this.closeButton.Location = new System.Drawing.Point(875, 2);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(31, 32);
+            this.closeButton.TabIndex = 77;
+            this.closeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // EvaluationСriteriasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(910, 659);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.goToTestButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.panel2);
@@ -148,6 +166,7 @@
             this.Controls.SetChildIndex(this.minimizeButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);
             this.Controls.SetChildIndex(this.changeWindowBoxButton, 0);
+            this.Controls.SetChildIndex(this.closeButton, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -160,5 +179,6 @@
         private System.Windows.Forms.Panel panel2;
         private MyButton goBackButton;
         private MyButton goToTestButton;
+        public System.Windows.Forms.Button closeButton;
     }
 }

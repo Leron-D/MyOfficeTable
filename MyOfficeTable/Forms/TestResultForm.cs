@@ -23,5 +23,10 @@ namespace MyOfficeTable
             rightNumberLabel.Text = $"Вы ответили правильно на {rightNum} из {numberOfQuestions} вопросов";
             markLabel.Text = $"Ваша оценка: {mark}";
         }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            TestForm.testForm.Close();
+        }
     }
 }

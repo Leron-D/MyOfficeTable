@@ -22,6 +22,7 @@ namespace MyOfficeTable
 {
     public partial class TestForm : StyleForm
     {
+        public static TestForm testForm;
         double mark = 0;
         int numOfQuestion = 1;
         int[] questionsArray = new int[15] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
@@ -39,6 +40,7 @@ namespace MyOfficeTable
         public TestForm(string fileName, double numberOfQuestions)
         {
             InitializeComponent();
+            testForm = this;
             numOfQuestions = numberOfQuestions;
             LoadForm(fileName);
         }
@@ -306,10 +308,9 @@ namespace MyOfficeTable
 
         private void OpenResultForm(double rightNum, int mark)
         {
-            Hide();
             TestResultForm form = new TestResultForm(rightNum, mark, numOfQuestions);
-            form.ShowDialog();
-            Close();
+            form.Show();
+            Hide();
         }
 
         private void ChangePositionOfRadioButtons(int y)
@@ -407,9 +408,7 @@ namespace MyOfficeTable
 
         private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Hide();
-            SelectThemeForm form = new SelectThemeForm("Тестирование");
-            form.ShowDialog();
+            SelectThemeForm.selectThemeForm.Show();
         }
 
         private void AnswerTextBox_KeyDown(object sender, KeyEventArgs e)
