@@ -51,15 +51,15 @@
             this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
             this.changeWindowBoxButton.Location = new System.Drawing.Point(1059, 2);
             // 
-            // cancelButton
-            // 
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.Location = new System.Drawing.Point(1100, 2);
-            // 
             // minimizeButton
             // 
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.Location = new System.Drawing.Point(1018, 2);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.Location = new System.Drawing.Point(1100, 2);
             // 
             // label1
             // 
@@ -116,7 +116,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "InstructionForm";
-            this.Text = "InstructionForm";
+            this.Text = "Инструкции к заданию";
             this.Controls.SetChildIndex(this.goNextButton, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label1, 0);

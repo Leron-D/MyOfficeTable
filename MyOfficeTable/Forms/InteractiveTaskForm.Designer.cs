@@ -776,7 +776,7 @@
             this.MinimumSize = new System.Drawing.Size(1037, 883);
             this.Name = "InteractiveTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InteractiveTaskForm";
+            this.Text = "Интерактивное задание";
             this.Load += new System.EventHandler(this.InteractiveTaskForm_Load);
             this.Resize += new System.EventHandler(this.InteractiveTaskForm_Resize);
             this.task1ReferencesTabPage.ResumeLayout(false);
