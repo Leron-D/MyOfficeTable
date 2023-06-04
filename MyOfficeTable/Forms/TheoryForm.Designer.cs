@@ -60,15 +60,15 @@
             this.changeWindowBoxButton.Location = new System.Drawing.Point(1324, 0);
             this.changeWindowBoxButton.Click += new System.EventHandler(this.СhangeWindowBoxButton_Click);
             // 
-            // cancelButton
-            // 
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.Location = new System.Drawing.Point(1365, 0);
-            // 
             // minimizeButton
             // 
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.Location = new System.Drawing.Point(1283, 0);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.Location = new System.Drawing.Point(1365, 0);
             // 
             // rightPanel
             // 

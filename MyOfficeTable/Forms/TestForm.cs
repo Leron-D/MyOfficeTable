@@ -68,26 +68,12 @@ namespace MyOfficeTable
 
                 radioButtonsList = new List<MyRadioButton>
                 {
-                    answerRadioButton1,
-                    answerRadioButton2,
-                    answerRadioButton3,
-                    answerRadioButton4,
-                    answerRadioButton5,
-                    answerRadioButton6,
-                    answerRadioButton7,
-                    answerRadioButton8
+                    answerRadioButton1, answerRadioButton2, answerRadioButton3, answerRadioButton4, answerRadioButton5, answerRadioButton6, answerRadioButton7, answerRadioButton8
                 };
 
                 checkBoxesList = new List<CheckBox>
                 {
-                    answerCheckBox1,
-                    answerCheckBox2,
-                    answerCheckBox3,
-                    answerCheckBox4,
-                    answerCheckBox5,
-                    answerCheckBox6,
-                    answerCheckBox7,
-                    answerCheckBox8
+                    answerCheckBox1, answerCheckBox2, answerCheckBox3, answerCheckBox4, answerCheckBox5, answerCheckBox6, answerCheckBox7,answerCheckBox8
                 };
 
                 timer.Start();
@@ -185,166 +171,82 @@ namespace MyOfficeTable
                 XmlDocument xDoc = new XmlDocument();
                 xDoc.Load(testName);
                 XmlElement xRoot = xDoc.DocumentElement;
+                int n = 0;
                 if (xRoot != null)
                 {
                     XmlNodeList a = xDoc.GetElementsByTagName("Question");
                     XmlNode question = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Text");
                     questionLabel.Text = $"Вопрос {numQuestion + 1}. {question.Value}";
+                    successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
+                    XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
+                    XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
+                    XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
+                    XmlNode answer4 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer4");
+                    XmlNode answer5 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer5");
+                    XmlNode answer6 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer6");
+                    XmlNode answer7 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer7");
+                    XmlNode answer8 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer8");
+                    List<XmlNode> optionAnswersList = new List<XmlNode>
+                    {
+                        answer5, answer6, answer7,  answer8
+                    };
                     if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Single")
                     {
                         seconds = 30;
-                        answerRadioButton1.Visible = answerRadioButton2.Visible = answerRadioButton3.Visible = true;
-                        successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
-                        XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
-                        XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
-                        XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
-                        XmlNode answer4 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer4");
-                        XmlNode answer5 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer5");
-                        XmlNode answer6 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer6");
-                        XmlNode answer7 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer7");
-                        XmlNode answer8 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer8");
+                        answerRadioButton1.Visible = answerRadioButton2.Visible = answerRadioButton3.Visible = answerRadioButton4.Visible = true;
                         answerRadioButton1.Text = answer1.Value;
                         answerRadioButton2.Text = answer2.Value;
                         answerRadioButton3.Text = answer3.Value;
-                        if (answer4 != null)
+                        answerRadioButton4.Text = answer4.Value;
+                        for (int i = 4; i < radioButtonsList.Count; i++)
                         {
-                            answerRadioButton4.Visible = true;
-                            answerRadioButton4.Text = answer4.Value;
-                        }
-
-                        if (answer5 != null)
-                        {
-                            if (WindowState != FormWindowState.Maximized)
-                                Height += 42;
+                            if (optionAnswersList[n] != null)
+                            {
+                                if (WindowState != FormWindowState.Maximized)
+                                    Height += 42;
+                                else
+                                    addedHeight += 42;
+                                radioButtonsList[i].Visible = true;
+                                radioButtonsList[i].Text = optionAnswersList[n].Value;
+                            }
                             else
-                                addedHeight += 42;
-                            answerRadioButton5.Visible = true;
-                            answerRadioButton5.Text = answer5.Value;
-                        }
-                        else
-                        {
-                            return;
-                        }
-
-                        if (answer6 != null)
-                        {
-                            if (WindowState != FormWindowState.Maximized)
-                                Height += 42;
-                            else
-                                addedHeight += 42;
-                            answerRadioButton6.Visible = true;
-                            answerRadioButton6.Text = answer6.Value;
-                        }
-                        else
-                        {
-                            return;
-                        }
-
-                        if (answer7 != null)
-                        {
-                            if (WindowState != FormWindowState.Maximized)
-                                Height += 42;
-                            else
-                                addedHeight += 42;
-                            answerRadioButton7.Visible = true;
-                            answerRadioButton7.Text = answer7.Value;
-                        }
-                        else
-                        {
-                            return;
-                        }
-
-                        if (answer8 != null)
-                        {
-                            if (WindowState != FormWindowState.Maximized)
-                                Height += 42;
-                            else
-                                addedHeight += 42;
-                            answerRadioButton8.Visible = true;
-                            answerRadioButton8.Text = answer8.Value;
+                            {
+                                return;
+                            }
+                            n++;
                         }
                     }
                     else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "Multiple")
                     {
                         seconds = 60;
-                        answerCheckBox1.Visible = answerCheckBox2.Visible = answerCheckBox3.Visible = true;
-                        successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
-                        XmlNode answer1 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer1");
-                        XmlNode answer2 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer2");
-                        XmlNode answer3 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer3");
-                        XmlNode answer4 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer4");
-                        XmlNode answer5 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer5");
-                        XmlNode answer6 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer6");
-                        XmlNode answer7 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer7");
-                        XmlNode answer8 = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("Answer8");
+                        answerCheckBox1.Visible = answerCheckBox2.Visible = answerCheckBox3.Visible = answerCheckBox4.Visible = true;
                         answerCheckBox1.Text = answer1.Value;
                         answerCheckBox2.Text = answer2.Value;
                         answerCheckBox3.Text = answer3.Value;
+                        answerCheckBox4.Text = answer4.Value;
 
-                        if (answer4 != null)
+                        for (int i = 4; i < checkBoxesList.Count; i++)
                         {
-                            answerCheckBox4.Visible = true;
-                            answerCheckBox4.Text = answer4.Value;
-                        }
-
-                        if (answer5 != null)
-                        {
-                            if (WindowState != FormWindowState.Maximized)
-                                Height += 42;
+                            if (optionAnswersList[n] != null)
+                            {
+                                if (WindowState != FormWindowState.Maximized)
+                                    Height += 42;
+                                else
+                                    addedHeight += 42;
+                                checkBoxesList[i].Visible = true;
+                                checkBoxesList[i].Text = optionAnswersList[n].Value;
+                                n++;
+                            }
                             else
-                                addedHeight += 42;
-                            answerCheckBox5.Visible = true;
-                            answerCheckBox5.Text = answer5.Value;
-                        }
-                        else
-                        {
-                            return;
-                        }
-
-                        if (answer6 != null)
-                        {
-                            if (WindowState != FormWindowState.Maximized)
-                                Height += 42;
-                            else
-                                addedHeight += 42;
-                            answerCheckBox6.Visible = true;
-                            answerCheckBox6.Text = answer6.Value;
-                        }
-                        else
-                        {
-                            return;
-                        }
-
-                        if (answer7 != null)
-                        {
-                            if (WindowState != FormWindowState.Maximized)
-                                Height += 42;
-                            else
-                                addedHeight += 42;
-                            answerCheckBox7.Visible = true;
-                            answerCheckBox7.Text = answer7.Value;
-                        }
-                        else
-                        {
-                            return;
-                        }
-
-                        if (answer8 != null)
-                        {
-                            if (WindowState != FormWindowState.Maximized)
-                                Height += 42;
-                            else
-                                addedHeight += 42;
-                            answerCheckBox8.Visible = true;
-                            answerCheckBox8.Text = answer8.Value;
+                            {
+                                return;
+                            }
                         }
                     }
-
                     else if (a.Item(questionsArray[numQuestion]).Attributes["Type"].Value == "String")
                     {
                         seconds = 90;
                         answerTextBox.Visible = true;
-                        successfulAnswer = a.Item(questionsArray[numQuestion]).Attributes.GetNamedItem("True");
                     }
                 }
                 answerCheckBox1.Top = answerTextBox.Top = answerRadioButton1.Top = questionLabel.Location.Y + questionLabel.Height + 20;
@@ -506,7 +408,7 @@ namespace MyOfficeTable
         private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Hide();
-            MainForm form = new MainForm();
+            SelectThemeForm form = new SelectThemeForm("Тестирование");
             form.ShowDialog();
         }
 
@@ -577,7 +479,7 @@ namespace MyOfficeTable
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            if (numOfQuestionLabel.Text != "#")
+            if (numOfQuestionLabel.Text != "Номер вопроса")
             {
                 var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (message == DialogResult.Yes)

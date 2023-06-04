@@ -21,8 +21,7 @@ namespace MyOfficeTable
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
             rightNumberLabel.Text = $"Вы ответили правильно на {rightNum} из {numberOfQuestions} вопросов";
-            markLabel.Text = mark.ToString();
-            headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
+            markLabel.Text = $"Ваша оценка: {mark}";
         }
     }
 }
