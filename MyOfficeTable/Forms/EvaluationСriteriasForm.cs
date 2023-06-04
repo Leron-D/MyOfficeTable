@@ -57,7 +57,7 @@ namespace MyOfficeTable
             if (!Settings.Default.goFromTheory)
                 Close();
             else
-                GoToForm(new MainForm());
+                MainForm._mainForm.Show();
         }
 
         private void GoToTestButton_Click(object sender, EventArgs e)

@@ -33,8 +33,8 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.webBrowser = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.goToLectionButton = new System.Windows.Forms.Button();
-            this.testingButton = new System.Windows.Forms.Button();
+            this.goToLectionButton = new MyOfficeTable.MyButton();
+            this.testingButton = new MyOfficeTable.MyButton();
             this.changeSizePanelButton = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.goBackButton = new MyOfficeTable.MyButton();
@@ -107,33 +107,45 @@
             // 
             // goToLectionButton
             // 
-            this.goToLectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.goToLectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.goToLectionButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.goToLectionButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.goToLectionButton.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.goToLectionButton.BorderRadius = 20;
+            this.goToLectionButton.BorderSize = 0;
             this.goToLectionButton.FlatAppearance.BorderSize = 0;
             this.goToLectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goToLectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.goToLectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goToLectionButton.ForeColor = System.Drawing.Color.White;
-            this.goToLectionButton.Location = new System.Drawing.Point(3, 239);
+            this.goToLectionButton.Location = new System.Drawing.Point(0, 248);
+            this.goToLectionButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goToLectionButton.Name = "goToLectionButton";
-            this.goToLectionButton.Size = new System.Drawing.Size(284, 50);
-            this.goToLectionButton.TabIndex = 34;
+            this.goToLectionButton.Size = new System.Drawing.Size(290, 60);
+            this.goToLectionButton.TabIndex = 76;
             this.goToLectionButton.Text = "Перейти к лекции";
+            this.goToLectionButton.TextColor = System.Drawing.Color.White;
             this.goToLectionButton.UseVisualStyleBackColor = false;
             this.goToLectionButton.Click += new System.EventHandler(this.GoToLectionButton_Click);
             // 
             // testingButton
             // 
-            this.testingButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.testingButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.testingButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.testingButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.testingButton.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.testingButton.BorderRadius = 20;
+            this.testingButton.BorderSize = 0;
             this.testingButton.FlatAppearance.BorderSize = 0;
             this.testingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.testingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.testingButton.ForeColor = System.Drawing.Color.White;
-            this.testingButton.Location = new System.Drawing.Point(3, 322);
+            this.testingButton.Location = new System.Drawing.Point(0, 350);
+            this.testingButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.testingButton.Name = "testingButton";
-            this.testingButton.Size = new System.Drawing.Size(284, 50);
-            this.testingButton.TabIndex = 33;
-            this.testingButton.Text = "Пройти тестирование\r\n";
+            this.testingButton.Size = new System.Drawing.Size(290, 60);
+            this.testingButton.TabIndex = 76;
+            this.testingButton.Text = "Перейти к тестированию";
+            this.testingButton.TextColor = System.Drawing.Color.White;
             this.testingButton.UseVisualStyleBackColor = false;
             this.testingButton.Click += new System.EventHandler(this.TestingButton_Click);
             // 
@@ -216,9 +228,9 @@
         private System.Windows.Forms.Panel leftPanel;
         private MyOfficeTable.MyButton goBackButton;
         private Microsoft.Web.WebView2.WinForms.WebView2 webBrowser;
-        private System.Windows.Forms.Button testingButton;
-        private System.Windows.Forms.Button goToLectionButton;
         private System.Windows.Forms.Button changeSizePanelButton;
         private System.Windows.Forms.Timer timer;
+        private MyButton goToLectionButton;
+        private MyButton testingButton;
     }
 }

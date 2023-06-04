@@ -15,13 +15,13 @@ namespace MyOfficeTable
     public partial class MainForm : StyleForm
     {
         bool loadForm = true;
-        public static MainForm mainForm;
+        public static MainForm _mainForm;
         ToolTip toolTip = new ToolTip();
 
         public MainForm()
         {
             InitializeComponent();
-            mainForm = this;
+            _mainForm = this;
             if (Settings.Default.IsFirstLoad)
             {
                 Animator.Start();

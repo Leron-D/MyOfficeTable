@@ -45,7 +45,7 @@ namespace MyOfficeTable.Forms
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
-            MainForm.mainForm.Close();
+            MainForm._mainForm.Close();
             if (EvaluationСriteriasForm.evaluationСriteriasForm != null)
             {
                 EvaluationСriteriasForm.evaluationСriteriasForm.Close();

@@ -772,7 +772,6 @@
             this.Controls.Add(this.goBackButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1037, 883);
             this.Name = "InteractiveTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

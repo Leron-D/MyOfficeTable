@@ -476,7 +476,7 @@ namespace MyOfficeTable.Forms
                 Settings.Default.Save();
                 Close();
                 SelectThemeForm.selectThemeForm.Close();
-                MainForm.mainForm.Show();
+                MainForm._mainForm.Show();
             }
         }
 

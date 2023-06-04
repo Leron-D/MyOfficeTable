@@ -134,7 +134,7 @@ namespace MyOfficeTable
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            MainForm.mainForm.Show();
+            MainForm._mainForm.Show();
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
