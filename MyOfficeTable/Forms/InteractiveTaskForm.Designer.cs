@@ -456,9 +456,7 @@
             // 
             // imagesPanel
             // 
-            this.imagesPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.imagesPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imagesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imagesPanel.Controls.Add(this.label6);
             this.imagesPanel.Controls.Add(this.sourcePictureBox2);

@@ -47,7 +47,6 @@ namespace MyOfficeTable.Forms
             InitializeComponent();
             theme = taskName;
             LoadForm();
-            MessageBox.Show($"{destinationPictureBox1.Parent.Name}");
             controlRatiosOnForm = new List<ControlRatios>
             {
                 new ControlRatios(nameLabel1, 0.291627, 0.132626, 0, 0.338196),
@@ -79,189 +78,196 @@ namespace MyOfficeTable.Forms
 
         private void LoadForm()
         {
-            AutoScaleMode = AutoScaleMode.Font;
-            Settings.Default.firstLoadInstruction = false;
-            Settings.Default.Save();
-            ToolTip toolTip = new ToolTip();
-            tabControl.Multiline = true;
-            tabControl.Appearance = TabAppearance.Buttons;
-            tabControl.ItemSize = new Size(0, 1);
-            tabControl.SizeMode = TabSizeMode.Fixed;
-            tabControl.TabStop = false;
-            destinationPictureBox1.AllowDrop = destinationPictureBox2.AllowDrop = destinationPictureBox3.AllowDrop = destinationPictureBox4.AllowDrop =
-            sourcePictureBox1.AllowDrop = sourcePictureBox2.AllowDrop = sourcePictureBox3.AllowDrop = sourcePictureBox4.AllowDrop = sourcePictureBox4.AllowDrop = true;
-            headerLabel1.Text = headerLabel2.Text = theme;
-            srcPictureBox = null;
-
-            if (theme == "Интерфейс табличного процессора")
+            try
             {
-                Random random = new Random();
+                AutoScaleMode = AutoScaleMode.Font;
+                Settings.Default.firstLoadInstruction = false;
+                Settings.Default.Save();
+                ToolTip toolTip = new ToolTip();
+                tabControl.Multiline = true;
+                tabControl.Appearance = TabAppearance.Buttons;
+                tabControl.ItemSize = new Size(0, 1);
+                tabControl.SizeMode = TabSizeMode.Fixed;
+                tabControl.TabStop = false;
+                destinationPictureBox1.AllowDrop = destinationPictureBox2.AllowDrop = destinationPictureBox3.AllowDrop = destinationPictureBox4.AllowDrop =
+                sourcePictureBox1.AllowDrop = sourcePictureBox2.AllowDrop = sourcePictureBox3.AllowDrop = sourcePictureBox4.AllowDrop = sourcePictureBox4.AllowDrop = true;
+                headerLabel1.Text = headerLabel2.Text = theme;
+                srcPictureBox = null;
 
-                listOfNames = new List<string>
+                if (theme == "Интерфейс табличного процессора")
                 {
-                    "Вырезать",
-                    "Копировать\nформатирование",
-                    "Полужирное\nначертание",
-                    "Все буквы\nпрописные",
-                    "Сохранить",
-                    "Печать",
-                    "Копировать",
-                    "Вставить",
-                    "Подчёркнутый",
-                    "Цвет заливки",
-                    "Курсив",
-                    "Цвет текста"
-                };
+                    Random random = new Random();
 
-                listOfTags1 = new List<string>
+                    listOfNames = new List<string>
+                    {
+                        "Вырезать",
+                        "Копировать\nформатирование",
+                        "Полужирное\nначертание",
+                        "Все буквы\nпрописные",
+                        "Сохранить",
+                        "Печать",
+                        "Копировать",
+                        "Вставить",
+                        "Подчёркнутый",
+                        "Цвет заливки",
+                        "Курсив",
+                        "Цвет текста"
+                    };
+
+                    listOfTags1 = new List<string>
+                    {
+                        "cut",
+                        "copyFormat",
+                        "bold",
+                        "allLettersUppercase",
+                        "save",
+                        "print",
+                        "copy",
+                        "enter",
+                        "underlined",
+                        "colorOfFill",
+                        "italic",
+                        "colorOfText"
+                    };
+
+                    listOfImages1 = new List<Image>
+                    {
+                        Resources.Cut,
+                        Resources.CopyFormat,
+                        Resources.Bold,
+                        Resources.AllLettersUppercase,
+                        Resources.Save,
+                        Resources.Print,
+                        Resources.Copy,
+                        Resources.Enter,
+                        Resources.Underlined,
+                        Resources.ColorOfFill,
+                        Resources.Italic,
+                        Resources.ColorOfText
+                    };
+
+                    listOfSourcePictureBoxes = new List<PictureBox>
+                    {
+                        sourcePictureBox1,
+                        sourcePictureBox2,
+                        sourcePictureBox3,
+                        sourcePictureBox4
+                    };
+
+                    listOfDestinationPictureBoxes = new List<PictureBox>
+                    {
+                        destinationPictureBox1,
+                        destinationPictureBox2,
+                        destinationPictureBox3,
+                        destinationPictureBox4
+                    };
+
+                    listOfNameLabels = new List<Label>
+                    {
+                        nameLabel1,
+                        nameLabel2,
+                        nameLabel3,
+                        nameLabel4
+                    };
+
+
+                    listOfIndexes1 = new List<int>
+                    {
+                        0,
+                        4,
+                        8
+                    };
+
+                    listOfResultLabels1 = new List<Label>
+                    {
+                        resultLabel1,
+                        resultLabel2,
+                        resultLabel3,
+                        resultLabel4
+                    };
+
+                    numberOfTasks = random.Next(2, 4);
+                    tabControl.SelectedTab = tabControl.TabPages[0];
+                    TakeTaskByInterface();
+                }
+                else if (theme == "Ссылки на ячейки в табличном процессоре")
                 {
-                    "cut",
-                    "copyFormat",
-                    "bold",
-                    "allLettersUppercase",
-                    "save",
-                    "print",
-                    "copy",
-                    "enter",
-                    "underlined",
-                    "colorOfFill",
-                    "italic",
-                    "colorOfText"
-                };
+                    tabControl.SelectedTab = tabControl.TabPages[1];
 
-                listOfImages1 = new List<Image>
-                {
-                    Resources.Cut,
-                    Resources.CopyFormat,
-                    Resources.Bold,
-                    Resources.AllLettersUppercase,
-                    Resources.Save,
-                    Resources.Print,
-                    Resources.Copy,
-                    Resources.Enter,
-                    Resources.Underlined,
-                    Resources.ColorOfFill,
-                    Resources.Italic,
-                    Resources.ColorOfText
-                };
+                    listOfImages2 = new List<Image>
+                    {
+                        Resources.InteractiveTask1,
+                        Resources.InteractiveTask2,
+                        Resources.InteractiveTask3,
+                        Resources.InteractiveTask4,
+                        Resources.InteractiveTask5,
+                        Resources.InteractiveTask6,
+                        Resources.InteractiveTask7,
+                        Resources.InteractiveTask8,
+                        Resources.InteractiveTask9,
+                        Resources.InteractiveTask10,
+                        Resources.InteractiveTask11,
+                        Resources.InteractiveTask12
+                    };
 
-                listOfSourcePictureBoxes = new List<PictureBox>
-                {
-                    sourcePictureBox1,
-                    sourcePictureBox2,
-                    sourcePictureBox3,
-                    sourcePictureBox4
-                };
+                    listOfTags2 = new List<string>
+                    {
+                        "=A3+$B$2",
+                        "=B3+$B$2*C3",
+                        "=$A4+B4",
+                        "=$B5/B$2",
+                        "=$A$1-C3+B$2",
+                        "=A$1*B$1",
+                        "=$B5-B$3/C3",
+                        "=$B$2/C$3",
+                        "Смешанная",
+                        "Относительная",
+                        "Абсолютная",
+                        "Объемная"
+                    };
 
-                listOfDestinationPictureBoxes = new List<PictureBox>
-                {
-                    destinationPictureBox1,
-                    destinationPictureBox2,
-                    destinationPictureBox3,
-                    destinationPictureBox4
-                };
+                    listOfIndexes2 = new List<int>
+                    {
+                        0,
+                        4,
+                        8
+                    };
 
-                listOfNameLabels = new List<Label>
-                {
-                    nameLabel1,
-                    nameLabel2,
-                    nameLabel3,
-                    nameLabel4
-                };
+                    listOfFormulaPictureBoxes = new List<PictureBox>
+                    {
+                        formulaPictureBox1,
+                        formulaPictureBox2,
+                        formulaPictureBox3,
+                        formulaPictureBox4
+                    };
 
+                    listOfTextBoxes = new List<TextBox>
+                    {
+                        answerTextBox1,
+                        answerTextBox2,
+                        answerTextBox3,
+                        answerTextBox4
+                    };
 
-                listOfIndexes1 = new List<int>
-                {
-                    0,
-                    4,
-                    8
-                };
+                    listOfResultLabels2 = new List<Label>
+                    {
+                        resultLabel5,
+                        resultLabel6,
+                        resultLabel7,
+                        resultLabel8
+                    };
 
-                listOfResultLabels1 = new List<Label>
-                {
-                    resultLabel1,
-                    resultLabel2,
-                    resultLabel3,
-                    resultLabel4
-                };
+                    numberOfTasks = 2;
 
-                numberOfTasks = random.Next(2, 4);
-                tabControl.SelectedTab = tabControl.TabPages[0];
-                TakeTaskByInterface();
+                    TakeTaskByReferences();
+                }
+                numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
+                numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
             }
-            else if (theme == "Ссылки на ячейки в табличном процессоре")
+            catch (Exception ex)
             {
-                tabControl.SelectedTab = tabControl.TabPages[1];
-
-                listOfImages2 = new List<Image>
-                {
-                    Resources.InteractiveTask1,
-                    Resources.InteractiveTask2,
-                    Resources.InteractiveTask3,
-                    Resources.InteractiveTask4,
-                    Resources.InteractiveTask5,
-                    Resources.InteractiveTask6,
-                    Resources.InteractiveTask7,
-                    Resources.InteractiveTask8,
-                    Resources.InteractiveTask9,
-                    Resources.InteractiveTask10,
-                    Resources.InteractiveTask11,
-                    Resources.InteractiveTask12
-                };
-
-                listOfTags2 = new List<string>
-                {
-                    "=A3+$B$2",
-                    "=B3+$B$2*C3",
-                    "=$A4+B4",
-                    "=$B5/B$2",
-                    "=$A$1-C3+B$2",
-                    "=A$1*B$1",
-                    "=$B5-B$3/C3",
-                    "=$B$2/C$3",
-                    "Смешанная",
-                    "Относительная",
-                    "Абсолютная",
-                    "Объемная"
-                };
-
-                listOfIndexes2 = new List<int>
-                {
-                    0,
-                    4,
-                    8
-                };
-
-                listOfFormulaPictureBoxes = new List<PictureBox>
-                {
-                    formulaPictureBox1,
-                    formulaPictureBox2,
-                    formulaPictureBox3,
-                    formulaPictureBox4
-                };
-
-                listOfTextBoxes = new List<TextBox>
-                {
-                    answerTextBox1,
-                    answerTextBox2,
-                    answerTextBox3,
-                    answerTextBox4
-                };
-
-                listOfResultLabels2 = new List<Label>
-                {
-                    resultLabel5,
-                    resultLabel6,
-                    resultLabel7,
-                    resultLabel8
-                };
-
-                numberOfTasks = 2;
-
-                TakeTaskByReferences();
+                MessageBox.Show(ex.Message);
             }
-            numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
-            numOfTaskLabel.Left = (ClientSize.Width - numOfTaskLabel.Width) / 2;
         }
 
         private void TakeTaskByInterface()
