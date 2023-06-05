@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Location = new System.Drawing.Point(0, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1247, 134);
+            this.panel1.Size = new System.Drawing.Size(1240, 134);
             this.panel1.TabIndex = 44;
             // 
             // pictureBox2
@@ -56,7 +56,7 @@
             this.pictureBox2.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(132, 133);
+            this.pictureBox2.Size = new System.Drawing.Size(134, 134);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 42;
             this.pictureBox2.TabStop = false;
@@ -67,9 +67,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.ForeColor = System.Drawing.Color.White;
-            this.headerLabel.Location = new System.Drawing.Point(133, 0);
+            this.headerLabel.Location = new System.Drawing.Point(132, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(1111, 134);
+            this.headerLabel.Size = new System.Drawing.Size(1108, 134);
             this.headerLabel.TabIndex = 6;
             this.headerLabel.Text = "Электронное пособие\r\n«Основы работы в МойОфис Таблица»";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,6 +129,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StyleForm";
@@ -146,9 +147,9 @@
         #endregion
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.PictureBox pictureBox2;
-        protected System.Windows.Forms.Label headerLabel;
         protected System.Windows.Forms.Button changeWindowBoxButton;
         protected System.Windows.Forms.Button minimizeButton;
         public System.Windows.Forms.Button cancelButton;
+        public System.Windows.Forms.Label headerLabel;
     }
 }

@@ -35,6 +35,9 @@ namespace MyOfficeTable.Forms
         List<TextBox> listOfTextBoxes;
         bool loadForm = true;
         int randomCount = 3;
+        private Point mouseOffset;
+        private Point currentOffset;
+        private bool isMouseDown = false;
 
         public InteractiveTaskForm(string taskName)
         {

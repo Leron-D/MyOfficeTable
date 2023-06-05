@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -24,7 +25,7 @@ namespace MyOfficeTable
         public Color ForeColorHeader { get; set; } = Color.White;
 
         public string TextDescrition { get; set; } = "Your description text for this control";
-        public Font FontDescrition { get; set; } = new Font("Verdana", 8.25F, FontStyle.Regular);
+        public Font FontDescrition { get; set; } = new Font("Verdana", 12F, FontStyle.Regular);
         public Color ForeColorDescrition { get; set; } = Color.Black;
 
         public Color BackColorCurtain { get; set; } = Color.Red;
@@ -37,7 +38,7 @@ namespace MyOfficeTable
             DoubleBuffered = true;
 
             Size = new Size(250, 200);
-            CurtainHeight = Height - 60;
+            CurtainHeight = Height - (48 + this.FontHeader.Size*2);
 
             Font = new Font("Verdana", 9F, FontStyle.Regular);
             BackColor = Color.White;
@@ -68,10 +69,10 @@ namespace MyOfficeTable
             //Обводка
             graph.DrawRectangle(new Pen(Color.Gray), rect);
 
-            if (animCurtain.Value == 50)
+            if (animCurtain.Value == 20 + this.FontHeader.Size * 2) // 50
             {
                 graph.DrawString(TextDescrition, FontDescrition, new SolidBrush(ForeColorDescrition),
-                new Rectangle(15, 70, Width - 15, Height - 70));
+                new Rectangle(15, (int)(20 + this.FontHeader.Size * 2.6), Width - 15, Height - 70));
             }
 
             graph.DrawString(Text, Font, new SolidBrush(ForeColor), 15, Height - 37);
@@ -88,8 +89,16 @@ namespace MyOfficeTable
             if (Width <= 100)
                 Width = 100;
 
-            CurtainHeight = Height - 60;
 
+            this.FontHeader = new Font(this.Font.Name, Height / 23, FontStyle.Bold);
+            this.FontDescrition = new Font(this.Font.Name, Height / 23);
+
+            if (FontHeader.Size < 9)
+                FontHeader = new Font(this.Font.Name, 9, FontStyle.Bold);
+            if (FontDescrition.Size < 9)
+                FontDescrition = new Font(this.Font.Name, 9);
+
+            CurtainHeight = Height - (48 + this.FontHeader.Size);
             animCurtain = new Animation();
             animCurtain.Value = CurtainHeight;
 
@@ -140,7 +149,7 @@ namespace MyOfficeTable
         {
             if (MouseEntered == true)
             {
-                animCurtain = new Animation("Curtain_" + Handle, Invalidate, animCurtain.Value, 50);
+                animCurtain = new Animation("Curtain_" + Handle, Invalidate, animCurtain.Value, 20+this.FontHeader.Size*2); //50
             }
             else
             {

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.WebSockets;
 using System.Windows.Forms;
 
 namespace MyOfficeTable
@@ -32,6 +33,7 @@ namespace MyOfficeTable
 
         private void LoadForm(string mode)
         {
+            headerLabel.Text = "Выбор темы";
             transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
             selectMode = mode;
             if (mode == "Теория")
@@ -257,6 +259,11 @@ namespace MyOfficeTable
                 }
                 CenterToScreen();
             }
+        }
+
+        private void SelectThemeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainForm._mainForm.Close();
         }
     }
 }

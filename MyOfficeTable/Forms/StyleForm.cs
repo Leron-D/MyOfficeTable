@@ -16,6 +16,8 @@ namespace MyOfficeTable.Forms
         private Point currentOffset;
         private bool isMouseDown = false;
 
+        bool mov;
+
         public StyleForm()
         {
             InitializeComponent();

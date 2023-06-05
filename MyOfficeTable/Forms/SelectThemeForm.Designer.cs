@@ -37,12 +37,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // headerLabel
+            // panel1
             // 
-            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.Location = new System.Drawing.Point(63, 0);
-            this.headerLabel.Size = new System.Drawing.Size(991, 134);
-            this.headerLabel.Text = "Выбор темы";
+            this.panel1.Size = new System.Drawing.Size(1057, 134);
             // 
             // changeWindowBoxButton
             // 
@@ -59,6 +56,12 @@
             // 
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.Location = new System.Drawing.Point(1020, 1);
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Location = new System.Drawing.Point(0, 0);
+            this.headerLabel.Size = new System.Drawing.Size(1057, 134);
+            this.headerLabel.Text = "Выбор темы";
             // 
             // goBackButton
             // 
@@ -158,6 +161,7 @@
             this.MinimumSize = new System.Drawing.Size(1054, 452);
             this.Name = "SelectThemeForm";
             this.Text = "Выбор темы";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SelectThemeForm_FormClosed);
             this.Resize += new System.EventHandler(this.SelectThemeForm_Resize);
             this.Controls.SetChildIndex(this.selectThemeComboBox, 0);
             this.Controls.SetChildIndex(this.transitionButton, 0);

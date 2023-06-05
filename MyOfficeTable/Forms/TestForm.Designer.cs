@@ -62,12 +62,6 @@
             // 
             this.panel1.Size = new System.Drawing.Size(1291, 134);
             // 
-            // headerLabel
-            // 
-            this.headerLabel.Location = new System.Drawing.Point(131, 0);
-            this.headerLabel.Size = new System.Drawing.Size(1157, 134);
-            this.headerLabel.Text = "Тестирование";
-            // 
             // changeWindowBoxButton
             // 
             this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
@@ -84,6 +78,12 @@
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.Location = new System.Drawing.Point(1160, 495);
             this.cancelButton.Visible = false;
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Location = new System.Drawing.Point(131, 0);
+            this.headerLabel.Size = new System.Drawing.Size(1157, 134);
+            this.headerLabel.Text = "Тестирование";
             // 
             // answerCheckBox1
             // 
@@ -345,7 +345,7 @@
             this.goNextQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goNextQuestionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goNextQuestionButton.ForeColor = System.Drawing.Color.White;
-            this.goNextQuestionButton.Location = new System.Drawing.Point(1006, 489);
+            this.goNextQuestionButton.Location = new System.Drawing.Point(988, 490);
             this.goNextQuestionButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goNextQuestionButton.Name = "goNextQuestionButton";
             this.goNextQuestionButton.Size = new System.Drawing.Size(282, 40);
@@ -534,7 +534,6 @@
             this.Controls.Add(this.answerTextBox);
             this.Controls.Add(this.answerCheckBox5);
             this.Controls.Add(this.answerRadioButton2);
-            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1286, 530);

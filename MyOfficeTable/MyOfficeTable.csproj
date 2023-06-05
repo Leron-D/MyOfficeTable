@@ -162,6 +162,7 @@
     <Compile Include="Forms\TheoryForm.Designer.cs">
       <DependentUpon>TheoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Support\ControlRatios.cs" />
     <EmbeddedResource Include="Forms\EvaluationСriteriasForm.resx">
       <DependentUpon>EvaluationСriteriasForm.cs</DependentUpon>
     </EmbeddedResource>
