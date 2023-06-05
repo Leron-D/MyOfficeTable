@@ -130,8 +130,8 @@ namespace MyOfficeTable
 
         void GoToForm(Form form)
         {
-            form.Show();
             Hide();
+            form.Show();
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
