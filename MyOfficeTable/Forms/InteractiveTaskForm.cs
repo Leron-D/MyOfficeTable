@@ -1,4 +1,5 @@
 ﻿using MyOfficeTable.Properties;
+using MyOfficeTable.Support;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,12 +39,42 @@ namespace MyOfficeTable.Forms
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
+        List<ControlRatios> controlRatiosOnForm;
+        List<ControlRatios> controlRatiosInPanel;
 
         public InteractiveTaskForm(string taskName)
         {
             InitializeComponent();
             theme = taskName;
             LoadForm();
+            MessageBox.Show($"{destinationPictureBox1.Parent.Name}");
+            controlRatiosOnForm = new List<ControlRatios>
+            {
+                new ControlRatios(nameLabel1, 0.291627, 0.132626, 0, 0.338196),
+                new ControlRatios(nameLabel2, 0.291627, 0.132626, 0, 0.503979),
+                new ControlRatios(nameLabel3, 0.291627, 0.132626, 0, 0.676393),
+                new ControlRatios(nameLabel4, 0.291627, 0.132626, 0, 0.848806),
+
+                new ControlRatios(destinationPictureBox1, 0.096246, 0.132626, 0.320500, 0.331565),
+                new ControlRatios(destinationPictureBox2, 0.096246, 0.132626, 0.320500, 0.503979),
+                new ControlRatios(destinationPictureBox3, 0.096246, 0.132626, 0.320500, 0.676393),
+                new ControlRatios(destinationPictureBox4, 0.096246, 0.132626, 0.320500, 0.848806),
+
+                new ControlRatios(imagesPanel, 0.412897, 0.568966, 0.547642, 0.364721),
+                
+                new ControlRatios(resultLabel1, 0.035611, 0.049072, 0.457170, 0.375332),
+                new ControlRatios(resultLabel2, 0.035611, 0.049072, 0.457170, 0.549072),
+                new ControlRatios(resultLabel3, 0.035611, 0.049072, 0.457170, 0.721485),
+                new ControlRatios(resultLabel4, 0.035611, 0.049072, 0.457170, 0.884615)
+            };
+
+            controlRatiosInPanel = new List<ControlRatios>
+            {
+                new ControlRatios(sourcePictureBox1, 0.233100, 0.233100, 0.620047, 0.664336),
+                new ControlRatios(sourcePictureBox2, 0.233100, 0.233100, 0.146853, 0.256410),
+                new ControlRatios(sourcePictureBox3, 0.233100, 0.233100, 0.146853, 0.664336),
+                new ControlRatios(sourcePictureBox4, 0.233100, 0.233100, 0.620047, 0.256410)
+            };
         }
 
         private void LoadForm()
@@ -478,8 +509,7 @@ namespace MyOfficeTable.Forms
                 Settings.Default.firstLoadInstruction = true;
                 Settings.Default.Save();
                 Close();
-                SelectThemeForm.selectThemeForm.Close();
-                MainForm._mainForm.Show();
+                SelectThemeForm.selectThemeForm.Show();
             }
         }
 
@@ -583,55 +613,63 @@ namespace MyOfficeTable.Forms
 
         private void DestinationPictureBox1_LocationChanged(object sender, EventArgs e)
         {
-            if (!loadForm)
-            {
-                destinationPictureBox2.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox1.Location.Y + destinationPictureBox1.Height + 25);
-                destinationPictureBox3.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox2.Location.Y + destinationPictureBox2.Height + 25);
-                destinationPictureBox4.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox3.Location.Y + destinationPictureBox3.Height + 25);
+            //if (!loadForm)
+            //{
+            //    destinationPictureBox2.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox1.Location.Y + destinationPictureBox1.Height + 25);
+            //    destinationPictureBox3.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox2.Location.Y + destinationPictureBox2.Height + 25);
+            //    destinationPictureBox4.Location = new Point(destinationPictureBox1.Location.X, destinationPictureBox3.Location.Y + destinationPictureBox3.Height + 25);
 
-                nameLabel1.Location = new Point(destinationPictureBox1.Location.X - nameLabel1.Width - 30, destinationPictureBox1.Location.Y);
+            //    nameLabel1.Location = new Point(destinationPictureBox1.Location.X - nameLabel1.Width - 30, destinationPictureBox1.Location.Y);
 
-                resultLabel1.Location = new Point(destinationPictureBox1.Location.X + destinationPictureBox1.Width + 42,
-                                                  destinationPictureBox1.Location.Y + (destinationPictureBox1.Height - resultLabel1.Height) / 2);
-                resultLabel2.Location = new Point(destinationPictureBox2.Location.X + destinationPictureBox2.Width + 42,
-                                                  destinationPictureBox2.Location.Y + (destinationPictureBox2.Height - resultLabel2.Height) / 2);
-                resultLabel3.Location = new Point(destinationPictureBox3.Location.X + destinationPictureBox3.Width + 42,
-                                                  destinationPictureBox3.Location.Y + (destinationPictureBox3.Height - resultLabel3.Height) / 2);
-                resultLabel4.Location = new Point(destinationPictureBox4.Location.X + destinationPictureBox4.Width + 42,
-                                                  destinationPictureBox4.Location.Y + (destinationPictureBox4.Height - resultLabel4.Height) / 2);
-            }
+            //    resultLabel1.Location = new Point(destinationPictureBox1.Location.X + destinationPictureBox1.Width + 42,
+            //                                      destinationPictureBox1.Location.Y + (destinationPictureBox1.Height - resultLabel1.Height) / 2);
+            //    resultLabel2.Location = new Point(destinationPictureBox2.Location.X + destinationPictureBox2.Width + 42,
+            //                                      destinationPictureBox2.Location.Y + (destinationPictureBox2.Height - resultLabel2.Height) / 2);
+            //    resultLabel3.Location = new Point(destinationPictureBox3.Location.X + destinationPictureBox3.Width + 42,
+            //                                      destinationPictureBox3.Location.Y + (destinationPictureBox3.Height - resultLabel3.Height) / 2);
+            //    resultLabel4.Location = new Point(destinationPictureBox4.Location.X + destinationPictureBox4.Width + 42,
+            //                                      destinationPictureBox4.Location.Y + (destinationPictureBox4.Height - resultLabel4.Height) / 2);
+            //}
         }
 
         private void DestinationPictureBox1_Resize(object sender, EventArgs e)
         {
-            if (!loadForm)
-            {
-                nameLabel1.Size = nameLabel2.Size = nameLabel3.Size = nameLabel4.Size = new Size(nameLabel1.Width, destinationPictureBox1.Height);
-            }
+            //if (!loadForm)
+            //{
+            //    nameLabel1.Size = nameLabel2.Size = nameLabel3.Size = nameLabel4.Size = new Size(nameLabel1.Width, destinationPictureBox1.Height);
+            //}
         }
 
         private void NameLabel1_LocationChanged(object sender, EventArgs e)
         {
-            if (!loadForm)
-            {
-                nameLabel2.Location = new Point(nameLabel1.Location.X, destinationPictureBox2.Location.Y);
-                nameLabel3.Location = new Point(nameLabel2.Location.X, destinationPictureBox3.Location.Y);
-                nameLabel4.Location = new Point(nameLabel3.Location.X, destinationPictureBox4.Location.Y);
-            }
+            //if (!loadForm)
+            //{
+            //    nameLabel2.Location = new Point(nameLabel1.Location.X, destinationPictureBox2.Location.Y);
+            //    nameLabel3.Location = new Point(nameLabel2.Location.X, destinationPictureBox3.Location.Y);
+            //    nameLabel4.Location = new Point(nameLabel3.Location.X, destinationPictureBox4.Location.Y);
+            //}
         }
 
         private void InteractiveTaskForm_Resize(object sender, EventArgs e)
         {
-            if (!loadForm)
+            //if (!loadForm)
+            //{
+            //    if (WindowState == FormWindowState.Maximized)
+            //    {
+            //        ChangeControlsForFullscreen();
+            //    }
+            //    else
+            //    {
+            //        ChangeControlsForNormalscreen();
+            //    }
+            //}
+            foreach (var item in controlRatiosOnForm)
             {
-                if (WindowState == FormWindowState.Maximized)
-                {
-                    ChangeControlsForFullscreen();
-                }
-                else
-                {
-                    ChangeControlsForNormalscreen();
-                }
+                item.Resize(tabControl.TabPages[0]);
+            }
+            foreach (var item in controlRatiosInPanel)
+            {
+                item.Resize(imagesPanel);
             }
         }
 

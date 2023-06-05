@@ -447,25 +447,27 @@
             // 
             this.nameLabel4.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel4.Location = new System.Drawing.Point(0, 636);
+            this.nameLabel4.Location = new System.Drawing.Point(0, 640);
             this.nameLabel4.Name = "nameLabel4";
             this.nameLabel4.Size = new System.Drawing.Size(303, 100);
             this.nameLabel4.TabIndex = 36;
-            this.nameLabel4.Text = "Все буквы\r\nпрописные\r\n";
+            this.nameLabel4.Text = "Все буквы\r\nпрописные";
             this.nameLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // imagesPanel
             // 
-            this.imagesPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imagesPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.imagesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imagesPanel.Controls.Add(this.label6);
             this.imagesPanel.Controls.Add(this.sourcePictureBox2);
             this.imagesPanel.Controls.Add(this.sourcePictureBox1);
             this.imagesPanel.Controls.Add(this.sourcePictureBox3);
             this.imagesPanel.Controls.Add(this.sourcePictureBox4);
-            this.imagesPanel.Location = new System.Drawing.Point(574, 340);
+            this.imagesPanel.Location = new System.Drawing.Point(569, 275);
             this.imagesPanel.Name = "imagesPanel";
-            this.imagesPanel.Size = new System.Drawing.Size(429, 314);
+            this.imagesPanel.Size = new System.Drawing.Size(429, 429);
             this.imagesPanel.TabIndex = 12;
             // 
             // label6
@@ -485,7 +487,7 @@
             // 
             this.sourcePictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sourcePictureBox2.Image = global::MyOfficeTable.Properties.Resources.CopyFormat;
-            this.sourcePictureBox2.Location = new System.Drawing.Point(63, 75);
+            this.sourcePictureBox2.Location = new System.Drawing.Point(63, 110);
             this.sourcePictureBox2.Name = "sourcePictureBox2";
             this.sourcePictureBox2.Size = new System.Drawing.Size(100, 100);
             this.sourcePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -501,7 +503,7 @@
             this.sourcePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sourcePictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sourcePictureBox1.Image = global::MyOfficeTable.Properties.Resources.Cut;
-            this.sourcePictureBox1.Location = new System.Drawing.Point(266, 199);
+            this.sourcePictureBox1.Location = new System.Drawing.Point(266, 285);
             this.sourcePictureBox1.Name = "sourcePictureBox1";
             this.sourcePictureBox1.Size = new System.Drawing.Size(100, 100);
             this.sourcePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -517,7 +519,7 @@
             this.sourcePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.sourcePictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sourcePictureBox3.Image = global::MyOfficeTable.Properties.Resources.AllLettersUppercase;
-            this.sourcePictureBox3.Location = new System.Drawing.Point(63, 199);
+            this.sourcePictureBox3.Location = new System.Drawing.Point(63, 285);
             this.sourcePictureBox3.Name = "sourcePictureBox3";
             this.sourcePictureBox3.Size = new System.Drawing.Size(100, 100);
             this.sourcePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -533,7 +535,7 @@
             this.sourcePictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sourcePictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sourcePictureBox4.Image = global::MyOfficeTable.Properties.Resources.Bold;
-            this.sourcePictureBox4.Location = new System.Drawing.Point(266, 75);
+            this.sourcePictureBox4.Location = new System.Drawing.Point(266, 110);
             this.sourcePictureBox4.Name = "sourcePictureBox4";
             this.sourcePictureBox4.Size = new System.Drawing.Size(100, 100);
             this.sourcePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -548,7 +550,7 @@
             // 
             this.nameLabel3.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.nameLabel3.Location = new System.Drawing.Point(0, 512);
+            this.nameLabel3.Location = new System.Drawing.Point(0, 510);
             this.nameLabel3.Name = "nameLabel3";
             this.nameLabel3.Size = new System.Drawing.Size(303, 100);
             this.nameLabel3.TabIndex = 35;
@@ -558,7 +560,7 @@
             // destinationPictureBox4
             // 
             this.destinationPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.destinationPictureBox4.Location = new System.Drawing.Point(333, 636);
+            this.destinationPictureBox4.Location = new System.Drawing.Point(333, 640);
             this.destinationPictureBox4.Name = "destinationPictureBox4";
             this.destinationPictureBox4.Size = new System.Drawing.Size(100, 100);
             this.destinationPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -590,7 +592,7 @@
             this.nameLabel2.Name = "nameLabel2";
             this.nameLabel2.Size = new System.Drawing.Size(303, 100);
             this.nameLabel2.TabIndex = 32;
-            this.nameLabel2.Text = "Копировать \r\nформатирование\r\n";
+            this.nameLabel2.Text = "Копировать \r\nформатирование";
             this.nameLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nameLabel1
@@ -608,7 +610,7 @@
             // destinationPictureBox3
             // 
             this.destinationPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.destinationPictureBox3.Location = new System.Drawing.Point(333, 509);
+            this.destinationPictureBox3.Location = new System.Drawing.Point(333, 510);
             this.destinationPictureBox3.Name = "destinationPictureBox3";
             this.destinationPictureBox3.Size = new System.Drawing.Size(100, 100);
             this.destinationPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -770,7 +772,6 @@
             this.Controls.Add(this.goNextButton);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.goBackButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1037, 883);
             this.Name = "InteractiveTaskForm";

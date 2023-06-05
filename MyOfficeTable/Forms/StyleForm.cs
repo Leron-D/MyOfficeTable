@@ -25,9 +25,12 @@ namespace MyOfficeTable.Forms
 
         private void StyleForm_MouseDown(object sender, MouseEventArgs e)
         {
-            isMouseDown = true;
-            mouseOffset = Cursor.Position;
-            currentOffset = this.Location;
+            if (e.Button == MouseButtons.Left)
+            {
+                isMouseDown = true;
+                mouseOffset = Cursor.Position;
+                currentOffset = this.Location;
+            }
         }
 
         private void StyleForm_MouseMove(object sender, MouseEventArgs e)

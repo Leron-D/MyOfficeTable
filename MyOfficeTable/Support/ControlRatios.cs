@@ -43,8 +43,16 @@ namespace MyOfficeTable.Support
 
         public void Resize(Panel panel)
         {
-            Control.Width = (int)(Width * panel.Width);
-            Control.Height = (int)(Height * panel.Height);
+            if (Control.Width == Control.Height)
+            {
+                Control.Height = (int)(Height * panel.Height);
+                Control.Width = Control.Height;
+            }
+            else
+            {
+                Control.Width = (int)(Width * panel.Width);
+                Control.Height = (int)(Height * panel.Height);
+            }
             Control.Left = (int)(Left * panel.Width);
             Control.Top = (int)(Top * panel.Height);
         }
