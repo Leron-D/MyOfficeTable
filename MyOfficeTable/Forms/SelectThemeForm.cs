@@ -230,7 +230,7 @@ namespace MyOfficeTable
                     transitionButton.Top = selectThemeComboBox.Location.Y + 130;
                     goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 80;
                     goBackButton.Size = new Size(261, 50);
-                    goBackButton.Location = new Point(goBackButton.Location.X, goBackButton.Location.Y - 10);
+                    goBackButton.Location = new Point(0, Height - goBackButton.Height - 2);
                     transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 24, FontStyle.Bold);
                 }
                 else

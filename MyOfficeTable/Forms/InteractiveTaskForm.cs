@@ -677,6 +677,14 @@ namespace MyOfficeTable.Forms
             {
                 item.Resize(imagesPanel);
             }
+            foreach (var control in tabControl.TabPages[0].Controls)
+            {
+                if (control is Label)
+                {
+                    var item = control as Label;
+                    item.Font = new Font(item.Font.Name, item.Height/18, item.Font.Style);
+                }
+            }
         }
 
         private void InteractiveTaskForm_Load(object sender, EventArgs e)
