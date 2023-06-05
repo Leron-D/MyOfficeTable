@@ -765,6 +765,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1037, 883);
+            this.ControlBox = false;
             this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.numOfTaskLabel);
             this.Controls.Add(this.cancelButton);
