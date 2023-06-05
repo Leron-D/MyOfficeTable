@@ -57,8 +57,8 @@ namespace MyOfficeTable
 
         private void GoToForm(Form form)
         {
-            form.Show();
             Hide();
+            form.Show();
         }
 
         private void ReferenceButton_Click(object sender, EventArgs e)
@@ -69,17 +69,35 @@ namespace MyOfficeTable
 
         private void TheoryButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new SelectThemeForm("Теория"));
+            if (SelectThemeForm.selectThemeForm != null)
+            {
+                SelectThemeForm.selectThemeForm.Show();
+                Hide();
+            }
+            else
+                GoToForm(new SelectThemeForm("Теория"));
         }
 
         private void TestingButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new SelectThemeForm("Тестирование"));
+            if (SelectThemeForm.selectThemeForm != null)
+            {
+                SelectThemeForm.selectThemeForm.Show();
+                Hide();
+            }
+            else
+                GoToForm(new SelectThemeForm("Тестирование"));
         }
 
         private void InteractiveTasksButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new SelectThemeForm("Интерактивные задания"));
+            if (SelectThemeForm.selectThemeForm != null)
+            {
+                SelectThemeForm.selectThemeForm.Show();
+                Hide();
+            }
+            else
+                GoToForm(new SelectThemeForm("Интерактивные задания"));
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
