@@ -49,11 +49,6 @@
             // 
             this.panel1.Size = new System.Drawing.Size(1406, 134);
             // 
-            // headerLabel
-            // 
-            this.headerLabel.Size = new System.Drawing.Size(1270, 134);
-            this.headerLabel.Text = "Теоретический материал";
-            // 
             // changeWindowBoxButton
             // 
             this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
@@ -69,6 +64,11 @@
             // 
             this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.Location = new System.Drawing.Point(1365, 0);
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Size = new System.Drawing.Size(1270, 134);
+            this.headerLabel.Text = "Теоретический материал";
             // 
             // rightPanel
             // 
