@@ -143,26 +143,19 @@ namespace MyOfficeTable
         void GoToForm(Form form)
         {
             Hide();
-            form.Show();
+            form.ShowDialog();
+            Close();
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            selectThemeComboBox = null;
-            MainForm form = new MainForm();
+            MainForm._mainForm.Show();
             Hide();
-            form.ShowDialog();
-            Close();
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void TransitionButton_Click(object sender, EventArgs e)
@@ -275,11 +268,6 @@ namespace MyOfficeTable
                 }
                 CenterToScreen();
             }
-        }
-
-        private void SelectThemeForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            MainForm._mainForm.Close();
         }
     }
 }

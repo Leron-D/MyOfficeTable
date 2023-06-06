@@ -763,7 +763,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1037, 883);
-            this.ControlBox = false;
             this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.numOfTaskLabel);
             this.Controls.Add(this.cancelButton);
@@ -771,12 +770,16 @@
             this.Controls.Add(this.goNextButton);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.goBackButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1037, 883);
             this.Name = "InteractiveTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Интерактивное задание";
             this.Load += new System.EventHandler(this.InteractiveTaskForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InteractiveTaskForm_MouseUp);
             this.Resize += new System.EventHandler(this.InteractiveTaskForm_Resize);
             this.task1ReferencesTabPage.ResumeLayout(false);
             this.task1ReferencesTabPage.PerformLayout();

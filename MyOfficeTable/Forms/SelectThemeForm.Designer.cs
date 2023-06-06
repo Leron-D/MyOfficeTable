@@ -160,7 +160,6 @@
             this.MaximizeBox = false;
             this.Name = "SelectThemeForm";
             this.Text = "Выбор темы";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SelectThemeForm_FormClosed);
             this.Resize += new System.EventHandler(this.SelectThemeForm_Resize);
             this.Controls.SetChildIndex(this.selectThemeComboBox, 0);
             this.Controls.SetChildIndex(this.transitionButton, 0);

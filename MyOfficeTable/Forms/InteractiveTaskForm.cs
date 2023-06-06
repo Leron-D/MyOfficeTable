@@ -100,6 +100,30 @@ namespace MyOfficeTable.Forms
             };
         }
 
+        private void InteractiveTaskForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isMouseDown = true;
+                mouseOffset = Cursor.Position;
+                currentOffset = this.Location;
+            }
+        }
+
+        private void InteractiveTaskForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isMouseDown)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
+                this.Location = Point.Add(currentOffset, new Size(dif));
+            }
+        }
+
+        private void InteractiveTaskForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            isMouseDown = false;
+        }
+
         private void LoadForm()
         {
             try
@@ -533,13 +557,15 @@ namespace MyOfficeTable.Forms
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            SelectThemeForm form = new SelectThemeForm("Интерактивные задания");
             var message = MessageBox.Show("Вы точно хотите выйти?", "Выход из задания", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (message == DialogResult.Yes)
             {
                 Settings.Default.firstLoadInstruction = true;
                 Settings.Default.Save();
+                Hide();
+                form.ShowDialog();
                 Close();
-                SelectThemeForm.selectThemeForm.Show();
             }
         }
 

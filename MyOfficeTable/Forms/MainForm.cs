@@ -58,8 +58,7 @@ namespace MyOfficeTable
         private void GoToForm(Form form)
         {
             Hide();
-            form.ShowDialog();
-            Close();
+            form.Show();
         }
 
         private void ReferenceButton_Click(object sender, EventArgs e)
@@ -70,34 +69,34 @@ namespace MyOfficeTable
 
         private void TheoryButton_Click(object sender, EventArgs e)
         {
-            //if (SelectThemeForm.selectThemeForm != null)
-            //{
-            //    SelectThemeForm.selectThemeForm.Show();
-            //    Hide();
-            //}
-            //else
+            if (SelectThemeForm.selectThemeForm != null)
+            {
+                SelectThemeForm.selectThemeForm.Close();
+                GoToForm(new SelectThemeForm("Теория"));
+            }
+            else
                 GoToForm(new SelectThemeForm("Теория"));
         }
 
         private void TestingButton_Click(object sender, EventArgs e)
         {
-            //if (SelectThemeForm.selectThemeForm != null)
-            //{
-            //    SelectThemeForm.selectThemeForm.Show();
-            //    Hide();
-            //}
-            //else
+            if (SelectThemeForm.selectThemeForm != null)
+            {
+                SelectThemeForm.selectThemeForm.Close();
+                GoToForm(new SelectThemeForm("Тестирование"));
+            }
+            else
                 GoToForm(new SelectThemeForm("Тестирование"));
         }
 
         private void InteractiveTasksButton_Click(object sender, EventArgs e)
         {
-            //if (SelectThemeForm.selectThemeForm != null)
-            //{
-            //    SelectThemeForm.selectThemeForm.Show();
-            //    Hide();
-            //}
-            //else
+            if (SelectThemeForm.selectThemeForm != null)
+            {
+                SelectThemeForm.selectThemeForm.Close();
+                GoToForm(new SelectThemeForm("Интерактивные задания"));
+            }
+            else
                 GoToForm(new SelectThemeForm("Интерактивные задания"));
         }
 
