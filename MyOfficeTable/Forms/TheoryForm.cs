@@ -119,7 +119,6 @@ namespace MyOfficeTable
             if(changeSizePanelButton.Tag == "Свернуть")
             {
                 isCollapsed = false;
-                //LeftPanel_Paint(leftPanel, new PaintEventArgs());
             }
             else
             {
@@ -162,7 +161,6 @@ namespace MyOfficeTable
                     toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
                 }
                 leftPanel.Invalidate();
-                leftPanel.Update();
             }
         }
 

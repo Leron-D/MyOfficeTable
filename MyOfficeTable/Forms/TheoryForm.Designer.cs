@@ -120,7 +120,7 @@
             this.goToLectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goToLectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goToLectionButton.ForeColor = System.Drawing.Color.White;
-            this.goToLectionButton.Location = new System.Drawing.Point(0, 248);
+            this.goToLectionButton.Location = new System.Drawing.Point(2, 248);
             this.goToLectionButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goToLectionButton.Name = "goToLectionButton";
             this.goToLectionButton.Size = new System.Drawing.Size(286, 60);
@@ -142,7 +142,7 @@
             this.testingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.testingButton.ForeColor = System.Drawing.Color.White;
-            this.testingButton.Location = new System.Drawing.Point(0, 350);
+            this.testingButton.Location = new System.Drawing.Point(2, 350);
             this.testingButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.testingButton.Name = "testingButton";
             this.testingButton.Size = new System.Drawing.Size(286, 60);
@@ -160,12 +160,12 @@
             this.changeSizePanelButton.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeSizePanelButton.ForeColor = System.Drawing.Color.White;
             this.changeSizePanelButton.Image = global::MyOfficeTable.Properties.Resources.Collapse;
-            this.changeSizePanelButton.Location = new System.Drawing.Point(6, 202);
+            this.changeSizePanelButton.Location = new System.Drawing.Point(3, 216);
             this.changeSizePanelButton.Name = "changeSizePanelButton";
-            this.changeSizePanelButton.Size = new System.Drawing.Size(44, 43);
+            this.changeSizePanelButton.Size = new System.Drawing.Size(27, 29);
             this.changeSizePanelButton.TabIndex = 35;
             this.changeSizePanelButton.Tag = "Свернуть";
-            this.changeSizePanelButton.UseVisualStyleBackColor = true;
+            this.changeSizePanelButton.UseVisualStyleBackColor = false;
             this.changeSizePanelButton.Click += new System.EventHandler(this.ChangeSizePanelButton_Click);
             // 
             // timer
