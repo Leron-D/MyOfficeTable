@@ -37,10 +37,10 @@
             this.resultLabel7 = new System.Windows.Forms.Label();
             this.resultLabel6 = new System.Windows.Forms.Label();
             this.resultLabel5 = new System.Windows.Forms.Label();
-            this.answerTextBox4 = new System.Windows.Forms.TextBox();
-            this.answerTextBox3 = new System.Windows.Forms.TextBox();
-            this.answerTextBox2 = new System.Windows.Forms.TextBox();
-            this.answerTextBox1 = new System.Windows.Forms.TextBox();
+            this.answerTextBox4 = new MyOfficeTable.MyTextBox();
+            this.answerTextBox3 = new MyOfficeTable.MyTextBox();
+            this.answerTextBox2 = new MyOfficeTable.MyTextBox();
+            this.answerTextBox1 = new MyOfficeTable.MyTextBox();
             this.formulaPictureBox4 = new System.Windows.Forms.PictureBox();
             this.formulaPictureBox2 = new System.Windows.Forms.PictureBox();
             this.formulaPictureBox3 = new System.Windows.Forms.PictureBox();
@@ -225,7 +225,7 @@
             // answerTextBox4
             // 
             this.answerTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.answerTextBox4.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox4.Font = new System.Drawing.Font("Lucida Sans", 18F);
             this.answerTextBox4.Location = new System.Drawing.Point(612, 686);
             this.answerTextBox4.Name = "answerTextBox4";
             this.answerTextBox4.Size = new System.Drawing.Size(327, 36);
@@ -235,7 +235,7 @@
             // answerTextBox3
             // 
             this.answerTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.answerTextBox3.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox3.Font = new System.Drawing.Font("Lucida Sans", 18F);
             this.answerTextBox3.Location = new System.Drawing.Point(100, 686);
             this.answerTextBox3.Name = "answerTextBox3";
             this.answerTextBox3.Size = new System.Drawing.Size(327, 36);
@@ -245,7 +245,7 @@
             // answerTextBox2
             // 
             this.answerTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.answerTextBox2.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox2.Font = new System.Drawing.Font("Lucida Sans", 18F);
             this.answerTextBox2.Location = new System.Drawing.Point(612, 435);
             this.answerTextBox2.Name = "answerTextBox2";
             this.answerTextBox2.Size = new System.Drawing.Size(327, 36);
@@ -255,7 +255,7 @@
             // answerTextBox1
             // 
             this.answerTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.answerTextBox1.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox1.Font = new System.Drawing.Font("Lucida Sans", 18F);
             this.answerTextBox1.Location = new System.Drawing.Point(100, 435);
             this.answerTextBox1.Name = "answerTextBox1";
             this.answerTextBox1.Size = new System.Drawing.Size(327, 36);
@@ -836,10 +836,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label headerLabel1;
         private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TextBox answerTextBox4;
-        private System.Windows.Forms.TextBox answerTextBox3;
-        private System.Windows.Forms.TextBox answerTextBox2;
-        private System.Windows.Forms.TextBox answerTextBox1;
         private System.Windows.Forms.PictureBox formulaPictureBox4;
         private System.Windows.Forms.PictureBox formulaPictureBox2;
         private System.Windows.Forms.PictureBox formulaPictureBox3;
@@ -852,5 +848,9 @@
         private System.Windows.Forms.Label taskLabel1;
         private System.Windows.Forms.Label numOfTaskLabel;
         private System.Windows.Forms.Button changeWindowBoxButton;
+        private MyTextBox answerTextBox4;
+        private MyTextBox answerTextBox3;
+        private MyTextBox answerTextBox2;
+        private MyTextBox answerTextBox1;
     }
 }

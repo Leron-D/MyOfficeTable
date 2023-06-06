@@ -91,6 +91,9 @@
     <Compile Include="Controls\ButtonCard.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\MyButton.cs">
       <SubType>Component</SubType>
     </Compile>
