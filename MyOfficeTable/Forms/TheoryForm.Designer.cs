@@ -100,7 +100,7 @@
             // 
             this.leftPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.leftPanel.BackColor = System.Drawing.Color.LightBlue;
+            this.leftPanel.BackColor = System.Drawing.Color.PowderBlue;
             this.leftPanel.Controls.Add(this.goToLectionButton);
             this.leftPanel.Controls.Add(this.testingButton);
             this.leftPanel.Location = new System.Drawing.Point(3, 251);
@@ -142,7 +142,7 @@
             this.testingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.testingButton.ForeColor = System.Drawing.Color.White;
-            this.testingButton.Location = new System.Drawing.Point(2, 350);
+            this.testingButton.Location = new System.Drawing.Point(1, 350);
             this.testingButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.testingButton.Name = "testingButton";
             this.testingButton.Size = new System.Drawing.Size(286, 60);

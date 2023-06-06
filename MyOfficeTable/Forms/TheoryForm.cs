@@ -182,7 +182,6 @@ namespace MyOfficeTable
                 changeWindowBoxButton.Image = Resources.Fullscreen;
             }
             leftPanel.Invalidate();
-            leftPanel.Update();
             CenterToScreen();
         }
 
