@@ -98,6 +98,9 @@
             // 
             // leftPanel
             // 
+            this.leftPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.leftPanel.BackColor = System.Drawing.Color.LightBlue;
             this.leftPanel.Controls.Add(this.goToLectionButton);
             this.leftPanel.Controls.Add(this.testingButton);
             this.leftPanel.Location = new System.Drawing.Point(3, 251);
@@ -120,7 +123,7 @@
             this.goToLectionButton.Location = new System.Drawing.Point(0, 248);
             this.goToLectionButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goToLectionButton.Name = "goToLectionButton";
-            this.goToLectionButton.Size = new System.Drawing.Size(290, 60);
+            this.goToLectionButton.Size = new System.Drawing.Size(286, 60);
             this.goToLectionButton.TabIndex = 76;
             this.goToLectionButton.Text = "Перейти к лекции";
             this.goToLectionButton.TextColor = System.Drawing.Color.White;
@@ -142,7 +145,7 @@
             this.testingButton.Location = new System.Drawing.Point(0, 350);
             this.testingButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.testingButton.Name = "testingButton";
-            this.testingButton.Size = new System.Drawing.Size(290, 60);
+            this.testingButton.Size = new System.Drawing.Size(286, 60);
             this.testingButton.TabIndex = 76;
             this.testingButton.Text = "Перейти к тестированию";
             this.testingButton.TextColor = System.Drawing.Color.White;

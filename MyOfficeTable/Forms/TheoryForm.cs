@@ -26,6 +26,7 @@ namespace MyOfficeTable
             InitializeComponent();
             theoryForm = this;
             LoadForm(lection);
+            leftPanel.Paint += LeftPanel_Paint;
         }
 
         private void LoadForm(string lection)
@@ -118,6 +119,7 @@ namespace MyOfficeTable
             if(changeSizePanelButton.Tag == "Свернуть")
             {
                 isCollapsed = false;
+                //LeftPanel_Paint(leftPanel, new PaintEventArgs());
             }
             else
             {
@@ -159,6 +161,8 @@ namespace MyOfficeTable
                     changeSizePanelButton.Tag = "Свернуть";
                     toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
                 }
+                leftPanel.Invalidate();
+                leftPanel.Update();
             }
         }
 
@@ -179,7 +183,32 @@ namespace MyOfficeTable
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
             }
+            leftPanel.Invalidate();
+            leftPanel.Update();
             CenterToScreen();
+        }
+
+        private void LeftPanel_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            e.Graphics.Clear(leftPanel.Parent.BackColor);
+            Control control = leftPanel;
+            int radius = 30;
+            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            {
+                path.AddLine(radius, 0, control.Width - radius, 0);
+                path.AddArc(control.Width - radius, 0, radius, radius, 270, 90);
+                path.AddLine(control.Width, radius, control.Width, control.Height - radius);
+                path.AddArc(control.Width - radius, control.Height - radius, radius, radius, 0, 90);
+                path.AddLine(control.Width - radius, control.Height, radius, control.Height);
+                path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
+                path.AddLine(0, control.Height - radius, 0, radius);
+                path.AddArc(0, 0, radius, radius, 180, 90);
+                using (SolidBrush brush = new SolidBrush(control.BackColor))
+                {
+                    e.Graphics.FillPath(brush, path);
+                }
+            }
         }
     }
 }
