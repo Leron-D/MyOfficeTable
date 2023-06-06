@@ -199,7 +199,7 @@
             this.resultLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.resultLabel6.Font = new System.Drawing.Font("Lucida Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel6.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.resultLabel6.Location = new System.Drawing.Point(960, 435);
+            this.resultLabel6.Location = new System.Drawing.Point(960, 434);
             this.resultLabel6.Name = "resultLabel6";
             this.resultLabel6.Size = new System.Drawing.Size(37, 37);
             this.resultLabel6.TabIndex = 65;

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Drawing.Image;
 
 namespace MyOfficeTable.Forms
 {
@@ -39,7 +40,8 @@ namespace MyOfficeTable.Forms
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
-        List<ControlRatios> controlRatiosOnForm;
+        List<ControlRatios> controlRatiosOnForm1;
+        List<ControlRatios> controlRatiosOnForm2;
         List<ControlRatios> controlRatiosInPanel;
 
         public InteractiveTaskForm(string taskName)
@@ -47,7 +49,7 @@ namespace MyOfficeTable.Forms
             InitializeComponent();
             theme = taskName;
             LoadForm();
-            controlRatiosOnForm = new List<ControlRatios>
+            controlRatiosOnForm1 = new List<ControlRatios>
             {
                 new ControlRatios(nameLabel1, 0.291627, 0.132626, 0, 0.338196),
                 new ControlRatios(nameLabel2, 0.291627, 0.132626, 0, 0.503979),
@@ -64,7 +66,29 @@ namespace MyOfficeTable.Forms
                 new ControlRatios(resultLabel1, 0.035611, 0.049072, 0.457170, 0.375332),
                 new ControlRatios(resultLabel2, 0.035611, 0.049072, 0.457170, 0.549072),
                 new ControlRatios(resultLabel3, 0.035611, 0.049072, 0.457170, 0.721485),
-                new ControlRatios(resultLabel4, 0.035611, 0.049072, 0.457170, 0.884615)
+                new ControlRatios(resultLabel4, 0.035611, 0.049072, 0.457170, 0.884615),
+
+                new ControlRatios(taskLabel1, 0.846006, 0.128647, 0.092397, 0.185676)
+            };
+
+            controlRatiosOnForm2 = new List<ControlRatios>
+            {
+                new ControlRatios(formulaPictureBox1, 0.314726, 0.177719, 0.096246, 0.367374),
+                new ControlRatios(formulaPictureBox2, 0.314726, 0.177719, 0.589028, 0.367374),
+                new ControlRatios(formulaPictureBox3, 0.314726, 0.177719, 0.096246, 0.702918),
+                new ControlRatios(formulaPictureBox4, 0.314726, 0.177719, 0.589028, 0.702918),
+
+                new ControlRatios(answerTextBox1, 0.314726, 0.047745, 0.096246, 0.576923),
+                new ControlRatios(answerTextBox2, 0.314726, 0.047745, 0.589028, 0.576923),
+                new ControlRatios(answerTextBox3, 0.314726, 0.047745, 0.096246, 0.909814),
+                new ControlRatios(answerTextBox4, 0.314726, 0.047745, 0.589028, 0.909814),
+                
+                new ControlRatios(resultLabel5, 0.035611, 0.049072, 0.431184, 0.575597),
+                new ControlRatios(resultLabel6, 0.035611, 0.049072, 0.923965, 0.575597),
+                new ControlRatios(resultLabel7, 0.035611, 0.049072, 0.431184, 0.909814),
+                new ControlRatios(resultLabel8, 0.035611, 0.049072, 0.923965, 0.909814),
+
+                new ControlRatios(taskLabel2, 0.846006, 0.128647, 0.072185, 0.196286)
             };
 
             controlRatiosInPanel = new List<ControlRatios>
@@ -617,6 +641,7 @@ namespace MyOfficeTable.Forms
             CenterToScreen();
         }
 
+        #region
         private void DestinationPictureBox1_LocationChanged(object sender, EventArgs e)
         {
             //if (!loadForm)
@@ -655,9 +680,11 @@ namespace MyOfficeTable.Forms
             //    nameLabel4.Location = new Point(nameLabel3.Location.X, destinationPictureBox4.Location.Y);
             //}
         }
+        #endregion
 
         private void InteractiveTaskForm_Resize(object sender, EventArgs e)
         {
+            #region
             //if (!loadForm)
             //{
             //    if (WindowState == FormWindowState.Maximized)
@@ -669,21 +696,39 @@ namespace MyOfficeTable.Forms
             //        ChangeControlsForNormalscreen();
             //    }
             //}
-            foreach (var item in controlRatiosOnForm)
+            #endregion
+
+            if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
-                item.Resize(tabControl.TabPages[0]);
-            }
-            foreach (var item in controlRatiosInPanel)
-            {
-                item.Resize(imagesPanel);
-            }
-            foreach (var control in tabControl.TabPages[0].Controls)
-            {
-                if (control is Label)
+                foreach (var item in controlRatiosOnForm1)
                 {
-                    var item = control as Label;
-                    item.Font = new Font(item.Font.Name, item.Height/18, item.Font.Style);
+                    item.Resize(tabControl.TabPages[0]);
                 }
+                foreach (var item in controlRatiosInPanel)
+                {
+                    item.Resize(imagesPanel);
+                }
+            }
+            else
+            {
+                foreach (var item in controlRatiosOnForm2)
+                {
+                    item.Resize(tabControl.TabPages[1]);
+                }
+            }
+
+            if (WindowState == FormWindowState.Maximized)
+            {
+                loadForm = false;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+                changeWindowBoxButton.Tag = "Normalscreen";
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
             }
         }
 
@@ -728,7 +773,7 @@ namespace MyOfficeTable.Forms
 
         private void FormulaPictureBox1_Resize(object sender, EventArgs e)
         {
-            answerTextBox1.Width = answerTextBox2.Width = answerTextBox3.Width = answerTextBox4.Width = formulaPictureBox1.Width;
+            //answerTextBox1.Width = answerTextBox2.Width = answerTextBox3.Width = answerTextBox4.Width = formulaPictureBox1.Width;
         }
     }
 }
