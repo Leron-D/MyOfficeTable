@@ -18,7 +18,7 @@ namespace MyOfficeTable
 {
     public partial class SelectThemeForm : StyleForm
     {
-        public static SelectThemeForm selectThemeForm;
+        public static SelectThemeForm _selectThemeForm;
         string selectMode;
         List<string> listOfTheoryThemes = new List<string>();
         List<string> listOfTestsThemes = new List<string>();
@@ -29,7 +29,7 @@ namespace MyOfficeTable
         public SelectThemeForm(string mode)
         {
             InitializeComponent();
-            selectThemeForm = this;
+            _selectThemeForm = this;
             LoadForm(mode);
 
             controlRatios = new List<ControlRatios>
@@ -143,8 +143,7 @@ namespace MyOfficeTable
         void GoToForm(Form form)
         {
             Hide();
-            form.ShowDialog();
-            Close();
+            form.Show();
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -267,6 +266,22 @@ namespace MyOfficeTable
                     transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
                 }
                 CenterToScreen();
+            }
+        }
+
+        private void SelectThemeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (TheoryForm.theoryForm != null)
+            {
+                TheoryForm.theoryForm.Close();
+            }
+            if (TestForm._testForm != null)
+            {
+                TestForm._testForm.Close();
+            }
+            if (InteractiveTaskForm._interactiveTaskForm != null)
+            {
+                InteractiveTaskForm._interactiveTaskForm.Close();
             }
         }
     }

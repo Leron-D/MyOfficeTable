@@ -22,7 +22,7 @@ namespace MyOfficeTable
 {
     public partial class TestForm : StyleForm
     {
-        public static TestForm testForm;
+        public static TestForm _testForm;
         double mark = 0;
         int numOfQuestion = 1;
         int[] questionsArray = new int[15] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
@@ -40,7 +40,7 @@ namespace MyOfficeTable
         public TestForm(string fileName, double numberOfQuestions)
         {
             InitializeComponent();
-            testForm = this;
+            _testForm = this;
             numOfQuestions = numberOfQuestions;
             LoadForm(fileName);
         }
@@ -408,7 +408,7 @@ namespace MyOfficeTable
 
         private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            SelectThemeForm.selectThemeForm.Show();
+            SelectThemeForm._selectThemeForm.Show();
         }
 
         private void AnswerTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -482,10 +482,16 @@ namespace MyOfficeTable
             {
                 var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (message == DialogResult.Yes)
-                    Close();
+                {
+                    SelectThemeForm._selectThemeForm.Show();
+                    Hide();
+                }
             }
             else
-                Close();
+            {
+                SelectThemeForm._selectThemeForm.Show();
+                Hide();
+            }
         }
     }
 }

@@ -69,9 +69,9 @@ namespace MyOfficeTable
 
         private void TheoryButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm.selectThemeForm != null)
+            if (SelectThemeForm._selectThemeForm != null)
             {
-                SelectThemeForm.selectThemeForm.Close();
+                SelectThemeForm._selectThemeForm.Close();
                 GoToForm(new SelectThemeForm("Теория"));
             }
             else
@@ -80,9 +80,9 @@ namespace MyOfficeTable
 
         private void TestingButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm.selectThemeForm != null)
+            if (SelectThemeForm._selectThemeForm != null)
             {
-                SelectThemeForm.selectThemeForm.Close();
+                SelectThemeForm._selectThemeForm.Close();
                 GoToForm(new SelectThemeForm("Тестирование"));
             }
             else
@@ -91,9 +91,9 @@ namespace MyOfficeTable
 
         private void InteractiveTasksButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm.selectThemeForm != null)
+            if (SelectThemeForm._selectThemeForm != null)
             {
-                SelectThemeForm.selectThemeForm.Close();
+                SelectThemeForm._selectThemeForm.Close();
                 GoToForm(new SelectThemeForm("Интерактивные задания"));
             }
             else

@@ -15,6 +15,7 @@ namespace MyOfficeTable.Forms
 {
     public partial class InteractiveTaskForm : Form
     {
+        public static InteractiveTaskForm _interactiveTaskForm;
         PictureBox srcPictureBox;
         string theme = "";
         int numOfTask = 1;
@@ -49,6 +50,7 @@ namespace MyOfficeTable.Forms
             InitializeComponent();
             theme = taskName;
             LoadForm();
+            _interactiveTaskForm = this;
             controlRatiosOnForm1 = new List<ControlRatios>
             {
                 new ControlRatios(nameLabel1, 0.291627, 0.132626, 0, 0.338196),
@@ -563,9 +565,11 @@ namespace MyOfficeTable.Forms
             {
                 Settings.Default.firstLoadInstruction = true;
                 Settings.Default.Save();
+                //Hide();
+                //form.ShowDialog();
+                //Close();
                 Hide();
-                form.ShowDialog();
-                Close();
+                SelectThemeForm._selectThemeForm.Show();
             }
         }
 
