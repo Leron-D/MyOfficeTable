@@ -58,8 +58,7 @@
             // headerLabel
             // 
             this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.Location = new System.Drawing.Point(0, 0);
-            this.headerLabel.Size = new System.Drawing.Size(1237, 134);
+            this.headerLabel.Size = new System.Drawing.Size(1105, 134);
             // 
             // referenceButton
             // 
@@ -190,7 +189,7 @@
             this.Controls.Add(this.referenceButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(911, 613);
+            this.MinimumSize = new System.Drawing.Size(995, 720);
             this.Name = "MainForm";
             this.Text = "Главная";
             this.Resize += new System.EventHandler(this.MainForm_Resize);

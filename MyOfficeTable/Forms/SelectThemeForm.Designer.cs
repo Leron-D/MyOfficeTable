@@ -142,7 +142,7 @@
             this.selectThemeComboBox.MinimumSize = new System.Drawing.Size(200, 2);
             this.selectThemeComboBox.Name = "selectThemeComboBox";
             this.selectThemeComboBox.Padding = new System.Windows.Forms.Padding(2);
-            this.selectThemeComboBox.Size = new System.Drawing.Size(866, 36);
+            this.selectThemeComboBox.Size = new System.Drawing.Size(866, 40);
             this.selectThemeComboBox.TabIndex = 40;
             this.selectThemeComboBox.Texts = "";
             // 
@@ -158,7 +158,6 @@
             this.Controls.Add(this.selectThemeComboBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1054, 452);
             this.Name = "SelectThemeForm";
             this.Text = "Выбор темы";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SelectThemeForm_FormClosed);

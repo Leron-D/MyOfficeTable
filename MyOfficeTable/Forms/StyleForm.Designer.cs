@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StyleForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.headerLabel = new System.Windows.Forms.Label();
             this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.pictPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,15 +46,24 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictPanel);
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Location = new System.Drawing.Point(0, 47);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1240, 134);
             this.panel1.TabIndex = 44;
             // 
+            // pictPanel
+            // 
+            this.pictPanel.Controls.Add(this.pictureBox2);
+            this.pictPanel.Location = new System.Drawing.Point(0, 0);
+            this.pictPanel.Name = "pictPanel";
+            this.pictPanel.Size = new System.Drawing.Size(134, 134);
+            this.pictPanel.TabIndex = 76;
+            // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
@@ -139,6 +150,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.StyleForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.StyleForm_MouseUp);
             this.panel1.ResumeLayout(false);
+            this.pictPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -151,5 +163,6 @@
         protected System.Windows.Forms.Button minimizeButton;
         public System.Windows.Forms.Button cancelButton;
         public System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Panel pictPanel;
     }
 }

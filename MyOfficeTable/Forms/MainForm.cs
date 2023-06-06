@@ -58,7 +58,8 @@ namespace MyOfficeTable
         private void GoToForm(Form form)
         {
             Hide();
-            form.Show();
+            form.ShowDialog();
+            Close();
         }
 
         private void ReferenceButton_Click(object sender, EventArgs e)
@@ -69,34 +70,34 @@ namespace MyOfficeTable
 
         private void TheoryButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm.selectThemeForm != null)
-            {
-                SelectThemeForm.selectThemeForm.Show();
-                Hide();
-            }
-            else
+            //if (SelectThemeForm.selectThemeForm != null)
+            //{
+            //    SelectThemeForm.selectThemeForm.Show();
+            //    Hide();
+            //}
+            //else
                 GoToForm(new SelectThemeForm("Теория"));
         }
 
         private void TestingButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm.selectThemeForm != null)
-            {
-                SelectThemeForm.selectThemeForm.Show();
-                Hide();
-            }
-            else
+            //if (SelectThemeForm.selectThemeForm != null)
+            //{
+            //    SelectThemeForm.selectThemeForm.Show();
+            //    Hide();
+            //}
+            //else
                 GoToForm(new SelectThemeForm("Тестирование"));
         }
 
         private void InteractiveTasksButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm.selectThemeForm != null)
-            {
-                SelectThemeForm.selectThemeForm.Show();
-                Hide();
-            }
-            else
+            //if (SelectThemeForm.selectThemeForm != null)
+            //{
+            //    SelectThemeForm.selectThemeForm.Show();
+            //    Hide();
+            //}
+            //else
                 GoToForm(new SelectThemeForm("Интерактивные задания"));
         }
 
@@ -129,11 +130,6 @@ namespace MyOfficeTable
             //    }
             //}
             #endregion
-            //foreach (var item in controlRatios)
-            //{
-            //    item.Resize(buttonPanel);
-            //}
-            // ТУДА ЕГО
         }
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)

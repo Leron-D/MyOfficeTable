@@ -1,5 +1,6 @@
 ﻿using MyOfficeTable.Forms;
 using MyOfficeTable.Properties;
+using MyOfficeTable.Support;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,12 +24,23 @@ namespace MyOfficeTable
         List<string> listOfTestsThemes = new List<string>();
         List<int> listOfNumberOfQuestions = new List<int>();
         bool loadForm = true;
+        List<ControlRatios> controlRatios;
 
         public SelectThemeForm(string mode)
         {
             InitializeComponent();
             selectThemeForm = this;
             LoadForm(mode);
+
+            controlRatios = new List<ControlRatios>
+            {
+                new ControlRatios(transitionButton, 0.384112, 0.089613, 0.305607, 0.580448),
+                new ControlRatios(goToEvaluationCriteriasButton, 0.384112, 0.089613, 0.305607, 0.702648),
+
+                new ControlRatios(goBackButton, 0.141121, 0.081466, 0, 0.837067),
+
+                new ControlRatios(selectThemeComboBox, 0.809346, 0.081466, 0.090654, 0.458248)
+            };
         }
 
         private void LoadForm(string mode)
@@ -136,8 +148,11 @@ namespace MyOfficeTable
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            MainForm._mainForm.Show();
+            selectThemeComboBox = null;
+            MainForm form = new MainForm();
             Hide();
+            form.ShowDialog();
+            Close();
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
