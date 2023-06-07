@@ -50,7 +50,7 @@ namespace MyOfficeTable
             try
             {
                 testName = fileName;           
-                headerLabel.Text = Path.GetFileNameWithoutExtension(testName);
+                headerLabel.Text = Path.GetFileNameWithoutExtension(testName).Replace(". ", ".").Split('.').Last();
                 answerCheckBox1.Top = answerTextBox.Top = answerRadioButton1.Top = questionLabel.Location.Y + questionLabel.Height + 42;
                 answerCheckBox2.Location = new Point(1, answerCheckBox1.Location.Y + 42);
                 answerCheckBox3.Location = new Point(1, answerCheckBox2.Location.Y + 42);

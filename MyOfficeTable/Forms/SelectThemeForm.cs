@@ -20,8 +20,6 @@ namespace MyOfficeTable
     {
         public static SelectThemeForm _selectThemeForm;
         string selectMode;
-        List<string> listOfTheoryThemes = new List<string>();
-        List<string> listOfTestsThemes = new List<string>();
         List<int> listOfNumberOfQuestions = new List<int>();
         public static bool loadForm = true;
 
@@ -52,27 +50,12 @@ namespace MyOfficeTable
                 ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(minimizeButton, "Свернуть");
                 toolTip.SetToolTip(cancelButton, "Закрыть");
-                listOfTheoryThemes = new List<string>
-            {
-                "Интерфейс табличного процессора",
-                "Создание, редактирование и форматирование рабочих листов табличного процессора",
-                "Ссылки на ячейки в табличном процессоре",
-                "Использование формул и функций в табличном процессоре",
-                "Построение графиков и диаграмм",
-                "Фильтрация и сортировка данных"
-            };
-                listOfTestsThemes = new List<string>
-            {
-                "Создание, редактирование и форматирование рабочих листов табличного процессора",
-                "Использование формул и функций в табличном процессоре",
-                "Построение графиков и диаграмм"
-            };
                 listOfNumberOfQuestions = new List<int>
-            {
-                13,
-                11,
-                9
-            };
+                {
+                    13,
+                    11,
+                    9
+                };
 
                 if (Settings.Default.isFullSize)
                 {
@@ -109,17 +92,17 @@ namespace MyOfficeTable
             {
                 if (selectMode == "Тестирование")
                 {
-                    foreach (string theme in listOfTestsThemes)
+                    foreach (string theme in Directory.GetFiles($"{Directory.GetCurrentDirectory()}/Tests", "*.xml"))
                     {
-                        selectThemeComboBox.Items.Add(theme);
+                        selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme));
                     }
                     selectThemeComboBox.SelectedIndex = 0;
                 }
                 else if (selectMode == "Теория")
                 {
-                    foreach (string theme in listOfTheoryThemes)
+                    foreach (string theme in Directory.GetFiles($"{Directory.GetCurrentDirectory()}/Lections", "*.html"))
                     {
-                        selectThemeComboBox.Items.Add(theme);
+                        selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme));
                     }
                     selectThemeComboBox.SelectedIndex = 0;
                 }
