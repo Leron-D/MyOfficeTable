@@ -62,12 +62,6 @@
             // 
             this.panel1.Size = new System.Drawing.Size(1291, 134);
             // 
-            // changeWindowBoxButton
-            // 
-            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
-            this.changeWindowBoxButton.Location = new System.Drawing.Point(1213, 0);
-            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
-            // 
             // minimizeButton
             // 
             this.minimizeButton.FlatAppearance.BorderSize = 0;
@@ -89,6 +83,12 @@
             // 
             this.guideButton.FlatAppearance.BorderSize = 0;
             this.guideButton.Location = new System.Drawing.Point(1129, -2);
+            // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(1213, 0);
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
             // 
             // answerCheckBox1
             // 

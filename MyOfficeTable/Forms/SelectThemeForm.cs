@@ -148,6 +148,10 @@ namespace MyOfficeTable
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
+            if (Settings.Default.isFullSize)
+                MainForm._mainForm.WindowState = FormWindowState.Maximized;
+            else
+                MainForm._mainForm.WindowState = FormWindowState.Normal;
             MainForm._mainForm.Show();
             Hide();
         }
@@ -241,6 +245,8 @@ namespace MyOfficeTable
                     goBackButton.Size = new Size(261, 50);
                     goBackButton.Location = new Point(0, Height - goBackButton.Height - 2);
                     transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 24, FontStyle.Bold);
+                    changeWindowBoxButton.Tag = "NormalScreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
                 }
                 else
                 {
@@ -265,6 +271,8 @@ namespace MyOfficeTable
                     goBackButton.Size = new Size(151, 40);
                     goBackButton.Location = new Point(0, 411);
                     transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
                 }
                 CenterToScreen();
             }

@@ -179,11 +179,11 @@
         #endregion
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.PictureBox pictureBox2;
-        protected System.Windows.Forms.Button changeWindowBoxButton;
         protected System.Windows.Forms.Button minimizeButton;
         public System.Windows.Forms.Button cancelButton;
         public System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Panel pictPanel;
         protected System.Windows.Forms.Button guideButton;
+        public System.Windows.Forms.Button changeWindowBoxButton;
     }
 }

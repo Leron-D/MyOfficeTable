@@ -484,17 +484,20 @@ namespace MyOfficeTable
                 if (message == DialogResult.Yes)
                 {
                     SelectThemeForm.loadForm = false;
+                    SelectThemeForm._selectThemeForm.Show();
                     if (Settings.Default.isFullSize)
+                    {
                         SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
+                    }
                     else
                         SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
-                    SelectThemeForm._selectThemeForm.Show();
                     Hide();
                 }
             }
             else
             {
                 SelectThemeForm.loadForm = false;
+                SelectThemeForm._selectThemeForm.Show();
                 if (Settings.Default.isFullSize)
                     SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
                 else

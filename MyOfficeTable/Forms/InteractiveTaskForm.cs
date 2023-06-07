@@ -562,6 +562,11 @@ namespace MyOfficeTable.Forms
             {
                 Settings.Default.firstLoadInstruction = true;
                 Settings.Default.Save();
+                SelectThemeForm.loadForm = false;
+                if (Settings.Default.isFullSize)
+                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
+                else
+                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
                 SelectThemeForm._selectThemeForm.Show();
                 Hide();
             }

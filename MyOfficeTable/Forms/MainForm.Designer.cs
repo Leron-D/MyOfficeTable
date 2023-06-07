@@ -41,11 +41,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // changeWindowBoxButton
-            // 
-            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
-            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
-            // 
             // minimizeButton
             // 
             this.minimizeButton.FlatAppearance.BorderSize = 0;
@@ -58,6 +53,15 @@
             // 
             this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.Size = new System.Drawing.Size(1105, 134);
+            // 
+            // guideButton
+            // 
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
             // 
             // buttonPanel
             // 
@@ -175,6 +179,8 @@
             this.Name = "MainForm";
             this.Text = "Главная";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
+            this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.buttonPanel, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.panel1, 0);

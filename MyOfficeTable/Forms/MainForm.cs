@@ -122,5 +122,19 @@ namespace MyOfficeTable
                 ReferenceForm._referenceForm.Close();
             }
         }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+            }
+            else
+            {
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+            }
+        }
     }
 }
