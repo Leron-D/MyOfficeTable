@@ -18,16 +18,10 @@ namespace MyOfficeTable
         bool loadForm = true;
         public static MainForm _mainForm;
         ToolTip toolTip = new ToolTip();
-        //List<ControlRatios> controlRatios;
-
 
         public MainForm()
         {
             InitializeComponent();
-            //controlRatios = new List<ControlRatios>
-            //{
-            //    new ControlRatios(theoryButton, 0.237928, 0.638249, 0.045654, 0.218894),
-            //};
             _mainForm = this;
             if (Settings.Default.IsFirstLoad)
             {
@@ -97,37 +91,6 @@ namespace MyOfficeTable
             }
             else
                 GoToForm(new SelectThemeForm("Интерактивные задания"));
-        }
-
-        private void MainForm_Resize(object sender, EventArgs e)
-        {
-            #region
-            //if (!loadForm && WindowState != FormWindowState.Minimized)
-            //{
-            //    if (WindowState == FormWindowState.Maximized)
-            //    {
-            //        interactiveTasksButton.Size = testingButton.Size = theoryButton.Size = new Size(328, 349);
-            //        theoryButton.Left = 88;
-            //        interactiveTasksButton.Left = buttonPanel.Width - 88 - interactiveTasksButton.Width;
-            //        testingButton.Left = (buttonPanel.Width - testingButton.Width) / 2;
-            //        theoryButton.Font = testingButton.Font = interactiveTasksButton.Font = theoryButton.FontDescrition = testingButton.FontDescrition =
-            //        interactiveTasksButton.FontDescrition = new Font(theoryButton.Font.Name, 16);
-            //        theoryButton.FontHeader = testingButton.FontHeader = interactiveTasksButton.FontHeader = new Font(theoryButton.Font.Name, 16, FontStyle.Bold);
-            //        headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
-            //    }
-            //    else
-            //    {
-            //        interactiveTasksButton.Size = testingButton.Size = theoryButton.Size = new Size(271, 277);
-            //        theoryButton.Location = new Point(57, 93);
-            //        testingButton.Location = new Point(436, 93);
-            //        interactiveTasksButton.Location = new Point(813, 93);
-            //        theoryButton.Font = testingButton.Font = interactiveTasksButton.Font = theoryButton.FontDescrition = testingButton.FontDescrition =
-            //        interactiveTasksButton.FontDescrition = new Font(theoryButton.Font.Name, 12);
-            //        theoryButton.FontHeader = testingButton.FontHeader = interactiveTasksButton.FontHeader = new Font(theoryButton.Font.Name, 12, FontStyle.Bold);
-            //        headerLabel.Font = new Font(headerLabel.Font.Name, 30, FontStyle.Bold);
-            //    }
-            //}
-            #endregion
         }
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)

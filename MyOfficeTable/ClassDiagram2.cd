@@ -66,7 +66,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.MyButton">
-    <Position X="11" Y="5" Width="1.5" />
+    <Position X="14.5" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
@@ -82,7 +82,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAAAAAAADCAABABAACCAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAEAACAAAACAAAgAAAAAABAAQAAAEA=</HashCode>
       <FileName>Forms\InstructionForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -92,8 +92,26 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAAADAAACAAAABEAACAAAASAgAAEgAABAAAQRAAAAA=</HashCode>
+      <HashCode>AAAAADAAACAAAABEAACAAAASAgAAEgAABAAAQRAAAAA=</HashCode>
       <FileName>Forms\EvaluationСriteriasForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.MyTextBox">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\MyTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyOfficeTable.Support.ControlRatios">
+    <Position X="11" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEBAAABAQAQAAAAEgAAAAIAAAACAAAAAEAAAA=</HashCode>
+      <FileName>Support\ControlRatios.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

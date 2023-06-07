@@ -19,14 +19,13 @@ namespace MyOfficeTable
         bool isCollapsed = false;
         string file;
         ToolTip toolTip = new ToolTip();
-        bool loadForm = true;
 
         public TheoryForm(string lection)
         {
             InitializeComponent();
             theoryForm = this;
-            LoadForm(lection);
             leftPanel.Paint += LeftPanel_Paint;
+            LoadForm(lection);
         }
 
         private void LoadForm(string lection)
@@ -35,13 +34,10 @@ namespace MyOfficeTable
             if (!File.Exists(fileTest))
             {
                 testingButton.Visible = false;
-                goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
             }
             else
             {
                 testingButton.Visible = true;
-                goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
-                testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
             }
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
             file = lection;
@@ -52,9 +48,8 @@ namespace MyOfficeTable
 
             if (Settings.Default.isFullSize)
             {
-                loadForm = false;
                 WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "Normalscreen";
+                changeWindowBoxButton.Tag = "NormalScreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
             }
             else
@@ -168,7 +163,6 @@ namespace MyOfficeTable
 
         private void СhangeWindowBoxButton_Click(object sender, EventArgs e)
         {
-            loadForm = false;
             if (changeWindowBoxButton.Tag == "Fullscreen")
             {
                 Settings.Default.isFullSize = true;
@@ -221,6 +215,13 @@ namespace MyOfficeTable
                 {
                     e.Graphics.FillPath(brush, path);
                 }
+            }
+            if (testingButton.Visible == false)
+                goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
+            else
+            {
+                goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
+                testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
             }
         }
     }

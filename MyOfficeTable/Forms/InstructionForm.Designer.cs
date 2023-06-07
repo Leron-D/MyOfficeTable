@@ -64,6 +64,12 @@
             this.headerLabel.Size = new System.Drawing.Size(776, 134);
             this.headerLabel.Text = "Руководство пользователя";
             // 
+            // guideButton
+            // 
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            this.guideButton.Location = new System.Drawing.Point(750, 2);
+            this.guideButton.Visible = false;
+            // 
             // webBrowser
             // 
             this.webBrowser.AllowExternalDrop = true;
@@ -72,7 +78,7 @@
             this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser.Location = new System.Drawing.Point(0, 0);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(887, 448);
+            this.webBrowser.Size = new System.Drawing.Size(887, 433);
             this.webBrowser.TabIndex = 76;
             this.webBrowser.ZoomFactor = 1D;
             // 
@@ -82,9 +88,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.webBrowser);
-            this.panel2.Location = new System.Drawing.Point(12, 187);
+            this.panel2.Location = new System.Drawing.Point(12, 202);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(887, 448);
+            this.panel2.Size = new System.Drawing.Size(887, 433);
             this.panel2.TabIndex = 77;
             // 
             // closeButton
@@ -114,6 +120,7 @@
             this.MaximizeBox = false;
             this.Name = "InstructionForm";
             this.Text = "Инструкции к заданию";
+            this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.minimizeButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);

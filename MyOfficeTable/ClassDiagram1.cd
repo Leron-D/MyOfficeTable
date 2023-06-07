@@ -6,17 +6,17 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AgIAABAAACBAAAAAACCIAAECIAAAABAAAADAgRAAAAA=</HashCode>
+      <HashCode>AgIAEBAAACBAAAAACCCIAAECIAAAABAAAQBAARAAACA=</HashCode>
       <FileName>Forms\MainForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.ReferenceForm">
-    <Position X="10.75" Y="3.75" Width="1.5" />
+    <Position X="10.75" Y="4" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAAAAAAECAAAAAAAACAAAACAACAAAAAAAIAQAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAECAAAAAAAACAAAACAACAAAAAAAIAQAYAABA=</HashCode>
       <FileName>Forms\ReferenceForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -25,17 +25,8 @@
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
-    <InheritanceLine Type="MyOfficeTable.Forms.StyleForm" ManuallyRouted="true">
-      <Path>
-        <Point X="13.25" Y="3.338" />
-        <Point X="13.25" Y="3.51" />
-        <Point X="14.077" Y="3.51" />
-        <Point X="14.077" Y="5.996" />
-        <Point X="14.25" Y="5.996" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>EBEAIBCAAChAAIDAAACAAAACAAEAEAAgAACAQhACAIA=</HashCode>
+      <HashCode>EAEAIBCAAChAAIDAAACAACACAAEAEAAgAACAQhACCIE=</HashCode>
       <FileName>Forms\SelectThemeForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,17 +36,17 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>EEQIIBSAArkAMgBBEACAggACCIAAGAEIACDACBAAiQg=</HashCode>
+      <HashCode>EEQIIBCAErkAMgBBEACAAgACCIGAGAEIACDACBAAiQg=</HashCode>
       <FileName>Forms\TestForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MyOfficeTable.TestResultForm">
-    <Position X="12.5" Y="3.75" Width="1.5" />
+    <Position X="12.5" Y="4" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAABAAAACACAACAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAACAAAAAAAACACAACAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Forms\TestResultForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,7 +64,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>EAUAABAAACAAAABECCCAAAACAAIAEBAABQAIABEQAEA=</HashCode>
+      <HashCode>EAUAABAAACAgAABECCCAAAACAAIAEBAQBQAIABEQAEA=</HashCode>
       <FileName>Forms\TheoryForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -89,7 +80,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>ABAAAAAAADCAABABAACCAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAEAACAAAACAAAgAAAAAABAAQAAAEA=</HashCode>
       <FileName>Forms\InstructionForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -99,7 +90,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABAAAAQAACQAABAAAADEgAACAAEAAAABAAIAQQAAAAA=</HashCode>
+      <HashCode>ABAAAAQAACQAABBAgADEkAASAAEAAAABAAIAQQAAAAA=</HashCode>
       <FileName>Forms\StyleForm.cs</FileName>
     </TypeIdentifier>
   </Class>

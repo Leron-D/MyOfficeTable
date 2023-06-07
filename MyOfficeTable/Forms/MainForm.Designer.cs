@@ -175,7 +175,6 @@
             this.Name = "MainForm";
             this.Text = "Главная";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
-            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.Controls.SetChildIndex(this.buttonPanel, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
