@@ -24,23 +24,12 @@ namespace MyOfficeTable
         List<string> listOfTestsThemes = new List<string>();
         List<int> listOfNumberOfQuestions = new List<int>();
         public static bool loadForm = true;
-        List<ControlRatios> controlRatios;
 
         public SelectThemeForm(string mode)
         {
             InitializeComponent();
             _selectThemeForm = this;
             LoadForm(mode);
-
-            controlRatios = new List<ControlRatios>
-            {
-                new ControlRatios(transitionButton, 0.384112, 0.089613, 0.305607, 0.580448),
-                new ControlRatios(goToEvaluationCriteriasButton, 0.384112, 0.089613, 0.305607, 0.702648),
-
-                new ControlRatios(goBackButton, 0.141121, 0.081466, 0, 0.837067),
-
-                new ControlRatios(selectThemeComboBox, 0.809346, 0.081466, 0.090654, 0.458248)
-            };
         }
 
         private void LoadForm(string mode)

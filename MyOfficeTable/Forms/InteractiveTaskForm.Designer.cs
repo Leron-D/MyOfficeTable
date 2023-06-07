@@ -75,7 +75,6 @@
             this.numOfTaskLabel = new System.Windows.Forms.Label();
             this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.goNextButton = new MyOfficeTable.MyButton();
-            this.goBackButton = new MyOfficeTable.MyButton();
             this.guideButton = new System.Windows.Forms.Button();
             this.task1ReferencesTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.formulaPictureBox4)).BeginInit();
@@ -605,7 +604,6 @@
             this.nameLabel1.TabIndex = 31;
             this.nameLabel1.Text = "Вырезать";
             this.nameLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.nameLabel1.LocationChanged += new System.EventHandler(this.NameLabel1_LocationChanged);
             // 
             // destinationPictureBox3
             // 
@@ -630,11 +628,9 @@
             this.destinationPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.destinationPictureBox1.TabIndex = 7;
             this.destinationPictureBox1.TabStop = false;
-            this.destinationPictureBox1.LocationChanged += new System.EventHandler(this.DestinationPictureBox1_LocationChanged);
             this.destinationPictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragDrop);
             this.destinationPictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox_DragEnter);
             this.destinationPictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseDown);
-            this.destinationPictureBox1.Resize += new System.EventHandler(this.DestinationPictureBox1_Resize);
             // 
             // panel2
             // 
@@ -738,29 +734,6 @@
             this.goNextButton.UseVisualStyleBackColor = false;
             this.goNextButton.Click += new System.EventHandler(this.GoNextButton_Click);
             // 
-            // goBackButton
-            // 
-            this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.goBackButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.goBackButton.BorderRadius = 20;
-            this.goBackButton.BorderSize = 0;
-            this.goBackButton.Enabled = false;
-            this.goBackButton.FlatAppearance.BorderSize = 0;
-            this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.goBackButton.ForeColor = System.Drawing.Color.White;
-            this.goBackButton.Location = new System.Drawing.Point(0, 840);
-            this.goBackButton.MinimumSize = new System.Drawing.Size(150, 40);
-            this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(194, 40);
-            this.goBackButton.TabIndex = 57;
-            this.goBackButton.Text = "Назад";
-            this.goBackButton.TextColor = System.Drawing.Color.White;
-            this.goBackButton.UseVisualStyleBackColor = false;
-            this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
-            // 
             // guideButton
             // 
             this.guideButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -790,7 +763,6 @@
             this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.goNextButton);
             this.Controls.Add(this.tabControl);
-            this.Controls.Add(this.goBackButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1037, 883);
@@ -830,7 +802,6 @@
         #endregion
 
         private MyOfficeTable.MyButton goNextButton;
-        private MyOfficeTable.MyButton goBackButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.TabPage task1ReferencesTabPage;
