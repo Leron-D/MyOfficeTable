@@ -22,118 +22,168 @@ namespace MyOfficeTable
         public MainForm()
         {
             InitializeComponent();
-            _mainForm = this;
-            if (Settings.Default.IsFirstLoad)
+            try
             {
-                Animator.Start();
-                Settings.Default.IsFirstLoad = false;
-                Settings.Default.Save();
+                _mainForm = this;
+                if (Settings.Default.IsFirstLoad)
+                {
+                    Animator.Start();
+                    Settings.Default.IsFirstLoad = false;
+                    Settings.Default.Save();
+                }
+                toolTip.SetToolTip(minimizeButton, "Свернуть");
+                toolTip.SetToolTip(cancelButton, "Закрыть");
+                if (Settings.Default.isFullSize)
+                {
+                    loadForm = false;
+                    WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Tag = "Normalscreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                    toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
+                }
+                else
+                {
+                    WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                    toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
+                }
             }
-            toolTip.SetToolTip(minimizeButton, "Свернуть");
-            toolTip.SetToolTip(cancelButton, "Закрыть");
-            if (Settings.Default.isFullSize)
+            catch (Exception ex)
             {
-                loadForm = false;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "Normalscreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-                toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void GoToForm(Form form)
         {
-            form.Show();
-            Hide();
-        }
-
-        private void ReferenceButton_Click(object sender, EventArgs e)
-        {
-            InstructionForm form = new InstructionForm();
-            form.ShowDialog();
+            try
+            {
+                form.Show();
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void TheoryButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm._selectThemeForm != null)
+            try
             {
-                SelectThemeForm._selectThemeForm.Close();
-                GoToForm(new SelectThemeForm("Теория"));
+                if (SelectThemeForm._selectThemeForm != null)
+                {
+                    SelectThemeForm._selectThemeForm.Close();
+                    GoToForm(new SelectThemeForm("Теория"));
+                }
+                else
+                    GoToForm(new SelectThemeForm("Теория"));
             }
-            else
-                GoToForm(new SelectThemeForm("Теория"));
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void TestingButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm._selectThemeForm != null)
+            try
             {
-                SelectThemeForm._selectThemeForm.Close();
-                GoToForm(new SelectThemeForm("Тестирование"));
+                if (SelectThemeForm._selectThemeForm != null)
+                {
+                    SelectThemeForm._selectThemeForm.Close();
+                    GoToForm(new SelectThemeForm("Тестирование"));
+                }
+                else
+                    GoToForm(new SelectThemeForm("Тестирование"));
             }
-            else
-                GoToForm(new SelectThemeForm("Тестирование"));
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void InteractiveTasksButton_Click(object sender, EventArgs e)
         {
-            if (SelectThemeForm._selectThemeForm != null)
+            try
             {
-                SelectThemeForm._selectThemeForm.Close();
-                GoToForm(new SelectThemeForm("Интерактивные задания"));
+                if (SelectThemeForm._selectThemeForm != null)
+                {
+                    SelectThemeForm._selectThemeForm.Close();
+                    GoToForm(new SelectThemeForm("Интерактивные задания"));
+                }
+                else
+                    GoToForm(new SelectThemeForm("Интерактивные задания"));
             }
-            else
-                GoToForm(new SelectThemeForm("Интерактивные задания"));
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
         {
-            loadForm = false;
-            if (changeWindowBoxButton.Tag == "Fullscreen")
+            try
             {
-                Settings.Default.isFullSize = true;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
+                loadForm = false;
+                if (changeWindowBoxButton.Tag == "Fullscreen")
+                {
+                    Settings.Default.isFullSize = true;
+                    WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Tag = "NormalScreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                    toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
+                }
+                else
+                {
+                    Settings.Default.isFullSize = false;
+                    WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                    toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
+                }
+                CenterToScreen();
             }
-            else
+            catch (Exception ex)
             {
-                Settings.Default.isFullSize = false;
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-                toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            CenterToScreen();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (ReferenceForm._referenceForm != null)
+            try
             {
-                ReferenceForm._referenceForm.Close();
+                if (ReferenceForm._referenceForm != null)
+                {
+                    ReferenceForm._referenceForm.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Maximized)
+            try
             {
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
+                if (WindowState == FormWindowState.Maximized)
+                {
+                    changeWindowBoxButton.Tag = "NormalScreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                }
+                else
+                {
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

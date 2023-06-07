@@ -19,15 +19,22 @@ namespace MyOfficeTable
         public ReferenceForm()
         {
             InitializeComponent();
-            _referenceForm = this;
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(minimizeButton, "Свернуть");
-            toolTip.SetToolTip(cancelButton, "Закрыть");
-            headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
-            titleLabel.Text = "Название: Электронное пособие «Основы работы в «МойОфис Таблица»";
-            versionLabel.Text = $"Версия программы: {Assembly.GetExecutingAssembly().GetName().Version}";
-            descriptionLabel.Text = "Описание: программа предназначена для самостоятельного изучения материала и самопроверки знаний по теме «Основы работы в «МойОфис Таблица»";
-            creatorLabel.Text = "Создатель: Студент группы ПКС-91 Шаньгин Максим";
+            try
+            {
+                _referenceForm = this;
+                ToolTip toolTip = new ToolTip();
+                toolTip.SetToolTip(minimizeButton, "Свернуть");
+                toolTip.SetToolTip(cancelButton, "Закрыть");
+                headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
+                titleLabel.Text = "Название: Электронное пособие «Основы работы в «МойОфис Таблица»";
+                versionLabel.Text = $"Версия программы: {Assembly.GetExecutingAssembly().GetName().Version}";
+                descriptionLabel.Text = "Описание: программа предназначена для самостоятельного изучения материала и самопроверки знаний по теме «Основы работы в «МойОфис Таблица»";
+                creatorLabel.Text = "Создатель: Студент группы ПКС-91 Шаньгин Максим";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
