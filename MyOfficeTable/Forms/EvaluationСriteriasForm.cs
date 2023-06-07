@@ -43,8 +43,8 @@ namespace MyOfficeTable
 
         void GoToForm(Form form)
         {
-            Hide();
             form.Show();
+            Hide();
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)

@@ -142,8 +142,8 @@ namespace MyOfficeTable
 
         void GoToForm(Form form)
         {
-            Hide();
             form.Show();
+            Hide();
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
@@ -171,10 +171,7 @@ namespace MyOfficeTable
                 }
                 else
                 {
-                    if (selectThemeComboBox.SelectedIndex == 0)
-                        GoToForm(new InstructionForm($"{selectThemeComboBox.SelectedItem}"));
-                    else
-                        GoToForm(new InteractiveTaskForm($"{selectThemeComboBox.SelectedItem}"));
+                    GoToForm(new InteractiveTaskForm($"{selectThemeComboBox.SelectedItem}"));
                 }
             }
             catch (Exception ex)

@@ -57,8 +57,8 @@ namespace MyOfficeTable
 
         private void GoToForm(Form form)
         {
-            Hide();
             form.Show();
+            Hide();
         }
 
         private void ReferenceButton_Click(object sender, EventArgs e)

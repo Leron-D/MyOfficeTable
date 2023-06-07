@@ -80,9 +80,8 @@ namespace MyOfficeTable
 
         private void GoToForm(Form form)
         {
+            form.Show();
             Hide();
-            form.ShowDialog();
-            Close();
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)

@@ -565,11 +565,8 @@ namespace MyOfficeTable.Forms
             {
                 Settings.Default.firstLoadInstruction = true;
                 Settings.Default.Save();
-                //Hide();
-                //form.ShowDialog();
-                //Close();
-                Hide();
                 SelectThemeForm._selectThemeForm.Show();
+                Hide();
             }
         }
 
