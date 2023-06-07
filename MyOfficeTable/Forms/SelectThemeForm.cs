@@ -160,7 +160,10 @@ namespace MyOfficeTable
             {
                 if (selectMode == "Тестирование")
                 {
-                    GoToForm(new TestForm(Directory.GetCurrentDirectory() + $@"\Tests\{selectThemeComboBox.SelectedItem}.xml", listOfNumberOfQuestions[selectThemeComboBox.SelectedIndex]));
+                    if (File.Exists($@"{Directory.GetCurrentDirectory()}\Tests\{selectThemeComboBox.SelectedItem}.xml"))
+                        GoToForm(new TestForm($@"{Directory.GetCurrentDirectory()}\Tests\{selectThemeComboBox.SelectedItem}.xml", listOfNumberOfQuestions[selectThemeComboBox.SelectedIndex]));
+                    else
+                        throw new Exception("Выбранного теста не существует");
                     if (Settings.Default.isFullSize)
                         TestForm._testForm.WindowState = FormWindowState.Maximized;
                     else
@@ -168,7 +171,10 @@ namespace MyOfficeTable
                 }
                 else if (selectMode == "Теория")
                 {
-                    GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html"));
+                    if (File.Exists($@"{Directory.GetCurrentDirectory()}\Lections\{selectThemeComboBox.SelectedItem}.html"))
+                        GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html"));
+                    else
+                        throw new Exception("Выбранной лекции не существует");
                 }
                 else
                 {
