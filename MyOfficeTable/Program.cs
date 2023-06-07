@@ -10,7 +10,7 @@ namespace MyOfficeTable
 {
     internal static class Program
     {
-        public static string TempFolder = Directory.GetCurrentDirectory() + "\\tempPath";
+        public static string TempFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\MyOfficeTableManual";
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
