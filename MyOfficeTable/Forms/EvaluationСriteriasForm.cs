@@ -18,33 +18,45 @@ namespace MyOfficeTable
         public static EvaluationСriteriasForm evaluationСriteriasForm;
         string file = "";
         int num = 0;
-        bool loadForm = true;
 
         public EvaluationСriteriasForm(int numberOfQuestions = 0, string fileName = "")
         {
             InitializeComponent();
+            try
+            {
+                evaluationСriteriasForm = this;
 
-            evaluationСriteriasForm = this;
+                num = numberOfQuestions;
 
-            num = numberOfQuestions;
+                file = fileName;
 
-            file = fileName;
+                if (Settings.Default.goFromTheory)
+                    goToTestButton.Visible = goBackButton.Visible = true;
+                else
+                    goToTestButton.Visible = goBackButton.Visible = false;
 
-            if (Settings.Default.goFromTheory)
-                goToTestButton.Visible = goBackButton.Visible = true;
-            else
-                goToTestButton.Visible = goBackButton.Visible = false;
-
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(minimizeButton, "Свернуть");
-            toolTip.SetToolTip(cancelButton, "Закрыть");
-            webBrowser.Navigate(Directory.GetCurrentDirectory() + @"\Tests\EvaulationCriterias.html");
+                ToolTip toolTip = new ToolTip();
+                toolTip.SetToolTip(minimizeButton, "Свернуть");
+                toolTip.SetToolTip(cancelButton, "Закрыть");
+                webBrowser.Navigate(Directory.GetCurrentDirectory() + @"\Tests\EvaulationCriterias.html");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         void GoToForm(Form form)
         {
-            form.Show();
-            Hide();
+            try
+            {
+                form.Show();
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -74,7 +86,14 @@ namespace MyOfficeTable
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new TheoryForm($@"{Directory.GetCurrentDirectory()}\Lections\{Path.GetFileNameWithoutExtension(file)}.html"));
+            try
+            {
+                GoToForm(new TheoryForm($@"{Directory.GetCurrentDirectory()}\Lections\{Path.GetFileNameWithoutExtension(file)}.html"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -106,20 +106,34 @@ namespace MyOfficeTable.Forms
 
         private void InteractiveTaskForm_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                isMouseDown = true;
-                mouseOffset = Cursor.Position;
-                currentOffset = this.Location;
+                if (e.Button == MouseButtons.Left)
+                {
+                    isMouseDown = true;
+                    mouseOffset = Cursor.Position;
+                    currentOffset = this.Location;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void InteractiveTaskForm_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isMouseDown)
+            try
             {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
+                if (isMouseDown)
+                {
+                    Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
+                    this.Location = Point.Add(currentOffset, new Size(dif));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -306,48 +320,62 @@ namespace MyOfficeTable.Forms
 
         private void TakeTaskByInterface()
         {
-            Random random = new Random();
-            for (int i = 0; i < 4; i++)
+            try
             {
-                listOfDestinationPictureBoxes[i].Image = null;
-                listOfDestinationPictureBoxes[i].Tag = false;
-                listOfResultLabels1[i].Visible = false;
+                Random random = new Random();
+                for (int i = 0; i < 4; i++)
+                {
+                    listOfDestinationPictureBoxes[i].Image = null;
+                    listOfDestinationPictureBoxes[i].Tag = false;
+                    listOfResultLabels1[i].Visible = false;
+                }
+                int randomIndex = random.Next(0, randomCount);
+                index1 = listOfIndexes1[randomIndex];
+                listOfIndexes1.RemoveAt(randomIndex);
+                randomCount--;
+                int k = 0;
+                for (int i = index1; i < index1 + 4; i++)
+                {
+                    listOfSourcePictureBoxes[k].Image = listOfImages1[i];
+                    listOfSourcePictureBoxes[k].Tag = listOfTags1[i];
+                    listOfNameLabels[k].Text = listOfNames[i];
+                    k++;
+                }
             }
-            int randomIndex = random.Next(0, randomCount);
-            index1 = listOfIndexes1[randomIndex];
-            listOfIndexes1.RemoveAt(randomIndex);
-            randomCount--;
-            int k = 0;
-            for (int i = index1; i < index1 + 4; i++)
+            catch (Exception ex)
             {
-                listOfSourcePictureBoxes[k].Image = listOfImages1[i];
-                listOfSourcePictureBoxes[k].Tag = listOfTags1[i];
-                listOfNameLabels[k].Text = listOfNames[i];
-                k++;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void TakeTaskByReferences()
         {
-            Random random = new Random();
-            for (int i = 0; i < 4; i++)
+            try
             {
-                listOfTextBoxes[i].Text = "";
-                listOfResultLabels2[i].Visible = false;
+                Random random = new Random();
+                for (int i = 0; i < 4; i++)
+                {
+                    listOfTextBoxes[i].Text = "";
+                    listOfResultLabels2[i].Visible = false;
+                }
+                int randomIndex = random.Next(0, 3);
+                if (randomIndex == 2)
+                    taskLabel2.Text = "Задание: Введите тип ссылки, которая записана в выделенной ячейке";
+                else
+                    taskLabel2.Text = "Задание: Введите формулу, которая будет написана в выделенной ячейке при копировании";
+                index2 = listOfIndexes2[randomIndex];
+                listOfIndexes2.RemoveAt(randomIndex);
+                int k = 0;
+                for (int i = index2; i < index2 + 4; i++)
+                {
+                    listOfFormulaPictureBoxes[k].Image = listOfImages2[i];
+                    listOfTextBoxes[k].Tag = listOfTags2[i];
+                    k++;
+                }
             }
-            int randomIndex = random.Next(0, 3);
-            if (randomIndex == 2)
-                taskLabel2.Text = "Задание: Введите тип ссылки, которая записана в выделенной ячейке";
-            else
-                taskLabel2.Text = "Задание: Введите формулу, которая будет написана в выделенной ячейке при копировании";
-            index2 = listOfIndexes2[randomIndex];
-            listOfIndexes2.RemoveAt(randomIndex);
-            int k = 0;
-            for (int i = index2; i < index2 + 4; i++)
+            catch (Exception ex)
             {
-                listOfFormulaPictureBoxes[k].Image = listOfImages2[i];
-                listOfTextBoxes[k].Tag = listOfTags2[i];
-                k++;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -359,120 +387,169 @@ namespace MyOfficeTable.Forms
 
         private void OpenReferenceForm()
         {
-            if (ReferenceForm._referenceForm == null)
+            try
             {
-                ReferenceForm form = new ReferenceForm();
-                form.ShowDialog();
+                if (ReferenceForm._referenceForm == null)
+                {
+                    ReferenceForm form = new ReferenceForm();
+                    form.ShowDialog();
+                }
+                else
+                {
+                    ReferenceForm._referenceForm.Show();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ReferenceForm._referenceForm.Show();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void GoToNextTask()
         {
-            if (tabControl.SelectedTab == tabControl.TabPages[0] && resultLabel1.Tag == "Correct" && resultLabel2.Tag == "Correct" && resultLabel3.Tag == "Correct" && resultLabel4.Tag == "Correct")
+            try
             {
-                if (numOfTask != numberOfTasks)
-                    TakeTaskByInterface();
+                if (tabControl.SelectedTab == tabControl.TabPages[0] && resultLabel1.Tag == "Correct" && resultLabel2.Tag == "Correct" && resultLabel3.Tag == "Correct" && resultLabel4.Tag == "Correct")
+                {
+                    if (numOfTask != numberOfTasks)
+                        TakeTaskByInterface();
+                    else
+                    {
+                        GoToSelectThemeForm();
+                    }
+                    CheckCorrectness();
+                }
+                else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
+                {
+                    if (numOfTask != numberOfTasks)
+                        TakeTaskByReferences();
+                    else
+                    {
+                        GoToSelectThemeForm();
+                    }
+                    CheckCorrectness();
+                }
                 else
                 {
-                    GoToSelectThemeForm();
+                    MessageBox.Show("Задание решено неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CheckCorrectness();
+                    return;
                 }
-                CheckCorrectness();
+                numOfTask++;
+                if (numOfTask == numberOfTasks)
+                    goNextButton.Text = "Завершить";
+                numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
+                SetInvisibleOfResultLabels();
             }
-            else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
+            catch (Exception ex)
             {
-                if (numOfTask != numberOfTasks)
-                    TakeTaskByReferences();
-                else
-                {
-                    GoToSelectThemeForm();
-                }
-                CheckCorrectness();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("Задание решено неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                CheckCorrectness();
-                return;
-            }
-            numOfTask++;
-            if (numOfTask == numberOfTasks)
-                goNextButton.Text = "Завершить";
-            numOfTaskLabel.Text = $"{numOfTask} из {numberOfTasks}";
-            SetInvisibleOfResultLabels();
         }
 
         private void GoToSelectThemeForm()
         {
-            Settings.Default.firstLoadInstruction = true;
-            Settings.Default.Save();
-            MessageBox.Show("Вы завершили выполнение задания!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ShowForm(new SelectThemeForm("Интерактивные задания"));
+            try
+            {
+                Settings.Default.firstLoadInstruction = true;
+                Settings.Default.Save();
+                MessageBox.Show("Вы завершили выполнение задания!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowForm(new SelectThemeForm("Интерактивные задания"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CheckCorrectness()
         {
-            if (tabControl.SelectedTab == tabControl.TabPages[0])
+            try
             {
-                int k = 0;
-                for (int i = index1; i < index1 + 4; i++)
+                if (tabControl.SelectedTab == tabControl.TabPages[0])
                 {
-                    ChangeImageOfLabel(listOfDestinationPictureBoxes[k], listOfTags1[i], listOfResultLabels1[k]);
-                    k++;
+                    int k = 0;
+                    for (int i = index1; i < index1 + 4; i++)
+                    {
+                        ChangeImageOfLabel(listOfDestinationPictureBoxes[k], listOfTags1[i], listOfResultLabels1[k]);
+                        k++;
+                    }
+                }
+                else
+                {
+                    int k = 0;
+                    for (int i = index2; i < index2 + 4; i++)
+                    {
+                        ChangeImageOfLabel(listOfTextBoxes[k], listOfResultLabels2[k]);
+                        k++;
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                int k = 0;
-                for (int i = index2; i < index2 + 4; i++)
-                {
-                    ChangeImageOfLabel(listOfTextBoxes[k], listOfResultLabels2[k]);
-                    k++;
-                }
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void ShowForm(Form form)
         {
-            Hide();
-            form.ShowDialog();
-            Close();
+            try
+            {
+                Hide();
+                form.ShowDialog();
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ChangeImageOfLabel(PictureBox destination, string tag, Label resultLabel)
         {
-            resultLabel.Visible = true;
-            if (destination.Tag != tag)
+            try
             {
-                resultLabel.Text = "";
-                resultLabel.Image = Resources.Incorrect;
-                resultLabel.Tag = "Incorrect";
+                resultLabel.Visible = true;
+                if (destination.Tag != tag)
+                {
+                    resultLabel.Text = "";
+                    resultLabel.Image = Resources.Incorrect;
+                    resultLabel.Tag = "Incorrect";
+                }
+                else
+                {
+                    resultLabel.Text = "";
+                    resultLabel.Image = Resources.Correct;
+                    resultLabel.Tag = "Correct";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                resultLabel.Text = "";
-                resultLabel.Image = Resources.Correct;
-                resultLabel.Tag = "Correct";
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void ChangeImageOfLabel(TextBox textBox, Label resultLabel)
         {
-            resultLabel.Visible = true;
-            if (textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
+            try
             {
-                resultLabel.Text = "";
-                resultLabel.Image = Resources.Incorrect;
-                resultLabel.Tag = "Incorrect";
+                resultLabel.Visible = true;
+                if (textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
+                {
+                    resultLabel.Text = "";
+                    resultLabel.Image = Resources.Incorrect;
+                    resultLabel.Tag = "Incorrect";
+                }
+                else
+                {
+                    resultLabel.Text = "";
+                    resultLabel.Image = Resources.Correct;
+                    resultLabel.Tag = "Correct";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                resultLabel.Text = "";
-                resultLabel.Image = Resources.Correct;
-                resultLabel.Tag = "Correct";
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -483,19 +560,26 @@ namespace MyOfficeTable.Forms
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            SelectThemeForm form = new SelectThemeForm("Интерактивные задания");
-            var message = MessageBox.Show("Вы точно хотите выйти?", "Выход из задания", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (message == DialogResult.Yes)
+            try
             {
-                Settings.Default.firstLoadInstruction = true;
-                Settings.Default.Save();
-                SelectThemeForm.loadForm = false;
-                if (Settings.Default.isFullSize)
-                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
-                else
-                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
-                SelectThemeForm._selectThemeForm.Show();
-                Hide();
+                SelectThemeForm form = new SelectThemeForm("Интерактивные задания");
+                var message = MessageBox.Show("Вы точно хотите выйти?", "Выход из задания", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (message == DialogResult.Yes)
+                {
+                    Settings.Default.firstLoadInstruction = true;
+                    Settings.Default.Save();
+                    SelectThemeForm.loadForm = false;
+                    if (Settings.Default.isFullSize)
+                        SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
+                    else
+                        SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
+                    SelectThemeForm._selectThemeForm.Show();
+                    Hide();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -506,35 +590,55 @@ namespace MyOfficeTable.Forms
 
         private void PictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            srcPictureBox = sender as PictureBox;
-            PictureBox pictureBox = sender as PictureBox;
-            if (e.Button == MouseButtons.Left && pictureBox.Image != null)
-                pictureBox.DoDragDrop(pictureBox.Image, DragDropEffects.Move);
+            try
+            {
+                srcPictureBox = sender as PictureBox;
+                PictureBox pictureBox = sender as PictureBox;
+                if (e.Button == MouseButtons.Left && pictureBox.Image != null)
+                    pictureBox.DoDragDrop(pictureBox.Image, DragDropEffects.Move);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void PictureBox_DragEnter(object sender, DragEventArgs e)
         {
-            PictureBox pictureBox = sender as PictureBox;
-            if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect & DragDropEffects.Move) != 0)
-                e.Effect = DragDropEffects.Move;
-            else
-                e.Effect = DragDropEffects.None;
+            try
+            {
+                if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect & DragDropEffects.Move) != 0)
+                    e.Effect = DragDropEffects.Move;
+                else
+                    e.Effect = DragDropEffects.None;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void PictureBox_DragDrop(object sender, DragEventArgs e)
         {
-            PictureBox destinationPictureBox = sender as PictureBox;
-            Image image = destinationPictureBox.Image;
-            string tag = "";
-            if (destinationPictureBox.Tag == null)
-                tag = null;
-            else
-                tag = destinationPictureBox.Tag.ToString();
-            destinationPictureBox.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
-            destinationPictureBox.Tag = srcPictureBox.Tag;
-            srcPictureBox.Image = image;
-            srcPictureBox.Tag = tag;
-            CheckCorrectness();
+            try
+            {
+                PictureBox destinationPictureBox = sender as PictureBox;
+                Image image = destinationPictureBox.Image;
+                string tag = "";
+                if (destinationPictureBox.Tag == null)
+                    tag = null;
+                else
+                    tag = destinationPictureBox.Tag.ToString();
+                destinationPictureBox.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
+                destinationPictureBox.Tag = srcPictureBox.Tag;
+                srcPictureBox.Image = image;
+                srcPictureBox.Tag = tag;
+                CheckCorrectness();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void GoNextButton_Click(object sender, EventArgs e)
@@ -549,103 +653,131 @@ namespace MyOfficeTable.Forms
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
         {
-            loadForm = false;
-            if (changeWindowBoxButton.Tag == "Fullscreen")
+            try
             {
-                Settings.Default.isFullSize = true;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
+                loadForm = false;
+                if (changeWindowBoxButton.Tag == "Fullscreen")
+                {
+                    Settings.Default.isFullSize = true;
+                    WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Tag = "NormalScreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                    toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
+                }
+                else
+                {
+                    Settings.Default.isFullSize = false;
+                    WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                    toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
+                }
+                CenterToScreen();
             }
-            else
+            catch (Exception ex)
             {
-                Settings.Default.isFullSize = false;
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-                toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            CenterToScreen();
         }
 
         private void InteractiveTaskForm_Resize(object sender, EventArgs e)
         {
-            new ControlRatios(goNextButton, 0.187078, 0.045300, 0.810029, 0.951302).Resize(this);
-            if (tabControl.SelectedTab == tabControl.TabPages[0])
+            try
             {
-                foreach (var item in controlRatiosOnForm1)
+                new ControlRatios(goNextButton, 0.187078, 0.045300, 0.810029, 0.951302).Resize(this);
+                if (tabControl.SelectedTab == tabControl.TabPages[0])
                 {
-                    item.Resize(tabControl.TabPages[0]);
+                    foreach (var item in controlRatiosOnForm1)
+                    {
+                        item.Resize(tabControl.TabPages[0]);
+                    }
+                    foreach (var item in controlRatiosInPanel)
+                    {
+                        item.Resize(imagesPanel);
+                    }
                 }
-                foreach (var item in controlRatiosInPanel)
+                else
                 {
-                    item.Resize(imagesPanel);
+                    foreach (var item in controlRatiosOnForm2)
+                    {
+                        item.Resize(tabControl.TabPages[1]);
+                    }
                 }
-            }
-            else
-            {
-                foreach (var item in controlRatiosOnForm2)
-                {
-                    item.Resize(tabControl.TabPages[1]);
-                }
-            }
 
-            if (WindowState == FormWindowState.Maximized)
-            {
-                loadForm = false;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                changeWindowBoxButton.Tag = "Normalscreen";
-                headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 32, headerLabel1.Font.Style);
-                goNextButton.Font = new Font(goNextButton.Font.Name, 24, goNextButton.Font.Style);
+                if (WindowState == FormWindowState.Maximized)
+                {
+                    loadForm = false;
+                    WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                    changeWindowBoxButton.Tag = "Normalscreen";
+                    headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 32, headerLabel1.Font.Style);
+                    goNextButton.Font = new Font(goNextButton.Font.Name, 24, goNextButton.Font.Style);
+                }
+                else
+                {
+                    WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                    headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 28, headerLabel1.Font.Style);
+                    goNextButton.Font = new Font(goNextButton.Font.Name, 18, goNextButton.Font.Style);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-                headerLabel1.Font = headerLabel2.Font = new Font(headerLabel1.Font.Name, 28, headerLabel1.Font.Style);
-                goNextButton.Font = new Font(goNextButton.Font.Name, 18, goNextButton.Font.Style);
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void InteractiveTaskForm_Load(object sender, EventArgs e)
         {
-            if (Settings.Default.isFullSize)
+            try
             {
-                loadForm = false;
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                changeWindowBoxButton.Tag = "Normalscreen";
+                if (Settings.Default.isFullSize)
+                {
+                    loadForm = false;
+                    WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                    changeWindowBoxButton.Tag = "Normalscreen";
+                }
+                else
+                {
+                    WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void FormulaPictureBox1_LocationChanged(object sender, EventArgs e)
         {
-            if (!loadForm)
+            try
             {
-                answerTextBox1.Location = new Point(formulaPictureBox1.Location.X, formulaPictureBox1.Location.Y + formulaPictureBox1.Height + 24);
-                formulaPictureBox2.Location = new Point(ClientSize.Width - formulaPictureBox1.Width - 100, formulaPictureBox1.Location.Y);
+                if (!loadForm)
+                {
+                    answerTextBox1.Location = new Point(formulaPictureBox1.Location.X, formulaPictureBox1.Location.Y + formulaPictureBox1.Height + 24);
+                    formulaPictureBox2.Location = new Point(ClientSize.Width - formulaPictureBox1.Width - 100, formulaPictureBox1.Location.Y);
 
-                formulaPictureBox3.Location = new Point(formulaPictureBox1.Location.X, answerTextBox1.Location.Y + answerTextBox1.Height + 53);
+                    formulaPictureBox3.Location = new Point(formulaPictureBox1.Location.X, answerTextBox1.Location.Y + answerTextBox1.Height + 53);
 
-                answerTextBox2.Location = new Point(formulaPictureBox2.Location.X, formulaPictureBox2.Location.Y + formulaPictureBox2.Height + 24);
-                formulaPictureBox4.Location = new Point(formulaPictureBox2.Location.X, answerTextBox2.Location.Y + answerTextBox2.Height + 53);
+                    answerTextBox2.Location = new Point(formulaPictureBox2.Location.X, formulaPictureBox2.Location.Y + formulaPictureBox2.Height + 24);
+                    formulaPictureBox4.Location = new Point(formulaPictureBox2.Location.X, answerTextBox2.Location.Y + answerTextBox2.Height + 53);
 
-                answerTextBox3.Location = new Point(formulaPictureBox3.Location.X, formulaPictureBox3.Location.Y + formulaPictureBox3.Height + 24);
-                answerTextBox4.Location = new Point(formulaPictureBox4.Location.X, formulaPictureBox4.Location.Y + formulaPictureBox4.Height + 24);
+                    answerTextBox3.Location = new Point(formulaPictureBox3.Location.X, formulaPictureBox3.Location.Y + formulaPictureBox3.Height + 24);
+                    answerTextBox4.Location = new Point(formulaPictureBox4.Location.X, formulaPictureBox4.Location.Y + formulaPictureBox4.Height + 24);
 
-                resultLabel5.Location = new Point(answerTextBox1.Location.X + answerTextBox1.Width + 28, answerTextBox1.Location.Y);
-                resultLabel6.Location = new Point(answerTextBox2.Location.X + answerTextBox2.Width + 28, answerTextBox2.Location.Y);
-                resultLabel7.Location = new Point(answerTextBox3.Location.X + answerTextBox3.Width + 28, answerTextBox3.Location.Y);
-                resultLabel8.Location = new Point(answerTextBox4.Location.X + answerTextBox4.Width + 28, answerTextBox4.Location.Y);
+                    resultLabel5.Location = new Point(answerTextBox1.Location.X + answerTextBox1.Width + 28, answerTextBox1.Location.Y);
+                    resultLabel6.Location = new Point(answerTextBox2.Location.X + answerTextBox2.Width + 28, answerTextBox2.Location.Y);
+                    resultLabel7.Location = new Point(answerTextBox3.Location.X + answerTextBox3.Width + 28, answerTextBox3.Location.Y);
+                    resultLabel8.Location = new Point(answerTextBox4.Location.X + answerTextBox4.Width + 28, answerTextBox4.Location.Y);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -661,14 +793,21 @@ namespace MyOfficeTable.Forms
 
         private void GuideButton_Click(object sender, EventArgs e)
         {
-            if (InstructionForm._instructionForm == null)
+            try
             {
-                InstructionForm form = new InstructionForm();
-                form.ShowDialog();
+                if (InstructionForm._instructionForm == null)
+                {
+                    InstructionForm form = new InstructionForm();
+                    form.ShowDialog();
+                }
+                else
+                {
+                    InstructionForm._instructionForm.Show();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                InstructionForm._instructionForm.Show();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

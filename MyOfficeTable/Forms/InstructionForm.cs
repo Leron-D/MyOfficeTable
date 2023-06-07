@@ -38,17 +38,24 @@ namespace MyOfficeTable.Forms
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
         {
-            if (changeWindowBoxButton.Tag == "Fullscreen")
+            try
             {
-                this.WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
+                if (changeWindowBoxButton.Tag == "Fullscreen")
+                {
+                    this.WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Tag = "NormalScreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                }
+                else
+                {
+                    this.WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
