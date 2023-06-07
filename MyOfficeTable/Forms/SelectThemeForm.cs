@@ -23,7 +23,7 @@ namespace MyOfficeTable
         List<string> listOfTheoryThemes = new List<string>();
         List<string> listOfTestsThemes = new List<string>();
         List<int> listOfNumberOfQuestions = new List<int>();
-        bool loadForm = true;
+        public static bool loadForm = true;
         List<ControlRatios> controlRatios;
 
         public SelectThemeForm(string mode)
@@ -164,6 +164,10 @@ namespace MyOfficeTable
                 if (selectMode == "Тестирование")
                 {
                     GoToForm(new TestForm(Directory.GetCurrentDirectory() + $@"\Tests\{selectThemeComboBox.SelectedItem}.xml", listOfNumberOfQuestions[selectThemeComboBox.SelectedIndex]));
+                    if (Settings.Default.isFullSize)
+                        TestForm._testForm.WindowState = FormWindowState.Maximized;
+                    else
+                        TestForm._testForm.WindowState = FormWindowState.Normal;
                 }
                 else if (selectMode == "Теория")
                 {

@@ -483,12 +483,22 @@ namespace MyOfficeTable
                 var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (message == DialogResult.Yes)
                 {
+                    SelectThemeForm.loadForm = false;
+                    if (Settings.Default.isFullSize)
+                        SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
+                    else
+                        SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
                     SelectThemeForm._selectThemeForm.Show();
                     Hide();
                 }
             }
             else
             {
+                SelectThemeForm.loadForm = false;
+                if (Settings.Default.isFullSize)
+                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
+                else
+                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
                 SelectThemeForm._selectThemeForm.Show();
                 Hide();
             }
