@@ -63,6 +63,11 @@
             this.headerLabel.Size = new System.Drawing.Size(1057, 134);
             this.headerLabel.Text = "Выбор темы";
             // 
+            // guideButton
+            // 
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            this.guideButton.Location = new System.Drawing.Point(895, 1);
+            // 
             // goBackButton
             // 
             this.goBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -162,6 +167,7 @@
             this.Text = "Выбор темы";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SelectThemeForm_FormClosed);
             this.Resize += new System.EventHandler(this.SelectThemeForm_Resize);
+            this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.selectThemeComboBox, 0);
             this.Controls.SetChildIndex(this.transitionButton, 0);
             this.Controls.SetChildIndex(this.goToEvaluationCriteriasButton, 0);

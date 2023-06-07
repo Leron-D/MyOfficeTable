@@ -21,6 +21,7 @@ namespace MyOfficeTable.Forms
             InitializeComponent();
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(pictureBox2, "Справка о программе");
+            toolTip.SetToolTip(guideButton, "Руководство пользователя");
         }
 
         private void StyleForm_MouseDown(object sender, MouseEventArgs e)
@@ -59,6 +60,10 @@ namespace MyOfficeTable.Forms
             {
                 TheoryForm.theoryForm.Close();
             }
+            if (InstructionForm._instructionForm != null)
+            {
+                InstructionForm._instructionForm.Close();
+            }
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -76,6 +81,19 @@ namespace MyOfficeTable.Forms
             else
             {
                 ReferenceForm._referenceForm.Show();
+            }
+        }
+
+        private void GuideButton_Click(object sender, EventArgs e)
+        {
+            if (InstructionForm._instructionForm == null)
+            {
+                InstructionForm form = new InstructionForm();
+                form.ShowDialog();
+            }
+            else
+            {
+                InstructionForm._instructionForm.Show();
             }
         }
     }

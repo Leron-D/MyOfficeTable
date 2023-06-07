@@ -85,6 +85,11 @@
             this.headerLabel.Size = new System.Drawing.Size(1157, 134);
             this.headerLabel.Text = "Тестирование";
             // 
+            // guideButton
+            // 
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            this.guideButton.Location = new System.Drawing.Point(1129, -2);
+            // 
             // answerCheckBox1
             // 
             this.answerCheckBox1.Appearance = System.Windows.Forms.Appearance.Button;
@@ -541,6 +546,7 @@
             this.Text = "Тестирование";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestForm_FormClosed);
             this.Load += new System.EventHandler(this.TestForm_Load);
+            this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);
             this.Controls.SetChildIndex(this.answerRadioButton2, 0);
             this.Controls.SetChildIndex(this.answerCheckBox5, 0);

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.referenceButton = new System.Windows.Forms.Button();
             this.buttonPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.theoryButton = new MyOfficeTable.ButtonCard();
@@ -59,22 +58,6 @@
             // 
             this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLabel.Size = new System.Drawing.Size(1105, 134);
-            // 
-            // referenceButton
-            // 
-            this.referenceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.referenceButton.BackColor = System.Drawing.Color.Transparent;
-            this.referenceButton.FlatAppearance.BorderSize = 0;
-            this.referenceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.referenceButton.ForeColor = System.Drawing.Color.Transparent;
-            this.referenceButton.Image = global::MyOfficeTable.Properties.Resources.question;
-            this.referenceButton.Location = new System.Drawing.Point(1084, 3);
-            this.referenceButton.Name = "referenceButton";
-            this.referenceButton.Size = new System.Drawing.Size(22, 29);
-            this.referenceButton.TabIndex = 40;
-            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.referenceButton.UseVisualStyleBackColor = false;
-            this.referenceButton.Click += new System.EventHandler(this.ReferenceButton_Click);
             // 
             // buttonPanel
             // 
@@ -186,7 +169,6 @@
             this.ClientSize = new System.Drawing.Size(1240, 720);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.buttonPanel);
-            this.Controls.Add(this.referenceButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(995, 720);
@@ -194,7 +176,6 @@
             this.Text = "Главная";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
-            this.Controls.SetChildIndex(this.referenceButton, 0);
             this.Controls.SetChildIndex(this.buttonPanel, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
@@ -210,7 +191,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button referenceButton;
         private System.Windows.Forms.Panel buttonPanel;
         private System.Windows.Forms.Panel panel3;
         private ButtonCard theoryButton;

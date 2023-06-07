@@ -76,6 +76,7 @@
             this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.goNextButton = new MyOfficeTable.MyButton();
             this.goBackButton = new MyOfficeTable.MyButton();
+            this.guideButton = new System.Windows.Forms.Button();
             this.task1ReferencesTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.formulaPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formulaPictureBox2)).BeginInit();
@@ -760,12 +761,29 @@
             this.goBackButton.UseVisualStyleBackColor = false;
             this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
+            // guideButton
+            // 
+            this.guideButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guideButton.BackColor = System.Drawing.Color.Transparent;
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            this.guideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guideButton.ForeColor = System.Drawing.Color.Transparent;
+            this.guideButton.Image = global::MyOfficeTable.Properties.Resources.Guide;
+            this.guideButton.Location = new System.Drawing.Point(878, 1);
+            this.guideButton.Name = "guideButton";
+            this.guideButton.Size = new System.Drawing.Size(37, 34);
+            this.guideButton.TabIndex = 77;
+            this.guideButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.guideButton.UseVisualStyleBackColor = false;
+            this.guideButton.Click += new System.EventHandler(this.GuideButton_Click);
+            // 
             // InteractiveTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1037, 883);
+            this.Controls.Add(this.guideButton);
             this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.numOfTaskLabel);
             this.Controls.Add(this.cancelButton);
@@ -858,5 +876,6 @@
         private MyTextBox answerTextBox3;
         private MyTextBox answerTextBox2;
         private MyTextBox answerTextBox1;
+        protected System.Windows.Forms.Button guideButton;
     }
 }

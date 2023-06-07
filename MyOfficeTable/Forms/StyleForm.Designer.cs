@@ -36,6 +36,7 @@
             this.changeWindowBoxButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
+            this.guideButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pictPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -132,12 +133,29 @@
             this.minimizeButton.UseVisualStyleBackColor = false;
             this.minimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
+            // guideButton
+            // 
+            this.guideButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guideButton.BackColor = System.Drawing.Color.Transparent;
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            this.guideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guideButton.ForeColor = System.Drawing.Color.Transparent;
+            this.guideButton.Image = global::MyOfficeTable.Properties.Resources.Guide;
+            this.guideButton.Location = new System.Drawing.Point(1081, 0);
+            this.guideButton.Name = "guideButton";
+            this.guideButton.Size = new System.Drawing.Size(37, 34);
+            this.guideButton.TabIndex = 76;
+            this.guideButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.guideButton.UseVisualStyleBackColor = false;
+            this.guideButton.Click += new System.EventHandler(this.GuideButton_Click);
+            // 
             // StyleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1240, 703);
+            this.Controls.Add(this.guideButton);
             this.Controls.Add(this.changeWindowBoxButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.minimizeButton);
@@ -166,5 +184,6 @@
         public System.Windows.Forms.Button cancelButton;
         public System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Panel pictPanel;
+        protected System.Windows.Forms.Button guideButton;
     }
 }

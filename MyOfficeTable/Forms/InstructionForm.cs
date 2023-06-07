@@ -1,9 +1,11 @@
 ﻿using MyOfficeTable.Forms;
+using MyOfficeTable.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,52 +15,46 @@ namespace MyOfficeTable.Forms
 {
     public partial class InstructionForm : StyleForm
     {
-        string theme = "";
-
-        public InstructionForm(string taskName)
+        public static InstructionForm _instructionForm;
+        public InstructionForm()
         {
             InitializeComponent();
-            theme = taskName;
-            if (Properties.Settings.Default.firstLoadInstruction)
+            _instructionForm = this;
+            InitialWebView();
+        }
+
+        private async void InitialWebView()
+        {
+            try
             {
-                goNextButton.Visible = true;
+                await webBrowser.EnsureCoreWebView2Async(null);
+                webBrowser.CoreWebView2.Navigate($"{Directory.GetCurrentDirectory()}/Guide/Guide.html");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
+        {
+            if (changeWindowBoxButton.Tag == "Fullscreen")
+            {
+                this.WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
             }
             else
             {
-                goNextButton.Visible = false;
-                Size = new Size(Size.Width, 700);
+                this.WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
             }
-            goNextButton.Left = (ClientSize.Width - goNextButton.Width) / 2;
         }
 
-        private void LoadInteractiveTask()
+        private void СloseButton_Click(object sender, EventArgs e)
         {
-            InteractiveTaskForm form = new InteractiveTaskForm(theme);
             Hide();
-            form.ShowDialog();
-            Close();
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            if (Properties.Settings.Default.firstLoadInstruction)
-            {
-                var message = MessageBox.Show("Вы точно хотите выйти?", "Выход из задания", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (message == DialogResult.Yes)
-                {
-                    MainForm form = new MainForm();
-                    Hide();
-                    form.ShowDialog();
-                    Close();
-                }
-            }
-            else
-                Close();
-        }
-
-        private void GoNextButton_Click(object sender, EventArgs e)
-        {
-            LoadInteractiveTask();
         }
     }
 }

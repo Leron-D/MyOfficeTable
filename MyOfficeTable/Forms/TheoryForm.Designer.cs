@@ -70,6 +70,11 @@
             this.headerLabel.Size = new System.Drawing.Size(1270, 134);
             this.headerLabel.Text = "Теоретический материал";
             // 
+            // guideButton
+            // 
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            this.guideButton.Location = new System.Drawing.Point(1240, 0);
+            // 
             // rightPanel
             // 
             this.rightPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -84,15 +89,13 @@
             // webBrowser
             // 
             this.webBrowser.AllowExternalDrop = true;
-            this.webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.webBrowser.BackColor = System.Drawing.Color.White;
             this.webBrowser.CreationProperties = null;
             this.webBrowser.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webBrowser.Location = new System.Drawing.Point(0, 3);
+            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser.Location = new System.Drawing.Point(0, 0);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(1098, 645);
+            this.webBrowser.Size = new System.Drawing.Size(1098, 651);
             this.webBrowser.TabIndex = 0;
             this.webBrowser.ZoomFactor = 1D;
             // 
@@ -209,6 +212,7 @@
             this.MaximizeBox = false;
             this.Name = "TheoryForm";
             this.Text = "Теоретический материал";
+            this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.rightPanel, 0);
             this.Controls.SetChildIndex(this.leftPanel, 0);
             this.Controls.SetChildIndex(this.goBackButton, 0);

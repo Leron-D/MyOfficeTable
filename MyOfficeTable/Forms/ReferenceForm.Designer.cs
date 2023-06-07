@@ -61,6 +61,12 @@
             this.headerLabel.Size = new System.Drawing.Size(788, 134);
             this.headerLabel.Text = "О программе";
             // 
+            // guideButton
+            // 
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            this.guideButton.Location = new System.Drawing.Point(692, 2);
+            this.guideButton.Visible = false;
+            // 
             // creatorLabel
             // 
             this.creatorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -138,6 +144,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReferenceForm";
             this.Text = "О программе";
+            this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.creatorLabel, 0);
             this.Controls.SetChildIndex(this.titleLabel, 0);
             this.Controls.SetChildIndex(this.versionLabel, 0);

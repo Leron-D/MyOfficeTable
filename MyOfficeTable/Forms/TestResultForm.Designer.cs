@@ -36,11 +36,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // headerLabel
-            // 
-            this.headerLabel.Size = new System.Drawing.Size(502, 134);
-            this.headerLabel.Text = "Результат тестирования";
-            // 
             // changeWindowBoxButton
             // 
             this.changeWindowBoxButton.Enabled = false;
@@ -58,6 +53,16 @@
             this.cancelButton.Location = new System.Drawing.Point(599, 2);
             this.cancelButton.Visible = false;
             this.cancelButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Size = new System.Drawing.Size(502, 134);
+            this.headerLabel.Text = "Результат тестирования";
+            // 
+            // guideButton
+            // 
+            this.guideButton.FlatAppearance.BorderSize = 0;
+            this.guideButton.Location = new System.Drawing.Point(474, 2);
             // 
             // rightNumberLabel
             // 
@@ -114,6 +119,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestResultForm";
             this.Text = "Результаты тестирования";
+            this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);
             this.Controls.SetChildIndex(this.rightNumberLabel, 0);
             this.Controls.SetChildIndex(this.markLabel, 0);

@@ -139,6 +139,7 @@ namespace MyOfficeTable.Forms
                 toolTip.SetToolTip(headerPictureBox2, "Справка о программе");
                 toolTip.SetToolTip(cancelButton, "Закрыть");
                 toolTip.SetToolTip(minimizeButton, "Свернуть");
+                toolTip.SetToolTip(guideButton, "Руководство пользователя");
                 if (Settings.Default.isFullSize)
                     toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
                 else
@@ -804,6 +805,19 @@ namespace MyOfficeTable.Forms
         private void HeaderPictureBox2_Click(object sender, EventArgs e)
         {
             OpenReferenceForm();
+        }
+
+        private void GuideButton_Click(object sender, EventArgs e)
+        {
+            if (InstructionForm._instructionForm == null)
+            {
+                InstructionForm form = new InstructionForm();
+                form.ShowDialog();
+            }
+            else
+            {
+                InstructionForm._instructionForm.Show();
+            }
         }
     }
 }

@@ -35,7 +35,6 @@ namespace MyOfficeTable
                 Settings.Default.IsFirstLoad = false;
                 Settings.Default.Save();
             }
-            toolTip.SetToolTip(referenceButton, "Справка о программе");
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
             if (Settings.Default.isFullSize)
@@ -63,7 +62,7 @@ namespace MyOfficeTable
 
         private void ReferenceButton_Click(object sender, EventArgs e)
         {
-            ReferenceForm form = new ReferenceForm();
+            InstructionForm form = new InstructionForm();
             form.ShowDialog();
         }
 
