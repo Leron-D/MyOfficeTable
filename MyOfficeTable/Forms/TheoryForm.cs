@@ -35,10 +35,13 @@ namespace MyOfficeTable
             if (!File.Exists(fileTest))
             {
                 testingButton.Visible = false;
+                goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
             }
             else
             {
                 testingButton.Visible = true;
+                goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
+                testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
             }
             headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
             file = lection;
@@ -173,6 +176,13 @@ namespace MyOfficeTable
                 this.WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "NormalScreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
+                if (testingButton.Visible == false)
+                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
+                else
+                {
+                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
+                    testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
+                }
             }
             else
             {
@@ -180,6 +190,13 @@ namespace MyOfficeTable
                 this.WindowState = FormWindowState.Normal;
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
+                if (testingButton.Visible == false)
+                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
+                else
+                {
+                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
+                    testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
+                }
             }
             leftPanel.Invalidate();
             CenterToScreen();
