@@ -33,15 +33,10 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
+            this.closeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // headerLabel
-            // 
-            this.headerLabel.Location = new System.Drawing.Point(65, 0);
-            this.headerLabel.Size = new System.Drawing.Size(788, 134);
-            this.headerLabel.Text = "О программе";
             // 
             // changeWindowBoxButton
             // 
@@ -49,15 +44,22 @@
             this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
             this.changeWindowBoxButton.Location = new System.Drawing.Point(776, 2);
             // 
-            // cancelButton
-            // 
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.Location = new System.Drawing.Point(817, 2);
-            // 
             // minimizeButton
             // 
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.Location = new System.Drawing.Point(735, 5);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.Location = new System.Drawing.Point(817, 2);
+            this.cancelButton.Visible = false;
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.Location = new System.Drawing.Point(65, 0);
+            this.headerLabel.Size = new System.Drawing.Size(788, 134);
+            this.headerLabel.Text = "О программе";
             // 
             // creatorLabel
             // 
@@ -107,12 +109,28 @@
             this.descriptionLabel.TabIndex = 20;
             this.descriptionLabel.Text = "Описание: ";
             // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Image = global::MyOfficeTable.Properties.Resources.cancel;
+            this.closeButton.Location = new System.Drawing.Point(817, 2);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(31, 32);
+            this.closeButton.TabIndex = 77;
+            this.closeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // ReferenceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(852, 595);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.titleLabel);
@@ -128,6 +146,7 @@
             this.Controls.SetChildIndex(this.minimizeButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);
             this.Controls.SetChildIndex(this.changeWindowBoxButton, 0);
+            this.Controls.SetChildIndex(this.closeButton, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -139,5 +158,6 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.Label descriptionLabel;
+        public System.Windows.Forms.Button closeButton;
     }
 }

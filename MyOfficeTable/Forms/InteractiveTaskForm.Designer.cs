@@ -46,7 +46,7 @@
             this.formulaPictureBox3 = new System.Windows.Forms.PictureBox();
             this.formulaPictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.headerPictureBox2 = new System.Windows.Forms.PictureBox();
             this.headerLabel2 = new System.Windows.Forms.Label();
             this.task1InterfaceTabPage = new System.Windows.Forms.TabPage();
             this.taskLabel1 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.destinationPictureBox3 = new System.Windows.Forms.PictureBox();
             this.destinationPictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.headerPictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerLabel1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.numOfTaskLabel = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.formulaPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formulaPictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox2)).BeginInit();
             this.task1InterfaceTabPage.SuspendLayout();
             this.imagesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox2)).BeginInit();
@@ -94,7 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -314,29 +314,30 @@
             this.formulaPictureBox1.TabIndex = 56;
             this.formulaPictureBox1.TabStop = false;
             this.formulaPictureBox1.LocationChanged += new System.EventHandler(this.FormulaPictureBox1_LocationChanged);
-            this.formulaPictureBox1.Resize += new System.EventHandler(this.FormulaPictureBox1_Resize);
             // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel5.Controls.Add(this.pictureBox6);
+            this.panel5.Controls.Add(this.headerPictureBox2);
             this.panel5.Controls.Add(this.headerLabel2);
             this.panel5.Location = new System.Drawing.Point(0, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1043, 133);
             this.panel5.TabIndex = 46;
             // 
-            // pictureBox6
+            // headerPictureBox2
             // 
-            this.pictureBox6.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(132, 133);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 47;
-            this.pictureBox6.TabStop = false;
+            this.headerPictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
+            this.headerPictureBox2.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
+            this.headerPictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.headerPictureBox2.Name = "headerPictureBox2";
+            this.headerPictureBox2.Size = new System.Drawing.Size(132, 133);
+            this.headerPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.headerPictureBox2.TabIndex = 47;
+            this.headerPictureBox2.TabStop = false;
+            this.headerPictureBox2.Click += new System.EventHandler(this.HeaderPictureBox2_Click);
             // 
             // headerLabel2
             // 
@@ -639,22 +640,24 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel2.Controls.Add(this.pictureBox7);
+            this.panel2.Controls.Add(this.headerPictureBox1);
             this.panel2.Controls.Add(this.headerLabel1);
             this.panel2.Location = new System.Drawing.Point(0, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1039, 133);
             this.panel2.TabIndex = 30;
             // 
-            // pictureBox7
+            // headerPictureBox1
             // 
-            this.pictureBox7.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(132, 133);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 47;
-            this.pictureBox7.TabStop = false;
+            this.headerPictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.headerPictureBox1.Image = global::MyOfficeTable.Properties.Resources.MyOfficeTable;
+            this.headerPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.headerPictureBox1.Name = "headerPictureBox1";
+            this.headerPictureBox1.Size = new System.Drawing.Size(132, 133);
+            this.headerPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.headerPictureBox1.TabIndex = 47;
+            this.headerPictureBox1.TabStop = false;
+            this.headerPictureBox1.Click += new System.EventHandler(this.HeaderPictureBox1_Click);
             // 
             // headerLabel1
             // 
@@ -788,7 +791,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.formulaPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formulaPictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox2)).EndInit();
             this.task1InterfaceTabPage.ResumeLayout(false);
             this.imagesPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox2)).EndInit();
@@ -800,7 +803,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.destinationPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerPictureBox1)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -814,7 +817,7 @@
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.TabPage task1ReferencesTabPage;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox headerPictureBox2;
         private System.Windows.Forms.Label headerLabel2;
         private System.Windows.Forms.TabPage task1InterfaceTabPage;
         private System.Windows.Forms.Label resultLabel4;
@@ -836,7 +839,7 @@
         private System.Windows.Forms.PictureBox destinationPictureBox3;
         private System.Windows.Forms.PictureBox destinationPictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox headerPictureBox1;
         private System.Windows.Forms.Label headerLabel1;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.PictureBox formulaPictureBox4;

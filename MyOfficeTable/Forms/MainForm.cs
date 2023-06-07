@@ -153,5 +153,12 @@ namespace MyOfficeTable
             CenterToScreen();
         }
 
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (ReferenceForm._referenceForm != null)
+            {
+                ReferenceForm._referenceForm.Close();
+            }
+        }
     }
 }

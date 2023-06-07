@@ -22,6 +22,11 @@ namespace MyOfficeTable.Forms
         int numberOfTasks;
         int index1;
         int index2;
+        bool loadForm = true;
+        int randomCount = 3;
+        Point mouseOffset;
+        Point currentOffset;
+        bool isMouseDown = false;
         List<string> listOfNames;
         List<string> listOfTags1;
         List<string> listOfTags2;
@@ -36,14 +41,11 @@ namespace MyOfficeTable.Forms
         List<Label> listOfResultLabels1;
         List<Label> listOfResultLabels2;
         List<TextBox> listOfTextBoxes;
-        bool loadForm = true;
-        int randomCount = 3;
-        private Point mouseOffset;
-        private Point currentOffset;
-        private bool isMouseDown = false;
         List<ControlRatios> controlRatiosOnForm1;
         List<ControlRatios> controlRatiosOnForm2;
         List<ControlRatios> controlRatiosInPanel;
+
+        ToolTip toolTip = new ToolTip();
 
         public InteractiveTaskForm(string taskName)
         {
@@ -133,7 +135,14 @@ namespace MyOfficeTable.Forms
                 AutoScaleMode = AutoScaleMode.Font;
                 Settings.Default.firstLoadInstruction = false;
                 Settings.Default.Save();
-                ToolTip toolTip = new ToolTip();
+                toolTip.SetToolTip(headerPictureBox1, "Справка о программе");
+                toolTip.SetToolTip(headerPictureBox2, "Справка о программе");
+                toolTip.SetToolTip(cancelButton, "Закрыть");
+                toolTip.SetToolTip(minimizeButton, "Свернуть");
+                if (Settings.Default.isFullSize)
+                    toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
+                else
+                    toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
                 tabControl.Multiline = true;
                 tabControl.Appearance = TabAppearance.Buttons;
                 tabControl.ItemSize = new Size(0, 1);
@@ -198,42 +207,27 @@ namespace MyOfficeTable.Forms
 
                     listOfSourcePictureBoxes = new List<PictureBox>
                     {
-                        sourcePictureBox1,
-                        sourcePictureBox2,
-                        sourcePictureBox3,
-                        sourcePictureBox4
+                        sourcePictureBox1, sourcePictureBox2, sourcePictureBox3, sourcePictureBox4
                     };
 
                     listOfDestinationPictureBoxes = new List<PictureBox>
                     {
-                        destinationPictureBox1,
-                        destinationPictureBox2,
-                        destinationPictureBox3,
-                        destinationPictureBox4
+                        destinationPictureBox1, destinationPictureBox2, destinationPictureBox3, destinationPictureBox4
                     };
 
                     listOfNameLabels = new List<Label>
                     {
-                        nameLabel1,
-                        nameLabel2,
-                        nameLabel3,
-                        nameLabel4
+                        nameLabel1, nameLabel2, nameLabel3, nameLabel4
                     };
-
 
                     listOfIndexes1 = new List<int>
                     {
-                        0,
-                        4,
-                        8
+                        0, 4, 8
                     };
 
                     listOfResultLabels1 = new List<Label>
                     {
-                        resultLabel1,
-                        resultLabel2,
-                        resultLabel3,
-                        resultLabel4
+                        resultLabel1, resultLabel2, resultLabel3, resultLabel4
                     };
 
                     numberOfTasks = random.Next(2, 4);
@@ -278,33 +272,22 @@ namespace MyOfficeTable.Forms
 
                     listOfIndexes2 = new List<int>
                     {
-                        0,
-                        4,
-                        8
+                        0, 4, 8
                     };
 
                     listOfFormulaPictureBoxes = new List<PictureBox>
                     {
-                        formulaPictureBox1,
-                        formulaPictureBox2,
-                        formulaPictureBox3,
-                        formulaPictureBox4
+                        formulaPictureBox1, formulaPictureBox2, formulaPictureBox3, formulaPictureBox4
                     };
 
                     listOfTextBoxes = new List<TextBox>
                     {
-                        answerTextBox1,
-                        answerTextBox2,
-                        answerTextBox3,
-                        answerTextBox4
+                        answerTextBox1, answerTextBox2, answerTextBox3, answerTextBox4
                     };
 
                     listOfResultLabels2 = new List<Label>
                     {
-                        resultLabel5,
-                        resultLabel6,
-                        resultLabel7,
-                        resultLabel8
+                        resultLabel5, resultLabel6, resultLabel7, resultLabel8
                     };
 
                     numberOfTasks = 2;
@@ -371,6 +354,19 @@ namespace MyOfficeTable.Forms
         {
             resultLabel1.Visible = resultLabel2.Visible = resultLabel3.Visible = resultLabel4.Visible = resultLabel5.Visible = resultLabel6.Visible = resultLabel7.Visible =
             resultLabel8.Visible = false;
+        }
+
+        private void OpenReferenceForm()
+        {
+            if (ReferenceForm._referenceForm == null)
+            {
+                ReferenceForm form = new ReferenceForm();
+                form.ShowDialog();
+            }
+            else
+            {
+                ReferenceForm._referenceForm.Show();
+            }
         }
 
         private void ChangeControlsForNormalscreen()
@@ -657,6 +653,7 @@ namespace MyOfficeTable.Forms
                 WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "NormalScreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
+                toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
             }
             else
             {
@@ -664,6 +661,7 @@ namespace MyOfficeTable.Forms
                 WindowState = FormWindowState.Normal;
                 changeWindowBoxButton.Tag = "Fullscreen";
                 changeWindowBoxButton.Image = Resources.Fullscreen;
+                toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
             }
             CenterToScreen();
         }
@@ -798,9 +796,14 @@ namespace MyOfficeTable.Forms
             }
         }
 
-        private void FormulaPictureBox1_Resize(object sender, EventArgs e)
+        private void HeaderPictureBox1_Click(object sender, EventArgs e)
         {
-            //answerTextBox1.Width = answerTextBox2.Width = answerTextBox3.Width = answerTextBox4.Width = formulaPictureBox1.Width;
+            OpenReferenceForm();
+        }
+
+        private void HeaderPictureBox2_Click(object sender, EventArgs e)
+        {
+            OpenReferenceForm();
         }
     }
 }

@@ -183,7 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1240, 703);
+            this.ClientSize = new System.Drawing.Size(1240, 720);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.referenceButton);
@@ -192,6 +192,7 @@
             this.MinimumSize = new System.Drawing.Size(995, 720);
             this.Name = "MainForm";
             this.Text = "Главная";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.Controls.SetChildIndex(this.referenceButton, 0);
             this.Controls.SetChildIndex(this.buttonPanel, 0);

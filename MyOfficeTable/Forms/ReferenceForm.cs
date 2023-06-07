@@ -15,9 +15,11 @@ namespace MyOfficeTable
 {
     public partial class ReferenceForm : StyleForm
     {
+        public static ReferenceForm _referenceForm;
         public ReferenceForm()
         {
             InitializeComponent();
+            _referenceForm = this;
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(minimizeButton, "Свернуть");
             toolTip.SetToolTip(cancelButton, "Закрыть");
@@ -33,9 +35,9 @@ namespace MyOfficeTable
             WindowState = FormWindowState.Minimized;
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
         }
     }
 }

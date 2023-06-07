@@ -16,11 +16,11 @@ namespace MyOfficeTable.Forms
         private Point currentOffset;
         private bool isMouseDown = false;
 
-        bool mov;
-
         public StyleForm()
         {
             InitializeComponent();
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(pictureBox2, "Справка о программе");
         }
 
         private void StyleForm_MouseDown(object sender, MouseEventArgs e)
@@ -64,6 +64,19 @@ namespace MyOfficeTable.Forms
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            if (ReferenceForm._referenceForm == null)
+            {
+                ReferenceForm form = new ReferenceForm();
+                form.ShowDialog();
+            }
+            else
+            {
+                ReferenceForm._referenceForm.Show();
+            }
         }
     }
 }
