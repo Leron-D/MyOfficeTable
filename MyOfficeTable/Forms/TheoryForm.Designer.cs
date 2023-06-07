@@ -49,12 +49,6 @@
             // 
             this.panel1.Size = new System.Drawing.Size(1406, 134);
             // 
-            // changeWindowBoxButton
-            // 
-            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
-            this.changeWindowBoxButton.Location = new System.Drawing.Point(1324, 0);
-            this.changeWindowBoxButton.Click += new System.EventHandler(this.СhangeWindowBoxButton_Click);
-            // 
             // minimizeButton
             // 
             this.minimizeButton.FlatAppearance.BorderSize = 0;
@@ -74,6 +68,12 @@
             // 
             this.guideButton.FlatAppearance.BorderSize = 0;
             this.guideButton.Location = new System.Drawing.Point(1240, 0);
+            // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(1324, 0);
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.СhangeWindowBoxButton_Click);
             // 
             // rightPanel
             // 
@@ -212,6 +212,7 @@
             this.MaximizeBox = false;
             this.Name = "TheoryForm";
             this.Text = "Теоретический материал";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TheoryForm_FormClosed);
             this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.rightPanel, 0);
             this.Controls.SetChildIndex(this.leftPanel, 0);

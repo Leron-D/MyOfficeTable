@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -9,6 +10,7 @@ namespace MyOfficeTable
 {
     internal static class Program
     {
+        public static string TempFolder = Directory.GetCurrentDirectory() + "\\tempPath";
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

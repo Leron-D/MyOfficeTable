@@ -42,12 +42,6 @@
             // 
             this.panel1.Size = new System.Drawing.Size(912, 134);
             // 
-            // changeWindowBoxButton
-            // 
-            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
-            this.changeWindowBoxButton.Location = new System.Drawing.Point(834, 2);
-            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
-            // 
             // minimizeButton
             // 
             this.minimizeButton.FlatAppearance.BorderSize = 0;
@@ -69,6 +63,12 @@
             this.guideButton.FlatAppearance.BorderSize = 0;
             this.guideButton.Location = new System.Drawing.Point(750, 2);
             this.guideButton.Visible = false;
+            // 
+            // changeWindowBoxButton
+            // 
+            this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
+            this.changeWindowBoxButton.Location = new System.Drawing.Point(834, 2);
+            this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
             // 
             // webBrowser
             // 
@@ -120,6 +120,7 @@
             this.MaximizeBox = false;
             this.Name = "InstructionForm";
             this.Text = "Инструкции к заданию";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InstructionForm_FormClosed);
             this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.minimizeButton, 0);

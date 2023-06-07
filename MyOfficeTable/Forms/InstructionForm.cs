@@ -1,9 +1,11 @@
-﻿using MyOfficeTable.Forms;
+﻿using Microsoft.Web.WebView2.Core;
+using MyOfficeTable.Forms;
 using MyOfficeTable.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -27,7 +29,8 @@ namespace MyOfficeTable.Forms
         {
             try
             {
-                await webBrowser.EnsureCoreWebView2Async(null);
+                var environment = await CoreWebView2Environment.CreateAsync(null, Program.TempFolder);
+                await webBrowser.EnsureCoreWebView2Async(environment);
                 webBrowser.CoreWebView2.Navigate($"{Directory.GetCurrentDirectory()}/Guide/Guide.html");
             }
             catch (Exception ex)
@@ -62,6 +65,15 @@ namespace MyOfficeTable.Forms
         private void СloseButton_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void InstructionForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var webViewProcessId = Convert.ToInt32(webBrowser.CoreWebView2.BrowserProcessId);
+            var webViewProcess = Process.GetProcessById(webViewProcessId);
+            webBrowser.Dispose();
+            webViewProcess.WaitForExit(3000);
+            Directory.Delete(Program.TempFolder, true);
         }
     }
 }

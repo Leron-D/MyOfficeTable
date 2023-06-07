@@ -1,9 +1,11 @@
-﻿using MyOfficeTable.Forms;
+﻿using Microsoft.Web.WebView2.Core;
+using MyOfficeTable.Forms;
 using MyOfficeTable.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -71,7 +73,8 @@ namespace MyOfficeTable
         {
             try
             {
-                await webBrowser.EnsureCoreWebView2Async(null);
+                var environment = await CoreWebView2Environment.CreateAsync(null, Program.TempFolder);
+                await webBrowser.EnsureCoreWebView2Async(environment);
                 webBrowser.CoreWebView2.Navigate(file);
             }
             catch (Exception ex)
@@ -267,6 +270,22 @@ namespace MyOfficeTable
                     goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
                     testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TheoryForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                var webViewProcessId = Convert.ToInt32(webBrowser.CoreWebView2.BrowserProcessId);
+                var webViewProcess = Process.GetProcessById(webViewProcessId);
+                webBrowser.Dispose();
+                webViewProcess.WaitForExit(3000);
+                Directory.Delete(Program.TempFolder, true);
             }
             catch (Exception ex)
             {
