@@ -88,81 +88,101 @@ namespace MyOfficeTable
 
         private void ChangeControlsForNormalScreen()
         {
-            Settings.Default.isFullSize = false;
-            WindowState = FormWindowState.Normal;
-            changeWindowBoxButton.Tag = "Fullscreen";
-            changeWindowBoxButton.Image = Resources.Fullscreen;
-            questionLabel.MaximumSize = new Size(900, 150);
-            Height += addedHeight;
-            addedHeight = 0;
-            answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
-            answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
-            answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
-            new Font(answerCheckBox1.Font.Name, 18, FontStyle.Bold);
-            answerTextBox.Font = new Font(answerTextBox.Font.Name, 18);
-            questionLabel.Font = new Font(questionLabel.Font.Name, 18, FontStyle.Bold);
-            headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
-            timerLabel.Font = new Font(timerLabel.Font.Name, 18, FontStyle.Bold);
-            //timerLabel.Location = new Point(953, 199);
-            timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
-            timerLabel.Width -= 70;
-            numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 18, FontStyle.Bold);
+            try
+            {
+                Settings.Default.isFullSize = false;
+                WindowState = FormWindowState.Normal;
+                changeWindowBoxButton.Tag = "Fullscreen";
+                changeWindowBoxButton.Image = Resources.Fullscreen;
+                questionLabel.MaximumSize = new Size(900, 150);
+                Height += addedHeight;
+                addedHeight = 0;
+                answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
+                answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
+                answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
+                new Font(answerCheckBox1.Font.Name, 18, FontStyle.Bold);
+                answerTextBox.Font = new Font(answerTextBox.Font.Name, 18);
+                questionLabel.Font = new Font(questionLabel.Font.Name, 18, FontStyle.Bold);
+                headerLabel.Font = new Font(headerLabel.Font.Name, 28, FontStyle.Bold);
+                timerLabel.Font = new Font(timerLabel.Font.Name, 18, FontStyle.Bold);
+                timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
+                timerLabel.Width -= 70;
+                numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 18, FontStyle.Bold);
 
-            startTestButton.Font = new Font(startTestButton.Font.Name, 18, FontStyle.Bold);
-            startTestButton.Size = new Size(348, 40);
-            startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
-            startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + panel1.Height - 46;
+                startTestButton.Font = new Font(startTestButton.Font.Name, 18, FontStyle.Bold);
+                startTestButton.Size = new Size(348, 40);
+                startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
+                startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + panel1.Height - 46;
 
-            goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 18, FontStyle.Bold);
-            if (numOfQuestion != numOfQuestions)
-                goNextQuestionButton.Size = new Size(282, 40);
-            else
-                goNextQuestionButton.Size = new Size(346, 40);
-            goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+                goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 18, FontStyle.Bold);
+                if (numOfQuestion != numOfQuestions)
+                    goNextQuestionButton.Size = new Size(282, 40);
+                else
+                    goNextQuestionButton.Size = new Size(346, 40);
+                goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ChangeControlsForFullscreen()
         {
-            Settings.Default.isFullSize = true;
-            WindowState = FormWindowState.Maximized;
-            changeWindowBoxButton.Tag = "NormalScreen";
-            changeWindowBoxButton.Image = Resources.NormalScreen;
-            questionLabel.MaximumSize = new Size(1300, 150);
-            headerLabel.Font = new Font(headerLabel.Font.Name, 32, FontStyle.Bold);
-            answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
-            answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
-            answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
-            new Font(answerCheckBox1.Font.Name, 22, FontStyle.Bold);
-            answerTextBox.Font = new Font(answerTextBox.Font.Name, 22);
-            questionLabel.Font = new Font(questionLabel.Font.Name, 22, FontStyle.Bold);
-            timerLabel.Font = new Font(timerLabel.Font.Name, 22, FontStyle.Bold);
-            timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
-            timerLabel.Width += 70;
-            numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 22, FontStyle.Bold);
+            try
+            {
+                Settings.Default.isFullSize = true;
+                WindowState = FormWindowState.Maximized;
+                changeWindowBoxButton.Tag = "NormalScreen";
+                changeWindowBoxButton.Image = Resources.NormalScreen;
+                questionLabel.MaximumSize = new Size(1300, 150);
+                headerLabel.Font = new Font(headerLabel.Font.Name, 32, FontStyle.Bold);
+                answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
+                answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
+                answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
+                new Font(answerCheckBox1.Font.Name, 22, FontStyle.Bold);
+                answerTextBox.Font = new Font(answerTextBox.Font.Name, 22);
+                questionLabel.Font = new Font(questionLabel.Font.Name, 22, FontStyle.Bold);
+                timerLabel.Font = new Font(timerLabel.Font.Name, 22, FontStyle.Bold);
+                timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
+                timerLabel.Width += 70;
+                numOfQuestionLabel.Font = new Font(numOfQuestionLabel.Font.Name, 22, FontStyle.Bold);
 
-            startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
-            startTestButton.Size = new Size(404, 49);
-            startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
-            startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + panel1.Height - 46;
+                startTestButton.Font = new Font(startTestButton.Font.Name, 22, FontStyle.Bold);
+                startTestButton.Size = new Size(404, 49);
+                startTestButton.Left = (ClientSize.Width - startTestButton.Width) / 2;
+                startTestButton.Top = ((ClientSize.Height - startTestButton.Height) / 2) + panel1.Height - 46;
 
-            goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 22, FontStyle.Bold);
-            if (numOfQuestion != numOfQuestions)
-                goNextQuestionButton.Size = new Size(389, 49);
-            else
-                goNextQuestionButton.Size = new Size(309, 49);
-            goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+                goNextQuestionButton.Font = new Font(goNextQuestionButton.Font.Name, 22, FontStyle.Bold);
+                if (numOfQuestion != numOfQuestions)
+                    goNextQuestionButton.Size = new Size(389, 49);
+                else
+                    goNextQuestionButton.Size = new Size(309, 49);
+                goNextQuestionButton.Location = new Point(ClientSize.Width - goNextQuestionButton.Width, ClientSize.Height - goNextQuestionButton.Height - 1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ChangeVisibilityButtons()
         {
-            answerRadioButton1.Visible = answerRadioButton2.Visible = answerRadioButton3.Visible = answerCheckBox1.Visible = timerLabel.Visible = goNextQuestionButton.Visible =
-            answerCheckBox2.Visible = answerCheckBox3.Visible = answerCheckBox4.Visible = answerCheckBox4.Checked = answerRadioButton4.Visible = answerRadioButton4.Checked =
-            answerTextBox.Visible = answerRadioButton1.Checked = answerRadioButton2.Checked = answerRadioButton3.Checked = answerRadioButton4.Checked = answerRadioButton5.Checked =
-            answerRadioButton6.Checked = answerRadioButton7.Checked = answerRadioButton8.Checked = answerCheckBox1.Checked = answerCheckBox2.Checked = answerCheckBox3.Checked =
-            answerCheckBox4.Checked = questionLabel.Visible = answerCheckBox5.Checked = answerCheckBox6.Checked = answerCheckBox7.Checked = answerCheckBox8.Checked =
-            answerRadioButton5.Visible = answerCheckBox5.Visible = answerRadioButton6.Visible = answerCheckBox6.Visible = answerRadioButton7.Visible = answerCheckBox7.Visible =
-            answerRadioButton8.Visible = answerCheckBox8.Visible = false;
-            answerTextBox.Text = "";
+            try
+            {
+                answerRadioButton1.Visible = answerRadioButton2.Visible = answerRadioButton3.Visible = answerCheckBox1.Visible = timerLabel.Visible = goNextQuestionButton.Visible =
+                answerCheckBox2.Visible = answerCheckBox3.Visible = answerCheckBox4.Visible = answerCheckBox4.Checked = answerRadioButton4.Visible = answerRadioButton4.Checked =
+                answerTextBox.Visible = answerRadioButton1.Checked = answerRadioButton2.Checked = answerRadioButton3.Checked = answerRadioButton4.Checked = answerRadioButton5.Checked =
+                answerRadioButton6.Checked = answerRadioButton7.Checked = answerRadioButton8.Checked = answerCheckBox1.Checked = answerCheckBox2.Checked = answerCheckBox3.Checked =
+                answerCheckBox4.Checked = questionLabel.Visible = answerCheckBox5.Checked = answerCheckBox6.Checked = answerCheckBox7.Checked = answerCheckBox8.Checked =
+                answerRadioButton5.Visible = answerCheckBox5.Visible = answerRadioButton6.Visible = answerCheckBox6.Visible = answerRadioButton7.Visible = answerCheckBox7.Visible =
+                answerRadioButton8.Visible = answerCheckBox8.Visible = false;
+                answerTextBox.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void GetXml()
@@ -308,202 +328,300 @@ namespace MyOfficeTable
 
         private void OpenResultForm(double rightNum, int mark)
         {
-            TestResultForm form = new TestResultForm(rightNum, mark, numOfQuestions);
-            form.Show();
-            Hide();
+            try
+            {
+                TestResultForm form = new TestResultForm(rightNum, mark, numOfQuestions);
+                form.Show();
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ChangePositionOfRadioButtons(int y)
         {
-            answerTextBox.Location = answerRadioButton1.Location;
-            answerRadioButton2.Location = new Point(17, answerRadioButton1.Location.Y + y);
-            answerRadioButton3.Location = new Point(17, answerRadioButton2.Location.Y + y);
-            answerRadioButton4.Location = new Point(17, answerRadioButton3.Location.Y + y);
-            answerRadioButton5.Location = new Point(17, answerRadioButton4.Location.Y + y);
-            answerRadioButton6.Location = new Point(17, answerRadioButton5.Location.Y + y);
-            answerRadioButton7.Location = new Point(17, answerRadioButton6.Location.Y + y);
-            answerRadioButton8.Location = new Point(17, answerRadioButton7.Location.Y + y);
+            try
+            {
+                answerTextBox.Location = answerRadioButton1.Location;
+                answerRadioButton2.Location = new Point(17, answerRadioButton1.Location.Y + y);
+                answerRadioButton3.Location = new Point(17, answerRadioButton2.Location.Y + y);
+                answerRadioButton4.Location = new Point(17, answerRadioButton3.Location.Y + y);
+                answerRadioButton5.Location = new Point(17, answerRadioButton4.Location.Y + y);
+                answerRadioButton6.Location = new Point(17, answerRadioButton5.Location.Y + y);
+                answerRadioButton7.Location = new Point(17, answerRadioButton6.Location.Y + y);
+                answerRadioButton8.Location = new Point(17, answerRadioButton7.Location.Y + y);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ChangePositionOfCheckBoxes(int y)
         {
-            answerCheckBox2.Location = new Point(1, answerCheckBox1.Location.Y + y);
-            answerCheckBox3.Location = new Point(1, answerCheckBox2.Location.Y + y);
-            answerCheckBox4.Location = new Point(1, answerCheckBox3.Location.Y + y);
-            answerCheckBox5.Location = new Point(1, answerCheckBox4.Location.Y + y);
-            answerCheckBox6.Location = new Point(1, answerCheckBox5.Location.Y + y);
-            answerCheckBox7.Location = new Point(1, answerCheckBox6.Location.Y + y);
-            answerCheckBox8.Location = new Point(1, answerCheckBox7.Location.Y + y);
+            try
+            {
+                answerCheckBox2.Location = new Point(1, answerCheckBox1.Location.Y + y);
+                answerCheckBox3.Location = new Point(1, answerCheckBox2.Location.Y + y);
+                answerCheckBox4.Location = new Point(1, answerCheckBox3.Location.Y + y);
+                answerCheckBox5.Location = new Point(1, answerCheckBox4.Location.Y + y);
+                answerCheckBox6.Location = new Point(1, answerCheckBox5.Location.Y + y);
+                answerCheckBox7.Location = new Point(1, answerCheckBox6.Location.Y + y);
+                answerCheckBox8.Location = new Point(1, answerCheckBox7.Location.Y + y);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void StartTestButton_Click(object sender, EventArgs e)
         {
-            startTestButton.Visible = false;
-            numOfQuestionLabel.Visible = true;
-            GetXml();
-            numOfQuestionLabel.Text = $"{numOfQuestion} из {numOfQuestions}";
-            numOfQuestionLabel.Left = (ClientSize.Width - numOfQuestionLabel.Width) / 2;
-            timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
-            answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
-            answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
-            if (Settings.Default.isFullSize)
+            try
             {
-                timerLabel.Width += 70;
+                startTestButton.Visible = false;
+                numOfQuestionLabel.Visible = true;
+                GetXml();
+                numOfQuestionLabel.Text = $"{numOfQuestion} из {numOfQuestions}";
+                numOfQuestionLabel.Left = (ClientSize.Width - numOfQuestionLabel.Width) / 2;
+                timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
+                answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+                answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+                if (Settings.Default.isFullSize)
+                {
+                    timerLabel.Width += 70;
+                }
+                timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
             }
-            timerLabel.Location = new Point(ClientSize.Width - timerLabel.Width - 30, timerLabel.Location.Y);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            seconds--;
-            timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
-            if (answerRadioButton1.Visible == true)
+            try
             {
-                if (seconds == 0)
+                seconds--;
+                timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
+                if (answerRadioButton1.Visible == true)
                 {
-                    seconds = 30;
-                    GoNextQuestionButton_Click(this, EventArgs.Empty);
+                    if (seconds == 0)
+                    {
+                        seconds = 30;
+                        GoNextQuestionButton_Click(this, EventArgs.Empty);
+                    }
                 }
-            }
 
-            else if (answerCheckBox1.Visible == true)
-            {
-                if (seconds == 0)
+                else if (answerCheckBox1.Visible == true)
                 {
-                    seconds = 60;
-                    GoNextQuestionButton_Click(this, EventArgs.Empty);
+                    if (seconds == 0)
+                    {
+                        seconds = 60;
+                        GoNextQuestionButton_Click(this, EventArgs.Empty);
+                    }
+                }
+                else if (answerTextBox.Visible == true)
+                {
+                    if (seconds == 0)
+                    {
+                        seconds = 90;
+                        GoNextQuestionButton_Click(this, EventArgs.Empty);
+                    }
                 }
             }
-            else if (answerTextBox.Visible == true)
+            catch (Exception ex)
             {
-                if (seconds == 0)
-                {
-                    seconds = 90;
-                    GoNextQuestionButton_Click(this, EventArgs.Empty);
-                }
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void GoNextQuestionButton_Click(object sender, EventArgs e)
         {
-            timer.Stop();
-            numOfQuestion++;
-            numOfQuestionLabel.Text = $"{numOfQuestion} из {numOfQuestions}";
-            Height = MinimumSize.Height;
-            addedHeight = 0;
-            CheckСorrectness();            
-            ChangeVisibilityButtons();
-            GetXml();
-            timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
-            answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
-            answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
-            if (numOfQuestion == numOfQuestions)
+            try
             {
-                goNextQuestionButton.Text = "Завершить тестирование";
-                goNextQuestionButton.Width += 30;
-                goNextQuestionButton.Left -= 30;
+                timer.Stop();
+                numOfQuestion++;
+                numOfQuestionLabel.Text = $"{numOfQuestion} из {numOfQuestions}";
+                Height = MinimumSize.Height;
+                addedHeight = 0;
+                CheckСorrectness();
+                ChangeVisibilityButtons();
+                GetXml();
+                timerLabel.Text = $"Осталось {seconds} секунд(-ы)";
+                answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+                answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+                if (numOfQuestion == numOfQuestions)
+                {
+                    goNextQuestionButton.Text = "Завершить тестирование";
+                    goNextQuestionButton.Width += 30;
+                    goNextQuestionButton.Left -= 30;
+                }
+                timer.Start();
             }
-            timer.Start();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void TestForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            SelectThemeForm._selectThemeForm.Show();
+            try
+            {
+                SelectThemeForm._selectThemeForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AnswerTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                GoNextQuestionButton_Click(sender, e);
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                    GoNextQuestionButton_Click(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AnswerCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            var checkBox = sender as CheckBox;
-            if (checkBox.Checked)
+            try
             {
-                checkBox.Image = Resources._checked;
+                var checkBox = sender as CheckBox;
+                if (checkBox.Checked)
+                {
+                    checkBox.Image = Resources._checked;
+                }
+                else
+                {
+                    checkBox.Image = Resources._unchecked;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                checkBox.Image = Resources._unchecked;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void FirstAnswerRadioButton_LocationChanged(object sender, EventArgs e)
         {
-            if (WindowState != FormWindowState.Maximized)
-                ChangePositionOfRadioButtons(42);
-            else
-                ChangePositionOfRadioButtons(82);
+            try
+            {
+                if (WindowState != FormWindowState.Maximized)
+                    ChangePositionOfRadioButtons(42);
+                else
+                    ChangePositionOfRadioButtons(82);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FirstAnswerCheckBox_LocationChanged(object sender, EventArgs e)
         {
-            if (WindowState != FormWindowState.Maximized)
-                ChangePositionOfCheckBoxes(42);
-            else
-                ChangePositionOfCheckBoxes(92);
+            try
+            {
+                if (WindowState != FormWindowState.Maximized)
+                    ChangePositionOfCheckBoxes(42);
+                else
+                    ChangePositionOfCheckBoxes(92);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ChangeWindowBoxButton_Click(object sender, EventArgs e)
         {
-            loadForm = false;
-            if (changeWindowBoxButton.Tag == "Fullscreen")
+            try
             {
-                ChangeControlsForFullscreen();
+                loadForm = false;
+                if (changeWindowBoxButton.Tag == "Fullscreen")
+                {
+                    ChangeControlsForFullscreen();
+                }
+                else
+                {
+                    ChangeControlsForNormalScreen();
+                }
+                answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
+                answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
+                CenterToScreen();
             }
-            else
+            catch (Exception ex)
             {
-                ChangeControlsForNormalScreen();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            answerRadioButton1.Location = new Point(17, questionLabel.Location.Y + questionLabel.Height + 35);
-            answerCheckBox1.Location = new Point(1, questionLabel.Location.Y + questionLabel.Height + 35);
-            CenterToScreen();
         }
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            if (Settings.Default.isFullSize)
+            try
             {
-                loadForm = false;
+                if (Settings.Default.isFullSize)
+                {
+                    loadForm = false;
 
-                ChangeControlsForFullscreen();
+                    ChangeControlsForFullscreen();
+                }
+                else
+                {
+                    ChangeControlsForNormalScreen();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ChangeControlsForNormalScreen();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            if (numOfQuestionLabel.Text != "Номер вопроса")
+            try
             {
-                var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (message == DialogResult.Yes)
+                if (numOfQuestionLabel.Text != "Номер вопроса")
+                {
+                    var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (message == DialogResult.Yes)
+                    {
+                        SelectThemeForm.loadForm = false;
+                        SelectThemeForm._selectThemeForm.Show();
+                        if (Settings.Default.isFullSize)
+                        {
+                            SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
+                        }
+                        else
+                            SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
+                        Hide();
+                    }
+                }
+                else
                 {
                     SelectThemeForm.loadForm = false;
                     SelectThemeForm._selectThemeForm.Show();
                     if (Settings.Default.isFullSize)
-                    {
                         SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
-                    }
                     else
                         SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
+                    SelectThemeForm._selectThemeForm.Show();
                     Hide();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                SelectThemeForm.loadForm = false;
-                SelectThemeForm._selectThemeForm.Show();
-                if (Settings.Default.isFullSize)
-                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
-                else
-                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
-                SelectThemeForm._selectThemeForm.Show();
-                Hide();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

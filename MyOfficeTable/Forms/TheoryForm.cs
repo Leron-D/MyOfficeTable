@@ -30,33 +30,40 @@ namespace MyOfficeTable
 
         private void LoadForm(string lection)
         {
-            string fileTest = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(lection)}.xml";
-            if (!File.Exists(fileTest))
+            try
             {
-                testingButton.Visible = false;
-            }
-            else
-            {
-                testingButton.Visible = true;
-            }
-            headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
-            file = lection;
-            toolTip.SetToolTip(minimizeButton, "Свернуть");
-            toolTip.SetToolTip(cancelButton, "Закрыть");
-            toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
-            InitialWebView();
+                string fileTest = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(lection)}.xml";
+                if (!File.Exists(fileTest))
+                {
+                    testingButton.Visible = false;
+                }
+                else
+                {
+                    testingButton.Visible = true;
+                }
+                headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
+                file = lection;
+                toolTip.SetToolTip(minimizeButton, "Свернуть");
+                toolTip.SetToolTip(cancelButton, "Закрыть");
+                toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
+                InitialWebView();
 
-            if (Settings.Default.isFullSize)
-            {
-                WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
+                if (Settings.Default.isFullSize)
+                {
+                    WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Tag = "NormalScreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                }
+                else
+                {
+                    WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -75,13 +82,27 @@ namespace MyOfficeTable
 
         private void GoToForm(Form form)
         {
-            form.Show();
-            Hide();
+            try
+            {
+                form.Show();
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            GoToForm(new SelectThemeForm("Теория"));
+            try
+            {
+                GoToForm(new SelectThemeForm("Теория"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void GoToLectionButton_Click(object sender, EventArgs e)
@@ -113,115 +134,143 @@ namespace MyOfficeTable
 
         private void ChangeSizePanelButton_Click(object sender, EventArgs e)
         {
-            if(changeSizePanelButton.Tag == "Свернуть")
+            try
             {
-                isCollapsed = false;
+                if (changeSizePanelButton.Tag == "Свернуть")
+                {
+                    isCollapsed = false;
+                }
+                else
+                {
+                    isCollapsed = true;
+                }
+                timer.Start();
             }
-            else
+            catch (Exception ex)
             {
-                isCollapsed = true;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            timer.Start();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            if (!isCollapsed)
+            try
             {
-                if (leftPanel.Width > 0)
+                if (!isCollapsed)
                 {
-                    leftPanel.Width -= 29;
-                    rightPanel.Left -= 29;
-                    rightPanel.Width += 29;
+                    if (leftPanel.Width > 0)
+                    {
+                        leftPanel.Width -= 29;
+                        rightPanel.Left -= 29;
+                        rightPanel.Width += 29;
+                    }
+                    else
+                    {
+                        timer.Stop();
+                        changeSizePanelButton.Image = Resources.Expand;
+                        changeSizePanelButton.Tag = "Развернуть";
+                        toolTip.SetToolTip(changeSizePanelButton, "Развернуть панель");
+                    }
                 }
                 else
                 {
-                    timer.Stop();
-                    changeSizePanelButton.Image = Resources.Expand;
-                    changeSizePanelButton.Tag = "Развернуть";
-                    toolTip.SetToolTip(changeSizePanelButton, "Развернуть панель");
+                    if (leftPanel.Width < 290)
+                    {
+                        leftPanel.Width += 29;
+                        rightPanel.Left += 29;
+                        rightPanel.Width -= 29;
+                    }
+                    else
+                    {
+                        timer.Stop();
+                        changeSizePanelButton.Image = Resources.Collapse;
+                        changeSizePanelButton.Tag = "Свернуть";
+                        toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
+                    }
+                    leftPanel.Invalidate();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (leftPanel.Width < 290)
-                {
-                    leftPanel.Width += 29;
-                    rightPanel.Left += 29;
-                    rightPanel.Width -= 29;
-                }
-                else
-                {
-                    timer.Stop();
-                    changeSizePanelButton.Image = Resources.Collapse;
-                    changeSizePanelButton.Tag = "Свернуть";
-                    toolTip.SetToolTip(changeSizePanelButton, "Свернуть панель");
-                }
-                leftPanel.Invalidate();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void СhangeWindowBoxButton_Click(object sender, EventArgs e)
         {
-            if (changeWindowBoxButton.Tag == "Fullscreen")
+            try
             {
-                Settings.Default.isFullSize = true;
-                this.WindowState = FormWindowState.Maximized;
-                changeWindowBoxButton.Tag = "NormalScreen";
-                changeWindowBoxButton.Image = Resources.NormalScreen;
-                if (testingButton.Visible == false)
-                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
+                if (changeWindowBoxButton.Tag == "Fullscreen")
+                {
+                    Settings.Default.isFullSize = true;
+                    WindowState = FormWindowState.Maximized;
+                    changeWindowBoxButton.Tag = "NormalScreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                    if (testingButton.Visible == false)
+                        goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
+                    else
+                    {
+                        goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
+                        testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
+                    }
+                }
                 else
                 {
-                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
-                    testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
+                    Settings.Default.isFullSize = false;
+                    WindowState = FormWindowState.Normal;
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
+                    if (testingButton.Visible == false)
+                        goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
+                    else
+                    {
+                        goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
+                        testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
+                    }
                 }
+                leftPanel.Invalidate();
+                CenterToScreen();
             }
-            else
+            catch (Exception ex)
             {
-                Settings.Default.isFullSize = false;
-                this.WindowState = FormWindowState.Normal;
-                changeWindowBoxButton.Tag = "Fullscreen";
-                changeWindowBoxButton.Image = Resources.Fullscreen;
-                if (testingButton.Visible == false)
-                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
-                else
-                {
-                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
-                    testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
-                }
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            leftPanel.Invalidate();
-            CenterToScreen();
         }
 
         private void LeftPanel_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            e.Graphics.Clear(leftPanel.Parent.BackColor);
-            Control control = leftPanel;
-            int radius = 30;
-            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            try
             {
-                path.AddLine(radius, 0, control.Width - radius, 0);
-                path.AddArc(control.Width - radius, 0, radius, radius, 270, 90);
-                path.AddLine(control.Width, radius, control.Width, control.Height - radius);
-                path.AddArc(control.Width - radius, control.Height - radius, radius, radius, 0, 90);
-                path.AddLine(control.Width - radius, control.Height, radius, control.Height);
-                path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
-                path.AddLine(0, control.Height - radius, 0, radius);
-                path.AddArc(0, 0, radius, radius, 180, 90);
-                using (SolidBrush brush = new SolidBrush(control.BackColor))
+                e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                e.Graphics.Clear(leftPanel.Parent.BackColor);
+                Control control = leftPanel;
+                int radius = 30;
+                using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
                 {
-                    e.Graphics.FillPath(brush, path);
+                    path.AddLine(radius, 0, control.Width - radius, 0);
+                    path.AddArc(control.Width - radius, 0, radius, radius, 270, 90);
+                    path.AddLine(control.Width, radius, control.Width, control.Height - radius);
+                    path.AddArc(control.Width - radius, control.Height - radius, radius, radius, 0, 90);
+                    path.AddLine(control.Width - radius, control.Height, radius, control.Height);
+                    path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
+                    path.AddLine(0, control.Height - radius, 0, radius);
+                    path.AddArc(0, 0, radius, radius, 180, 90);
+                    using (SolidBrush brush = new SolidBrush(control.BackColor))
+                    {
+                        e.Graphics.FillPath(brush, path);
+                    }
+                }
+                if (testingButton.Visible == false)
+                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
+                else
+                {
+                    goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
+                    testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
                 }
             }
-            if (testingButton.Visible == false)
-                goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2;
-            else
+            catch (Exception ex)
             {
-                goToLectionButton.Top = (leftPanel.Height - goToLectionButton.Height) / 2 - 42;
-                testingButton.Top = goToLectionButton.Top + goToLectionButton.Height + 42;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

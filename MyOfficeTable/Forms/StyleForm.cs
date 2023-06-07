@@ -26,20 +26,34 @@ namespace MyOfficeTable.Forms
 
         private void StyleForm_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                isMouseDown = true;
-                mouseOffset = Cursor.Position;
-                currentOffset = this.Location;
+                if (e.Button == MouseButtons.Left)
+                {
+                    isMouseDown = true;
+                    mouseOffset = Cursor.Position;
+                    currentOffset = this.Location;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void StyleForm_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isMouseDown)
+            try
             {
-                Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
-                this.Location = Point.Add(currentOffset, new Size(dif));
+                if (isMouseDown)
+                {
+                    Point dif = Point.Subtract(Cursor.Position, new Size(mouseOffset));
+                    this.Location = Point.Add(currentOffset, new Size(dif));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -50,19 +64,26 @@ namespace MyOfficeTable.Forms
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Close();
-            MainForm._mainForm.Close();
-            if (EvaluationСriteriasForm.evaluationСriteriasForm != null)
+            try
             {
-                EvaluationСriteriasForm.evaluationСriteriasForm.Close();
+                Close();
+                MainForm._mainForm.Close();
+                if (EvaluationСriteriasForm.evaluationСriteriasForm != null)
+                {
+                    EvaluationСriteriasForm.evaluationСriteriasForm.Close();
+                }
+                if (TheoryForm.theoryForm != null)
+                {
+                    TheoryForm.theoryForm.Close();
+                }
+                if (InstructionForm._instructionForm != null)
+                {
+                    InstructionForm._instructionForm.Close();
+                }
             }
-            if (TheoryForm.theoryForm != null)
+            catch (Exception ex)
             {
-                TheoryForm.theoryForm.Close();
-            }
-            if (InstructionForm._instructionForm != null)
-            {
-                InstructionForm._instructionForm.Close();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -73,27 +94,41 @@ namespace MyOfficeTable.Forms
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-            if (ReferenceForm._referenceForm == null)
+            try
             {
-                ReferenceForm form = new ReferenceForm();
-                form.ShowDialog();
+                if (ReferenceForm._referenceForm == null)
+                {
+                    ReferenceForm form = new ReferenceForm();
+                    form.ShowDialog();
+                }
+                else
+                {
+                    ReferenceForm._referenceForm.Show();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ReferenceForm._referenceForm.Show();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void GuideButton_Click(object sender, EventArgs e)
         {
-            if (InstructionForm._instructionForm == null)
+            try
             {
-                InstructionForm form = new InstructionForm();
-                form.ShowDialog();
+                if (InstructionForm._instructionForm == null)
+                {
+                    InstructionForm form = new InstructionForm();
+                    form.ShowDialog();
+                }
+                else
+                {
+                    InstructionForm._instructionForm.Show();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                InstructionForm._instructionForm.Show();
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

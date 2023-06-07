@@ -17,11 +17,18 @@ namespace MyOfficeTable
         public TestResultForm(double rightNum, int mark, double numberOfQuestions)
         {
             InitializeComponent();
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(minimizeButton, "Свернуть");
-            toolTip.SetToolTip(cancelButton, "Закрыть");
-            rightNumberLabel.Text = $"Вы ответили правильно на {rightNum} из {numberOfQuestions} вопросов";
-            markLabel.Text = $"Ваша оценка: {mark}";
+            try
+            {
+                ToolTip toolTip = new ToolTip();
+                toolTip.SetToolTip(minimizeButton, "Свернуть");
+                toolTip.SetToolTip(cancelButton, "Закрыть");
+                rightNumberLabel.Text = $"Вы ответили правильно на {rightNum} из {numberOfQuestions} вопросов";
+                markLabel.Text = $"Ваша оценка: {mark}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
