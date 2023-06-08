@@ -92,17 +92,19 @@ namespace MyOfficeTable
             {
                 if (selectMode == "Тестирование")
                 {
-                    foreach (string theme in Directory.EnumerateFiles($@"{Directory.GetCurrentDirectory()}\Tests", "*.xml"))
+                    var dir = new DirectoryInfo($@"{Directory.GetCurrentDirectory()}\Tests");
+                    foreach (var theme in dir.GetFiles("*.xml"))
                     {
-                        selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme));
+                        selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme.FullName));
                     }
                     selectThemeComboBox.SelectedIndex = 0;
                 }
                 else if (selectMode == "Теория")
                 {
-                    foreach (string theme in Directory.GetFiles($@"{Directory.GetCurrentDirectory()}\Lections", "*.html"))
+                    var dir = new DirectoryInfo($@"{Directory.GetCurrentDirectory()}\Lections");
+                    foreach (var theme in dir.GetFiles("*.html"))
                     {
-                        selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme));
+                        selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme.FullName));
                     }
                     selectThemeComboBox.SelectedIndex = 0;
                 }
