@@ -138,9 +138,9 @@ namespace MyOfficeTable
                 questionLabel.MaximumSize = new Size(1300, 150);
                 headerLabel.Font = new Font(headerLabel.Font.Name, 32, FontStyle.Bold);
                 answerRadioButton1.Font = answerRadioButton2.Font = answerRadioButton3.Font = answerRadioButton4.Font = answerRadioButton5.Font =
-                answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = answerCheckBox1.Font = answerCheckBox2.Font =
-                answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = answerCheckBox7.Font = answerCheckBox8.Font =
-                new Font(answerCheckBox1.Font.Name, 22, FontStyle.Bold);
+                answerRadioButton6.Font = answerRadioButton7.Font = answerRadioButton8.Font = new Font(answerRadioButton1.Font.Name, 24, answerRadioButton1.Font.Style);
+                answerCheckBox1.Font = answerCheckBox2.Font = answerCheckBox3.Font = answerCheckBox4.Font = answerCheckBox5.Font = answerCheckBox6.Font = 
+                answerCheckBox7.Font = answerCheckBox8.Font = new Font(answerCheckBox1.Font.Name, 22, FontStyle.Bold);
                 answerTextBox.Font = new Font(answerTextBox.Font.Name, 22);
                 questionLabel.Font = new Font(questionLabel.Font.Name, 22, FontStyle.Bold);
                 timerLabel.Font = new Font(timerLabel.Font.Name, 22, FontStyle.Bold);

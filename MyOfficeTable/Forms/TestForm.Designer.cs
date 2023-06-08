@@ -75,6 +75,7 @@
             // 
             // headerLabel
             // 
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 28F, System.Drawing.FontStyle.Bold);
             this.headerLabel.Location = new System.Drawing.Point(131, 0);
             this.headerLabel.Size = new System.Drawing.Size(1157, 134);
             this.headerLabel.Text = "Тестирование";
