@@ -92,7 +92,7 @@ namespace MyOfficeTable
             {
                 if (selectMode == "Тестирование")
                 {
-                    foreach (string theme in Directory.GetFiles($"{Directory.GetCurrentDirectory()}/Tests", "*.xml"))
+                    foreach (string theme in Directory.EnumerateFiles($@"{Directory.GetCurrentDirectory()}\Tests", "*.xml"))
                     {
                         selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme));
                     }
@@ -100,7 +100,7 @@ namespace MyOfficeTable
                 }
                 else if (selectMode == "Теория")
                 {
-                    foreach (string theme in Directory.GetFiles($"{Directory.GetCurrentDirectory()}/Lections", "*.html"))
+                    foreach (string theme in Directory.GetFiles($@"{Directory.GetCurrentDirectory()}\Lections", "*.html"))
                     {
                         selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme));
                     }
