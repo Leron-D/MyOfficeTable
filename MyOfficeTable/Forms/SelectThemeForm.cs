@@ -22,6 +22,7 @@ namespace MyOfficeTable
         string selectMode;
         List<int> listOfNumberOfQuestions = new List<int>();
         public static bool loadForm = true;
+        ToolTip toolTip = new ToolTip();
 
         public SelectThemeForm(string mode)
         {
@@ -47,7 +48,6 @@ namespace MyOfficeTable
                     transitionButton.Text = "Перейти к заданию";
                     goToEvaluationCriteriasButton.Visible = false;
                 }
-                ToolTip toolTip = new ToolTip();
                 toolTip.SetToolTip(minimizeButton, "Свернуть");
                 toolTip.SetToolTip(cancelButton, "Закрыть");
                 listOfNumberOfQuestions = new List<int>

@@ -15,11 +15,11 @@ namespace MyOfficeTable.Forms
         private Point mouseOffset;
         private Point currentOffset;
         private bool isMouseDown = false;
+        ToolTip toolTip = new ToolTip();
 
         public StyleForm()
         {
             InitializeComponent();
-            ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(pictureBox2, "Справка о программе");
             toolTip.SetToolTip(guideButton, "Руководство пользователя");
         }
@@ -130,6 +130,14 @@ namespace MyOfficeTable.Forms
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void StyleForm_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+                toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
+            else
+                toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
         }
     }
 }

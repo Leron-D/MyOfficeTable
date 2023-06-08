@@ -169,6 +169,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StyleForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.StyleForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.StyleForm_MouseUp);
+            this.Resize += new System.EventHandler(this.StyleForm_Resize);
             this.panel1.ResumeLayout(false);
             this.pictPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
