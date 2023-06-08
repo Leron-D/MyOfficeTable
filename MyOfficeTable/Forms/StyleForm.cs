@@ -135,9 +135,15 @@ namespace MyOfficeTable.Forms
         private void StyleForm_Resize(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Maximized)
+            {
                 toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
+                headerLabel.Font = new Font(headerLabel.Font.Name, 32, headerLabel.Font.Style);
+            }
             else
+            {
                 toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
+                headerLabel.Font = new Font(headerLabel.Font.Name, 28, headerLabel.Font.Style);
+            }
         }
     }
 }

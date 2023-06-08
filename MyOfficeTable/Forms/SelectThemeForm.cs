@@ -136,11 +136,11 @@ namespace MyOfficeTable
         {
             try
             {
+                MainForm._mainForm.Show();
                 if (Settings.Default.isFullSize)
                     MainForm._mainForm.WindowState = FormWindowState.Maximized;
                 else
                     MainForm._mainForm.WindowState = FormWindowState.Normal;
-                MainForm._mainForm.Show();
                 Hide();
             }
             catch (Exception ex)

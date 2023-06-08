@@ -175,11 +175,13 @@ namespace MyOfficeTable
                 {
                     changeWindowBoxButton.Tag = "NormalScreen";
                     changeWindowBoxButton.Image = Resources.NormalScreen;
+                    toolTip.SetToolTip(changeWindowBoxButton, "Свернуть в окно");
                 }
                 else
                 {
                     changeWindowBoxButton.Tag = "Fullscreen";
                     changeWindowBoxButton.Image = Resources.Fullscreen;
+                    toolTip.SetToolTip(changeWindowBoxButton, "Развернуть");
                 }
             }
             catch (Exception ex)
