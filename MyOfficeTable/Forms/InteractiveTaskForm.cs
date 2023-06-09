@@ -509,18 +509,25 @@ namespace MyOfficeTable.Forms
         {
             try
             {
-                resultLabel.Visible = true;
-                if (destination.Tag != tag)
+                if (destination.Image != null)
                 {
-                    resultLabel.Text = "";
-                    resultLabel.Image = Resources.Incorrect;
-                    resultLabel.Tag = "Incorrect";
+                    resultLabel.Visible = true;
+                    if (destination.Tag != tag)
+                    {
+                        resultLabel.Text = "";
+                        resultLabel.Image = Resources.Incorrect;
+                        resultLabel.Tag = "Incorrect";
+                    }
+                    else
+                    {
+                        resultLabel.Text = "";
+                        resultLabel.Image = Resources.Correct;
+                        resultLabel.Tag = "Correct";
+                    }
                 }
                 else
                 {
-                    resultLabel.Text = "";
-                    resultLabel.Image = Resources.Correct;
-                    resultLabel.Tag = "Correct";
+                    resultLabel.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -533,19 +540,24 @@ namespace MyOfficeTable.Forms
         {
             try
             {
-                resultLabel.Visible = true;
-                if (textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
+                if (!String.IsNullOrWhiteSpace(textBox.Text))
                 {
-                    resultLabel.Text = "";
-                    resultLabel.Image = Resources.Incorrect;
-                    resultLabel.Tag = "Incorrect";
+                    resultLabel.Visible = true;
+                    if (textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
+                    {
+                        resultLabel.Text = "";
+                        resultLabel.Image = Resources.Incorrect;
+                        resultLabel.Tag = "Incorrect";
+                    }
+                    else
+                    {
+                        resultLabel.Text = "";
+                        resultLabel.Image = Resources.Correct;
+                        resultLabel.Tag = "Correct";
+                    }
                 }
                 else
-                {
-                    resultLabel.Text = "";
-                    resultLabel.Image = Resources.Correct;
-                    resultLabel.Tag = "Correct";
-                }
+                    resultLabel.Visible = false;
             }
             catch (Exception ex)
             {

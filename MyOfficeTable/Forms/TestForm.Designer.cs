@@ -351,7 +351,7 @@
             this.goNextQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.goNextQuestionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.goNextQuestionButton.ForeColor = System.Drawing.Color.White;
-            this.goNextQuestionButton.Location = new System.Drawing.Point(988, 490);
+            this.goNextQuestionButton.Location = new System.Drawing.Point(1003, 489);
             this.goNextQuestionButton.MinimumSize = new System.Drawing.Size(150, 40);
             this.goNextQuestionButton.Name = "goNextQuestionButton";
             this.goNextQuestionButton.Size = new System.Drawing.Size(282, 40);
