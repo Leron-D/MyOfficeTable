@@ -807,15 +807,8 @@ namespace MyOfficeTable.Forms
         {
             try
             {
-                if (InstructionForm._instructionForm == null)
-                {
-                    InstructionForm form = new InstructionForm();
-                    form.ShowDialog();
-                }
-                else
-                {
-                    InstructionForm._instructionForm.Show();
-                }
+                InstructionForm form = new InstructionForm();
+                form.ShowDialog();
             }
             catch (Exception ex)
             {

@@ -17,7 +17,7 @@ namespace MyOfficeTable
 {
     public partial class TheoryForm : StyleForm
     {
-        public static TheoryForm theoryForm;
+        public static TheoryForm _theoryForm;
         bool isCollapsed = false;
         string file;
         ToolTip toolTip = new ToolTip();
@@ -25,7 +25,7 @@ namespace MyOfficeTable
         public TheoryForm(string lection)
         {
             InitializeComponent();
-            theoryForm = this;
+            _theoryForm = this;
             leftPanel.Paint += LeftPanel_Paint;
             LoadForm(lection);
         }

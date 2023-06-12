@@ -64,16 +64,19 @@ namespace MyOfficeTable.Forms
 
         private void СloseButton_Click(object sender, EventArgs e)
         {
-            Hide();
-        }
-
-        private void InstructionForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            var webViewProcessId = Convert.ToInt32(webBrowser.CoreWebView2.BrowserProcessId);
-            var webViewProcess = Process.GetProcessById(webViewProcessId);
-            webBrowser.Dispose();
-            webViewProcess.WaitForExit(3000);
-            Directory.Delete(Program.TempFolder, true);
+            try
+            {
+                var webViewProcessId = Convert.ToInt32(webBrowser.CoreWebView2.BrowserProcessId);
+                var webViewProcess = Process.GetProcessById(webViewProcessId);
+                webBrowser.Dispose();
+                webViewProcess.WaitForExit(3000);
+                Directory.Delete(Program.TempFolder, true);
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

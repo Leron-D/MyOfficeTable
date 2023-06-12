@@ -92,7 +92,7 @@ namespace MyOfficeTable
             {
                 if (selectMode == "Тестирование")
                 {
-                    var dir = new DirectoryInfo($@"{Directory.GetCurrentDirectory()}\Tests");
+                    var dir = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "Tests"));
                     foreach (var theme in dir.GetFiles("*.xml"))
                     {
                         selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme.FullName));
@@ -101,7 +101,7 @@ namespace MyOfficeTable
                 }
                 else if (selectMode == "Теория")
                 {
-                    var dir = new DirectoryInfo($@"{Directory.GetCurrentDirectory()}\Lections");
+                    var dir = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "Lections"));
                     foreach (var theme in dir.GetFiles("*.html"))
                     {
                         selectThemeComboBox.Items.Add(Path.GetFileNameWithoutExtension(theme.FullName));
@@ -173,6 +173,8 @@ namespace MyOfficeTable
                 }
                 else if (selectMode == "Теория")
                 {
+                    if (TheoryForm._theoryForm != null)
+                        TheoryForm._theoryForm.Close();
                     if (File.Exists($@"{Directory.GetCurrentDirectory()}\Lections\{selectThemeComboBox.SelectedItem}.html"))
                         GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html"));
                     else
@@ -304,9 +306,9 @@ namespace MyOfficeTable
         {
             try
             {
-                if (TheoryForm.theoryForm != null)
+                if (TheoryForm._theoryForm != null)
                 {
-                    TheoryForm.theoryForm.Close();
+                    TheoryForm._theoryForm.Close();
                 }
                 if (TestForm._testForm != null)
                 {

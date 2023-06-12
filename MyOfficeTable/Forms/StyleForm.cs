@@ -72,9 +72,9 @@ namespace MyOfficeTable.Forms
                 {
                     EvaluationСriteriasForm.evaluationСriteriasForm.Close();
                 }
-                if (TheoryForm.theoryForm != null)
+                if (TheoryForm._theoryForm != null)
                 {
-                    TheoryForm.theoryForm.Close();
+                    TheoryForm._theoryForm.Close();
                 }
                 if (InstructionForm._instructionForm != null)
                 {
@@ -116,15 +116,8 @@ namespace MyOfficeTable.Forms
         {
             try
             {
-                if (InstructionForm._instructionForm == null)
-                {
-                    InstructionForm form = new InstructionForm();
-                    form.ShowDialog();
-                }
-                else
-                {
-                    InstructionForm._instructionForm.Show();
-                }
+                InstructionForm form = new InstructionForm();
+                form.ShowDialog();
             }
             catch (Exception ex)
             {

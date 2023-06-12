@@ -120,7 +120,6 @@
             this.MaximizeBox = false;
             this.Name = "InstructionForm";
             this.Text = "Инструкции к заданию";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InstructionForm_FormClosed);
             this.Controls.SetChildIndex(this.guideButton, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.minimizeButton, 0);
