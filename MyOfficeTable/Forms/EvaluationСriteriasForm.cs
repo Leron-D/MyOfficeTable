@@ -15,20 +15,22 @@ namespace MyOfficeTable
 {
     public partial class EvaluationСriteriasForm : StyleForm
     {
-        public static EvaluationСriteriasForm evaluationСriteriasForm;
-        string file = "";
+        public static EvaluationСriteriasForm _evaluationСriteriasForm;
+        string fileOfTest = "";
         int num = 0;
+        bool themeWithTest;
 
-        public EvaluationСriteriasForm(int numberOfQuestions = 0, string fileName = "")
+        public EvaluationСriteriasForm(int numberOfQuestions = 0, bool withTest = true, string themeOfTest = null)
         {
             InitializeComponent();
             try
             {
-                evaluationСriteriasForm = this;
+                themeWithTest = withTest;
+                _evaluationСriteriasForm = this;
 
                 num = numberOfQuestions;
 
-                file = fileName;
+                fileOfTest = themeOfTest;
 
                 if (Settings.Default.goFromTheory)
                     goToTestButton.Visible = goBackButton.Visible = true;
@@ -74,8 +76,8 @@ namespace MyOfficeTable
 
         private void GoToTestButton_Click(object sender, EventArgs e)
         {
-            if (file != "")
-                GoToForm(new TestForm(file, num));
+            if (fileOfTest != "")
+                GoToForm(new TestForm(fileOfTest, num));
         }
 
         private void EvaluationСriteriasForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -88,7 +90,8 @@ namespace MyOfficeTable
         {
             try
             {
-                GoToForm(new TheoryForm($@"{Directory.GetCurrentDirectory()}\Lections\{Path.GetFileNameWithoutExtension(file)}.html"));
+                TheoryForm._theoryForm.Show();
+                Hide();
             }
             catch (Exception ex)
             {

@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheoryForm));
             this.rightPanel = new System.Windows.Forms.Panel();
-            this.webBrowser = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.goToLectionButton = new MyOfficeTable.MyButton();
             this.testingButton = new MyOfficeTable.MyButton();
             this.changeSizePanelButton = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.goBackButton = new MyOfficeTable.MyButton();
+            this.webBrowser = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.rightPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).BeginInit();
             this.leftPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,6 +61,7 @@
             // 
             // headerLabel
             // 
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 28F, System.Drawing.FontStyle.Bold);
             this.headerLabel.Size = new System.Drawing.Size(1270, 134);
             this.headerLabel.Text = "Теоретический материал";
             // 
@@ -85,19 +86,6 @@
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(1098, 651);
             this.rightPanel.TabIndex = 1;
-            // 
-            // webBrowser
-            // 
-            this.webBrowser.AllowExternalDrop = true;
-            this.webBrowser.BackColor = System.Drawing.Color.White;
-            this.webBrowser.CreationProperties = null;
-            this.webBrowser.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(1098, 651);
-            this.webBrowser.TabIndex = 0;
-            this.webBrowser.ZoomFactor = 1D;
             // 
             // leftPanel
             // 
@@ -198,6 +186,18 @@
             this.goBackButton.UseVisualStyleBackColor = false;
             this.goBackButton.Click += new System.EventHandler(this.GoBackButton_Click);
             // 
+            // webBrowser
+            // 
+            this.webBrowser.AllowExternalDrop = true;
+            this.webBrowser.CreationProperties = null;
+            this.webBrowser.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.Size = new System.Drawing.Size(1098, 651);
+            this.webBrowser.TabIndex = 0;
+            this.webBrowser.ZoomFactor = 1D;
+            // 
             // TheoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,8 +225,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.rightPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).EndInit();
             this.leftPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,10 +235,10 @@
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel leftPanel;
         private MyOfficeTable.MyButton goBackButton;
-        private Microsoft.Web.WebView2.WinForms.WebView2 webBrowser;
         private System.Windows.Forms.Button changeSizePanelButton;
         private System.Windows.Forms.Timer timer;
         private MyButton goToLectionButton;
         private MyButton testingButton;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webBrowser;
     }
 }

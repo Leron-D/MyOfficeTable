@@ -176,7 +176,16 @@ namespace MyOfficeTable
                     if (TheoryForm._theoryForm != null)
                         TheoryForm._theoryForm.Close();
                     if (File.Exists($@"{Directory.GetCurrentDirectory()}\Lections\{selectThemeComboBox.SelectedItem}.html"))
-                        GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html"));
+                    {
+                        if (selectThemeComboBox.SelectedIndex == 1)
+                            GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html", true, "1. Создание, редактирование и форматирование рабочих листов табличного процессора"));
+                        else if (selectThemeComboBox.SelectedIndex == 3)
+                            GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html", true, "2. Использование формул и функций в табличном процессоре"));
+                        else if (selectThemeComboBox.SelectedIndex == 4)
+                            GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html", true, "3. Построение графиков и диаграмм"));
+                        else
+                            GoToForm(new TheoryForm(Directory.GetCurrentDirectory() + $@"\Lections\{selectThemeComboBox.SelectedItem}.html", false));
+                    }
                     else
                         throw new Exception("Выбранной лекции не существует");
                 }

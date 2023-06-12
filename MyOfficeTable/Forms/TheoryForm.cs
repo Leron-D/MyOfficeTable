@@ -20,28 +20,32 @@ namespace MyOfficeTable
         public static TheoryForm _theoryForm;
         bool isCollapsed = false;
         string file;
+        string testFileName;
+        bool themeWithTest;
         ToolTip toolTip = new ToolTip();
 
-        public TheoryForm(string lection)
+        public TheoryForm(string lection, bool withTest, string nameOfTestTheme = null)
         {
             InitializeComponent();
+            themeWithTest = withTest;
+            testFileName = nameOfTestTheme;
             _theoryForm = this;
             leftPanel.Paint += LeftPanel_Paint;
-            LoadForm(lection);
+            LoadForm(lection, nameOfTestTheme);
         }
 
-        private void LoadForm(string lection)
+        private void LoadForm(string lection, string nameOfTestTheme)
         {
             try
             {
-                string fileTest = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(lection)}.xml";
-                if (!File.Exists(fileTest))
+                testFileName = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(nameOfTestTheme)}.xml";
+                if (themeWithTest)
                 {
-                    testingButton.Visible = false;
+                    testingButton.Visible = true;
                 }
                 else
                 {
-                    testingButton.Visible = true;
+                    testingButton.Visible = false;
                 }
                 headerLabel.Left = (ClientSize.Width - headerLabel.Width) / 2;
                 file = lection;
@@ -127,7 +131,7 @@ namespace MyOfficeTable
                 string fileName = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(file)}.xml";
                 Settings.Default.goFromTheory = true;
                 Settings.Default.Save();
-                GoToForm(new EvaluationСriteriasForm(0, fileName));
+                GoToForm(new EvaluationСriteriasForm(0, themeWithTest, testFileName));
             }
             catch (Exception ex)
             {

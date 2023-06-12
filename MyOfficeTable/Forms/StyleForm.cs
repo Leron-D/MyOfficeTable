@@ -68,9 +68,9 @@ namespace MyOfficeTable.Forms
             {
                 Close();
                 MainForm._mainForm.Close();
-                if (EvaluationСriteriasForm.evaluationСriteriasForm != null)
+                if (EvaluationСriteriasForm._evaluationСriteriasForm != null)
                 {
-                    EvaluationСriteriasForm.evaluationСriteriasForm.Close();
+                    EvaluationСriteriasForm._evaluationСriteriasForm.Close();
                 }
                 if (TheoryForm._theoryForm != null)
                 {
