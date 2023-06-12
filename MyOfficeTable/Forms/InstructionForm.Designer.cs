@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstructionForm));
-            this.webBrowser = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Button();
+            this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +54,7 @@
             // 
             // headerLabel
             // 
+            this.headerLabel.Font = new System.Drawing.Font("Lucida Sans", 28F, System.Drawing.FontStyle.Bold);
             this.headerLabel.Size = new System.Drawing.Size(776, 134);
             this.headerLabel.Text = "Руководство пользователя";
             // 
@@ -69,18 +69,6 @@
             this.changeWindowBoxButton.FlatAppearance.BorderSize = 0;
             this.changeWindowBoxButton.Location = new System.Drawing.Point(834, 2);
             this.changeWindowBoxButton.Click += new System.EventHandler(this.ChangeWindowBoxButton_Click);
-            // 
-            // webBrowser
-            // 
-            this.webBrowser.AllowExternalDrop = true;
-            this.webBrowser.CreationProperties = null;
-            this.webBrowser.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(887, 433);
-            this.webBrowser.TabIndex = 76;
-            this.webBrowser.ZoomFactor = 1D;
             // 
             // panel2
             // 
@@ -108,6 +96,15 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.СloseButton_Click);
             // 
+            // webBrowser
+            // 
+            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.Size = new System.Drawing.Size(887, 433);
+            this.webBrowser.TabIndex = 0;
+            // 
             // InstructionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,16 +126,14 @@
             this.Controls.SetChildIndex(this.closeButton, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.webBrowser)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Microsoft.Web.WebView2.WinForms.WebView2 webBrowser;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.WebBrowser webBrowser;
     }
 }

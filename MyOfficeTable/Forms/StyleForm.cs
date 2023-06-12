@@ -116,8 +116,13 @@ namespace MyOfficeTable.Forms
         {
             try
             {
-                InstructionForm form = new InstructionForm();
-                form.ShowDialog();
+                if (InstructionForm._instructionForm == null)
+                {
+                    InstructionForm form = new InstructionForm();
+                    form.ShowDialog();
+                }
+                else
+                    InstructionForm._instructionForm.Show();
             }
             catch (Exception ex)
             {
