@@ -472,6 +472,10 @@ namespace MyOfficeTable
         {
             try
             {
+                if (Settings.Default.isFullSize)
+                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
+                else
+                    SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Normal;
                 SelectThemeForm._selectThemeForm.Show();
             }
             catch (Exception ex)

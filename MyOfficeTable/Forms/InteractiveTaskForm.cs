@@ -22,6 +22,7 @@ namespace MyOfficeTable.Forms
         int numberOfTasks;
         int index1;
         int index2;
+        int l = 3;
         bool loadForm = true;
         int randomCount = 3;
         Point mouseOffset;
@@ -358,7 +359,7 @@ namespace MyOfficeTable.Forms
                     listOfTextBoxes[i].Text = "";
                     listOfResultLabels2[i].Visible = false;
                 }
-                int randomIndex = random.Next(0, 3);
+                int randomIndex = random.Next(0, l);
                 if (randomIndex == 2)
                     taskLabel2.Text = "Задание: Введите тип ссылки, которая записана в выделенной ячейке";
                 else
@@ -372,6 +373,7 @@ namespace MyOfficeTable.Forms
                     listOfTextBoxes[k].Tag = listOfTags2[i];
                     k++;
                 }
+                l--;
             }
             catch (Exception ex)
             {
@@ -383,6 +385,8 @@ namespace MyOfficeTable.Forms
         {
             resultLabel1.Visible = resultLabel2.Visible = resultLabel3.Visible = resultLabel4.Visible = resultLabel5.Visible = resultLabel6.Visible = resultLabel7.Visible =
             resultLabel8.Visible = false;
+            resultLabel1.Tag = resultLabel2.Tag = resultLabel3.Tag = resultLabel4.Tag = resultLabel5.Tag = resultLabel6.Tag = resultLabel7.Tag =
+            resultLabel8.Tag = "Incorrect";
         }
 
         private void OpenReferenceForm()
@@ -419,7 +423,7 @@ namespace MyOfficeTable.Forms
                     }
                     CheckCorrectness();
                 }
-                else if (tabControl.SelectedTab == tabControl.TabPages[1] && numOfTask != numberOfTasks && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
+                else if (tabControl.SelectedTab == tabControl.TabPages[1] && resultLabel5.Tag == "Correct" && resultLabel6.Tag == "Correct" && resultLabel7.Tag == "Correct" && resultLabel8.Tag == "Correct")
                 {
                     if (numOfTask != numberOfTasks)
                         TakeTaskByReferences();
