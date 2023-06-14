@@ -21,7 +21,6 @@ namespace MyOfficeTable
         public static SelectThemeForm _selectThemeForm;
         string selectMode;
         List<int> listOfNumberOfQuestions = new List<int>();
-        public static bool loadForm = true;
         ToolTip toolTip = new ToolTip();
 
         public SelectThemeForm(string mode)
@@ -59,7 +58,6 @@ namespace MyOfficeTable
 
                 if (Settings.Default.isFullSize)
                 {
-                    loadForm = false;
                     WindowState = FormWindowState.Maximized;
                     changeWindowBoxButton.Tag = "NormalScreen";
                     changeWindowBoxButton.Image = Resources.NormalScreen;
@@ -224,7 +222,6 @@ namespace MyOfficeTable
         {
             try
             {
-                loadForm = false;
                 if (changeWindowBoxButton.Tag == "Fullscreen")
                 {
                     Settings.Default.isFullSize = true;
@@ -252,58 +249,55 @@ namespace MyOfficeTable
         {
             try
             {
-                if (!loadForm)
+                if (WindowState == FormWindowState.Maximized)
                 {
-                    if (WindowState == FormWindowState.Maximized)
-                    {
-                        selectThemeComboBox.Size = new Size(1400, 70);
-                        selectThemeComboBox.Left = (ClientSize.Width - selectThemeComboBox.Width) / 2;
-                        if (selectMode == "Тестирование")
-                            selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2 - 50;
-                        else
-                            selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2 + 10;
-                        selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 22);
-                        selectThemeComboBox.BorderSize = 1;
-                        headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
+                    selectThemeComboBox.Size = new Size(1400, 70);
+                    selectThemeComboBox.Left = (ClientSize.Width - selectThemeComboBox.Width) / 2;
+                    if (selectMode == "Тестирование")
+                        selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2 - 50;
+                    else
+                        selectThemeComboBox.Top = (ClientSize.Height - selectThemeComboBox.Height) / 2 + 10;
+                    selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 22);
+                    selectThemeComboBox.BorderSize = 1;
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 36, FontStyle.Bold);
 
-                        transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(440, 50);
-                        transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
-                        transitionButton.Top = selectThemeComboBox.Location.Y + 130;
-                        goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 80;
-                        goBackButton.Size = new Size(261, 50);
-                        goBackButton.Location = new Point(0, Height - goBackButton.Height - 2);
-                        transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 24, FontStyle.Bold);
-                        changeWindowBoxButton.Tag = "NormalScreen";
-                        changeWindowBoxButton.Image = Resources.NormalScreen;
-                    }
+                    transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(440, 50);
+                    transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
+                    transitionButton.Top = selectThemeComboBox.Location.Y + 130;
+                    goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 80;
+                    goBackButton.Size = new Size(261, 50);
+                    goBackButton.Location = new Point(0, Height - goBackButton.Height - 2);
+                    transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 24, FontStyle.Bold);
+                    changeWindowBoxButton.Tag = "NormalScreen";
+                    changeWindowBoxButton.Image = Resources.NormalScreen;
+                }
+                else
+                {
+                    selectThemeComboBox.Size = new Size(866, 36);
+                    selectThemeComboBox.Left = (ClientSize.Width - selectThemeComboBox.Width) / 2;
+                    if (selectMode == "Тестирование")
+                        selectThemeComboBox.Location = new Point(97, 225);
                     else
                     {
-                        selectThemeComboBox.Size = new Size(866, 36);
-                        selectThemeComboBox.Left = (ClientSize.Width - selectThemeComboBox.Width) / 2;
-                        if (selectMode == "Тестирование")
-                            selectThemeComboBox.Location = new Point(97, 225);
-                        else
-                        {
-                            selectThemeComboBox.Location = new Point(97, 250);
-                            transitionButton.Location = new Point(transitionButton.Location.X, 310);
-                        }
-
-                        selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 14);
-                        selectThemeComboBox.BorderSize = 1;
-                        headerLabel.Font = new Font(headerLabel.Font.Name, 30, FontStyle.Bold);
-
-                        transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(411, 44);
-                        transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
-                        transitionButton.Top = selectThemeComboBox.Location.Y + 60;
-                        goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 60;
-                        goBackButton.Size = new Size(151, 40);
-                        goBackButton.Location = new Point(0, 411);
-                        transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
-                        changeWindowBoxButton.Tag = "Fullscreen";
-                        changeWindowBoxButton.Image = Resources.Fullscreen;
+                        selectThemeComboBox.Location = new Point(97, 250);
+                        transitionButton.Location = new Point(transitionButton.Location.X, 310);
                     }
-                    CenterToScreen();
+
+                    selectThemeComboBox.Font = new Font("Microsoft Sans Serif", 14);
+                    selectThemeComboBox.BorderSize = 1;
+                    headerLabel.Font = new Font(headerLabel.Font.Name, 30, FontStyle.Bold);
+
+                    transitionButton.Size = goToEvaluationCriteriasButton.Size = new Size(411, 44);
+                    transitionButton.Left = goToEvaluationCriteriasButton.Left = (ClientSize.Width - transitionButton.Width) / 2;
+                    transitionButton.Top = selectThemeComboBox.Location.Y + 60;
+                    goToEvaluationCriteriasButton.Top = transitionButton.Location.Y + 60;
+                    goBackButton.Size = new Size(151, 40);
+                    goBackButton.Location = new Point(0, 411);
+                    transitionButton.Font = goToEvaluationCriteriasButton.Font = goBackButton.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
+                    changeWindowBoxButton.Tag = "Fullscreen";
+                    changeWindowBoxButton.Image = Resources.Fullscreen;
                 }
+                CenterToScreen();
             }
             catch (Exception ex)
             {

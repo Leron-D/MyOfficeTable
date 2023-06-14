@@ -132,6 +132,7 @@ namespace MyOfficeTable
             try
             {
                 Settings.Default.isFullSize = true;
+                Settings.Default.Save();
                 WindowState = FormWindowState.Maximized;
                 changeWindowBoxButton.Tag = "NormalScreen";
                 changeWindowBoxButton.Image = Resources.NormalScreen;
@@ -600,7 +601,6 @@ namespace MyOfficeTable
                     var message = MessageBox.Show("Вы уверены, что хотите завершить тестирование?", "Вопрос", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (message == DialogResult.Yes)
                     {
-                        SelectThemeForm.loadForm = false;
                         SelectThemeForm._selectThemeForm.Show();
                         if (Settings.Default.isFullSize)
                         {
@@ -613,7 +613,6 @@ namespace MyOfficeTable
                 }
                 else
                 {
-                    SelectThemeForm.loadForm = false;
                     SelectThemeForm._selectThemeForm.Show();
                     if (Settings.Default.isFullSize)
                         SelectThemeForm._selectThemeForm.WindowState = FormWindowState.Maximized;
