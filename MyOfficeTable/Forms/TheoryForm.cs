@@ -38,7 +38,7 @@ namespace MyOfficeTable
         {
             try
             {
-                testFileName = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(nameOfTestTheme)}.xml";
+                testFileName = $@"{Directory.GetCurrentDirectory()}\Tests\{nameOfTestTheme}.xml";
                 if (themeWithTest)
                 {
                     testingButton.Visible = true;
@@ -128,7 +128,6 @@ namespace MyOfficeTable
         {
             try
             {
-                string fileName = $@"{Directory.GetCurrentDirectory()}\Tests\{Path.GetFileNameWithoutExtension(file)}.xml";
                 Settings.Default.goFromTheory = true;
                 Settings.Default.Save();
                 GoToForm(new EvaluationСriteriasForm(0, themeWithTest, testFileName));
