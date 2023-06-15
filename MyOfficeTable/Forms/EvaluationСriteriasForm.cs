@@ -90,6 +90,8 @@ namespace MyOfficeTable
         {
             try
             {
+                Settings.Default.goFromTheory = false;
+                Settings.Default.Save();
                 TheoryForm._theoryForm.Show();
                 Hide();
             }
