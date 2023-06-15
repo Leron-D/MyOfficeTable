@@ -547,7 +547,7 @@ namespace MyOfficeTable.Forms
                 if (!String.IsNullOrWhiteSpace(textBox.Text))
                 {
                     resultLabel.Visible = true;
-                    if (textBox.Text.Replace('ё', 'е').Replace(" ", "").ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
+                    if (textBox.Text.Replace('ё', 'е').Replace("ый", "ая").Replace(" ", "").ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
                     {
                         resultLabel.Text = "";
                         resultLabel.Image = Resources.Incorrect;
