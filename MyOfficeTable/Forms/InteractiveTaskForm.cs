@@ -363,7 +363,7 @@ namespace MyOfficeTable.Forms
                 if (randomIndex == 2)
                     taskLabel2.Text = "Задание: Введите тип ссылки, которая записана в выделенной ячейке";
                 else
-                    taskLabel2.Text = "Задание: Введите формулу, которая будет написана в выделенной ячейке при копировании";
+                    taskLabel2.Text = "Задание: Введите формулу, которая будет написана в выделенной ячейке при копировании (со знаком равно)";
                 index2 = listOfIndexes2[randomIndex];
                 listOfIndexes2.RemoveAt(randomIndex);
                 int k = 0;
@@ -547,7 +547,7 @@ namespace MyOfficeTable.Forms
                 if (!String.IsNullOrWhiteSpace(textBox.Text))
                 {
                     resultLabel.Visible = true;
-                    if (textBox.Text.Replace('ё', 'е').ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
+                    if (textBox.Text.Replace('ё', 'е').Replace(" ", "").ToLower() != textBox.Tag.ToString().Replace('ё', 'е').ToLower())
                     {
                         resultLabel.Text = "";
                         resultLabel.Image = Resources.Incorrect;
